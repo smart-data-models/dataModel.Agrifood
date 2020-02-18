@@ -1,5 +1,7 @@
 # Agrifood Data Models
 
+# These models are on migration till 28-2-2020. Pending update of internal links. 
+
 This folder is intended to contain data models for Smart Agri-Food:
 
 -   [AgriApp](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriApp/schema.json)
