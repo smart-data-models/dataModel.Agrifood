@@ -1,6 +1,6 @@
 # Agrifood Data Models
 
-# These models are on migration till 24-2-2020. Pending update of internal links. 
+# Pending update of internal links. 
 
 This folder is intended to contain data models for Smart Agri-Food:
 
@@ -14,3 +14,4 @@ This folder is intended to contain data models for Smart Agri-Food:
 -   [AgriPest](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPest/schema.json)
 -   [AgriProductType](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriProductType/schema.json)
 -   [AgriSoil](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriSoil/schema.json)
+-   [Animal](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/schema.json)
