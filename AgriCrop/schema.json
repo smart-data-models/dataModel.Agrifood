@@ -6,10 +6,10 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/specs/AgriFood/agrifood-schema.json#/definitions/AgriFood-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
     },
     {
       "properties": {
@@ -26,7 +26,7 @@
           "type": "array",
           "items": [
             {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
           ]
         },
@@ -34,7 +34,7 @@
           "type": "array",
           "items": [
             {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
           ]
         },
@@ -42,7 +42,7 @@
           "type": "array",
           "items": [
             {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
           ]
         },

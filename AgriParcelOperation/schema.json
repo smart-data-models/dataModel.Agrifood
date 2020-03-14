@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriParcelOperation/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/schema.json",
   "title": "FIWARE - Agri Parcel Operation",
   "description": "This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/specs/AgriFood/agrifood-schema.json#/definitions/AgriFood-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
     },
     {
       "properties": {
@@ -19,7 +19,7 @@
           "description": "NGSI Entity Type"
         },
         "hasAgriParcel": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "operationType": {
           "type": "string",
@@ -42,7 +42,7 @@
           "enum": ["planned", "ongoing", "finished", "scheduled", "cancelled"]
         },
         "hasOperator": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "startedAt": {
           "type": "string",
@@ -57,7 +57,7 @@
           "format": "date-time"
         },
         "hasAgriProductType": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "quantity": {
           "type": "number",
@@ -91,3 +91,5 @@
   ],
   "required": ["id", "type", "hasAgriParcel", "plannedStartAt", "plannedEndAt"]
 }
+
+

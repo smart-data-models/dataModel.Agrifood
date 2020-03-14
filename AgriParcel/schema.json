@@ -6,13 +6,13 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/specs/AgriFood/agrifood-schema.json#/definitions/AgriFood-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
     },
     {
       "properties": {
@@ -29,27 +29,27 @@
           "value": "string"
         },
         "belongsTo": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "ownedBy": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "hasAgriParcelParent": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "hasAgriParcelChildren": {
           "type": "array",
           "items": [
             {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
           ]
         },
         "hasAgriCrop": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "hasAgriSoil": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "cropStatus": {
           "type": "string",
@@ -69,7 +69,7 @@
           "type": "array",
           "items": [
             {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
           ]
         }
@@ -78,3 +78,6 @@
   ],
   "required": ["id", "type", "location", "area", "hasAgriCrop"]
 }
+
+  
+  
