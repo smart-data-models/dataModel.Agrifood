@@ -1,0 +1,156 @@
+AgriParcelOperation:
+  required:
+    - id
+    - type
+    - hasAgriParcel
+    - plannedStartAt
+    - plannedEndAt
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of a generic operations
+    performed on a parcel of land. This entity is primarily associated with the
+    agricultural vertical and related IoT applications.
+  properties:
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    endedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    irrigationRecord:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    operationType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    plannedEndAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    plannedStartAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    quantity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    relatedSource:
+      x-ngsi:
+        type: Property
+      type: array
+      description: List of IDs the current entity may have in external applications
+      items:
+        - type: object
+          values:
+            application:
+              anyOf:
+                - type: string
+                  minLength: 1
+                  maxLength: 256
+                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+                - type: string
+                  format: uri
+            applicationEntityId:
+              type: string
+    reportedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    result:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    startedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    status:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    waterSource:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    workOrder:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    workRecord:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri

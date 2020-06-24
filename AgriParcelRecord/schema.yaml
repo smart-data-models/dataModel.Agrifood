@@ -1,0 +1,153 @@
+AgriParcelRecord:
+  required:
+    - id
+    - type
+    - hasAgriParcel
+    - location
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of the conditions recorded on
+    a parcel of land. This entity is primarily associated with the agricultural
+    vertical and related IoT applications.
+  properties:
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    atmosphericPressure:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    depth:
+      x-ngsi:
+        type: Property
+      type: number
+      description: >-
+        Metadata to indicate the associated depth where soil measurements are
+        taken
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    hasDevice:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - &ref_0
+          anyOf:
+            - type: string
+              minLength: 1
+              maxLength: 256
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+            - type: string
+              format: uri
+    leafRelativeHumidity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    leafTemperature:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    leafWetness:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    observedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items: *ref_0
+    relatedSource:
+      x-ngsi:
+        type: Property
+      type: array
+      description: List of IDs the current entity may have in external applications
+      items:
+        - type: object
+          values:
+            application:
+              anyOf:
+                - type: string
+                  minLength: 1
+                  maxLength: 256
+                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+                - type: string
+                  format: uri
+            applicationEntityId:
+              type: string
+    relativeHumidity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    soilMoistureEC:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    soilMoistureVwc:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    soilSalinity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    soilTemperature:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    solarRadiaton:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''

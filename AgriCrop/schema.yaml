@@ -1,0 +1,129 @@
+AgriCrop:
+  required:
+    - id
+    - type
+    - name
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of a generic crop. This entity
+    is primarily associated with the agricultural vertical and related IoT
+    applications.
+  properties:
+    agroVocConcept:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    harvestingInterval:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - type: object
+          values:
+            dateRange:
+              type: string
+              pattern: '^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$'
+            description:
+              type: string
+    hasAgriFertiliser:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - &ref_0
+          anyOf:
+            - type: string
+              minLength: 1
+              maxLength: 256
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+            - type: string
+              format: uri
+    hasAgriPest:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - *ref_0
+    hasAgriSoil:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - *ref_0
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items: *ref_0
+    plantingFrom:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - type: object
+          values:
+            dateRange:
+              type: string
+              pattern: '^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$'
+            description:
+              type: string
+    relatedSource:
+      x-ngsi:
+        type: Property
+      type: array
+      description: List of IDs the current entity may have in external applications
+      items:
+        - type: object
+          values:
+            application:
+              anyOf:
+                - type: string
+                  minLength: 1
+                  maxLength: 256
+                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+                - type: string
+                  format: uri
+            applicationEntityId:
+              type: string
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    wateringFrequency:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''

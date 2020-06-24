@@ -1,0 +1,121 @@
+AgriGreenhouse:
+  required:
+    - id
+    - type
+    - hasAgriParcelParent
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of the conditions recorded
+    within a generic greenhouse, a type of AgriParcel. This entity is primarily
+    associated with the agricultural vertical and related IoT applications.
+  properties:
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    co2:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    dailyLight:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    drainFlow:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    hasAgriParcelChildren:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - &ref_0
+          anyOf:
+            - type: string
+              minLength: 1
+              maxLength: 256
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+            - type: string
+              format: uri
+    hasDevice:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - *ref_0
+    hasWaterQualityObserved:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - *ref_0
+    leafTemperature:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items: *ref_0
+    relatedSource:
+      x-ngsi:
+        type: Property
+      type: array
+      description: List of IDs the current entity may have in external applications
+      items:
+        - type: object
+          values:
+            application:
+              anyOf:
+                - type: string
+                  minLength: 1
+                  maxLength: 256
+                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+                - type: string
+                  format: uri
+            applicationEntityId:
+              type: string
+    relativeHumidity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
