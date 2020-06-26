@@ -20,20 +20,9 @@ This entity contains a harmonised description of the conditions recorded within 
 | drainFlow | Property | The observed drain flow rate in litres per second | Optional |
 | hasDevice | Relationship | Reference to the IoT devices associated with this greenhouse i.e. sensors, controls. | Recommended |
 
-## NGSI-LD Context Definition
-The following NGSI-LD context definition applies to the **Agri Greenhouse** entity
 
-[Download context definition.](../examples/Agri-Greenhouse-context.jsonld)
-
-```JavaScript
-{
-    "@context": {}
-}
-```
 ## Example of Agri Greenhouse Entity
 The following is an example instance of the **Agri Greenhouse** entity
-
-[Download example entity definition.](../examples/Agri-Greenhouse.jsonld)
 
 ```JavaScript
 {
