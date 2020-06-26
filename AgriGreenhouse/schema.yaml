@@ -20,21 +20,21 @@ AgriGreenhouse:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The measured interior C02 concentration nominally in mg/L.'
       format: int32
     dailyLight:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Daily Accumulated light measured in kW per square metre'
       format: int32
     dataProvider:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
@@ -42,12 +42,13 @@ AgriGreenhouse:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: 'The observed drain flow rate in litres per second'
     hasAgriParcelChildren:
       x-ngsi:
-        type: Property
+        type: Relationship
+        model: 'https://schema.org/URL'
       type: array
-      description: ''
+      description: 'Related sub AgriParcel records to which this entity relates.'
       items:
         - &ref_0
           anyOf:
@@ -66,9 +67,9 @@ AgriGreenhouse:
         - *ref_0
     hasWaterQualityObserved:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: array
-      description: ''
+      description: 'Reference to one or more water quality observation records current for this entity.'
       items:
         - *ref_0
     leafTemperature:
@@ -76,7 +77,7 @@ AgriGreenhouse:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The average greenhouse air temperature nominally in degrees centigrade.'
       format: int32
     name:
       $ref: >-
@@ -110,7 +111,10 @@ AgriGreenhouse:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: |
+        The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).
+
+        0 ≤ relativeHumidity ≤ 1
     source:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
