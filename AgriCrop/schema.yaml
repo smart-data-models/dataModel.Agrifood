@@ -35,7 +35,16 @@ AgriCrop:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: |
+        A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals:
+
+        *interval, description*
+
+        Where interval is in the form of start date/end date
+
+        `--MM-DD/--MM-DD`
+
+        Meaning repeat each year from this start date to this end date.
       items:
         - type: object
           values:
@@ -46,9 +55,9 @@ AgriCrop:
               type: string
     hasAgriFertiliser:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: array
-      description: ''
+      description: 'Reference to the recommended types of fertiliser suitable for growing this crop.'
       items:
         - &ref_0
           anyOf:
@@ -60,16 +69,18 @@ AgriCrop:
               format: uri
     hasAgriPest:
       x-ngsi:
-        type: Property
+        type: Relationship
+        model: "https://schema.org/URL"
       type: array
-      description: ''
+      description: 'Reference to the pests known to attack this crop.'
       items:
         - *ref_0
     hasAgriSoil:
       x-ngsi:
-        type: Property
+        type: Relationship
+        model: "https://schema.org/URL"
       type: array
-      description: ''
+      description: 'Reference to the recommended types of soil suitable for growing this crop.'
       items:
         - *ref_0
     name:
@@ -86,7 +97,16 @@ AgriCrop:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: |
+        A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals:
+
+        *interval, description*
+        
+        Where interval is in the form of start date/end date
+
+        `--MM-DD/--MM-DD`
+
+        Meaning repeat each year from this start date to this end date.
       items:
         - type: object
           values:
@@ -121,4 +141,5 @@ AgriCrop:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: |
+        A description of the recommended watering schedule. A choice from an enumerated list. One of: *daily, weekly, biweekly, monthly, onDemand, other*
