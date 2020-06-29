@@ -1,0 +1,120 @@
+AgriGreenhouse:
+  required:
+    - id
+    - type
+    - hasAgriParcelParent
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of the conditions recorded
+    within a generic greenhouse, a type of AgriParcel. This entity is primarily
+    associated with the agricultural vertical and related IoT applications.
+  properties:
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    co2:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: 'The measured interior C02 concentration nominally in mg/L.'
+      format: int32
+    dailyLight:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: 'Daily Accumulated light measured in kW per square metre'
+      format: int32
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Specifies the URL to information about the provider of this information'
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    drainFlow:
+      x-ngsi:
+        type: Property
+      type: object
+      description: 'The observed drain flow rate in litres per second'
+    hasAgriParcelChildren:
+      x-ngsi:
+        type: Relationship
+        model: 'https://schema.org/URL'
+      type: array
+      description: 'Related sub AgriParcel records to which this entity relates.'
+      items:
+        - &ref_0
+          anyOf:
+            - type: string
+              minLength: 1
+              maxLength: 256
+              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+            - type: string
+              format: uri
+    hasDevice:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        - *ref_0
+    hasWaterQualityObserved:
+      x-ngsi:
+        type: Relationship
+      type: array
+      description: 'Reference to one or more water quality observation records current for this entity.'
+      items:
+        - *ref_0
+    leafTemperature:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: 'The average greenhouse air temperature nominally in degrees centigrade.'
+      format: int32
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Relationship
+        model: https://schema.org/URL  
+      type: array
+      description: ''
+      items: *ref_0
+    relatedSource:
+      x-ngsi:
+        type: Property
+      type: array
+      description: List of IDs the current entity may have in external applications
+      items:
+        - type: object
+          values:
+            application:
+              anyOf:
+                - type: string
+                  minLength: 1
+                  maxLength: 256
+                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+                - type: string
+                  format: uri
+            applicationEntityId:
+              type: string
+    relativeHumidity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: |
+        The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).
+
+        0 ≤ relativeHumidity ≤ 1
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
