@@ -1,0 +1,51 @@
+--- 
+  components: 
+    schemas: 
+      AgriPest: 
+        $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/model.yaml#/AgriPest"
+  info: 
+    description: >-
+      This entity contains a harmonised description of an agricultural pest. 
+      This entity is primarily associated with the agricultural vertical and related IoT applications
+    title: AgriPest
+    version: "1.0.0"
+  openapi: "3.0.0"
+  
+  # These paths are merely representative.
+  paths: 
+    /ngsi-ld/v1/entities: 
+      get: 
+        description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+        parameters: 
+          - 
+            in: query
+            name: type
+            required: true
+            schema: 
+              enum: 
+                - AgriPest
+              type: string
+        responses: 
+          ? "200"
+          : 
+            content: 
+              application/ld+json: 
+                examples: 
+                  keyvalues: 
+                    summary: "Key-Values Pairs"
+                    value: 
+                      - 
+                        $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/examples/example-normalized.json"
+                  normalized: 
+                    summary: "Normalized NGSI-LD"
+                    value: 
+                      - 
+                        $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/examples/example-normalized-ld.jsonld"
+            description: OK
+        tags: 
+          - ngsi-ld
+  tags: 
+    - 
+  
+      description: "NGSI-LD Linked-data Format"
+      name: ngsi-ld
