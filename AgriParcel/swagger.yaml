@@ -15,7 +15,7 @@
   paths: 
     /ngsi-ld/v1/entities: 
       get: 
-        description: ""
+        description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
         parameters: 
           - 
             in: query
