@@ -2,12 +2,11 @@
   components: 
     schemas: 
       AgriSoil: 
-        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriSoil/model.yaml#/AgriSoil"
+        $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/model.yaml#/AgriSoil"
   info: 
     description: >-
-      This entity contains a harmonised description of a generic app made for the
-      Agrifood domain. This entity is primarily associated with the agricultural
-      vertical and related IoT applications.
+      This entity contains a harmonised description of soil. 
+      This entity is primarily associated with the agricultural vertical and related IoT applications
     title: AgriSoil
     version: "1.0.0"
   openapi: "3.0.0"
@@ -36,12 +35,12 @@
                     summary: "Key-Values Pairs"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriSoil/examples/example-normalized.json"
+                        $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/examples/example-normalized.json"
                   normalized: 
                     summary: "Normalized NGSI-LD"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriSoil/examples/example-normalized-ld.jsonld"
+                        $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/examples/example-normalized-ld.jsonld"
             description: OK
         tags: 
           - ngsi-ld
