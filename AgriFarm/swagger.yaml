@@ -1,10 +1,27 @@
 --- 
+<<<<<<< HEAD
+  components: 
+    schemas: 
+      AgriFarm: 
+        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/model.yaml#/AgriFarm"
+  info: 
+    description: >-
+      This entity contains a harmonised description of a generic app made for the
+      Agrifood domain. This entity is primarily associated with the agricultural
+      vertical and related IoT applications.
+    title: AgriFarm
+    version: "1.0.0"
+  openapi: "3.0.0"
+=======
 components: 
   schemas: 
     AgriFarm: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/schema.yaml#/AgriFarm"
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/model.yaml#/AgriFarm"
 info: 
-  description: ""
+  description: >-
+    This entity contains a harmonised description of a generic app made for the
+    Agrifood domain. This entity is primarily associated with the agricultural
+    vertical and related IoT applications.
   title: AgriFarm
   version: "1.0.0"
 openapi: "3.0.0"
@@ -13,10 +30,7 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: >-
-         This entity contains a harmonised description of a generic crop. This entity
-         is primarily associated with the agricultural vertical and related IoT
-          applications.
+      description: ""
       parameters: 
         - 
           in: query
@@ -36,17 +50,54 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/example.json"
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/examples/example-normalized.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/example-normalized-ld.jsonld"
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
 tags: 
   - 
+>>>>>>> 1272af35434ef5964350f1d0467a9f311c7da4c8
   
-    description: "NGSI-LD Linked-data Format"
-    name: ngsi-ld
+  # These paths are merely representative.
+  paths: 
+    /ngsi-ld/v1/entities: 
+      get: 
+        description: ""
+        parameters: 
+          - 
+            in: query
+            name: type
+            required: true
+            schema: 
+              enum: 
+                - AgriFarm
+              type: string
+        responses: 
+          ? "200"
+          : 
+            content: 
+              application/ld+json: 
+                examples: 
+                  keyvalues: 
+                    summary: "Key-Values Pairs"
+                    value: 
+                      - 
+                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/examples/example-normalized.json"
+                  normalized: 
+                    summary: "Normalized NGSI-LD"
+                    value: 
+                      - 
+                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/examples/example-normalized-ld.jsonld"
+            description: OK
+        tags: 
+          - ngsi-ld
+  tags: 
+    - 
+  
+      description: "NGSI-LD Linked-data Format"
+      name: ngsi-ld
