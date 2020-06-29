@@ -5,7 +5,7 @@ AgriGreenhouse:
     - hasAgriParcelParent
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: >-
     This entity contains a harmonised description of the conditions recorded
@@ -14,7 +14,7 @@ AgriGreenhouse:
   properties:
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     co2:
       x-ngsi:
         type: Property
@@ -37,7 +37,7 @@ AgriGreenhouse:
       description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     drainFlow:
       x-ngsi:
         type: Property
@@ -81,7 +81,7 @@ AgriGreenhouse:
       format: int32
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -117,4 +117,4 @@ AgriGreenhouse:
         0 ≤ relativeHumidity ≤ 1
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

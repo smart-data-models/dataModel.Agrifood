@@ -1,19 +1,16 @@
-AgriProductType:
+AgriPest:
   required:
     - id
     - type
     - name
-    - root
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: >-
-    This entity contains a harmonised description of a generic agricultural
-    product type. This entity is primarily associated with the agricultural
-    vertical and related IoT applications. The AgriProductType includes a
-    hierarchical structure that allows product types to be grouped in a flexible
-    way.
+    This entity contains a harmonised description of an agricultural pest. This
+    entity is primarily associated with the agricultural vertical and related
+    IoT applications.
   properties:
     agroVocConcept:
       x-ngsi:
@@ -24,20 +21,7 @@ AgriProductType:
       format: uri
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
-    category:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
-        enum:
-          - fertiliser
-          - cropNutrition
-          - cropProtection
-          - cropVariety
-          - harvestCommodity
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
       x-ngsi:
         type: Property
@@ -46,8 +30,8 @@ AgriProductType:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    hasAgriProductTypeChildren:
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    hasAgriProductType:
       x-ngsi:
         type: Property
       type: array
@@ -63,7 +47,7 @@ AgriProductType:
               format: uri
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -89,11 +73,6 @@ AgriProductType:
                   format: uri
             applicationEntityId:
               type: string
-    root:
-      x-ngsi:
-        type: Property
-      type: boolean
-      description: ''
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
