@@ -1,19 +1,19 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
-  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriApp/schema.json",
-  "title": "FIWARE - Agri App",
+  "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriApp/schema.json",
+  "title": "Smart Data Models - Agri App",
   "description": "This entity contains a harmonised description of a generic app made for the Agrifood domain. This entity is primarily associated with the agricultural vertical and related IoT applications.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/specs/AgriFood/agrifood-schema.json#/definitions/AgriFood-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
     },
     {
       "properties": {
@@ -26,7 +26,7 @@
           "type": "string"
         },
         "hasProvider": {
-          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
           "description": "Provider (Person or Organization) of the application"
         },
         "endpoint": {
