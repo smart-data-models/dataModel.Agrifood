@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
-  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriPest/schema.json",
-  "title": "FIWARE - Agri Pest",
+  "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/schema.json",
+  "title": "Smart Data Models - Agri Pest",
   "description": "This entity contains a harmonised description of an agricultural pest. This entity is primarily associated with the agricultural vertical and related IoT applications.",
   "type": "object",
   "allOf": [

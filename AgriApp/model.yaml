@@ -1,3 +1,7 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.Agrifood
+
 AgriApp:
   required:
     - id
@@ -26,8 +30,8 @@ AgriApp:
       type: array
       description: ''
       items:
-        - type: string
-          enum:
+        type: string
+        enum:
             - TBD
     dataProvider:
       x-ngsi:
@@ -59,9 +63,17 @@ AgriApp:
       type: array
       description: List of IDs the current entity may have in external applications
       items:
-        - type: object
-          values:
-            application: *ref_0
+        type: object
+        properties:
+            application:
+              anyOf:
+                - type: string
+                  minLength: 1
+                  maxLength: 256
+                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+                - type: string
+                  format: uri
+
             applicationEntityId:
               type: string
     source:
