@@ -4,7 +4,7 @@
       AgriSoil: 
         $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/model.yaml#/AgriSoil"
   info: 
-    description: >-
+    description: |
       This entity contains a harmonised description of soil. 
       This entity is primarily associated with the agricultural vertical and related IoT applications
     title: AgriSoil

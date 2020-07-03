@@ -7,7 +7,7 @@ Animal:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of a generic soil. This entity
     is primarily associated with the agricultural vertical and related IoT
     applications.
@@ -26,11 +26,8 @@ Animal:
       type: string
       description: ''
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
@@ -52,12 +49,8 @@ Animal:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items: *ref_0
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     relatedSource:
       x-ngsi:
         type: Property
@@ -77,8 +70,5 @@ Animal:
             applicationEntityId:
               type: string
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

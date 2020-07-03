@@ -4,7 +4,7 @@
       AgriProductType: 
         $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriProductType/model.yaml#/AgriProductType"
   info: 
-    description: >-
+    description: |
       This entity contains a harmonised description of a generic agricultural product type. This entity 
       is primarily associated with the agricultural vertical and related IoT applications. 
       The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.

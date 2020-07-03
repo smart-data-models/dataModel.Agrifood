@@ -4,7 +4,7 @@
       AgriCrop: 
         $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/model.yaml#/AgriCrop"
   info: 
-    description: >-
+    description: |
            This entity contains a harmonised description of a generic crop. 
            This entity is primarily associated with the agricultural vertical and related IoT applications..
     title: AgriCrop

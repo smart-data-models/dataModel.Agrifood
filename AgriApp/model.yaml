@@ -10,7 +10,7 @@ AgriApp:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of a generic app made for the
     Agrifood domain. This entity is primarily associated with the agricultural
     vertical and related IoT applications.
@@ -34,11 +34,8 @@ AgriApp:
         enum:
             - TBD
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
