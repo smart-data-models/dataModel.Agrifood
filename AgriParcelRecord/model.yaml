@@ -90,12 +90,8 @@ AgriParcelRecord:
       description: ''
       format: date-time
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items: *ref_0
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     relatedSource:
       x-ngsi:
         type: Property
