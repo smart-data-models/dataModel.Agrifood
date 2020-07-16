@@ -3,22 +3,22 @@ contributors:
 -
  name: Alberto
  surname:  Abella
- mail: None
+ mail: alberto.abella@fiware.org
  organization: fiware
  project: 
  comments: 
 -
  name: Francisco de la
  surname:  Vega
- mail: None
+ mail: 
  organization: Universidad Politécnica de Madrid
  project: 
  comments: 
 -
  name: Jason
- surname:  Fox
- mail: None
- organization: @Fiware
+ surname: Fox
+ mail: 
+ organization: Fiware
  project: 
  comments: 
 -
@@ -38,7 +38,7 @@ contributors:
 -
  name: Otto
  surname:  Hylli
- mail: None
+ mail: 
  organization: Tampere University
  project: 
  comments: 
