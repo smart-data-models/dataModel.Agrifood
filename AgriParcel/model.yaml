@@ -28,7 +28,7 @@ AgriParcel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The area of the parcel nominally in square meters.'
     areaServed:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
@@ -37,13 +37,13 @@ AgriParcel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'A choice from an enumerated list describing the crop planting status One of: seeded, justBorn, growing, maturing, readyForHarvesting.'
     dataProvider:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -51,7 +51,7 @@ AgriParcel:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'An optional reference to lower level (child) AgriParcel records to which this entity relates.'
       items:
         - &ref_0
           anyOf:
@@ -65,7 +65,7 @@ AgriParcel:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: '	Reference to the IoT devices associated with this parcel i.e. sensors, controls.	'
       items:
         - *ref_0
     lastPlantedAt:
@@ -73,7 +73,7 @@ AgriParcel:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Indicates the date when the crop was last planted.'
       format: date-time
     location:
       $ref: >-
@@ -82,17 +82,13 @@ AgriParcel:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items: *ref_0
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     relatedSource:
       x-ngsi:
         type: Property
       type: array
-      description: List of IDs the current entity may have in external applications
+      description: 'List of IDs the current entity may have in external applications'
       items:
         - type: object
           values:
