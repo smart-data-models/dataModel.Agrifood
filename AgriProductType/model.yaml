@@ -47,7 +47,7 @@ AgriProductType:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -55,7 +55,7 @@ AgriProductType:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to child product types i.e. immediately below this entity in the hierarchy.'
       items:
         - &ref_0
           anyOf:
@@ -69,12 +69,8 @@ AgriProductType:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items: *ref_0
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     relatedSource:
       x-ngsi:
         type: Property
@@ -97,7 +93,7 @@ AgriProductType:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'A logical indicator that this product is the root of an AgriProductType hierarchy. Logical true indicates it is the root.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
