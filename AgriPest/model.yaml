@@ -31,7 +31,7 @@ AgriPest:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -39,7 +39,7 @@ AgriPest:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to the recommended types of product that can be used to treat this pest.'
       items:
         - &ref_0
           anyOf:
@@ -53,17 +53,13 @@ AgriPest:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items: *ref_0
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     relatedSource:
       x-ngsi:
         type: Property
       type: array
-      description: List of IDs the current entity may have in external applications
+      description: 'List of IDs the current entity may have in external applications'
       items:
         - type: object
           values:
