@@ -63,7 +63,7 @@ AgriGreenhouse:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.'
       items:
         - *ref_0
     hasWaterQualityObserved:

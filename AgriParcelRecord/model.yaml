@@ -30,7 +30,7 @@ AgriParcelRecord:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Atmospheric Pressure nominally in units of hecto Pascals.'
     dataProvider:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
@@ -48,7 +48,7 @@ AgriParcelRecord:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.'
       items:
         - &ref_0
           anyOf:
@@ -84,7 +84,7 @@ AgriParcelRecord:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Indicates the date/time the record was observed/ last observed.'
       format: date-time
     owner:
       $ref: >-
@@ -111,17 +111,17 @@ AgriParcelRecord:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Relative Humidity a number between 0 and 1 representing the range of 0% to 100%. 0 ≤ relativeHumidity ≤ 1'
     soilMoistureEC:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: '	Measured as Electrical Conductivity, EC nominally in units of Siemens per meter (S/m).'
     soilMoistureVwc:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Measured as Volumetric Water Content, VWC as a percentage. 0 ≤soilMoistureVwc ≤ 1	'
     soilSalinity:
       x-ngsi:
         type: Property
@@ -131,7 +131,7 @@ AgriParcelRecord:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The observed soil temperature nominally in degrees centigrade.'
     solarRadiaton:
       x-ngsi:
         type: Property

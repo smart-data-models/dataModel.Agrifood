@@ -52,7 +52,7 @@ AgriProductType:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to child product types i.e. immediately below this entity in the hierarchy.'
       items:
         - &ref_0
           anyOf:
@@ -90,7 +90,7 @@ AgriProductType:
       x-ngsi:
         type: Property
       type: boolean
-      description: ''
+      description: 'A logical indicator that this product is the root of an AgriProductType hierarchy. Logical true indicates it is the root.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

@@ -36,7 +36,7 @@ AgriPest:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to the recommended types of product that can be used to treat this pest.'
       items:
         - &ref_0
           anyOf:
@@ -56,7 +56,7 @@ AgriPest:
       x-ngsi:
         type: Property
       type: array
-      description: List of IDs the current entity may have in external applications
+      description: 'List of IDs the current entity may have in external applications'
       items:
         - type: object
           values:

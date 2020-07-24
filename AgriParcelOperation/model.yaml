@@ -32,7 +32,7 @@ AgriParcelOperation:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Timestamp when the operation actually finished.'
       format: date-time
     irrigationRecord:
       x-ngsi:
@@ -49,7 +49,7 @@ AgriParcelOperation:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'A choice from an enumerated list describing the operation performed on the parcel. One of: fertiliser, inspection, pesticide, water, other.'
     owner:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
@@ -58,20 +58,20 @@ AgriParcelOperation:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The planned end date/timestamp for the operation.Note that this is advisory and the actual time the operation finishes may be before or after the planned end.'
       format: date-time
     plannedStartAt:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: '	The planned start date/timestamp for the operation.Note that this is advisory and the actual time the operation starts may be before or after the planned start.'
       format: date-time
     quantity:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids.'
     relatedSource:
       x-ngsi:
         type: Property
@@ -95,14 +95,14 @@ AgriParcelOperation:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Timestamp when the event/ fault was reported.'
       format: date-time
     result:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'A description of the results of the operation. One of: ok, aborted, failed.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -111,14 +111,14 @@ AgriParcelOperation:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Timestamp when the operation actually started to be performed.'
       format: date-time
     status:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'A choice from an enumerated list describing the status. One of: planned, ongoing, finished, scheduled, cancelled.'
     watersource:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

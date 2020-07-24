@@ -36,7 +36,7 @@ AgriSoil:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'
       items:
         - &ref_0
           anyOf:
