@@ -1,0 +1,44 @@
+description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
+contributors:
+-
+ name: Alberto
+ surname:  Abella
+ mail: alberto.abella@fiware.org
+ organization: fiware
+ project: 
+ comments: 
+-
+ name: Francisco de la
+ surname:  Vega
+ mail: 
+ organization: Universidad Politécnica de Madrid
+ project: 
+ comments: 
+-
+ name: Jason
+ surname: Fox
+ mail: 
+ organization: Fiware
+ project: 
+ comments: 
+-
+ name: Jose M.
+ surname:  Cantera
+ mail: jmcanterafonseca4github@gmail.com
+ organization: CanteraFonseca.EU
+ project: 
+ comments: 
+-
+ name: Nikos
+ surname:  Kalatzis
+ mail: nikosk@cn.ntua.gr
+ organization: Neuropublic S.A. & NTUA
+ project: 
+ comments: 
+-
+ name: Otto
+ surname:  Hylli
+ mail: 
+ organization: Tampere University
+ project: 
+ comments: 

@@ -4,7 +4,7 @@
       AgriPest: 
         $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/model.yaml#/AgriPest"
   info: 
-    description: >-
+    description: |
       This entity contains a harmonised description of an agricultural pest. 
       This entity is primarily associated with the agricultural vertical and related IoT applications
     title: AgriPest

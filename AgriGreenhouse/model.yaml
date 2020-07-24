@@ -11,7 +11,7 @@ AgriGreenhouse:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of the conditions recorded
     within a generic greenhouse, a type of AgriParcel. This entity is primarily
     associated with the agricultural vertical and related IoT applications.
@@ -34,11 +34,8 @@ AgriGreenhouse:
       description: 'Daily Accumulated light measured in kW per square metre'
       format: int32
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Specifies the URL to information about the provider of this information'
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description

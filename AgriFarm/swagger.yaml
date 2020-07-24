@@ -4,7 +4,7 @@
       AgriFarm: 
         $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/model.yaml#/AgriFarm"
   info: 
-    description: >-
+    description: |
       This entity contains a harmonised description of a generic app made for the
       Agrifood domain. This entity is primarily associated with the agricultural
       vertical and related IoT applications.

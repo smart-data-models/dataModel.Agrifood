@@ -10,7 +10,7 @@ AgriFarm:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of a generic farm made up of
     buildings and parcels. This entity is primarily associated with the
     agricultural vertical and related IoT applications.
@@ -30,11 +30,8 @@ AgriFarm:
       type: object
       description: 'Contact information of the farm i.e email, telephone, etc'
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description

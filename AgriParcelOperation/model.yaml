@@ -13,7 +13,7 @@ AgriParcelOperation:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of a generic operations
     performed on a parcel of land. This entity is primarily associated with the
     agricultural vertical and related IoT applications.
@@ -22,11 +22,8 @@ AgriParcelOperation:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Specifies the URL to information about the provider of this information'
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description

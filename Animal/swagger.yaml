@@ -4,7 +4,7 @@
       Animal: 
         $ref: "https://smart-data-models.github.io/dataModel.Agrifood/Animal/model.yaml#/Animal"
   info: 
-    description: >-
+    description: |
       The next diagram describes the beef chain considered in the ShareBeef project.
       In this diagram different stakeholders of the meat chain are described like some of their interactions.
     title: Animal
