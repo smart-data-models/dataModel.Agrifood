@@ -119,7 +119,7 @@ AgriParcelOperation:
         model: 'https://schema.org/Text'
       type: string
       description: 'A choice from an enumerated list describing the status. One of: planned, ongoing, finished, scheduled, cancelled.'
-    watersource:
+    waterSource:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     workOrder:
