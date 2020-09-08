@@ -66,7 +66,7 @@ The list of incubated (on development) data models are:
 
 [Zone_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Zone_incubated)
 
-No public contributors currently.
+[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 6 current contributors of the data models of this Subject.
 
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Agrifood/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Agrifood/pulls) on existing data models
 
