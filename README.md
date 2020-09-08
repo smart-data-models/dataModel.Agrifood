@@ -1,6 +1,8 @@
 # dataModel.Agrifood
 
 
+### List of data models
+
 The following entity types are available:
 - [AgriApp](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriApp/README.md). This entity contains a harmonised description of a generic app made for the
 Agrifood domain. This entity is primarily associated with the agricultural
@@ -60,14 +62,20 @@ applications.
 
 
 
+
+### Incubated data models
 The list of incubated (on development) data models are:
 
-[Pen_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Pen_incubated)
+  - [Pen_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Pen_incubated)
 
-[Zone_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Zone_incubated)
+  - [Zone_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Zone_incubated)
 
+
+### Contributors
 [Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 6 current contributors of the data models of this Subject.
 
+
+### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Agrifood/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Agrifood/pulls) on existing data models
 
 
