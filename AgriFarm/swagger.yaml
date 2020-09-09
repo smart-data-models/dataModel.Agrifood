@@ -41,7 +41,7 @@
                     summary: "Normalized NGSI-LD"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/examples/example-normalized-ld.jsonld"
+                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFarm/examples/example-normalized.jsonld"
             description: OK
         tags: 
           - ngsi-ld
