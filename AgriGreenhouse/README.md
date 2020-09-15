@@ -10,7 +10,7 @@ associated with the agricultural vertical and related IoT applications.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/examples/example.json) (keyvalues) for NGSI v2
