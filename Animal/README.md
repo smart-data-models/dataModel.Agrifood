@@ -10,7 +10,7 @@ applications.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Agrifood/Animal/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Agrifood/Animal/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/Animal/examples/example.json) (keyvalues) for NGSI v2
