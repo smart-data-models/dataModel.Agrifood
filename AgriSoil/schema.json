@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/schema.json",
-  "title": "FIWARE - Agri Food",
+  "title": "Smart Data Models - AgriSoil",
   "description": "This entity contains a harmonised description of a generic soil. This entity is primarily associated with the agricultural vertical and related IoT applications.",
   "type": "object",
   "allOf": [
@@ -21,19 +21,24 @@
         },
         "agroVocConcept": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "description": "Property."
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Property."
         },
         "alternateName": {
-          "type": "string"
+          "type": "string",
+          "description": "Property."
         },
         "description": {
-          "type": "string"
+          "type": "string",
+          "description": "Property."
         },
         "hasAgriProductType": {
           "type": "array",
+          "description": "Property. Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.",
           "items": [
             {
               "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
