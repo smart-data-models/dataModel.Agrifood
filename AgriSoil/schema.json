@@ -17,7 +17,7 @@
         "type": {
           "type": "string",
           "enum": ["AgriSoil"],
-          "description": "NGSI Entity Type"
+          "description": "Property. NGSI Entity Type"
         },
         "agroVocConcept": {
           "type": "string",
