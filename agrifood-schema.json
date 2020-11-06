@@ -9,7 +9,7 @@
       "properties": {
         "relatedSource": {
           "type": "array",
-          "description": "List of IDs the current entity may have in external applications",
+          "description": "Property. List of IDs the current entity may have in external applications",
           "items": [
             {
               "type": "object",
