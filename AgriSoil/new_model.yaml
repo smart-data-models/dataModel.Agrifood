@@ -1,0 +1,79 @@
+AgriSoil:
+  description: 'This entity contains a harmonised description of a generic soil. This entity is primarily associated with the agricultural vertical and related IoT applications.'
+  properties:
+    agroVocConcept:
+      description: ""
+      format: uri
+      type: Property.
+    alternateName:
+      description: ""
+      type: Property.
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: ""
+      type: Property.
+    hasAgriProductType:
+      description: 'Relationship. Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'
+      items:
+        - anyOf: &agrisoil_-_properties_-_id_-_anyof
+            - description: 'Property. Identifier format of any NGSI entity'
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: 'Property. Identifier format of any NGSI entity'
+              format: uri
+              type: string
+      type: array
+    id:
+      anyOf: *agrisoil_-_properties_-_id_-_anyof
+    name:
+      description: ""
+      type: Property.
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *agrisoil_-_properties_-_id_-_anyof
+      type: Property
+    relatedSource:
+      description: 'List of IDs the current entity may have in external applications'
+      items:
+        - type: object
+          values:
+            application:
+              anyOf: *agrisoil_-_properties_-_id_-_anyof
+            applicationEntityId:
+              type: string
+      type: Property
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity Type'
+      enum:
+        - AgriSoil
+      type: Property
+  required:
+    - id
+    - type
+    - name
+  type: object
