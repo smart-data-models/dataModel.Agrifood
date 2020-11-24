@@ -123,7 +123,7 @@ AgriGreenhouse:
     - hasAgriParcelParent    
   type: object    
 ```  
-Aquí hay un ejemplo de un AgriGreenhouse en formato JSON como valores clave. Es compatible con NGSI V2 cuando se usa "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un AgriGreenhouse en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
