@@ -1,0 +1,92 @@
+AgriProductType:
+  description: 'This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.'
+  properties:
+    agroVocConcept:
+      format: uri
+      type: string
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    category:
+      items:
+        enum:
+          - fertiliser
+          - cropNutrition
+          - cropProtection
+          - cropVariety
+          - harvestCommodity
+        type: string
+      type: array
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    hasAgriProductTypeChildren:
+      items:
+        - anyOf: &agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof
+            - description: 'Property. Identifier format of any NGSI entity'
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: 'Property. Identifier format of any NGSI entity'
+              format: uri
+              type: string
+      type: array
+    hasAgriProductTypeParent:
+      anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof
+    id:
+      anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof
+    name:
+      description: 'The name of this item.'
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof
+      type: Property
+    relatedSource:
+      description: 'List of IDs the current entity may have in external applications'
+      items:
+        - type: object
+          values:
+            application:
+              anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof
+            applicationEntityId:
+              type: string
+      type: Property
+    root:
+      type: boolean
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity Type'
+      enum:
+        - AgriProductType
+      type: string
+  required:
+    - id
+    - type
+    - name
+    - root
+  type: object
