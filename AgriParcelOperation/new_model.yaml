@@ -1,0 +1,136 @@
+AgriParcelOperation:
+  description: 'This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'
+  properties:
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    endedAt:
+      format: date-time
+      type: string
+    hasAgriParcel:
+      anyOf: &agriparceloperation_-_properties_-_hasagriproducttype_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    hasAgriProductType:
+      anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof
+    hasOperator:
+      anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof
+    id:
+      anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof
+    irrigationRecord:
+      format: uri
+      type: string
+    name:
+      description: 'The name of this item.'
+      type: Property
+    operationType:
+      enum:
+        - fertiliser
+        - inspection
+        - pesticide
+        - water
+        - other
+      type: string
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof
+      type: Property
+    plannedEndAt:
+      format: date-time
+      type: string
+    plannedStartAt:
+      format: date-time
+      type: string
+    quantity:
+      minimum: 0
+      type: number
+    relatedSource:
+      description: 'List of IDs the current entity may have in external applications'
+      items:
+        - type: object
+          values:
+            application:
+              anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof
+            applicationEntityId:
+              type: string
+      type: Property
+    reportedAt:
+      format: date-time
+      type: string
+    result:
+      enum:
+        - ok
+        - aborted
+        - failed
+      type: string
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    startedAt:
+      format: date-time
+      type: string
+    status:
+      enum:
+        - planned
+        - ongoing
+        - finished
+        - scheduled
+        - cancelled
+      type: string
+    type:
+      description: 'NGSI Entity Type'
+      enum:
+        - AgriParcelOperation
+      type: string
+    waterSource:
+      enum:
+        - borehole
+        - rainfall
+        - river
+        - 'rainwater capture'
+        - 'water dam'
+        - 'commercial supply'
+      type: string
+    workOrder:
+      format: uri
+      type: string
+    workRecord:
+      format: uri
+      type: string
+  required:
+    - id
+    - type
+    - hasAgriParcel
+    - plannedStartAt
+    - plannedEndAt
+  type: object
