@@ -1,0 +1,114 @@
+AgriGreenhouse:
+  description: 'This entity contains a harmonised description of the conditions recorded within a generic greenhouse, a type of AgriParcel. This entity is primarily associated with the agricultural vertical and related IoT applications.'
+  properties:
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    belongsTo:
+      anyOf: &anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    co2:
+      type: integer
+    dailyLight:
+      type: integer
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    drainFlow:
+      type: object
+      values:
+        maxValue:
+          minimum: 0
+          type: number
+        minValue:
+          minimum: 0
+          type: number
+        unitText:
+          type: string
+        value:
+          minimum: 0
+          type: number
+    hasAgriParcelChildren:
+      items:
+        - anyOf: *anyof
+      type: array
+    hasAgriParcelParent:
+      anyOf: *anyof
+    hasDevice:
+      items:
+        - anyOf: *anyof
+      type: array
+    hasWaterQualityObserved:
+      items:
+        - anyOf: *anyof
+      type: array
+    hasWeatherObserved:
+      anyOf: *anyof
+    id:
+      anyOf: *anyof
+    leafTemperature:
+      type: integer
+    name:
+      description: 'The name of this item.'
+      type: Property
+    ownedBy:
+      anyOf: *anyof
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *anyof
+      type: Property
+    relatedSource:
+      description: 'List of IDs the current entity may have in external applications'
+      items:
+        - type: object
+          values:
+            application:
+              anyOf: *anyof
+            applicationEntityId:
+              type: string
+      type: Property
+    relativeHumidity:
+      maximum: 1.0
+      minimum: 0.0
+      type: number
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity Type'
+      enum:
+        - AgriGreenhouse
+      type: string
+  required:
+    - id
+    - type
+    - hasAgriParcelParent
+  type: object
