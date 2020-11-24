@@ -1,0 +1,309 @@
+Animal:
+  description: 'An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          type: string
+        addressLocality:
+          type: string
+        addressRegion:
+          type: string
+        areaServed:
+          type: string
+        postOfficeBoxNumber:
+          type: string
+        postalCode:
+          type: string
+        streetAddress:
+          type: string
+      type: Property
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided.'
+      type: Property
+    birthdate:
+      description: 'Animal’s birthdate'
+      format: date-time
+      type: string
+    breed:
+      description: 'Breed of the animal'
+      type: string
+    calvedBy:
+      anyOf: &animal_-_properties_-_fedwith_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    fedWith:
+      anyOf: *animal_-_properties_-_fedwith_-_anyof
+    healthCondition:
+      description: 'Phenological condition of the animal'
+      enum:
+        - healthy
+        - sick
+        - inTreatment
+      type: string
+    id:
+      anyOf: *animal_-_properties_-_fedwith_-_anyof
+    legalId:
+      description: 'Legal ID of the animal'
+      type: string
+    locatedAt:
+      anyOf: *animal_-_properties_-_fedwith_-_anyof
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    name:
+      description: 'The name of this item.'
+      type: Property
+    ownedBy:
+      anyOf: *animal_-_properties_-_fedwith_-_anyof
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *animal_-_properties_-_fedwith_-_anyof
+      type: Property
+    phenologicalCondition:
+      description: 'Phenological condition of the animal'
+      enum:
+        - lactatingBaby
+        - grazingBaby
+        - maleAdult
+        - femaleAdult
+        - maleYoung
+        - femaleYoung
+      type: string
+    relatedSource:
+      description: 'List of IDs the current entity may have in external applications'
+      items:
+        - type: object
+          values:
+            application:
+              anyOf: *animal_-_properties_-_fedwith_-_anyof
+            applicationEntityId:
+              type: string
+      type: Property
+    reproductiveCondition:
+      description: 'Reproductive condition of the animal'
+      enum:
+        - noStatus
+        - inactive
+        - inCalf
+        - inHeat
+        - active
+      type: string
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    sex:
+      description: 'Sex of the animal'
+      enum:
+        - male
+        - female
+      type: string
+    siredBy:
+      anyOf: *animal_-_properties_-_fedwith_-_anyof
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    species:
+      description: 'Species to which the animal belongs'
+      enum:
+        - cow
+        - goat
+        - horse
+        - pig
+        - sheep
+      type: string
+    type:
+      description: 'NGSI Entity Type'
+      enum:
+        - Animal
+      type: string
+    weight:
+      type: number
+    welfareCondition:
+      description: 'Indicator of the animal welfare'
+      enum:
+        - issue
+        - adequate
+      type: string
+  required:
+    - id
+    - type
+    - species
+    - legalId
+    - sex
+  type: object
