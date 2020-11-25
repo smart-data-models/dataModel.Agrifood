@@ -5,9 +5,10 @@ Entité : AgriParcelOperation
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `endedAt`:   `hasAgriParcel`:   `hasAgriProductType`:   `hasOperator`:   `id`:   `irrigationRecord`:   `name`: Le nom de cet article.  `operationType`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `plannedEndAt`:   `plannedStartAt`:   `quantity`:   `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  `reportedAt`:   `result`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `startedAt`:   `status`:   `type`: Type d'entité NGSI  `waterSource`:   `workOrder`:   `workRecord`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `endedAt`:   - `hasAgriParcel`:   - `hasAgriProductType`:   - `hasOperator`:   - `id`:   - `irrigationRecord`:   - `name`: Le nom de cet article.  - `operationType`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `plannedEndAt`:   - `plannedStartAt`:   - `quantity`:   - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `reportedAt`:   - `result`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `startedAt`:   - `status`:   - `type`: Type d'entité NGSI  - `waterSource`:   - `workOrder`:   - `workRecord`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 AgriParcelOperation:    
   description: 'This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
   properties:    
@@ -145,6 +146,9 @@ AgriParcelOperation:
     - plannedEndAt    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### AgriParcelOperation NGSI V2 - Exemple de valeurs clés  
 Voici un exemple d'AgriParcelOperation en format JSON comme valeurs clés. Ce format est compatible avec la version 2 de l'INSG lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -181,6 +185,7 @@ AgriParcelOperation:
   "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1"  
 }  
 ```  
+#### AgriParcelOperation NGSI V2 normalisé Exemple  
 Voici un exemple d'AgriParcelOpération au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -272,6 +277,7 @@ AgriParcelOperation:
   }  
 }  
 ```  
+#### AgriParcelOperation NGSI-LD valeurs clés Exemple  
 Voici un exemple d'AgriParcelOperation en format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -302,6 +308,7 @@ AgriParcelOperation:
  "workOrder": "https://example.com/agriparcelrecords/workorder1",  
  "workRecord": "https://example.com/agriparcelrecords/workrecord1"}  
 ```  
+#### AgriParcelOperation NGSI-LD normalisé Exemple  
 Voici un exemple d'AgriParcelOperation au format JSON-LD tel que normalisé. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
