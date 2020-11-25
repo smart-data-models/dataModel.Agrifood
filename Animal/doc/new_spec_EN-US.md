@@ -7,7 +7,8 @@ Entity: Animal
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `birthdate`: Animal’s birthdate  - `breed`: Breed of the animal  - `calvedBy`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `fedWith`:   - `healthCondition`: Phenological condition of the animal  - `id`:   - `legalId`: Legal ID of the animal  - `locatedAt`:   - `location`:   - `name`: The name of this item.  - `ownedBy`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `phenologicalCondition`: Phenological condition of the animal  - `relatedSource`: List of IDs the current entity may have in external applications  - `reproductiveCondition`: Reproductive condition of the animal  - `seeAlso`:   - `sex`: Sex of the animal  - `siredBy`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `species`: Species to which the animal belongs  - `type`: NGSI Entity Type  - `weight`:   - `welfareCondition`: Indicator of the animal welfare  ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Animal:    
   description: 'An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.'    
   properties:    
@@ -318,6 +319,7 @@ Animal:
     - sex    
   type: object    
 ```  
+</details>    
 #### Animal NGSI V2 key-values Example    
 Here is an example of a Animal in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
