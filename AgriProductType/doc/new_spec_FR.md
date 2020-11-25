@@ -5,9 +5,10 @@ Entité : AgriProductType
 
 ## Liste des biens  
 
-`agroVocConcept`:   `alternateName`: Un autre nom pour cet article  `category`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `hasAgriProductTypeChildren`:   `hasAgriProductTypeParent`:   `id`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  `root`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: Type d'entité NGSI  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `agroVocConcept`:   - `alternateName`: Un autre nom pour cet article  - `category`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasAgriProductTypeChildren`:   - `hasAgriProductTypeParent`:   - `id`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `root`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 AgriProductType:    
   description: 'This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.'    
   properties:    
@@ -101,6 +102,9 @@ AgriProductType:
     - root    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### AgriProductType NGSI V2 valeurs clés Exemple  
 Voici un exemple d'un AgriProductType au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -127,6 +131,7 @@ AgriProductType:
   ]  
 }  
 ```  
+#### AgriProductType NGSI V2 normalisé Exemple  
 Voici un exemple d'un AgriProductType au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -178,6 +183,7 @@ AgriProductType:
   }  
 }  
 ```  
+#### AgriProductType NGSI-LD valeurs clés Exemple  
 Voici un exemple d'un AgriProductType au format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -198,6 +204,7 @@ AgriProductType:
  "root": True,  
  "type": "AgriProductType"}  
 ```  
+#### AgriProductType NGSI-LD normalisé Exemple  
 Voici un exemple d'un AgriProductType au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
