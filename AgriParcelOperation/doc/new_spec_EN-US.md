@@ -5,8 +5,10 @@ Entity: AgriParcelOperation
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endedAt`:   - `hasAgriParcel`:   - `hasAgriProductType`:   - `hasOperator`:   - `id`:   - `irrigationRecord`:   - `name`: The name of this item.  - `operationType`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `plannedEndAt`:   - `plannedStartAt`:   - `quantity`:   - `relatedSource`: List of IDs the current entity may have in external applications  - `reportedAt`:   - `result`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startedAt`:   - `status`:   - `type`: NGSI Entity Type  - `waterSource`:   - `workOrder`:   - `workRecord`:   ## Data Model description of properties  
-Sorted alphabetically  
+- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endedAt`:   - `hasAgriParcel`:   - `hasAgriProductType`:   - `hasOperator`:   - `id`:   - `irrigationRecord`:   - `name`: The name of this item.  - `operationType`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `plannedEndAt`:   - `plannedStartAt`:   - `quantity`:   - `relatedSource`: List of IDs the current entity may have in external applications  - `reportedAt`:   - `result`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startedAt`:   - `status`:   - `type`: NGSI Entity Type  - `waterSource`:   - `workOrder`:   - `workRecord`:     
+Required properties  
+- `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriParcelOperation:    
@@ -147,6 +149,7 @@ AgriParcelOperation:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### AgriParcelOperation NGSI V2 key-values Example    
 Here is an example of a AgriParcelOperation in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -185,7 +188,7 @@ AgriParcelOperation:
 }  
 ```  
 #### AgriParcelOperation NGSI V2 normalized Example    
-Here is an example of a AgriParcelOperation in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a AgriParcelOperation in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -277,7 +280,7 @@ AgriParcelOperation:
 }  
 ```  
 #### AgriParcelOperation NGSI-LD key-values Example    
-Here is an example of a AgriParcelOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a AgriParcelOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
