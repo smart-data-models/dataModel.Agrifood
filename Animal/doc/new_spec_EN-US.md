@@ -5,8 +5,10 @@ Entity: Animal
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `birthdate`: Animal’s birthdate  - `breed`: Breed of the animal  - `calvedBy`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `fedWith`:   - `healthCondition`: Phenological condition of the animal  - `id`:   - `legalId`: Legal ID of the animal  - `locatedAt`:   - `location`:   - `name`: The name of this item.  - `ownedBy`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `phenologicalCondition`: Phenological condition of the animal  - `relatedSource`: List of IDs the current entity may have in external applications  - `reproductiveCondition`: Reproductive condition of the animal  - `seeAlso`:   - `sex`: Sex of the animal  - `siredBy`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `species`: Species to which the animal belongs  - `type`: NGSI Entity Type  - `weight`:   - `welfareCondition`: Indicator of the animal welfare  ## Data Model description of properties  
-Sorted alphabetically  
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `birthdate`: Animal’s birthdate  - `breed`: Breed of the animal  - `calvedBy`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `fedWith`:   - `healthCondition`: Phenological condition of the animal  - `id`:   - `legalId`: Legal ID of the animal  - `locatedAt`:   - `location`:   - `name`: The name of this item.  - `ownedBy`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `phenologicalCondition`: Phenological condition of the animal  - `relatedSource`: List of IDs the current entity may have in external applications  - `reproductiveCondition`: Reproductive condition of the animal  - `seeAlso`:   - `sex`: Sex of the animal  - `siredBy`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `species`: Species to which the animal belongs  - `type`: NGSI Entity Type  - `weight`:   - `welfareCondition`: Indicator of the animal welfare    
+Required properties  
+- `id`  - `legalId`  - `sex`  - `species`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Animal:    
@@ -320,6 +322,7 @@ Animal:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Animal NGSI V2 key-values Example    
 Here is an example of a Animal in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -355,7 +358,7 @@ Animal:
 }  
 ```  
 #### Animal NGSI V2 normalized Example    
-Here is an example of a Animal in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Animal in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -433,7 +436,7 @@ Animal:
 }  
 ```  
 #### Animal NGSI-LD key-values Example    
-Here is an example of a Animal in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Animal in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
