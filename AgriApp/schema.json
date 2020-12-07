@@ -19,31 +19,51 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["AgriApp"],
-          "description": "NGSI Entity Type"
+          "enum": [
+            "AgriApp"
+          ],
+          "description": "Property. NGSI Entity Type. it has to be AgriApp"
         },
         "version": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. The version of the App"
         },
         "hasProvider": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Provider (Person or Organization) of the application"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Provider (Person or Organization) of the application"
         },
         "endpoint": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "description": "Property. Model:'http://schema.org/URL'. The digital connection point for the App"
         },
         "category": {
           "type": "array",
+          "description": "Property. List of categories of the app",
           "items": [
             {
-              "type": "string",
-              "enum": ["TBD"]
+              "type": "string"
             }
           ]
         }
       }
     }
   ],
-  "required": ["id", "type"]
+  "required": [
+    "id",
+    "type"
+  ]
 }
