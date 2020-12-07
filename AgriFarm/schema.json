@@ -19,29 +19,42 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["AgriFarm"],
-          "description": "NGSI Entity Type"
+          "enum": [
+            "AgriFarm"
+          ],
+          "description": "Property. NGSI Entity Type. It has to be AgriFarm"
         },
         "landLocation": {
-          "$ref": "http://geojson.org/schema/Geometry.json#",
-          "description": "Geometry defining the boundaries of the farm land"
+          "$ref": "http://geojson.org/schema/Geometry.json#"
         },
         "contactPoint": {
-          "type": "object",
-          "description": "Contact information of the farm i.e email, telephone, etc"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/contactPoint"
         },
         "ownedBy": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Owner (Person or Organization) of the farm"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Owner (Person or Organization) of the farm"
         },
         "hasBuilding": {
           "type": "array",
+          "description": "Relationship. List of buildings belonging to the farm",
           "items": [
             {
               "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
-          ],
-          "description": "List of buildings belonging to the farm"
+          ]
         },
         "hasAgriParcel": {
           "type": "array",
@@ -50,12 +63,15 @@
               "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
             }
           ],
-          "description": "List of agri parcels belonging to the farm"
+          "description": "Relationship. List of agri parcels belonging to the farm"
         }
       }
     }
   ],
-  "required": ["id", "type"]
+  "required": [
+    "id",
+    "type"
+  ]
 }
 
   
