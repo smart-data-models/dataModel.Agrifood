@@ -17,24 +17,12 @@
         "type": {
           "type": "string",
           "enum": ["AgriSoil"],
-          "description": "Property. NGSI Entity Type"
+          "description": "Property. NGSI Entity Type: It has to be AgriSoil"
         },
         "agroVocConcept": {
           "type": "string",
           "format": "uri",
-          "description": "Property."
-        },
-        "name": {
-          "type": "string",
-          "description": "Property."
-        },
-        "alternateName": {
-          "type": "string",
-          "description": "Property."
-        },
-        "description": {
-          "type": "string",
-          "description": "Property."
+          "description": "Relationship. Model:'http://schema.org/URL'. Reference to the agrovoc term associated with this item"
         },
         "hasAgriProductType": {
           "type": "array",
