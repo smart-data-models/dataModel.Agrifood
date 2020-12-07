@@ -16,39 +16,80 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["AgriCrop"],
-          "description": "NGSI Entity Type"
+          "enum": [
+            "AgriCrop"
+          ],
+          "description": "Property. NGSI Entity Type. it has to be AgriCrop"
         },
         "agroVocConcept": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "description": "Property. Model:'http://schema.org/URL'. The link with the defined concept into the AgroVoc vocabulary"
         },
         "hasAgriSoil": {
           "type": "array",
-          "items": [
-            {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            }
-          ]
+          "description": "Relationship. Model:'http://schema.org/URL'. Reference to the recommended types of soil suitable for growing this crop.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         },
         "hasAgriFertiliser": {
           "type": "array",
+          "description": "Relationship. Model:'http://schema.org/URL'. Reference to the recommended types of fertiliser suitable for growing this crop.",
           "items": [
             {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256,
+                  "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                  "description": "Property. Identifier format of any NGSI entity"
+                },
+                {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Property. Identifier format of any NGSI entity"
+                }
+              ]
             }
           ]
         },
         "hasAgriPest": {
           "type": "array",
-          "items": [
-            {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            }
-          ]
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         },
         "harvestingInterval": {
           "type": "array",
+          "description": "Property. Model:'http://schema.org/URL'. A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.",
           "items": [
             {
               "type": "object",
@@ -68,6 +109,7 @@
         },
         "plantingFrom": {
           "type": "array",
+          "description": "Property. Model:'http://schema.org/URL'. A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.",
           "items": [
             {
               "type": "object",
@@ -87,6 +129,7 @@
         },
         "wateringFrequency": {
           "type": "string",
+          "description": "Property. Model:'http://schema.org/URL'. Units:''. A description of the recommended watering schedule. A choice from an enumerated list. One of: **daily, weekly, biweekly, monthly, onDemand, other**. Enum:'daily, weekly, biweekly, monthly, onDemand,    other'",
           "enum": [
             "daily",
             "weekly",
@@ -99,5 +142,9 @@
       }
     }
   ],
-  "required": ["id", "type", "name"]
+  "required": [
+    "id",
+    "type",
+    "name"
+  ]
 }
