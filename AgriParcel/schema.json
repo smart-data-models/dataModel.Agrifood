@@ -20,26 +20,57 @@
         "type": {
           "type": "string",
           "enum": ["AgriParcel"],
-          "description": "NGSI Entity Type"
+          "description": "Property. NGSI Entity Type. It has to be AgriParcel"
         },
         "area": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'http://schema.org/Number'. Units:'m2'. The area of the parcel nominally in square meters."
         },
         "category": {
-          "value": "string"
+          "value": "string",
+          "description": "Property. Model:'http://schema.org/Text'. The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**"
         },
         "belongsTo": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+           "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Entity the item belongs to"
         },
         "ownedBy": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+           "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Owner (Person or Organization) of the item"
         },
         "hasAgriParcelParent": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "hasAgriParcelChildren": {
           "type": "array",
+          "description": "Relationship. Related sub AgriParcel records to which this entity relates",
           "items": [
             {
               "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
@@ -47,13 +78,42 @@
           ]
         },
         "hasAgriCrop": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+         "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to the crop associated with this parcel"
         },
         "hasAgriSoil": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to the soil associated with this parcel of land"
         },
         "cropStatus": {
           "type": "string",
+          "description": "Property. Enum:'seeded, justBorn, growing, maturing, readyForHarvesting'. A choice from an enumerated list describing the crop planting status",
           "enum": [
             "seeded",
             "justBorn",
@@ -64,10 +124,12 @@
         },
         "lastPlantedAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Indicates the date when the crop was last planted"
         },
         "hasDevices": {
           "type": "array",
+          "description": "Property. Reference to the IoT devices associated with this parcel i.e. sensors, controls.",
           "items": [
             {
               "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
