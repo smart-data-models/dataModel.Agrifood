@@ -19,50 +19,116 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["Animal"],
-          "description": "NGSI Entity Type"
+          "enum": [
+            "Animal"
+          ],
+          "description": "Property. NGSI Entity Type: It has to be Animal"
         },
         "species": {
           "type": "string",
-          "enum": ["cow", "goat", "horse", "pig", "sheep"],
-          "description": "Species to which the animal belongs"
+          "enum": [
+            "cow",
+            "goat",
+            "horse",
+            "pig",
+            "sheep",
+            "dairy cattle",
+            "beef cattle"
+          ],
+          "description": "Property. Species to which the animal belongs. This enum can be increased. Enum:'cow, goat, horse, pig, sheep, dairy cattle, beef cattle'· Model:'https://schema.org/Text'"
         },
         "legalId": {
           "type": "string",
-          "description": "Legal ID of the animal"
+          "description": "Property. Legal ID of the animal"
         },
         "birthdate": {
           "type": "string",
           "format": "date-time",
-          "description": "Animal’s birthdate"
+          "description": "Property. Animal's birthdate. Model:'https://schema.org/DateTime'"
         },
         "sex": {
           "type": "string",
-          "enum": ["male", "female"],
-          "description": "Sex of the animal"
+          "enum": [
+            "male",
+            "female"
+          ],
+          "description": "Property. Sex of the animal. Enum:'male, female'"
         },
         "breed": {
           "type": "string",
-          "description": "Breed of the animal"
+          "description": "Property. Breed of the animal"
         },
         "calvedBy": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Mother of the animal"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Mother of the animal"
         },
         "siredBy": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Father of the animal"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Father of the animal"
         },
         "weight": {
-          "type": "number"
+          "type": "number",
+          "description": "Relationship. Model:'http://schema.org/Number'. The weight of the animal as a number. Units:'kg'"
         },
         "ownedBy": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "The owner of the animal"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The owner of the animal"
         },
         "locatedAt": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "AgridataParcel relationship"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Id of the AgriParcel relationship"
         },
         "phenologicalCondition": {
           "type": "string",
@@ -74,29 +140,61 @@
             "maleYoung",
             "femaleYoung"
           ],
-          "description": "Phenological condition of the animal"
+          "description": "Property. Phenological condition of the animal. Enum:'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'."
         },
         "reproductiveCondition": {
           "type": "string",
-          "enum": ["noStatus", "inactive", "inCalf", "inHeat", "active"],
-          "description": "Reproductive condition of the animal"
+          "enum": [
+            "noStatus",
+            "inactive",
+            "inCalf",
+            "inHeat",
+            "active"
+          ],
+          "description": "Property. Reproductive condition of the animal. Enum:'noStatus, inactive, inCalf, inHeat, active'"
         },
         "healthCondition": {
           "type": "string",
-          "enum": ["healthy", "sick", "inTreatment"],
-          "description": "Phenological condition of the animal"
+          "enum": [
+            "healthy",
+            "sick",
+            "inTreatment"
+          ],
+          "description": "Property. Phenological condition of the animal. Enum:' healthy, sick, inTreatment'"
         },
         "fedWith": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Food used for the animal"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Food used for the animal"
         },
         "welfareCondition": {
           "type": "string",
-          "enum": ["issue", "adequate"],
-          "description": "Indicator of the animal welfare"
+          "enum": [
+            "issue",
+            "adequate"
+          ],
+          "description": "Property. Indicator of the animal welfare. Enum:'issue, adequate'"
         }
       }
     }
   ],
-  "required": ["id", "type", "species", "legalId", "sex"]
+  "required": [
+    "id",
+    "type",
+    "species",
+    "legalId",
+    "sex"
+  ]
 }

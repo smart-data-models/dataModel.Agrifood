@@ -1,5 +1,5 @@
 notesHeader:
-
+  The proposed animal data model has been made from a more general point of view, trying to adjust it to the information coming from the devices and sensors used in the UC. The next diagram describes the beef chain. In this diagram different stakeholders of the meat chain are described like some of their interactions. ![ ](../resources/diagram1.jpg). During the use of this data model it will be necessary to define several entities to handle the information generated in the proposed solution. Within all these entities, the animal entity that is the center of the solution stands out in the first place
 notesMiddle:
 
 notesFooter:
