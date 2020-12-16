@@ -70,6 +70,7 @@
         },
         "hasAgriPest": {
           "type": "array",
+          "description": "Relationship. Reference to the pests known to attack this crop. Model:'https://schema.org/URL'",
           "items": {
             "anyOf": [
               {
