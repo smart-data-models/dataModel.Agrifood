@@ -1,19 +1,27 @@
 Entidad: AgriPest  
 =================  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
-Descripción global: **Esta entidad contiene una descripción armonizada de una plaga agrícola. Esta entidad se asocia principalmente con las aplicaciones agrícolas verticales y las aplicaciones conexas de IO**.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriPest/LICENSE.md)  
+Descripción global: **Esta entidad contiene una descripción armonizada de una plaga agrícola. **  
 
 ## Lista de propiedades  
 
-`agroVocConcept`:   `alternateName`: Un nombre alternativo para este artículo  `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `hasAgriProductType`:   `id`:   `name`: El nombre de este artículo.  `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  `seeAlso`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `type`: Tipo de entidad NGSI  ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `agroVocConcept`: Referencia al término agrovocal asociado a este tema  - `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAgriProductType`: Referencia a los tipos de productos recomendados que pueden utilizarse para tratar esta plaga.  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI: Tiene que ser AgriPest    
+Propiedades requeridas  
+- `id`  - `name`  - `type`    
+Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones conexas de IO.  
+## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 AgriPest:    
-  description: 'This entity contains a harmonised description of an agricultural pest. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
+  description: 'This entity contains a harmonised description of an agricultural pest. '    
   properties:    
     agroVocConcept:    
+      description: 'Reference to the agrovoc term associated with this item'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -32,6 +40,7 @@ AgriPest:
       description: 'A description of this item'    
       type: Property    
     hasAgriProductType:    
+      description: 'Reference to the recommended types of product that can be used to treat this pest.'    
       items:    
         - anyOf: &agripest_-_properties_-_id_-_anyof    
             - description: 'Property. Identifier format of any NGSI entity'    
@@ -42,9 +51,14 @@ AgriPest:
             - description: 'Property. Identifier format of any NGSI entity'    
               format: uri    
               type: string    
-      type: array    
+          description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     id:    
       anyOf: *agripest_-_properties_-_id_-_anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -52,6 +66,7 @@ AgriPest:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *agripest_-_properties_-_id_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
@@ -60,10 +75,12 @@ AgriPest:
           values:    
             application:    
               anyOf: *agripest_-_properties_-_id_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -72,20 +89,24 @@ AgriPest:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type: It has to be AgriPest'    
       enum:    
         - AgriPest    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
     - name    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### Ejemplo de valores clave de AgriPest NGSI V2  
 Aquí hay un ejemplo de un AgriPest en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -114,7 +135,8 @@ AgriPest:
   ]  
 }  
 ```  
-Aquí hay un ejemplo de un AgriPest en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+#### AgriPest NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de un AgriPest en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
@@ -164,7 +186,8 @@ AgriPest:
   }  
 }  
 ```  
-Aquí hay un ejemplo de un AgriPest en formato JSON-LD como valores clave. Este es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriPest NGSI-LD key-values Example  
+Aquí hay un ejemplo de un AgriPest en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
@@ -184,6 +207,7 @@ AgriPest:
              "https://datamodel.org/example/pest"],  
  "type": "AgriPest"}  
 ```  
+#### AgriPest NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un AgriPest en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
