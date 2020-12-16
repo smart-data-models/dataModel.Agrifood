@@ -1,11 +1,13 @@
 Entité : AgriFarm  
 =================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
-Description globale : **Cette entité contient une description harmonisée d'une exploitation générique composée de bâtiments et de parcelles. Cette entité est principalement associée aux applications agricoles verticales et aux applications IdO connexes.**  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriFarm/LICENSE.md)  
+Description globale : **Cette entité contient une description harmonisée d'une exploitation générique composée de bâtiments et de parcelles. Cette entité est principalement associée aux applications verticales agricoles et aux applications IdO connexes.**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `contactPoint`: Coordonnées de l'exploitation (courriel, téléphone, etc.)  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasAgriParcel`: Liste des parcelles agricoles appartenant à l'exploitation  - `hasBuilding`: Liste des bâtiments appartenant à l'exploitation  - `id`:   - `landLocation`:   - `location`:   - `name`: Le nom de cet article.  - `ownedBy`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI  ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `contactPoint`: Les détails pour contacter l'article.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasAgriParcel`: Liste des parcelles agricoles appartenant à l'exploitation  - `hasBuilding`: Liste des bâtiments appartenant à l'exploitation  - `id`: Identifiant unique de l'entité  - `landLocation`:   - `location`:   - `name`: Le nom de cet article.  - `ownedBy`: Propriétaire (personne ou organisation) de l'exploitation  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriFarm    
+Propriétés requises  
+- `id`  - `type`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -16,29 +18,51 @@ AgriFarm:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     contactPoint:    
-      description: 'Contact information of the farm i.e email, telephone, etc'    
-      type: object    
+      description: 'The details to contact with the item.'    
+      properties:    
+        contactType:    
+          type: string    
+        email:    
+          description: 'Property. Email address of owner.'    
+          format: idn-email    
+          type: string    
+        name:    
+          type: string    
+        telephone:    
+          type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/ContactPoint    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -65,14 +89,18 @@ AgriFarm:
             - description: 'Property. Identifier format of any NGSI entity'    
               format: uri    
               type: string    
-      type: array    
+          description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
     hasBuilding:    
       description: 'List of buildings belonging to the farm'    
       items:    
         - anyOf: *anyof    
-      type: array    
+          description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
     id:    
       anyOf: *anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     landLocation:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -229,11 +257,22 @@ AgriFarm:
       description: 'The name of this item.'    
       type: Property    
     ownedBy:    
-      anyOf: *anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Owner (Person or Organization) of the farm'    
+      type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
@@ -242,10 +281,12 @@ AgriFarm:
           values:    
             application:    
               anyOf: *anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -254,14 +295,15 @@ AgriFarm:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type. It has to be AgriFarm'    
       enum:    
         - AgriFarm    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -318,7 +360,7 @@ AgriFarm:
 }  
 ```  
 #### AgriFarm NGSI V2 normalisé Exemple  
-Voici un exemple de ferme agricole au format JSON normalisé. Il est compatible avec la version 2 de l'INSG lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de ferme agricole au format JSON normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
@@ -400,7 +442,7 @@ AgriFarm:
 }  
 ```  
 #### Exemple de valeurs clés de l'INSG-LD pour AgriFarm  
-Voici un exemple d'AgriFarm en format JSON-LD comme valeurs clés. Ce format est compatible avec JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'AgriFarm en format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
