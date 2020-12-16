@@ -5,9 +5,11 @@ Entity: Animal
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `birthdate`: Animal’s birthdate  - `breed`: Breed of the animal  - `calvedBy`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `fedWith`:   - `healthCondition`: Phenological condition of the animal  - `id`:   - `legalId`: Legal ID of the animal  - `locatedAt`:   - `location`:   - `name`: The name of this item.  - `ownedBy`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `phenologicalCondition`: Phenological condition of the animal  - `relatedSource`: List of IDs the current entity may have in external applications  - `reproductiveCondition`: Reproductive condition of the animal  - `seeAlso`:   - `sex`: Sex of the animal  - `siredBy`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `species`: Species to which the animal belongs  - `type`: NGSI Entity Type  - `weight`:   - `welfareCondition`: Indicator of the animal welfare    
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `birthdate`: Animal's birthdate  - `breed`: Breed of the animal  - `calvedBy`: Mother of the animal  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `fedWith`: Food used for the animal  - `healthCondition`: Phenological condition of the animal. Enum:' healthy, sick, inTreatment'  - `id`: Unique identifier of the entity  - `legalId`: Legal ID of the animal  - `locatedAt`: Id of the AgriParcel relationship  - `location`:   - `name`: The name of this item.  - `ownedBy`: The owner of the animal  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `phenologicalCondition`: Phenological condition of the animal. Enum:'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'.  - `relatedSource`: List of IDs the current entity may have in external applications  - `reproductiveCondition`: Reproductive condition of the animal. Enum:'noStatus, inactive, inCalf, inHeat, active'  - `seeAlso`: list of uri pointing to additional resources about the item  - `sex`: Sex of the animal. Enum:'male, female'  - `siredBy`: Father of the animal  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `species`: Species to which the animal belongs. This enum can be increased  - `type`: NGSI Entity Type: It has to be Animal  - `weight`: The weight of the animal as a number  - `welfareCondition`: Indicator of the animal welfare. Enum:'issue, adequate'    
 Required properties  
-- `id`  - `legalId`  - `sex`  - `species`  - `type`  ## Data Model description of properties  
+- `id`  - `legalId`  - `sex`  - `species`  - `type`    
+The proposed animal data model has been made from a more general point of view, trying to adjust it to the information coming from the devices and sensors used in the UC. The next diagram describes the beef chain. In this diagram different stakeholders of the meat chain are described like some of their interactions. ![ ](../resources/diagram1.jpg). During the use of this data model it will be necessary to define several entities to handle the information generated in the proposed solution. Within all these entities, the animal entity that is the center of the solution stands out in the first place  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -18,35 +20,46 @@ Animal:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     birthdate:    
-      description: 'Animal’s birthdate'    
+      description: 'Animal''s birthdate'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     breed:    
       description: 'Breed of the animal'    
-      type: string    
+      type: Property    
     calvedBy:    
-      anyOf: &animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -55,6 +68,8 @@ Animal:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Mother of the animal'    
+      type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -70,21 +85,51 @@ Animal:
       description: 'A description of this item'    
       type: Property    
     fedWith:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Food used for the animal'    
+      type: Relationship    
     healthCondition:    
-      description: 'Phenological condition of the animal'    
+      description: 'Phenological condition of the animal. Enum:'' healthy, sick, inTreatment'''    
       enum:    
         - healthy    
         - sick    
         - inTreatment    
-      type: string    
+      type: Property    
     id:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf: &animal_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     legalId:    
       description: 'Legal ID of the animal'    
-      type: string    
+      type: Property    
     locatedAt:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Id of the AgriParcel relationship'    
+      type: Relationship    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -236,14 +281,25 @@ Animal:
       description: 'The name of this item.'    
       type: Property    
     ownedBy:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'The owner of the animal'    
+      type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *animal_-_properties_-_fedwith_-_anyof    
+        anyOf: *animal_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     phenologicalCondition:    
-      description: 'Phenological condition of the animal'    
+      description: 'Phenological condition of the animal. Enum:''lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung''.'    
       enum:    
         - lactatingBaby    
         - grazingBaby    
@@ -251,27 +307,29 @@ Animal:
         - femaleAdult    
         - maleYoung    
         - femaleYoung    
-      type: string    
+      type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
         - type: object    
           values:    
             application:    
-              anyOf: *animal_-_properties_-_fedwith_-_anyof    
+              anyOf: *animal_-_properties_-_owner_-_items_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     reproductiveCondition:    
-      description: 'Reproductive condition of the animal'    
+      description: 'Reproductive condition of the animal. Enum:''noStatus, inactive, inCalf, inHeat, active'''    
       enum:    
         - noStatus    
         - inactive    
         - inCalf    
         - inHeat    
         - active    
-      type: string    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -280,39 +338,58 @@ Animal:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     sex:    
-      description: 'Sex of the animal'    
+      description: 'Sex of the animal. Enum:''male, female'''    
       enum:    
         - male    
         - female    
-      type: string    
+      type: Property    
     siredBy:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Father of the animal'    
+      type: Relationship    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     species:    
-      description: 'Species to which the animal belongs'    
+      description: 'Species to which the animal belongs. This enum can be increased'    
       enum:    
         - cow    
         - goat    
         - horse    
         - pig    
         - sheep    
-      type: string    
+        - 'dairy cattle'    
+        - 'beef cattle'    
+      type: Property    
+      x-ngsi:    
+        model: 'Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text'    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type: It has to be Animal'    
       enum:    
         - Animal    
-      type: string    
+      type: Property    
     weight:    
-      type: number    
+      description: 'The weight of the animal as a number'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        units: kg    
     welfareCondition:    
-      description: 'Indicator of the animal welfare'    
+      description: 'Indicator of the animal welfare. Enum:''issue, adequate'''    
       enum:    
         - issue    
         - adequate    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
