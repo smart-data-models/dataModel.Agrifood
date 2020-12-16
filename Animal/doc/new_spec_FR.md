@@ -1,11 +1,15 @@
 Entité : Animal  
 ===============  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Animal/LICENSE.md)  
 Description globale : **Une observation des conditions des animaux à un certain endroit et à un certain moment. Ce modèle de données a été développé pour l'IoF2020 UC ShareBeef par UCO et SensoWave.**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `birthdate`: Date de naissance de l'animal  - `breed`: Race de l'animal  - `calvedBy`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `fedWith`:   - `healthCondition`: État phénologique de l'animal  - `id`:   - `legalId`: Identification légale de l'animal  - `locatedAt`:   - `location`:   - `name`: Le nom de cet article.  - `ownedBy`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `phenologicalCondition`: État phénologique de l'animal  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `reproductiveCondition`: État reproducteur de l'animal  - `seeAlso`:   - `sex`: Sexe de l'animal  - `siredBy`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `species`: Espèce à laquelle l'animal appartient  - `type`: Type d'entité NGSI  - `weight`:   - `welfareCondition`: Indicateur du bien-être des animaux  ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `birthdate`: Date de naissance de l'animal  - `breed`: Race de l'animal  - `calvedBy`: Mère de l'animal  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `fedWith`: Nourriture utilisée pour l'animal  - `healthCondition`: État phénologique de l'animal. Enum : "sain, malade, en traitement".  - `id`: Identifiant unique de l'entité  - `legalId`: Identification légale de l'animal  - `locatedAt`: Id de la relation AgriParcel  - `location`:   - `name`: Le nom de cet article.  - `ownedBy`: Le propriétaire de l'animal  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `phenologicalCondition`: État phénologique de l'animal. Enum : "bébé en lactation, bébé au pâturage, adulte mâle, adulte femelle, jeune mâle, jeune femelle".  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `reproductiveCondition`: État reproducteur de l'animal. Enum : "noStatus, inactive, inCalf, inHeat, active  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `sex`: Le sexe de l'animal. Enum : "mâle, femelle".  - `siredBy`: Père de l'animal  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `species`: Espèce à laquelle l'animal appartient. Cette énumération peut être augmentée  - `type`: Type d'entité NGSI : Il doit s'agir d'un animal  - `weight`: Le poids de l'animal sous forme de chiffre  - `welfareCondition`: Indicateur du bien-être des animaux. Enum : "problématique, adéquat".    
+Propriétés requises  
+- `id`  - `legalId`  - `sex`  - `species`  - `type`    
+Le modèle de données sur les animaux proposé a été élaboré d'un point de vue plus général, en essayant de l'adapter aux informations provenant des dispositifs et des capteurs utilisés dans la CU. Le diagramme suivant décrit la chaîne de la viande bovine. Dans ce diagramme, les différents acteurs de la chaîne de la viande sont décrits ainsi que certaines de leurs interactions. ![ ](../resources/diagram1.jpg). Lors de l'utilisation de ce modèle de données, il sera nécessaire de définir plusieurs entités pour traiter les informations générées dans la solution proposée. Au sein de toutes ces entités, l'entité animale qui est au centre de la solution se distingue en premier lieu  
+## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -16,35 +20,46 @@ Animal:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     birthdate:    
-      description: 'Animal’s birthdate'    
+      description: 'Animal''s birthdate'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     breed:    
       description: 'Breed of the animal'    
-      type: string    
+      type: Property    
     calvedBy:    
-      anyOf: &animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -53,6 +68,8 @@ Animal:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Mother of the animal'    
+      type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -68,21 +85,51 @@ Animal:
       description: 'A description of this item'    
       type: Property    
     fedWith:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Food used for the animal'    
+      type: Relationship    
     healthCondition:    
-      description: 'Phenological condition of the animal'    
+      description: 'Phenological condition of the animal. Enum:'' healthy, sick, inTreatment'''    
       enum:    
         - healthy    
         - sick    
         - inTreatment    
-      type: string    
+      type: Property    
     id:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf: &animal_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     legalId:    
       description: 'Legal ID of the animal'    
-      type: string    
+      type: Property    
     locatedAt:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Id of the AgriParcel relationship'    
+      type: Relationship    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -234,14 +281,25 @@ Animal:
       description: 'The name of this item.'    
       type: Property    
     ownedBy:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'The owner of the animal'    
+      type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *animal_-_properties_-_fedwith_-_anyof    
+        anyOf: *animal_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     phenologicalCondition:    
-      description: 'Phenological condition of the animal'    
+      description: 'Phenological condition of the animal. Enum:''lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung''.'    
       enum:    
         - lactatingBaby    
         - grazingBaby    
@@ -249,27 +307,29 @@ Animal:
         - femaleAdult    
         - maleYoung    
         - femaleYoung    
-      type: string    
+      type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
         - type: object    
           values:    
             application:    
-              anyOf: *animal_-_properties_-_fedwith_-_anyof    
+              anyOf: *animal_-_properties_-_owner_-_items_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     reproductiveCondition:    
-      description: 'Reproductive condition of the animal'    
+      description: 'Reproductive condition of the animal. Enum:''noStatus, inactive, inCalf, inHeat, active'''    
       enum:    
         - noStatus    
         - inactive    
         - inCalf    
         - inHeat    
         - active    
-      type: string    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -278,39 +338,58 @@ Animal:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     sex:    
-      description: 'Sex of the animal'    
+      description: 'Sex of the animal. Enum:''male, female'''    
       enum:    
         - male    
         - female    
-      type: string    
+      type: Property    
     siredBy:    
-      anyOf: *animal_-_properties_-_fedwith_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Father of the animal'    
+      type: Relationship    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     species:    
-      description: 'Species to which the animal belongs'    
+      description: 'Species to which the animal belongs. This enum can be increased'    
       enum:    
         - cow    
         - goat    
         - horse    
         - pig    
         - sheep    
-      type: string    
+        - 'dairy cattle'    
+        - 'beef cattle'    
+      type: Property    
+      x-ngsi:    
+        model: 'Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text'    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type: It has to be Animal'    
       enum:    
         - Animal    
-      type: string    
+      type: Property    
     weight:    
-      type: number    
+      description: 'The weight of the animal as a number'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        units: kg    
     welfareCondition:    
-      description: 'Indicator of the animal welfare'    
+      description: 'Indicator of the animal welfare. Enum:''issue, adequate'''    
       enum:    
         - issue    
         - adequate    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -356,7 +435,7 @@ Animal:
 }  
 ```  
 #### Exemple de normalisation du NGSI V2 pour les animaux  
-Voici un exemple d'un animal au format JSON tel que normalisé. Il est compatible avec la version 2 du NGSI lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'un animal au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -434,7 +513,7 @@ Animal:
 }  
 ```  
 #### Valeurs clés de l'INSMT-LD pour les animaux Exemple  
-Voici un exemple d'un animal au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'un animal au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
