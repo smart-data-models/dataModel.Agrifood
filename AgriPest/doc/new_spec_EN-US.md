@@ -1,22 +1,27 @@
 Entity: AgriPest  
 ================  
 This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
-Global description: **This entity contains a harmonised description of an agricultural pest. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
+Global description: **This entity contains a harmonised description of an agricultural pest. **  
 
 ## List of properties  
 
-- `agroVocConcept`:   - `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAgriProductType`:   - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type    
+- `agroVocConcept`: Reference to the agrovoc term associated with this item  - `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAgriProductType`: Reference to the recommended types of product that can be used to treat this pest.  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be AgriPest    
 Required properties  
-- `id`  - `name`  - `type`  ## Data Model description of properties  
+- `id`  - `name`  - `type`    
+This entity is primarily associated with the agricultural vertical and related IoT applications.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriPest:    
-  description: 'This entity contains a harmonised description of an agricultural pest. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
+  description: 'This entity contains a harmonised description of an agricultural pest. '    
   properties:    
     agroVocConcept:    
+      description: 'Reference to the agrovoc term associated with this item'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -35,6 +40,7 @@ AgriPest:
       description: 'A description of this item'    
       type: Property    
     hasAgriProductType:    
+      description: 'Reference to the recommended types of product that can be used to treat this pest.'    
       items:    
         - anyOf: &agripest_-_properties_-_id_-_anyof    
             - description: 'Property. Identifier format of any NGSI entity'    
@@ -45,9 +51,14 @@ AgriPest:
             - description: 'Property. Identifier format of any NGSI entity'    
               format: uri    
               type: string    
-      type: array    
+          description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     id:    
       anyOf: *agripest_-_properties_-_id_-_anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -55,6 +66,7 @@ AgriPest:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *agripest_-_properties_-_id_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
@@ -63,10 +75,12 @@ AgriPest:
           values:    
             application:    
               anyOf: *agripest_-_properties_-_id_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -75,14 +89,15 @@ AgriPest:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type: It has to be AgriPest'    
       enum:    
         - AgriPest    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
