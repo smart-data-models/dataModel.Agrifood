@@ -1,23 +1,32 @@
 Entidad: AgriProductType  
 ========================  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriProductType/LICENSE.md)  
 Descripción global: **Esta entidad contiene una descripción armonizada de un tipo de producto agrícola genérico. Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones conexas de IO. El AgriProductType incluye una estructura jerárquica que permite agrupar los tipos de productos de manera flexible**.  
 
 ## Lista de propiedades  
 
-`agroVocConcept`:   `alternateName`: Un nombre alternativo para este artículo  `category`:   `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `hasAgriProductTypeChildren`:   `hasAgriProductTypeParent`:   `id`:   `name`: El nombre de este artículo.  `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  `root`:   `seeAlso`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `type`: Tipo de entidad NGSI  ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `agroVocConcept`: Referencia al término agrovocal asociado a este tema  - `alternateName`: Un nombre alternativo para este artículo  - `category`: Categoría del producto. Enum:'fertilizante, cultivoNutrición, cultivoProtección, cultivoVariedad, cosechaMercancía'.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAgriProductTypeChildren`: Referencia a los tipos de productos infantiles, es decir, inmediatamente debajo de esta entidad en la jerarquía  - `hasAgriProductTypeParent`: Referencia al tipo de producto superior, es decir, inmediatamente superior a la entidad en la jerarquía.  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  - `root`: Un indicador lógico de que este producto es la raíz de una jerarquía de AgriProductType. El verdadero lógico indica que es la raíz.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI: Tiene que ser AgriProductType    
+Propiedades requeridas  
+- `id`  - `name`  - `root`  - `type`    
+Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones conexas de IO. El AgriProductType incluye una estructura jerárquica que permite agrupar los tipos de productos de manera flexible.  
+## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 AgriProductType:    
   description: 'This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.'    
   properties:    
     agroVocConcept:    
+      description: 'Reference to the agrovoc term associated with this item'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     category:    
+      description: 'Category of the product. Enum:''fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity''.'    
       items:    
         enum:    
           - fertiliser    
@@ -26,7 +35,9 @@ AgriProductType:
           - cropVariety    
           - harvestCommodity    
         type: string    
-      type: array    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/URL    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -42,8 +53,9 @@ AgriProductType:
       description: 'A description of this item'    
       type: Property    
     hasAgriProductTypeChildren:    
+      description: 'Reference to child product types i.e. immediately below this entity in the hierarchy'    
       items:    
-        - anyOf: &agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+        - anyOf: &agriproducttype_-_properties_-_id_-_anyof    
             - description: 'Property. Identifier format of any NGSI entity'    
               maxLength: 256    
               minLength: 1    
@@ -52,18 +64,32 @@ AgriProductType:
             - description: 'Property. Identifier format of any NGSI entity'    
               format: uri    
               type: string    
-      type: array    
+          description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
     hasAgriProductTypeParent:    
-      anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the parent product type i.e. immediately above the entity in the hierarchy.'    
+      type: Relationship    
     id:    
-      anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+      anyOf: *agriproducttype_-_properties_-_id_-_anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+        anyOf: *agriproducttype_-_properties_-_id_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
@@ -71,13 +97,16 @@ AgriProductType:
         - type: object    
           values:    
             application:    
-              anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+              anyOf: *agriproducttype_-_properties_-_id_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     root:    
-      type: boolean    
+      description: 'A logical indicator that this product is the root of an AgriProductType hierarchy. Logical true indicates it is the root.'    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -86,14 +115,15 @@ AgriProductType:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type: It has to be AgriProductType'    
       enum:    
         - AgriProductType    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -101,6 +131,9 @@ AgriProductType:
     - root    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### AgriProductType NGSI V2 key-values Example  
 Aquí hay un ejemplo de un AgriProductType en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza `opciones=valores-clave` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -127,7 +160,8 @@ AgriProductType:
   ]  
 }  
 ```  
-Aquí hay un ejemplo de un AgriProductType en formato JSON como normalizado. Es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+#### AgriProductType NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de un AgriProductType en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -178,7 +212,8 @@ AgriProductType:
   }  
 }  
 ```  
-Aquí hay un ejemplo de un AgriProductType en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriProductType NGSI-LD key-values Example  
+Aquí hay un ejemplo de un AgriProductType en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando se utiliza `opciones=valores-clave` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
@@ -198,6 +233,7 @@ AgriProductType:
  "root": True,  
  "type": "AgriProductType"}  
 ```  
+#### AgriProductType NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un AgriProductType en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
