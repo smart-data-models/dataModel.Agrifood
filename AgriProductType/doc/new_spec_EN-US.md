@@ -5,9 +5,11 @@ Entity: AgriProductType
 
 ## List of properties  
 
-- `agroVocConcept`:   - `alternateName`: An alternative name for this item  - `category`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAgriProductTypeChildren`:   - `hasAgriProductTypeParent`:   - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `root`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type    
+- `agroVocConcept`: Reference to the agrovoc term associated with this item  - `alternateName`: An alternative name for this item  - `category`: Category of the product. Enum:'fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity'.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAgriProductTypeChildren`: Reference to child product types i.e. immediately below this entity in the hierarchy  - `hasAgriProductTypeParent`: Reference to the parent product type i.e. immediately above the entity in the hierarchy.  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `root`: A logical indicator that this product is the root of an AgriProductType hierarchy. Logical true indicates it is the root.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be AgriProductType    
 Required properties  
-- `id`  - `name`  - `root`  - `type`  ## Data Model description of properties  
+- `id`  - `name`  - `root`  - `type`    
+This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -15,12 +17,16 @@ AgriProductType:
   description: 'This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.'    
   properties:    
     agroVocConcept:    
+      description: 'Reference to the agrovoc term associated with this item'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     category:    
+      description: 'Category of the product. Enum:''fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity''.'    
       items:    
         enum:    
           - fertiliser    
@@ -29,7 +35,9 @@ AgriProductType:
           - cropVariety    
           - harvestCommodity    
         type: string    
-      type: array    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/URL    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -45,8 +53,9 @@ AgriProductType:
       description: 'A description of this item'    
       type: Property    
     hasAgriProductTypeChildren:    
+      description: 'Reference to child product types i.e. immediately below this entity in the hierarchy'    
       items:    
-        - anyOf: &agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+        - anyOf: &agriproducttype_-_properties_-_id_-_anyof    
             - description: 'Property. Identifier format of any NGSI entity'    
               maxLength: 256    
               minLength: 1    
@@ -55,18 +64,32 @@ AgriProductType:
             - description: 'Property. Identifier format of any NGSI entity'    
               format: uri    
               type: string    
-      type: array    
+          description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
     hasAgriProductTypeParent:    
-      anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the parent product type i.e. immediately above the entity in the hierarchy.'    
+      type: Relationship    
     id:    
-      anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+      anyOf: *agriproducttype_-_properties_-_id_-_anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+        anyOf: *agriproducttype_-_properties_-_id_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
@@ -74,13 +97,16 @@ AgriProductType:
         - type: object    
           values:    
             application:    
-              anyOf: *agriproducttype_-_properties_-_hasagriproducttypeparent_-_anyof    
+              anyOf: *agriproducttype_-_properties_-_id_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     root:    
-      type: boolean    
+      description: 'A logical indicator that this product is the root of an AgriProductType hierarchy. Logical true indicates it is the root.'    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -89,14 +115,15 @@ AgriProductType:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type: It has to be AgriProductType'    
       enum:    
         - AgriProductType    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
