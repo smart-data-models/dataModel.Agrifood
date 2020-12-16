@@ -1,13 +1,18 @@
 Entidad: AgriParcelOperación  
 ============================  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md)  
 Descripción global: **Esta entidad contiene una descripción armonizada de una operación genérica realizada en una parcela de tierra. Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones de IO conexas**.  
 
 ## Lista de propiedades  
 
-`alternateName`: Un nombre alternativo para este artículo  `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `endedAt`:   `hasAgriParcel`:   `hasAgriProductType`:   `hasOperator`:   `id`:   `irrigationRecord`:   `name`: El nombre de este artículo.  `operationType`:   `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `plannedEndAt`:   `plannedStartAt`:   `quantity`:   `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  `reportedAt`:   `result`:   `seeAlso`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `startedAt`:   `status`:   `type`: Tipo de entidad NGSI  `waterSource`:   `workOrder`:   `workRecord`:   ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endedAt`: Sello de tiempo cuando la operación realmente terminó.  - `hasAgriParcel`: Referencia a la Agri-Partida  - `hasAgriProductType`: Referencia al AgriProductType utilizado/aplicado.  - `hasOperator`: Referencia al operador que realiza la operación  - `id`: Identificador único de la entidad  - `irrigationRecord`: Relación con el registro de riego de la ejecución  - `name`: El nombre de este artículo.  - `operationType`: Una elección de una lista enumerada que describe la operación realizada en la parcela. Enum:'fertilizante, inspección, pesticida, agua, otros'.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `plannedEndAt`: La fecha y hora de finalización prevista para la operación. <br/><br/>Aviso de que esto es un aviso y la hora real de finalización de la operación puede ser antes o después del final planificado.  - `plannedStartAt`: La fecha y hora de inicio prevista para la operación. Tenga en cuenta que esto es un aviso y que la hora real de inicio de la operación puede ser anterior o posterior al inicio previsto  - `quantity`: La cantidad total de agua o producto utilizada/ aplicada. Se recomienda medirla en litros para los líquidos o kilogramos para los sólidos.  - `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  - `reportedAt`: Sello de tiempo cuando se informó de la falla del evento.  - `result`: Una descripción de los resultados de la operación. Enum:'ok, abortada, fallida'.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `startedAt`: Sello de tiempo cuando la operación comenzó a realizarse.  - `status`: Una elección de una lista enumerada que describe la situación. Enum:'planificado, en curso, terminado, programado, cancelado'.  - `type`: Tipo de entidad NGSI. Tiene que ser AgriParcelOperación  - `waterSource`: Enum:'perforación, precipitación, río, captación de agua de lluvia, presa de agua, suministro comercial'.  - `workOrder`: Relación con la orden de trabajo para la ejecución  - `workRecord`: Relación con el registro de trabajo de la ejecución    
+Propiedades requeridas  
+- `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`    
+Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones conexas de IO.  
+## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 AgriParcelOperation:    
   description: 'This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
   properties:    
@@ -29,10 +34,13 @@ AgriParcelOperation:
       description: 'A description of this item'    
       type: Property    
     endedAt:    
+      description: 'Timestamp when the operation actually finished.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/DateTime    
     hasAgriParcel:    
-      anyOf: &agriparceloperation_-_properties_-_hasagriproducttype_-_anyof    
+      anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -41,60 +49,112 @@ AgriParcelOperation:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Reference to the AgriParcel'    
+      type: Relationship    
     hasAgriProductType:    
-      anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the AgriProductType used/ applied.'    
+      type: Relationship    
     hasOperator:    
-      anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the operator conducting the operation'    
+      type: Relationship    
     id:    
-      anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof    
+      anyOf: &agriparceloperation_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     irrigationRecord:    
+      description: 'Relationship with the irrigation record of the execution'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     name:    
       description: 'The name of this item.'    
       type: Property    
     operationType:    
+      description: 'A choice from an enumerated list describing the operation performed on the parcel. Enum:''fertiliser, inspection, pesticide, water, other'''    
       enum:    
         - fertiliser    
         - inspection    
         - pesticide    
         - water    
         - other    
-      type: string    
+      type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof    
+        anyOf: *agriparceloperation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     plannedEndAt:    
+      description: 'The planned end date/timestamp for the operation. <br/><br/>Note that this is advisory and the actual time the operation finishes may be before or after the planned end.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/DateTime    
     plannedStartAt:    
+      description: 'The planned start date/timestamp for the operation. Note that this is advisory and the actual time the operation starts may be before or after the planned start'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/DateTime    
     quantity:    
+      description: 'The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids.'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
         - type: object    
           values:    
             application:    
-              anyOf: *agriparceloperation_-_properties_-_hasagriproducttype_-_anyof    
+              anyOf: *agriparceloperation_-_properties_-_owner_-_items_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
       type: Property    
     reportedAt:    
+      description: 'Timestamp when the event fault was reported.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/DateTime    
     result:    
+      description: 'A description of the results of the operation. Enum:''ok, aborted, failed'''    
       enum:    
         - ok    
         - aborted    
         - failed    
-      type: string    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -103,26 +163,32 @@ AgriParcelOperation:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     startedAt:    
+      description: 'Timestamp when the operation actually started to be performed.'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/DateTime    
     status:    
+      description: 'A choice from an enumerated list describing the status. Enum:''planned, ongoing, finished, scheduled, cancelled'''    
       enum:    
         - planned    
         - ongoing    
         - finished    
         - scheduled    
         - cancelled    
-      type: string    
+      type: Property    
     type:    
-      description: 'NGSI Entity Type'    
+      description: 'NGSI Entity Type. It has to be AgriParcelOperation'    
       enum:    
         - AgriParcelOperation    
-      type: string    
+      type: Property    
     waterSource:    
+      description: 'Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'    
       enum:    
         - borehole    
         - rainfall    
@@ -130,13 +196,21 @@ AgriParcelOperation:
         - 'rainwater capture'    
         - 'water dam'    
         - 'commercial supply'    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
     workOrder:    
+      description: 'Relationship with the workorder for the execution'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     workRecord:    
+      description: 'Relationship with the work record of the execution'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
   required:    
     - id    
     - type    
@@ -145,6 +219,9 @@ AgriParcelOperation:
     - plannedEndAt    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### AgriParcelOperación NGSI V2 valores clave Ejemplo  
 Aquí hay un ejemplo de una Operación Agrícola en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -181,7 +258,8 @@ AgriParcelOperation:
   "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1"  
 }  
 ```  
-Aquí hay un ejemplo de una operación de agroparcelación en formato JSON normalizado. Esto es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+#### AgriParcelOperación NGSI V2 normalizada Ejemplo  
+Aquí hay un ejemplo de una operación de agroparcelación en formato JSON normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -272,7 +350,8 @@ AgriParcelOperation:
   }  
 }  
 ```  
-Aquí hay un ejemplo de una Operación Agrícola en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriParcelOperación NGSI-LD valores clave Ejemplo  
+Aquí hay un ejemplo de una Operación Agrícola en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
@@ -302,6 +381,7 @@ AgriParcelOperation:
  "workOrder": "https://example.com/agriparcelrecords/workorder1",  
  "workRecord": "https://example.com/agriparcelrecords/workrecord1"}  
 ```  
+#### AgriParcelOperación NGSI-LD normalizada Ejemplo  
 Aquí hay un ejemplo de una operación de agroparcelación en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
