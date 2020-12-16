@@ -28,7 +28,7 @@
           "$ref": "http://geojson.org/schema/Geometry.json#"
         },
         "contactPoint": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/contactPoint"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
         },
         "ownedBy": {
           "anyOf": [
