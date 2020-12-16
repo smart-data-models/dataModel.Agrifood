@@ -91,7 +91,7 @@
         "reportedAt": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'http://schema.org/DateTime'.Timestamp when the event/ fault was reported."
+          "description": "Property. Model:'http://schema.org/DateTime'. Timestamp when the event fault was reported."
         },
         "hasAgriProductType": {
            "anyOf": [
