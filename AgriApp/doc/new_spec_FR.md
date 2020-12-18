@@ -361,7 +361,7 @@ AgriApp:
  "version": "1.0"}  
 ```  
 #### AgriApp NGSI-LD normalisé Exemple  
-Voici un exemple d'AgriApp au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'AgriApp au format JSON-LD tel que normalisé. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "@context": [  
