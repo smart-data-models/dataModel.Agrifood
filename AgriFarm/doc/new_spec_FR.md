@@ -1,7 +1,7 @@
 Entité : AgriFarm  
 =================  
 [Licence ouverte](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriFarm/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'une exploitation générique composée de bâtiments et de parcelles. Cette entité est principalement associée aux applications verticales agricoles et aux applications IdO connexes.**  
+Description globale : **Cette entité contient une description harmonisée d'une exploitation générique composée de bâtiments et de parcelles. Cette entité est principalement associée aux applications agricoles verticales et aux applications IdO connexes.**  
 
 ## Liste des biens  
 
