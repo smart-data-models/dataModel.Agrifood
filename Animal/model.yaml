@@ -1,71 +1,384 @@
 Animal:
-  required:
-    - id
-    - type
-    - name
-  allOf:
-    - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
-  type: object
-  description: |
-    This entity contains a harmonised description of a generic soil. This entity
-    is primarily associated with the agricultural vertical and related IoT
-    applications.
+  description: 'An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.'
   properties:
-    agroVocConcept:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
-      format: uri
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
     alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+      description: 'An alternative name for this item'
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    birthdate:
+      description: 'Animal''s birthdate'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    breed:
+      description: 'Breed of the animal'
+      type: Property
+    calvedBy:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Mother of the animal'
+      type: Relationship
     dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
     description:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    hasAgriProductType:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        - &ref_0
-          anyOf:
-            - type: string
-              minLength: 1
-              maxLength: 256
-              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-            - type: string
-              format: uri
+      description: 'A description of this item'
+      type: Property
+    fedWith:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Food used for the animal'
+      type: Relationship
+    healthCondition:
+      description: 'Phenological condition of the animal. Enum:'' healthy, sick, inTreatment'''
+      enum:
+        - healthy
+        - sick
+        - inTreatment
+      type: Property
+    id:
+      anyOf: &animal_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
+    legalId:
+      description: 'Legal ID of the animal'
+      type: Property
+    locatedAt:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Id of the AgriParcel relationship'
+      type: Relationship
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
     name:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+      description: 'The name of this item.'
+      type: Property
+    ownedBy:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'The owner of the animal'
+      type: Relationship
     owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *animal_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
+    phenologicalCondition:
+      description: 'Phenological condition of the animal. Enum:''lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung''.'
+      enum:
+        - lactatingBaby
+        - grazingBaby
+        - maleAdult
+        - femaleAdult
+        - maleYoung
+        - femaleYoung
+      type: Property
     relatedSource:
-      x-ngsi:
-        type: Property
-      type: array
-      description: List of IDs the current entity may have in external applications
+      description: 'List of IDs the current entity may have in external applications'
       items:
         - type: object
           values:
             application:
-              anyOf:
-                - type: string
-                  minLength: 1
-                  maxLength: 256
-                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-                - type: string
-                  format: uri
+              anyOf: *animal_-_properties_-_owner_-_items_-_anyof
+              description: 'Property. Unique identifier of the entity'
             applicationEntityId:
               type: string
+      type: Property
+    reproductiveCondition:
+      description: 'Reproductive condition of the animal. Enum:''noStatus, inactive, inCalf, inHeat, active'''
+      enum:
+        - noStatus
+        - inactive
+        - inCalf
+        - inHeat
+        - active
+      type: Property
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    sex:
+      description: 'Sex of the animal. Enum:''male, female'''
+      enum:
+        - male
+        - female
+      type: Property
+    siredBy:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Father of the animal'
+      type: Relationship
     source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    species:
+      description: 'Species to which the animal belongs. This enum can be increased'
+      enum:
+        - cow
+        - goat
+        - horse
+        - pig
+        - sheep
+        - 'dairy cattle'
+        - 'beef cattle'
+      type: Property
+      x-ngsi:
+        model: 'Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text'
+    type:
+      description: 'NGSI Entity Type: It has to be Animal'
+      enum:
+        - Animal
+      type: Property
+    weight:
+      description: 'The weight of the animal as a number'
+      type: Relationship
+      x-ngsi:
+        model: http://schema.org/Number
+        units: kg
+    welfareCondition:
+      description: 'Indicator of the animal welfare. Enum:''issue, adequate'''
+      enum:
+        - issue
+        - adequate
+      type: Property
+  required:
+    - id
+    - type
+    - species
+    - legalId
+    - sex
+  type: object
