@@ -2,12 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised description of a generic agricultural
-product type. This entity is primarily associated with the agricultural
-vertical and related IoT applications. The AgriProductType includes a
-hierarchical structure that allows product types to be grouped in a flexible
-way.
-
+This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Agrifood/AgriProductType/swagger.yaml)
