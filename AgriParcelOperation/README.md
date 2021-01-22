@@ -2,10 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised description of a generic operations
-performed on a parcel of land. This entity is primarily associated with the
-agricultural vertical and related IoT applications.
-
+This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/swagger.yaml)
