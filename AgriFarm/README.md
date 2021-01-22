@@ -2,10 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised description of a generic farm made up of
-buildings and parcels. This entity is primarily associated with the
-agricultural vertical and related IoT applications.
-
+This entity contains a harmonised description of a generic farm made up of buildings and parcels. This entity is primarily associated with the agricultural vertical and related IoT applications.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Agrifood/AgriFarm/swagger.yaml)
