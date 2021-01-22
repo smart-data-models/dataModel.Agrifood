@@ -2,10 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised description of a generic soil. This entity
-is primarily associated with the agricultural vertical and related IoT
-applications.
-
+An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Agrifood/Animal/swagger.yaml)
