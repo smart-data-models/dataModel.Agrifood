@@ -1,96 +1,117 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Agrifood
-
 AgriProductType:
-  required:
-    - id
-    - type
-    - name
-    - root
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
-  type: object
-  description: |
-    This entity contains a harmonised description of a generic agricultural
-    product type. This entity is primarily associated with the agricultural
-    vertical and related IoT applications. The AgriProductType includes a
-    hierarchical structure that allows product types to be grouped in a flexible
-    way.
+  description: 'This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.'
   properties:
     agroVocConcept:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
+      description: 'Reference to the agrovoc term associated with this item'
       format: uri
-    alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
-    category:
+      type: Relationship
       x-ngsi:
-        type: Property
-      type: array
-      description: ''
+        model: http://schema.org/URL
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    category:
+      description: 'Category of the product. Enum:''fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity''.'
       items:
-        type: string
         enum:
           - fertiliser
           - cropNutrition
           - cropProtection
           - cropVariety
           - harvestCommodity
+        type: string
+      type: Property
+      x-ngsi:
+        model: http://schema.org/URL
     dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
     description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+      description: 'A description of this item'
+      type: Property
     hasAgriProductTypeChildren:
-      x-ngsi:
-        type: Property
-      type: array
-      description: 'Reference to child product types i.e. immediately below this entity in the hierarchy.'
+      description: 'Reference to child product types i.e. immediately below this entity in the hierarchy'
       items:
-        - &ref_0
-          anyOf:
-            - type: string
-              minLength: 1
+        - anyOf: &agriproducttype_-_properties_-_id_-_anyof
+            - description: 'Property. Identifier format of any NGSI entity'
               maxLength: 256
-              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-            - type: string
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: 'Property. Identifier format of any NGSI entity'
               format: uri
+              type: string
+          description: 'Property. Unique identifier of the entity'
+      type: Relationship
+    hasAgriProductTypeParent:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Reference to the parent product type i.e. immediately above the entity in the hierarchy.'
+      type: Relationship
+    id:
+      anyOf: *agriproducttype_-_properties_-_id_-_anyof
+      description: 'Unique identifier of the entity'
+      type: Property
     name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+      description: 'The name of this item.'
+      type: Property
     owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *agriproducttype_-_properties_-_id_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
     relatedSource:
-      x-ngsi:
-        type: Property
-      type: array
-      description: List of IDs the current entity may have in external applications
+      description: 'List of IDs the current entity may have in external applications'
       items:
         - type: object
           values:
             application:
-              anyOf:
-                - type: string
-                  minLength: 1
-                  maxLength: 256
-                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-                - type: string
-                  format: uri
+              anyOf: *agriproducttype_-_properties_-_id_-_anyof
+              description: 'Property. Unique identifier of the entity'
             applicationEntityId:
               type: string
+      type: Property
     root:
-      x-ngsi:
-        type: Property
-      type: boolean
       description: 'A logical indicator that this product is the root of an AgriProductType hierarchy. Logical true indicates it is the root.'
+      type: Property
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
     source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity Type: It has to be AgriProductType'
+      enum:
+        - AgriProductType
+      type: Property
+  required:
+    - id
+    - type
+    - name
+    - root
+  type: object

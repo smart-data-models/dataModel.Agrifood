@@ -2,12 +2,14 @@ AgriSoil:
   description: 'This entity contains a harmonised description of a generic soil. This entity is primarily associated with the agricultural vertical and related IoT applications.'
   properties:
     agroVocConcept:
-      description: ""
+      description: 'Reference to the agrovoc term associated with this item'
       format: uri
-      type: Property.
+      type: Relationship
+      x-ngsi:
+        model: http://schema.org/URL
     alternateName:
-      description: ""
-      type: Property.
+      description: 'An alternative name for this item'
+      type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: Property
@@ -20,10 +22,10 @@ AgriSoil:
       format: date-time
       type: Property
     description:
-      description: ""
-      type: Property.
+      description: 'A description of this item'
+      type: Property
     hasAgriProductType:
-      description: 'Relationship. Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'
+      description: 'Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'
       items:
         - anyOf: &agrisoil_-_properties_-_id_-_anyof
             - description: 'Property. Identifier format of any NGSI entity'
@@ -34,16 +36,20 @@ AgriSoil:
             - description: 'Property. Identifier format of any NGSI entity'
               format: uri
               type: string
-      type: array
+          description: 'Property. Unique identifier of the entity'
+      type: Relationship
     id:
       anyOf: *agrisoil_-_properties_-_id_-_anyof
+      description: 'Unique identifier of the entity'
+      type: Property
     name:
-      description: ""
-      type: Property.
+      description: 'The name of this item.'
+      type: Property
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *agrisoil_-_properties_-_id_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     relatedSource:
       description: 'List of IDs the current entity may have in external applications'
@@ -52,10 +58,12 @@ AgriSoil:
           values:
             application:
               anyOf: *agrisoil_-_properties_-_id_-_anyof
+              description: 'Property. Unique identifier of the entity'
             applicationEntityId:
               type: string
       type: Property
     seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
             - format: uri
@@ -64,11 +72,12 @@ AgriSoil:
           type: array
         - format: uri
           type: string
+      type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: Property
     type:
-      description: 'NGSI Entity Type'
+      description: 'NGSI Entity Type: It has to be AgriSoil'
       enum:
         - AgriSoil
       type: Property

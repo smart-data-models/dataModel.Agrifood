@@ -1,75 +1,88 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Agrifood
-
 AgriSoil:
-  required:
-    - id
-    - type
-    - name
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
-  type: object
-  description: |
-    This entity contains a harmonised description of a generic soil. This entity
-    is primarily associated with the agricultural vertical and related IoT
-    applications.
+  description: 'This entity contains a harmonised description of a generic soil. This entity is primarily associated with the agricultural vertical and related IoT applications.'
   properties:
     agroVocConcept:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
+      description: 'Reference to the agrovoc term associated with this item'
       format: uri
-    alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
-    dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
-    description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
-    hasAgriProductType:
+      type: Relationship
       x-ngsi:
-        type: Property
-      type: array
+        model: http://schema.org/URL
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    hasAgriProductType:
       description: 'Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'
       items:
-        - &ref_0
-          anyOf:
-            - type: string
-              minLength: 1
+        - anyOf: &agrisoil_-_properties_-_id_-_anyof
+            - description: 'Property. Identifier format of any NGSI entity'
               maxLength: 256
-              pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-            - type: string
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: 'Property. Identifier format of any NGSI entity'
               format: uri
+              type: string
+          description: 'Property. Unique identifier of the entity'
+      type: Relationship
+    id:
+      anyOf: *agrisoil_-_properties_-_id_-_anyof
+      description: 'Unique identifier of the entity'
+      type: Property
     name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+      description: 'The name of this item.'
+      type: Property
     owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *agrisoil_-_properties_-_id_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
     relatedSource:
-      x-ngsi:
-        type: Property
-      type: array
-      description: List of IDs the current entity may have in external applications
+      description: 'List of IDs the current entity may have in external applications'
       items:
         - type: object
           values:
             application:
-              anyOf:
-                - type: string
-                  minLength: 1
-                  maxLength: 256
-                  pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-                - type: string
-                  format: uri
+              anyOf: *agrisoil_-_properties_-_id_-_anyof
+              description: 'Property. Unique identifier of the entity'
             applicationEntityId:
               type: string
+      type: Property
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
     source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity Type: It has to be AgriSoil'
+      enum:
+        - AgriSoil
+      type: Property
+  required:
+    - id
+    - type
+    - name
+  type: object
