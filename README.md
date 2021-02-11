@@ -31,8 +31,6 @@ The following entity types are available:
 ### Incubated data models
 The list of incubated (on development) data models are:
 
-  - [Pen_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Pen_incubated)
-
   - [Zone_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Zone_incubated)
 
 
