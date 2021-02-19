@@ -3,8 +3,7 @@
  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",
  "alternateName": "Heavy soil",
  "createdAt": "2017-01-01T01:20:00Z",
- "description": "Fine grained, poor draining soil. Particle size less than "
-                "0.002mm",
+ "description": "Fine grained, poor draining soil. Particle size less than 0.002mm",
  "hasAgriProductType": ["urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",
                         "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"],
  "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",
