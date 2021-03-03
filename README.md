@@ -26,12 +26,10 @@ The following entity types are available:
 
 - [Animal](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/README.md). An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.
 
+- [Compartment](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/README.md). Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.
 
+- [Pen](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/README.md). Fenced area in a building or department or outside housing a group of animals. Animals in a pen can move and interact freely. Pens are often not completely separated from each other (half walls, iron bars, fences,…), making it possible that animals from neighbouring pens can see/touch
 
-### Incubated data models
-The list of incubated (on development) data models are:
-
-  - [Zone_incubated](https://github.com/smart-data-models/dataModel.Agrifood/tree/master/Zone_incubated)
 
 
 ### Contributors
