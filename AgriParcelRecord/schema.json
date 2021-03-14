@@ -47,7 +47,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Property. Model:'http://schema.org/Number'. Measured as Volumetric Water Content, VWC as a percentage. 0 ≤soilMoistureVwc ≤ 1 "
+          "description": "Property. Model:'http://schema.org/Number'. Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 "
         },
         "soilMoistureEC": {
           "type": "number",
