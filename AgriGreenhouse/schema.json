@@ -115,7 +115,7 @@
         },
         "leafTemperature": {
           "type": "integer",
-          "description": "Property. Model:'http://schema.org/Number'. The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 ≤ relativeHumidity ≤ 1"
+          "description": "Property. Model:'http://schema.org/Number'. The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1"
         },
         "co2": {
           "type": "integer",
