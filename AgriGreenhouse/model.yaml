@@ -117,7 +117,7 @@ AgriGreenhouse:
       description: 'Unique identifier of the entity'
       type: Property
     leafTemperature:
-      description: 'The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 ≤ relativeHumidity ≤ 1'
+      description: 'The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1'
       type: Property
       x-ngsi:
         model: http://schema.org/Number
@@ -165,8 +165,8 @@ AgriGreenhouse:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
-            - format: uri
-              type: string
+            format: uri
+            type: string
           minItems: 1
           type: array
         - format: uri
