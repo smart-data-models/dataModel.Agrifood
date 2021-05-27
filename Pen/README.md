@@ -12,6 +12,8 @@ Link to the [specification](https://github.com/smart-data-models/dataModel.Agrif
 Enlace a la [Especificación en español](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/doc/spec_ES.md)
 
 Lien vers le [spécification en français](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/doc/spec_FR.md)
+
+Link zu der [deutchen Spezifikation](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/doc/spec_DE.md)
 ### Examples
 
 Link to the [example](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/examples/example.json) (keyvalues) for NGSI v2
