@@ -6,7 +6,7 @@ Entität: Stift
 
 ## Liste der Eigenschaften  
 
-- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es ist eine JSON-Struktur ähnlich wie diese: {'Name': 'Temperatur', 'Wert' : 32}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit für die Ankunft der Tiere in der Box  - `avgGrowth`: Der durchschnittliche Gewichtszuwachs des Tieres in dieser Bucht  - `avgWeight`: Das durchschnittliche Gewicht des Tieres in dieser Box.  - `buildingId`: Eindeutiger Bezeichner des Gebäudes, in dem sich das Element befindet  - `co2`: Die CO2-Konzentration im Artikel  - `companyId`: Eindeutige Kennung einer Firma  - `compartmentId`: Eindeutiger Bezeichner des Fachs, in dem sich der Stift befindet.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `deadAnimalsSinceDateOfArrival`: Anzahl der verendeten Tiere seit dem Datum der Ankunft  - `description`: Eine Beschreibung dieses Artikels  - `farmId`: Eindeutiger Bezeichner der Farm, in der sich der Pferch befindet.  - `feedConsumption`: Die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Stall gefressen wurde, wird durch die Futteraufnahme und die spezifische Struktur gemessen, um jeweils nur ein Tier fressen zu lassen  - `humidity`: Menge, die die Menge des Wasserdampfs in der Atmosphäre im Stift darstellt.  - `id`:   - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen im Element vorgenommen wurden  - `location`:   - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge am Objekt  - `name`: Der Name dieses Elements.  - `numAnimals`: Anzahl der im Pen enthaltenen Tiere.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `sex`: Das Geschlecht der in der Bucht enthaltenen Tiere  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `temperature`: Temperatur des Stifts.  Unirs:' Celsius Grad'  - `type`: NGSI Entity-Typ. es muss Pen sein  - `waterConsumption`: Die gesamte Wassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Stall austritt. Sie wird durch Durchflussmesser und eine spezielle Struktur gemessen, um immer nur ein Tier gleichzeitig trinken zu lassen.  - `weightStDev`: Die Standardabweichung, die mit dem Durchschnittsgewicht der in der Bucht enthaltenen Tiere verbunden ist.    
+- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es ist eine JSON-Struktur ähnlich wie diese: {'Name': 'Temperatur', 'Wert' : 32}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit für die Ankunft der Tiere in der Box  - `avgGrowth`: Der durchschnittliche Gewichtszuwachs des Tieres in dieser Bucht  - `avgWeight`: Das durchschnittliche Gewicht des Tieres in dieser Box.  - `buildingId`: Eindeutiger Bezeichner des Gebäudes, in dem sich das Element befindet  - `co2`: Die CO2-Konzentration im Artikel  - `companyId`: Eindeutige Kennung einer Firma  - `compartmentId`: Eindeutige Kennung des Fachs, in dem sich der Stift befindet.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `deadAnimalsSinceDateOfArrival`: Anzahl der verendeten Tiere seit dem Datum der Ankunft  - `description`: Eine Beschreibung dieses Artikels  - `farmId`: Eindeutiger Bezeichner der Farm, in der sich der Pferch befindet.  - `feedConsumption`: Die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Stall gefressen wurde, wird durch die Futteraufnahme und die spezifische Struktur gemessen, um jeweils nur ein Tier fressen zu lassen  - `humidity`: Menge, die die Menge des Wasserdampfs in der Atmosphäre im Stift darstellt.  - `id`:   - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen im Element vorgenommen wurden  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge am Objekt  - `name`: Der Name dieses Elements.  - `numAnimals`: Anzahl der im Pen enthaltenen Tiere.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `sex`: Das Geschlecht der in der Bucht enthaltenen Tiere  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `temperature`: Temperatur des Stifts.  Unirs:' Celsius Grad'  - `type`: NGSI Entity-Typ. es muss Pen sein  - `waterConsumption`: Die gesamte Wassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Stall austritt. Sie wird durch Durchflussmesser und eine spezielle Struktur gemessen, um immer nur ein Tier gleichzeitig trinken zu lassen.  - `weightStDev`: Die Standardabweichung, die mit dem Durchschnittsgewicht der in der Bucht enthaltenen Tiere verbunden ist.    
 Erforderliche Eigenschaften  
 - `id`  - `lastUpdate`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -185,10 +185,10 @@ Pen:
         model: https://schema.org/DateTime    
         units: Seconds    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +208,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -231,7 +232,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -256,7 +258,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -278,7 +281,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -303,7 +307,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -330,7 +335,7 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     luminosity:    
       description: 'The brightness of a light source of a certain wavelength at the item'    
       minimum: 0    
