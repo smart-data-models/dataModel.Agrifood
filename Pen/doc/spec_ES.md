@@ -6,7 +6,7 @@ Entidad: Pen
 
 ## Lista de propiedades  
 
-- `additionalInfo`: lista de todos los valores brutos enviados por el sensor/plataforma con todas las posibles propiedades extra que no están incluidas en la estructura principal. Es una estructura JSON similar a esta: {'nombre': 'temperatura', 'valor' : 32}  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `arrivalTimestamp`: Fecha y hora de llegada de los animales al corral  - `avgGrowth`: El crecimiento medio del peso del animal en este corral  - `avgWeight`: El peso medio del animal en este corral.  - `buildingId`: Identificador único del edificio en el que se encuentra el artículo  - `co2`: La concentración de CO2 en el artículo  - `companyId`: Identificador único de una empresa  - `compartmentId`: Identificador único del compartimento en el que se encuentra la pluma.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `deadAnimalsSinceDateOfArrival`: Número de animales muertos desde la fecha de llegada  - `description`: Una descripción de este artículo  - `farmId`: Identificador único de la granja en la que se encuentra el corral.  - `feedConsumption`: La cantidad total de alimento que se ha ingerido en los puestos de alimentación en el corral. Se mide a través de las ingestas de alimento y la estructura específica para dejar que sólo un animal a la vez coma  - `humidity`: Cantidad que representa la cantidad de vapor de agua en la atmósfera en el corral.  - `id`:   - `lastUpdate`: Fecha y hora en que se tomaron las medidas en el artículo  - `location`:   - `luminosity`: El brillo de una fuente de luz de una determinada longitud de onda en el elemento  - `name`: El nombre de este artículo.  - `numAnimals`: Número de animales contenidos en el corral.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `sex`: El sexo de los animales contenidos en el corral  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `temperature`: Temperatura de la pluma.  Unirs:' Grado Celsius'  - `type`: Tipo de entidad NGSI. Tiene que ser Pen  - `waterConsumption`: La cantidad total de agua que sale del grifo o los grifos del corral. Se mide a través de caudalímetros y de una estructura específica para que sólo pueda beber un animal a la vez.  - `weightStDev`: La desviación estándar asociada al peso medio de los animales contenidos en el corral.    
+- `additionalInfo`: lista de todos los valores brutos enviados por el sensor/plataforma con todas las posibles propiedades extra que no están incluidas en la estructura principal. Es una estructura JSON similar a esta: {'nombre': 'temperatura', 'valor' : 32}  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `arrivalTimestamp`: Fecha y hora de llegada de los animales al corral  - `avgGrowth`: El crecimiento medio del peso del animal en este corral  - `avgWeight`: El peso medio del animal en este corral.  - `buildingId`: Identificador único del edificio en el que se encuentra el artículo  - `co2`: La concentración de CO2 en el artículo  - `companyId`: Identificador único de una empresa  - `compartmentId`: Identificador único del compartimento en el que se encuentra la pluma.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `deadAnimalsSinceDateOfArrival`: Número de animales muertos desde la fecha de llegada  - `description`: Una descripción de este artículo  - `farmId`: Identificador único de la granja en la que se encuentra el corral.  - `feedConsumption`: La cantidad total de alimento que se ha ingerido en los puestos de alimentación en el corral. Se mide a través de las ingestas de alimento y la estructura específica para dejar que sólo un animal a la vez coma  - `humidity`: Cantidad que representa la cantidad de vapor de agua en la atmósfera en el corral.  - `id`:   - `lastUpdate`: Fecha y hora en que se tomaron las medidas en el artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `luminosity`: El brillo de una fuente de luz de una determinada longitud de onda en el elemento  - `name`: El nombre de este artículo.  - `numAnimals`: Número de animales contenidos en el corral.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `sex`: El sexo de los animales contenidos en el corral  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `temperature`: Temperatura de la pluma.  Unirs:' Grado Celsius'  - `type`: Tipo de entidad NGSI. Tiene que ser Pen  - `waterConsumption`: La cantidad total de agua que sale del grifo o los grifos del corral. Se mide a través de caudalímetros y de una estructura específica para que sólo pueda beber un animal a la vez.  - `weightStDev`: La desviación estándar asociada al peso medio de los animales contenidos en el corral.    
 Propiedades requeridas  
 - `id`  - `lastUpdate`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -185,10 +185,10 @@ Pen:
         model: https://schema.org/DateTime    
         units: Seconds    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +208,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -231,7 +232,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -256,7 +258,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -278,7 +281,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -303,7 +307,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -330,7 +335,7 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     luminosity:    
       description: 'The brightness of a light source of a certain wavelength at the item'    
       minimum: 0    
