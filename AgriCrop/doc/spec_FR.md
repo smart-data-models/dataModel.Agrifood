@@ -1,16 +1,17 @@
 Entité : AgriCrop  
 =================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'une culture générique. Cette entité est principalement associée aux applications agricoles verticales et aux applications IdO connexes.**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Cette entité contient une description harmonisée d'une culture générique. Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes.**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `agroVocConcept`: Le lien avec le concept défini dans le vocabulaire d'AgroVoc  - `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `harvestingInterval`: Une liste de la ou des dates d'intervalle de récolte recommandées pour cette culture. Spécifié à l'aide des intervalles de dates répétitives ISO8601 : <br/><br/>**intervalle, description**<br/><br/>où **intervalle** se présente sous la forme **date de début/date de fin**<br/><br/>--MM-JJ/--MM-JJ<br/><br/> répétition moyenne chaque année entre cette date de début et cette date de fin.  - `hasAgriFertiliser`: Référence aux types d'engrais recommandés pour la culture de cette plante.  - `hasAgriPest`: Référence aux ravageurs connus pour attaquer cette culture  - `hasAgriSoil`: Référence aux types de sol recommandés pour la culture de cette plante.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `plantingFrom`: Une liste de la ou des dates d'intervalle de plantation recommandées pour cette culture. Spécifié à l'aide des intervalles de dates répétées ISO8601 : <br/><br/>**intervalle, description**<br/><br/>où **intervalle** se présente sous la forme **date de début/date de fin**<br/><br/>--MM-DD/--MM-DD<br/><br/> répétition moyenne chaque année entre cette date de début et cette date de fin.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriCrop  - `wateringFrequency`: Une description du programme d'arrosage recommandé. Un choix dans une liste énumérée. Un des : **quotidien, hebdomadaire, bihebdomadaire, mensuel, à la demande, autre**. Enumération : "quotidien, hebdomadaire, bihebdomadaire, mensuel, à la demande, autre".    
+- `agroVocConcept`: Le lien avec le concept défini dans le vocabulaire AgroVoc  - `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `harvestingInterval`: Une liste des dates d'intervalle de récolte recommandées pour cette culture. Spécifiée en utilisant les intervalles de dates répétitives ISO8601 : <br/><br/>**intervalle, description**<br/><br/>où **intervalle** se présente sous la forme de **date de début/date de fin**<br/><br/>--MM-DD/--MM-DD<br/><br/>Répétition chaque année de cette date de début à cette date de fin.  - `hasAgriFertiliser`: Référence aux types d'engrais recommandés pour la culture de cette plante.  - `hasAgriPest`: Référence aux parasites connus pour attaquer cette culture  - `hasAgriSoil`: Référence aux types de sol recommandés pour la culture de cette plante.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `plantingFrom`: Une liste des dates d'intervalle de plantation recommandées pour cette culture. Spécifiée en utilisant les intervalles de dates répétitives ISO8601 : <br/><br/>**intervalle, description**<br/><br/>où **intervalle** se présente sous la forme **date de début/date de fin**<br/><br/>--MM-DD/--MM-DD<br/><br/>Ce qui signifie répéter chaque année de cette date de début à cette date de fin.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriCrop.  - `wateringFrequency`: Une description du programme d'arrosage recommandé. Un choix dans une liste énumérée. Un des choix suivants : **quotidien, hebdomadaire, bihebdomadaire, mensuel, à la demande, autre**. Enum : 'daily, weekly, biweekly, monthly, onDemand, other' (quotidien, hebdomadaire, toutes les deux semaines, mensuel, à la demande, autre)    
 Propriétés requises  
 - `id`  - `name`  - `type`    
-Cette entité est principalement associée aux applications verticales agricoles et aux applications IdO connexes.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriCrop:    
@@ -150,8 +151,8 @@ AgriCrop:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -186,8 +187,8 @@ AgriCrop:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Exemple de valeurs clés de l'INSG V2 pour les cultures agricoles  
-Voici un exemple de valeurs clés d'un AgriCrop en format JSON. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### AgriCrop NGSI-v2 valeurs-clés Exemple  
+Voici un exemple d'un AgriCrop au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -243,8 +244,8 @@ AgriCrop:
   "wateringFrequency": "daily"  
 }  
 ```  
-#### AgriCrop NGSI V2 normalisé Exemple  
-Voici un exemple de culture agricole au format JSON normalisé. Ce format est compatible avec la version 2 de l'INSG lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### AgriCrop NGSI-v2 normalisé Exemple  
+Voici un exemple d'un AgriCrop au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -334,131 +335,161 @@ AgriCrop:
   }  
 }  
 ```  
-#### Exemple de valeurs clés de l'INSG-LD pour les cultures agricoles  
-Voici un exemple d'AgriCrop en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
- "alternateName": "Triticum aestivum",  
- "createdAt": "2017-01-01T01:20:00Z",  
- "description": "Spring wheat",  
- "harvestingInterval": [{"dateRange": "-03-21/-04-01",  
-                         "description": "Best Season"},  
-                        {"dateRange": "-04-02/-04-15",  
-                         "description": "Season OK"}],  
- "hasAgriFertiliser": ["urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-                       "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"],  
- "hasAgriPest": ["urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-                 "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"],  
- "hasAgriSoil": ["urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-                 "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"],  
- "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
- "modifiedAt": "2017-05-04T12:30:00Z",  
- "name": "Wheat",  
- "plantingFrom": [{"dateRange": "-09-28/-10-12", "description": "Best Season"},  
-                  {"dateRange": "-10-11/-10-18", "description": "Season OK"}],  
- "relatedSource": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                    "applicationEntityId": "app:weat"}],  
- "seeAlso": ["https://example.org/concept/wheat",  
-             "https://datamodel.org/example/wheat"],  
- "type": "AgriCrop",  
- "wateringFrequency": "daily"}  
-```  
-#### AgriCrop NGSI-LD normalisé Exemple  
-Voici un exemple d'AgriCrop en format JSON-LD tel que normalisé. Ce format est compatible avec JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### AgriCrop NGSI-LD valeurs-clés Exemple  
+Voici un exemple d'un AgriCrop au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ],  
-    "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-    "type": "AgriCrop",  
-    "createdAt": "2017-01-01T01:20:00Z",  
-    "modifiedAt": "2017-05-04T12:30:00Z",  
-    "name": {  
-        "type": "Property",  
-        "value": "Wheat"  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+  "type": "AgriCrop",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": {  
+    "type": "Property",  
+    "value": "Wheat"  
+  },  
+  "alternateName": {  
+    "type": "Property",  
+    "value": "Triticum aestivum"  
+  },  
+  "agroVocConcept": {  
+    "type": "Property",  
+    "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "https://example.org/concept/wheat",  
+      "https://datamodel.org/example/wheat"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Spring wheat"  
+  },  
+  "relatedSource": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+        "applicationEntityId": "app:weat"  
+      }  
+    ]  
+  },  
+  "hasAgriSoil": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+      "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
+    ]  
+  },  
+  "hasAgriFertiliser": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+      "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+    ]  
+  },  
+  "hasAgriPest": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+      "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+    ]  
+  },  
+  "plantingFrom": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "dateRange": "-09-28/-10-12",  
+        "description": "Best Season"  
+      },  
+      {  
+        "dateRange": "-10-11/-10-18",  
+        "description": "Season OK"  
+      }  
+    ]  
+  },  
+  "harvestingInterval": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "dateRange": "-03-21/-04-01",  
+        "description": "Best Season"  
+      },  
+      {  
+        "dateRange": "-04-02/-04-15",  
+        "description": "Season OK"  
+      }  
+    ]  
+  },  
+  "wateringFrequency": {  
+    "type": "Property",  
+    "value": "daily"  
+  }  
+}  
+```  
+#### AgriCrop NGSI-LD normalisé Exemple  
+Voici un exemple d'un AgriCrop au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
+  "alternateName": "Triticum aestivum",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "Spring wheat",  
+  "harvestingInterval": [  
+    {  
+      "dateRange": "-03-21/-04-01",  
+      "description": "Best Season"  
     },  
-    "alternateName": {  
-        "type": "Property",  
-        "value": "Triticum aestivum"  
-    },  
-    "agroVocConcept": {  
-        "type": "Property",  
-        "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
-    },  
-    "seeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "https://example.org/concept/wheat",  
-            "https://datamodel.org/example/wheat"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Spring wheat"  
-    },  
-    "relatedSource": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                "applicationEntityId": "app:weat"  
-            }  
-        ]  
-    },  
-    "hasAgriSoil": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-            "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
-        ]  
-    },  
-    "hasAgriFertiliser": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-            "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-        ]  
-    },  
-    "hasAgriPest": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-            "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-        ]  
-    },  
-    "plantingFrom": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "dateRange": "-09-28/-10-12",  
-                "description": "Best Season"  
-            },  
-            {  
-                "dateRange": "-10-11/-10-18",  
-                "description": "Season OK"  
-            }  
-        ]  
-    },  
-    "harvestingInterval": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "dateRange": "-03-21/-04-01",  
-                "description": "Best Season"  
-            },  
-            {  
-                "dateRange": "-04-02/-04-15",  
-                "description": "Season OK"  
-            }  
-        ]  
-    },  
-    "wateringFrequency": {  
-        "type": "Property",  
-        "value": "daily"  
+    {  
+      "dateRange": "-04-02/-04-15",  
+      "description": "Season OK"  
     }  
+  ],  
+  "hasAgriFertiliser": [  
+    "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+    "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+  ],  
+  "hasAgriPest": [  
+    "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+    "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+  ],  
+  "hasAgriSoil": [  
+    "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+    "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
+  ],  
+  "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": "Wheat",  
+  "plantingFrom": [  
+    {  
+      "dateRange": "-09-28/-10-12",  
+      "description": "Best Season"  
+    },  
+    {  
+      "dateRange": "-10-11/-10-18",  
+      "description": "Season OK"  
+    }  
+  ],  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:weat"  
+    }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/wheat",  
+    "https://datamodel.org/example/wheat"  
+  ],  
+  "type": "AgriCrop",  
+  "wateringFrequency": "daily"  
 }  
 ```  
