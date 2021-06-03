@@ -6,7 +6,7 @@ Entité : Pen
 
 ## Liste des propriétés  
 
-- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'name' : 'temperature', 'value' : 32}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure d'arrivée des animaux dans l'enclos  - `avgGrowth`: La croissance moyenne du poids de l'animal dans cet enclos  - `avgWeight`: Le poids moyen de l'animal dans cet enclos.  - `buildingId`: Identifiant unique du bâtiment dans lequel se trouve l'élément.  - `co2`: La concentration de CO2 dans l'article  - `companyId`: Identifiant unique d'une entreprise  - `compartmentId`: Identifiant unique du compartiment dans lequel se trouve le stylo.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `deadAnimalsSinceDateOfArrival`: Nombre d'animaux morts depuis la date d'arrivée  - `description`: Une description de cet article  - `farmId`: Identifiant unique de l'exploitation agricole dans laquelle se trouve l'enclos.  - `feedConsumption`: La quantité totale d'aliments qui a été consommée à partir de la ou des stations d'alimentation dans l'enclos. Elle est mesurée par la consommation d'aliments et la structure spécifique pour ne laisser manger qu'un seul animal à la fois.  - `humidity`: Quantité représentant la quantité de vapeur d'eau présente dans l'atmosphère dans le stylo.  - `id`:   - `lastUpdate`: Date et heure auxquelles les mesures de l'article ont été prises.  - `location`:   - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde à l'article  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux contenus dans l'enclos.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `sex`: Le sexe des animaux contenus dans l'enclos  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température de la plume.  Unirs:' degré Celsius'  - `type`: Type d'entité NGSI. Il doit s'agir de Pen  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets de l'enclos. Elle est mesurée par des débitmètres et une structure spécifique pour ne laisser boire qu'un seul animal à la fois.  - `weightStDev`: L'écart-type associé au poids moyen des animaux contenus dans l'enclos.    
+- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'name' : 'temperature', 'value' : 32}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure d'arrivée des animaux dans l'enclos  - `avgGrowth`: La croissance moyenne du poids de l'animal dans cet enclos  - `avgWeight`: Le poids moyen de l'animal dans cet enclos.  - `buildingId`: Identifiant unique du bâtiment dans lequel se trouve l'élément.  - `co2`: La concentration de CO2 dans l'article  - `companyId`: Identifiant unique d'une entreprise  - `compartmentId`: Identifiant unique du compartiment dans lequel se trouve le stylo.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `deadAnimalsSinceDateOfArrival`: Nombre d'animaux morts depuis la date d'arrivée  - `description`: Une description de cet article  - `farmId`: Identifiant unique de l'exploitation agricole dans laquelle se trouve l'enclos.  - `feedConsumption`: La quantité totale d'aliments qui a été consommée à partir de la ou des stations d'alimentation dans l'enclos. Elle est mesurée par la consommation d'aliments et la structure spécifique pour ne laisser manger qu'un seul animal à la fois.  - `humidity`: Quantité représentant la quantité de vapeur d'eau présente dans l'atmosphère dans le stylo.  - `id`:   - `lastUpdate`: Date et heure auxquelles les mesures de l'article ont été prises.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde à l'article  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux contenus dans l'enclos.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `sex`: Le sexe des animaux contenus dans l'enclos  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température de la plume.  Unirs:' degré Celsius'  - `type`: Type d'entité NGSI. Il doit s'agir de Pen  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets de l'enclos. Elle est mesurée par des débitmètres et une structure spécifique pour ne laisser boire qu'un seul animal à la fois.  - `weightStDev`: L'écart-type associé au poids moyen des animaux contenus dans l'enclos.    
 Propriétés requises  
 - `id`  - `lastUpdate`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -185,10 +185,10 @@ Pen:
         model: https://schema.org/DateTime    
         units: Seconds    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +208,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -231,7 +232,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -256,7 +258,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -278,7 +281,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -303,7 +307,8 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -330,7 +335,7 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     luminosity:    
       description: 'The brightness of a light source of a certain wavelength at the item'    
       minimum: 0    
