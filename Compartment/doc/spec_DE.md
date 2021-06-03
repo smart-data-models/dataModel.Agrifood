@@ -1,0 +1,709 @@
+Entität: Fach  
+=============  
+[Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Globale Beschreibung: **Künstlicher Bereich in einem Gebäude oder einer Abteilung, der von bestimmten Sensoren gemessen wird. Ein Bereich ist nicht unbedingt eine physische Trennwand. Es kann eine Abteilung oder eine Gruppierung von mehreren Stiften innerhalb einer Abteilung sein, die vom selben Sensor gemessen werden.**  
+
+## Liste der Eigenschaften  
+
+- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es ist eine JSON-Struktur ähnlich wie diese: { 'temperature': '32', 'humidity':'42'}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit, zu der das Tier in das Fach eingesetzt wurde  - `avgGrowth`: Der durchschnittliche Gewichtszuwachs der Tiere in diesem Abteil  - `avgWeight`: Das Durchschnittsgewicht der Schweine in diesem Abteil  - `buildingId`: Eindeutiger Bezeichner eines Gebäudes, in dem sich das Fach befindet  - `co2`: Die CO2-Konzentration im Kompartiment  - `companyId`: Eindeutige Kennung einer Firma  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `empty`: True/False-Wert, wenn das Fach leer ist  - `farmId`: Eindeutiger Bezeichner eines Betriebs, in dem sich das Kompartiment befindet  - `feedConsumption`: Die Gesamtmenge der Nahrung, die von der/den Futterstation(en) im Kompartiment gefressen wurde  - `humidity`: Menge, die die Menge an Wasserdampf in der Atmosphäre in der Kammer darstellt  - `id`: Eindeutiger Bezeichner der Entität  - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen im Compartment durchgeführt wurden. Unix-Zeitstempel  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle einer bestimmten Wellenlänge am Fach  - `name`: Der Name dieses Elements.  - `numAnimals`: Anzahl der Tiere im Kompartiment  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `parentCompartmentId`: Eindeutiger Bezeichner des Compartments, zu dem dieses Compartment gehört. Er wird nur verwendet, wenn ein Compartment andere Compartments enthält  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `sex`: Das Geschlecht der im Fach enthaltenen Tiere  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `temperature`: Temperatur des Fachs.  - `type`: NGSI Entity-Typ. es muss Compartment sein  - `waterConsumption`: Die Gesamtwassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Fach austrat  - `weightStDev`: Die Standardabweichung in Verbindung mit dem Durchschnittsgewicht der im Kompartiment enthaltenen Schweine/Ferkel    
+Erforderliche Eigenschaften  
+- `id`  - `lastUpdate`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+Alphabetisch sortiert (für Details anklicken)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
+Compartment:    
+  description: 'Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.'    
+  properties:    
+    additionalInfo:    
+      description: 'list of all the raw values sent by the sensor/platform with all the possible extra properties that are not included in the main structure. It is a JSON structure similar to this: { ''temperature'': ''32'', ''humidity'':''42''}'    
+      items:    
+        properties:    
+          parameter:    
+            type: string    
+          value:    
+            type: string    
+        type: object    
+      type: Property    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    arrivalTimestamp:    
+      description: 'Date and Time at which the animal were inserted in the compartment'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Datetime    
+    avgGrowth:    
+      description: 'The average growth in weight of the animals in this compartment'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
+    avgWeight:    
+      description: 'The average weight of the pigs in this compartment'    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    buildingId:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of a building the compartment is located in'    
+      type: Relationship    
+    co2:    
+      description: 'The CO2 concentration in the compartment'    
+      minimum: 0    
+      type: Property    
+    companyId:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of a company'    
+      type: Relationship    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: Property    
+    empty:    
+      description: 'True/False value if the compartment is empty'    
+      type: Property    
+    farmId:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of a farm where the compartment is located in'    
+      type: Relationship    
+    feedConsumption:    
+      description: 'The total amount of food that has been eaten from the feeding station(s) in the compartment'    
+      minimum: 0    
+      type: Property    
+    humidity:    
+      description: 'Quantity representing the amount of water vapour in the atmosphere in the compartment'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    id:    
+      anyOf: &compartment_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
+    lastUpdate:    
+      description: 'Date and time at which the measurements in the compartment were taken. Unix timestamp'    
+      type: Property    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      type: Geoproperty    
+    luminosity:    
+      description: 'The brightness of a light source of a certain wavelength at the compartment'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    numAnimals:    
+      description: 'Number of animals in the compartment'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    parentCompartmentId:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the  compartment where this compartment is a part of. It is used only when a compartment contains other compartments'    
+      type: Relationship    
+    relatedSource:    
+      description: 'List of IDs the current entity may have in external applications'    
+      items:    
+        - type: object    
+          values:    
+            application:    
+              anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
+            applicationEntityId:    
+              type: string    
+      type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      type: Property    
+    sex:    
+      description: 'The sex of the animals contained in the compartment'    
+      enum:    
+        - M    
+        - F    
+        - unknown    
+        - ""    
+      type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: Property    
+    temperature:    
+      description: 'Temperature of the compartment.'    
+      type: Property    
+    type:    
+      description: 'NGSI Entity type. it has to be Compartment'    
+      enum:    
+        - Compartment    
+      type: Property    
+    waterConsumption:    
+      description: 'The total amount of water that came out from the tap or taps in the compartment'    
+      minimum: 0    
+      type: Property    
+    weightStDev:    
+      description: 'The standard deviation associated to the average weight of the pigs/piglets contained in the compartment'    
+      type: Property    
+  required:    
+    - id    
+    - type    
+    - lastUpdate    
+  type: object    
+```  
+</details>    
+## Beispiel-Nutzlasten  
+#### Compartment NGSI-v2 Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für ein Compartment im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0",  
+  "type": "Compartment",  
+  "additionalInfo": [  
+    {  
+      "name": "Farm2FeedTray",  
+      "value": "4"  
+    },  
+    {  
+      "name": "Farm2ValveId",  
+      "value": ""  
+    },  
+    {  
+      "name": "Farm2DepartmentId",  
+      "value": "11"  
+    }  
+  ],  
+  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
+  "avgGrowth": 1.0,  
+  "avgWeight": 45.5,  
+  "buildingId": "f6ce5251-e959-4269-9040-8056c6a093d9",  
+  "co2": 20,  
+  "companyId": "1401c9e0-c441-4bd1-b8d3-fb1194479aa7",  
+  "empty": false,  
+  "farmId": "7438345c-fdff-45c9-a02f-1d764cbc03a7",  
+  "feedConsumption": 8.3,  
+  "humidity": 0.7,  
+  "lastUpdate": 1589841011000,  
+  "luminosity": 3,  
+  "name": "",  
+  "numAnimals": 22,  
+  "outputFeed": 8.2,  
+  "parentCompartmentId": "f0ddd929-5a18-479b-9ad6-5947cc2cd05b",  
+  "sex": "",  
+  "startWeight": 26,  
+  "temperature": 25,  
+  "waterConsumption": 23,  
+  "weightStDev": 2.3  
+}  
+```  
+#### Compartment NGSI-v2 normalisiert Beispiel  
+Hier ist ein Beispiel für ein Compartment im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0"  
+  ,  
+  "type": "Compartment",  
+  "additionalInfo": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "name": "Farm2FeedTray",  
+        "value": "4"  
+      },  
+      {  
+        "name": "Farm2ValveId",  
+        "value": ""  
+      },  
+      {  
+        "name": "Farm2DepartmentId",  
+        "value": "11"  
+      }  
+    ]  
+  },  
+  "arrivalTimestamp": {  
+    "type": "string",  
+    "value": "2020-04-14T22:00:00.000Z"  
+  },  
+  "avgGrowth": {  
+    "type": "number",  
+    "value": 4  
+  },  
+  "avgWeight": {  
+    "type": "number",  
+    "value": 45.5  
+  },  
+  "buildingId": {  
+    "type": "string",  
+    "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
+  },  
+  "co2": {  
+    "type": "number",  
+    "value": 20  
+  },  
+  "companyId": {  
+    "type": "string",  
+    "value": "1401c9e0-c441-4bd1-b8d3-fb1194479aa7"  
+  },  
+  "empty": {  
+    "type": "boolean",  
+    "value": false  
+  },  
+  "farmId": {  
+    "type": "string",  
+    "value": "7438345c-fdff-45c9-a02f-1d764cbc03a7"  
+  },  
+  "feedConsumption": {  
+    "type": "number",  
+    "value": 8.3  
+  },  
+  "humidity": {  
+    "type": "number",  
+    "value": 0.7  
+  },  
+  "lastUpdate": {  
+    "type": "number",  
+    "value": 1589841011000  
+  },  
+  "luminosity": {  
+    "type": "number",  
+    "value": 3  
+  },  
+  "name": {  
+    "type": "string",  
+    "value": ""  
+  },  
+  "numAnimals": {  
+    "type": "number",  
+    "value": 22  
+  },  
+  "outputFeed": {  
+    "type": "number",  
+    "value": 8.2  
+  },  
+  "parentCompartmentId": {  
+    "type": "string",  
+    "value": "f0ddd929-5a18-479b-9ad6-5947cc2cd05b"  
+  },  
+  "sex": {  
+    "type": "string",  
+    "value": ""  
+  },  
+  "startWeight": {  
+    "type": "number",  
+    "value": 26  
+  },  
+  "temperature": {  
+    "type": "number",  
+    "value": 25  
+  },  
+  "waterConsumption": {  
+    "type": "number",  
+    "value": 23  
+  },  
+  "weightStDev": {  
+    "type": "number",  
+    "value": 2.3  
+  }  
+}  
+```  
+#### Compartment NGSI-LD Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für ein Compartment im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+  "type": "Compartment",  
+  "additionalInfo": {  
+    "type": "array",  
+    "value": [  
+      {  
+        "name": "Farm2FeedTray",  
+        "value": "4"  
+      },  
+      {  
+        "name": "Farm2ValveId",  
+        "value": ""  
+      },  
+      {  
+        "name": "Farm2DepartmentId",  
+        "value": "11"  
+      }  
+    ]  
+  },  
+  "arrivalTimestamp": {  
+    "type": "string",  
+    "value": "2020-04-14T22:00:00.000Z"  
+  },  
+  "avgGrowth": {  
+    "type": "boolean",  
+    "value": true  
+  },  
+  "avgWeight": {  
+    "type": "number",  
+    "value": 45.5  
+  },  
+  "buildingId": {  
+    "type": "string",  
+    "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
+  },  
+  "co2": {  
+    "type": "number",  
+    "value": 20  
+  },  
+  "companyId": {  
+    "type": "string",  
+    "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
+  },  
+  "empty": {  
+    "type": "boolean",  
+    "value": false  
+  },  
+  "farmId": {  
+    "type": "string",  
+    "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
+  },  
+  "feedConsumption": {  
+    "type": "number",  
+    "value": 8.3  
+  },  
+  "humidity": {  
+    "type": "number",  
+    "value": 0.7  
+  },  
+  "lastUpdate": {  
+    "type": "number",  
+    "value": 1589841011000  
+  },  
+  "luminosity": {  
+    "type": "number",  
+    "value": 3  
+  },  
+  "name": {  
+    "type": "string",  
+    "value": ""  
+  },  
+  "numAnimals": {  
+    "type": "number",  
+    "value": 22  
+  },  
+  "outputFeed": {  
+    "type": "number",  
+    "value": 8.2  
+  },  
+  "parentCompartmentId": {  
+    "type": "string",  
+    "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
+  },  
+  "sex": {  
+    "type": "string",  
+    "value": ""  
+  },  
+  "startWeight": {  
+    "type": "number",  
+    "value": 26  
+  },  
+  "temperature": {  
+    "type": "number",  
+    "value": 25  
+  },  
+  "waterConsumption": {  
+    "type": "number",  
+    "value": 23  
+  },  
+  "weightStDev": {  
+    "type": "number",  
+    "value": 2.3  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+  ]  
+}  
+```  
+#### Compartment NGSI-LD normalisiert Beispiel  
+Hier ist ein Beispiel für ein Compartment im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+  "type": "Compartment",  
+  "additionalInfo": [  
+    {  
+      "name": "Farm2FeedTray",  
+      "value": "4"  
+    },  
+    {  
+      "name": "Farm2ValveId",  
+      "value": ""  
+    },  
+    {  
+      "name": "Farm2DepartmentId",  
+      "value": "11"  
+    }  
+  ],  
+  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
+  "avgGrowth": 1.0,  
+  "avgWeight": 45.5,  
+  "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
+  "co2": 20,  
+  "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
+  "empty": false,  
+  "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
+  "feedConsumption": 8.3,  
+  "humidity": 0.7,  
+  "lastUpdate": 1589841011000,  
+  "luminosity": 3,  
+  "name": "",  
+  "numAnimals": 22,  
+  "outputFeed": 8.2,  
+  "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
+  "sex": "",  
+  "startWeight": 26,  
+  "temperature": 25,  
+  "waterConsumption": 23,  
+  "weightStDev": 2.3,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+  ]  
+}  
+```  
