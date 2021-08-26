@@ -394,3 +394,4 @@ AgriParcel:
     - area
     - hasAgriCrop
   type: object
+  version: 0.0.1
