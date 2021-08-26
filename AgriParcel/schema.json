@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json",
     "title": "Smart Data Models - Agri Parcel",
     "description": "This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.",
@@ -30,7 +30,7 @@
                     "description": "Property. Model:'http://schema.org/Number'. Units:'m2'. The area of the parcel nominally in square meters."
                 },
                 "category": {
-                    "value": "string",
+                    "type": "string",
                     "description": "Property. Model:'http://schema.org/Text'. The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**"
                 },
                 "belongsTo": {
