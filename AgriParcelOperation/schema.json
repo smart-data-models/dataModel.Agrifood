@@ -163,5 +163,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasAgriParcel",
+        "plannedStartAt",
+        "plannedEndAt"
     ]
 }
