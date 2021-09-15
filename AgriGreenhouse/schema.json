@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/schema.json",
-    "title": "Smart Data Models - Agri Greenhouse"
+    "title": "Smart Data Models - Agri Greenhouse",
+    "description": "This entity contains a harmonised description of the conditions recorded within a generic greenhouse, a type of AgriParcel."
 }
