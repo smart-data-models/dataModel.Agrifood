@@ -155,5 +155,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "area",
+        "hasAgriCrop"
     ]
 }
