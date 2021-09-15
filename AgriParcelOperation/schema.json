@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/schema.json",
     "title": "Smart Data Models - Agri Parcel Operation",
-    "description": "This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications."
+    "description": "This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.",
+    "type": "object"
 }
