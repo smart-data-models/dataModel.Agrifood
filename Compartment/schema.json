@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json",
-    "title": " Smart Data models - Compartment schema"
+    "title": " Smart Data models - Compartment schema",
+    "description": "Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor."
 }
