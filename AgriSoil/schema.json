@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/schema.json",
-    "title": "Smart Data Models - AgriSoil"
+    "title": "Smart Data Models - AgriSoil",
+    "description": "This entity contains a harmonised description of a generic soil. This entity is primarily associated with the agricultural vertical and related IoT applications."
 }
