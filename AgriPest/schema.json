@@ -38,5 +38,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "name"
     ]
 }
