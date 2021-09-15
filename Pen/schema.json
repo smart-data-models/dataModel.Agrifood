@@ -3,5 +3,6 @@
     "$schemaVersion": "0.1.0",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json",
-    "title": " Smart Data models - Pen schema"
+    "title": " Smart Data models - Pen schema",
+    "description": "Fenced area in a building or department or outside housing a group of animals. Animals in a pen can move and interact freely. Pens are often not completely separated from each other (half walls, iron bars, fences,\u2026), making it possible that animals from neighbouring pens can see/touch"
 }
