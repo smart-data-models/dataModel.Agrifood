@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.1",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json",
+    "title": " Smart Data models - Compartment schema"
 }
