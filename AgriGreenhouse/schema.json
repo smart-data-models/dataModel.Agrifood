@@ -5,5 +5,158 @@
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/schema.json",
     "title": "Smart Data Models - Agri Greenhouse",
     "description": "This entity contains a harmonised description of the conditions recorded within a generic greenhouse, a type of AgriParcel.",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "AgriGreenhouse"
+                    ],
+                    "description": "Property. NGSI Entity Type. It has to be AgriGreenhouse"
+                },
+                "ownedBy": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Owner (Person or Organization) of the AgriGreenhouse"
+                },
+                "belongsTo": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Entity the Greenhouse belongs to"
+                },
+                "hasAgriParcelParent": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Reference to the AgriParcel entity to which this entity relates"
+                },
+                "hasAgriParcelChildren": {
+                    "type": "array",
+                    "description": "Relationship. Related sub AgriParcel records to which this entity relates",
+                    "items": [
+                        {
+                            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                        }
+                    ]
+                },
+                "hasWeatherObserved": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Reference to the weather observation record current for this entity"
+                },
+                "hasWaterQualityObserved": {
+                    "type": "array",
+                    "description": "Relationship. Reference to one or more water quality observation records current for this entity",
+                    "items": [
+                        {
+                            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                        }
+                    ]
+                },
+                "relativeHumidity": {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0,
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'Degrees centigrade'. The average greenhouse air temperature nominally in degrees centigrade."
+                },
+                "leafTemperature": {
+                    "type": "integer",
+                    "description": "Property. Model:'http://schema.org/Number'. The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1"
+                },
+                "co2": {
+                    "type": "integer",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'mg/L'. The measured interior C02 concentration nominally in mg/L"
+                },
+                "dailyLight": {
+                    "type": "integer",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'kw/m2'. Daily Accumulated light measured in kW per square metre"
+                },
+                "drainFlow": {
+                    "type": "object",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'L/s'. The observed drain flow rate in litres per second",
+                    "values": {
+                        "value": {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "maxValue": {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "minValue": {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "unitText": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "hasDevice": {
+                    "type": "array",
+                    "description": "Relationship. Model:'http://schema.org/URL'. Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.",
+                    "items": [
+                        {
+                            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
 }
