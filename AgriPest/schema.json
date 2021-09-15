@@ -5,5 +5,38 @@
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/schema.json",
     "title": "Smart Data Models - Agri Pest",
     "description": "This entity contains a harmonised description of an agricultural pest. ",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "AgriPest"
+                    ],
+                    "description": "Property. NGSI Entity Type: It has to be AgriPest"
+                },
+                "agroVocConcept": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Relationship. Model:'http://schema.org/URL'. Reference to the agrovoc term associated with this item"
+                },
+                "hasAgriProductType": {
+                    "type": "array",
+                    "description": "Relationship. Model:'http://schema.org/URL'. Reference to the recommended types of product that can be used to treat this pest.",
+                    "items": [
+                        {
+                            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
 }
