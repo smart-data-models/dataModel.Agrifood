@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriFarm/schema.json",
-    "title": "Smart Data Models - Agri Farm"
+    "title": "Smart Data Models - Agri Farm",
+    "description": "This entity contains a harmonised description of a generic farm made up of buildings and parcels. This entity is primarily associated with the agricultural vertical and related IoT applications."
 }
