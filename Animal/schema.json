@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.1",
-    "id": "https://smart-data-models.github.io/dataModel.Agrifood/Animall/schema.json"
+    "id": "https://smart-data-models.github.io/dataModel.Agrifood/Animall/schema.json",
+    "title": "Animal model IoF2020 ShareBeef UC"
 }
