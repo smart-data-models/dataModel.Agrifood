@@ -73,5 +73,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "name",
+        "root"
     ]
 }
