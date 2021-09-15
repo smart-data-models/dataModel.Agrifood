@@ -197,5 +197,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "lastUpdate"
     ]
 }
