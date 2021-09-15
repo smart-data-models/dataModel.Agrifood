@@ -5,5 +5,62 @@
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriApp/schema.json",
     "title": "Smart Data Models - Agri App",
     "description": "This entity contains a harmonised description of a generic app made for the Agrifood domain. This entity is primarily associated with the agricultural vertical and related IoT applications.",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "AgriApp"
+                    ],
+                    "description": "Property. NGSI Entity Type. it has to be AgriApp"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Property. The version of the App"
+                },
+                "hasProvider": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Provider (Person or Organization) of the application"
+                },
+                "endpoint": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Property. Model:'http://schema.org/URL'. The digital connection point for the App"
+                },
+                "category": {
+                    "type": "array",
+                    "description": "Property. List of categories of the app",
+                    "items": [
+                        {
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
 }
