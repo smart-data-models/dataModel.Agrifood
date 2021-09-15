@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.1",
     "id": "https://smart-data-models.github.io/dataModel.Agrifood/Animall/schema.json",
-    "title": "Animal model IoF2020 ShareBeef UC"
+    "title": "Animal model IoF2020 ShareBeef UC",
+    "description": "An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave."
 }
