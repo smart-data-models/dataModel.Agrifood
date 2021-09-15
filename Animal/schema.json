@@ -4,5 +4,190 @@
     "id": "https://smart-data-models.github.io/dataModel.Agrifood/Animall/schema.json",
     "title": "Animal model IoF2020 ShareBeef UC",
     "description": "An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Animal"
+                    ],
+                    "description": "Property. NGSI Entity Type: It has to be Animal"
+                },
+                "species": {
+                    "type": "string",
+                    "enum": [
+                        "cow",
+                        "goat",
+                        "horse",
+                        "pig",
+                        "sheep",
+                        "dairy cattle",
+                        "beef cattle"
+                    ],
+                    "description": "Property. Species to which the animal belongs. This enum can be increased. Enum:'cow, goat, horse, pig, sheep, dairy cattle, beef cattle'\u00b7 Model:'https://schema.org/Text'"
+                },
+                "legalId": {
+                    "type": "string",
+                    "description": "Property. Legal ID of the animal"
+                },
+                "birthdate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Animal's birthdate. Model:'https://schema.org/DateTime'"
+                },
+                "sex": {
+                    "type": "string",
+                    "enum": [
+                        "male",
+                        "female"
+                    ],
+                    "description": "Property. Sex of the animal. Enum:'male, female'"
+                },
+                "breed": {
+                    "type": "string",
+                    "description": "Property. Breed of the animal"
+                },
+                "calvedBy": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Mother of the animal"
+                },
+                "siredBy": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Father of the animal"
+                },
+                "weight": {
+                    "type": "number",
+                    "description": "Relationship. Model:'http://schema.org/Number'. The weight of the animal as a number. Units:'kg'"
+                },
+                "ownedBy": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. The owner of the animal"
+                },
+                "locatedAt": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Id of the AgriParcel relationship"
+                },
+                "phenologicalCondition": {
+                    "type": "string",
+                    "enum": [
+                        "lactatingBaby",
+                        "grazingBaby",
+                        "maleAdult",
+                        "femaleAdult",
+                        "maleYoung",
+                        "femaleYoung"
+                    ],
+                    "description": "Property. Phenological condition of the animal. Enum:'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'."
+                },
+                "reproductiveCondition": {
+                    "type": "string",
+                    "enum": [
+                        "noStatus",
+                        "inactive",
+                        "inCalf",
+                        "inHeat",
+                        "active"
+                    ],
+                    "description": "Property. Reproductive condition of the animal. Enum:'noStatus, inactive, inCalf, inHeat, active'"
+                },
+                "healthCondition": {
+                    "type": "string",
+                    "enum": [
+                        "healthy",
+                        "sick",
+                        "inTreatment"
+                    ],
+                    "description": "Property. Phenological condition of the animal. Enum:' healthy, sick, inTreatment'"
+                },
+                "fedWith": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Food used for the animal"
+                },
+                "welfareCondition": {
+                    "type": "string",
+                    "enum": [
+                        "issue",
+                        "adequate"
+                    ],
+                    "description": "Property. Indicator of the animal welfare. Enum:'issue, adequate'"
+                }
+            }
+        }
+    ]
 }
