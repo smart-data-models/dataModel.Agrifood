@@ -38,26 +38,33 @@ Animal:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     birthdate:    
       description: 'Animal''s birthdate'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     breed:    
       description: 'Breed of the animal'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     calvedBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -69,21 +76,30 @@ Animal:
           format: uri    
           type: string    
       description: 'Mother of the animal'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     fedWith:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -95,14 +111,17 @@ Animal:
           format: uri    
           type: string    
       description: 'Food used for the animal'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     healthCondition:    
       description: 'Phenological condition of the animal. Enum:'' healthy, sick, inTreatment'''    
       enum:    
         - healthy    
         - sick    
         - inTreatment    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &animal_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -114,10 +133,13 @@ Animal:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     legalId:    
       description: 'Legal ID of the animal'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     locatedAt:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -129,7 +151,8 @@ Animal:
           format: uri    
           type: string    
       description: 'Id of the AgriParcel relationship'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -281,10 +304,13 @@ Animal:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     ownedBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -296,13 +322,16 @@ Animal:
           format: uri    
           type: string    
       description: 'The owner of the animal'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *animal_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     phenologicalCondition:    
       description: 'Phenological condition of the animal. Enum:''lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung''.'    
       enum:    
@@ -312,7 +341,9 @@ Animal:
         - femaleAdult    
         - maleYoung    
         - femaleYoung    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -323,7 +354,9 @@ Animal:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     reproductiveCondition:    
       description: 'Reproductive condition of the animal. Enum:''noStatus, inactive, inCalf, inHeat, active'''    
       enum:    
@@ -332,7 +365,9 @@ Animal:
         - inCalf    
         - inHeat    
         - active    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -343,13 +378,16 @@ Animal:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     sex:    
       description: 'Sex of the animal. Enum:''male, female'''    
       enum:    
         - male    
         - female    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     siredBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -361,10 +399,13 @@ Animal:
           format: uri    
           type: string    
       description: 'Father of the animal'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     species:    
       description: 'Species to which the animal belongs. This enum can be increased'    
       enum:    
@@ -375,26 +416,32 @@ Animal:
         - sheep    
         - 'dairy cattle'    
         - 'beef cattle'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: 'Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text'    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be Animal'    
       enum:    
         - Animal    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     weight:    
       description: 'The weight of the animal as a number'    
-      type: Relationship    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Relationship    
         units: kg    
     welfareCondition:    
       description: 'Indicator of the animal welfare. Enum:''issue, adequate'''    
       enum:    
         - issue    
         - adequate    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -523,6 +570,50 @@ Animal:
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
   "type": "Animal",  
+  "birthdate": {  
+    "@type": "DateTime",  
+    "@value": "2017-01-01T01:20:00Z"  
+  },  
+  "breed": "Merina",  
+  "calvedBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
+  "fedWith": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081",  
+  "healthCondition": "healthy",  
+  "legalId": "ES142589652140",  
+  "locatedAt": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+  "location": {  
+    "coordinates": [  
+      -4.754444444,  
+      41.640833333  
+    ],  
+    "type": "Point"  
+  },  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "ownedBy": "http://person.org/leon",  
+  "phenologicalCondition": "adult",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:sheep1"  
+    }  
+  ],  
+  "reproductiveCondition": "inCalf",  
+  "sex": "female",  
+  "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
+  "species": "sheep",  
+  "weight": 65.3,  
+  "welfareCondition": "adequate",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### Animal NGSI-LD normalized Example    
+Here is an example of a Animal in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+  "type": "Animal",  
   "modifiedAt": "2017-05-04T12:30:00Z",  
   "species": {  
     "type": "Property",  
@@ -610,49 +701,5 @@ Animal:
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
-}  
-```  
-#### Animal NGSI-LD normalized Example    
-Here is an example of a Animal in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "birthdate": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-01T01:20:00Z"  
-  },  
-  "breed": "Merina",  
-  "calvedBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
-  "fedWith": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081",  
-  "healthCondition": "healthy",  
-  "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "legalId": "ES142589652140",  
-  "locatedAt": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-  "location": {  
-    "coordinates": [  
-      -4.754444444,  
-      41.640833333  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "http://person.org/leon",  
-  "phenologicalCondition": "adult",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:sheep1"  
-    }  
-  ],  
-  "reproductiveCondition": "inCalf",  
-  "sex": "female",  
-  "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
-  "species": "sheep",  
-  "type": "Animal",  
-  "weight": 65.3,  
-  "welfareCondition": "adequate"  
 }  
 ```  
