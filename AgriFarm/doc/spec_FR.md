@@ -36,17 +36,21 @@ AgriFarm:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     contactPoint:    
       description: 'The details to contact with the item.'    
       properties:    
@@ -63,23 +67,32 @@ AgriFarm:
         url:    
           format: uri    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasAgriParcel:    
       description: 'List of agri parcels belonging to the farm'    
       items:    
@@ -93,17 +106,22 @@ AgriFarm:
               format: uri    
               type: string    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasBuilding:    
       description: 'List of buildings belonging to the farm'    
       items:    
         - anyOf: *anyof    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     id:    
       anyOf: *anyof    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     landLocation:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -402,10 +420,13 @@ AgriFarm:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     ownedBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -417,13 +438,16 @@ AgriFarm:
           format: uri    
           type: string    
       description: 'Owner (Person or Organization) of the farm'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -434,7 +458,9 @@ AgriFarm:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -445,15 +471,20 @@ AgriFarm:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type. It has to be AgriFarm'    
       enum:    
         - AgriFarm    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -592,7 +623,87 @@ AgriFarm:
 }  
 ```  
 #### AgriFarm NGSI-LD key-values Exemple  
-Voici un exemple d'une AgriFarm au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'une AgriFarm au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Valdepe\u00f1as",  
+    "streetAddress": "Camino de Membrilla 17",  
+    "type": "PostalAddress"  
+  },  
+  "contactPoint": {  
+    "email": "wheatfarm@email.com",  
+    "telephone": "00349674532",  
+    "type": "ContactPoint"  
+  },  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "A farm producing wheat",  
+  "hasAgriParcel": [  
+    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
+  ],  
+  "hasBuilding": [  
+    "urn:ngsi-ld:Building:a6ba44e0-4474-11e8-8ed1-ab9e0ea93827",  
+    "urn:ngsi-ld:Building:d95b8874-4474-11e8-8d6b-dbe144258354"  
+  ],  
+  "id": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+  "landLocation": {  
+    "coordinates": [  
+      [  
+        [  
+          100,  
+          0  
+        ],  
+        [  
+          101,  
+          0  
+        ],  
+        [  
+          101,  
+          1  
+        ],  
+        [  
+          100,  
+          1  
+        ],  
+        [  
+          100,  
+          0  
+        ]  
+      ]  
+    ],  
+    "type": "Polygon"  
+  },  
+  "location": {  
+    "coordinates": [  
+      100,  
+      0  
+    ],  
+    "type": "Point"  
+  },  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": "Wheat farm",  
+  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:farm1"  
+    }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/farm",  
+    "https://datamodel.org/example/farm"  
+  ],  
+  "type": "AgriFarm"  
+}  
+```  
+#### AgriFarm NGSI-LD normalisé Exemple  
+Voici un exemple d'une AgriFarm au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "@context": [  
@@ -702,85 +813,5 @@ AgriFarm:
       "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
     ]  
   }  
-}  
-```  
-#### AgriFarm NGSI-LD normalisé Exemple  
-Voici un exemple d'une AgriFarm au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Valdepe\u00f1as",  
-    "streetAddress": "Camino de Membrilla 17",  
-    "type": "PostalAddress"  
-  },  
-  "contactPoint": {  
-    "email": "wheatfarm@email.com",  
-    "telephone": "00349674532",  
-    "type": "ContactPoint"  
-  },  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "A farm producing wheat",  
-  "hasAgriParcel": [  
-    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-  ],  
-  "hasBuilding": [  
-    "urn:ngsi-ld:Building:a6ba44e0-4474-11e8-8ed1-ab9e0ea93827",  
-    "urn:ngsi-ld:Building:d95b8874-4474-11e8-8d6b-dbe144258354"  
-  ],  
-  "id": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "landLocation": {  
-    "coordinates": [  
-      [  
-        [  
-          100,  
-          0  
-        ],  
-        [  
-          101,  
-          0  
-        ],  
-        [  
-          101,  
-          1  
-        ],  
-        [  
-          100,  
-          1  
-        ],  
-        [  
-          100,  
-          0  
-        ]  
-      ]  
-    ],  
-    "type": "Polygon"  
-  },  
-  "location": {  
-    "coordinates": [  
-      100,  
-      0  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Wheat farm",  
-  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:farm1"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/farm",  
-    "https://datamodel.org/example/farm"  
-  ],  
-  "type": "AgriFarm"  
 }  
 ```  
