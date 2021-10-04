@@ -36,42 +36,57 @@ AgriApp:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'List of categories of the app'    
       items:    
         - type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     endpoint:    
       description: 'The digital connection point for the App'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     hasProvider:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -83,7 +98,8 @@ AgriApp:
           format: uri    
           type: string    
       description: 'Provider (Person or Organization) of the application'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     id:    
       anyOf: &agriapp_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -95,7 +111,8 @@ AgriApp:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -247,16 +264,21 @@ AgriApp:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -267,7 +289,9 @@ AgriApp:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -278,18 +302,25 @@ AgriApp:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type. it has to be AgriApp'    
       enum:    
         - AgriApp    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     version:    
       description: 'The version of the App'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -353,6 +384,28 @@ AgriApp:
 Voici un exemple d'une AgriApp au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
+  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+  "type": "AgriApp",  
+  "category": [  
+    "TBD"  
+  ],  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "An app for wine tracking",  
+  "endpoint": "https://app.endpoint/download",  
+  "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": "Wine track",  
+  "version": "1.0",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### AgriApp NGSI-LD normalisé Exemple  
+Voici un exemple d'une AgriApp au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
@@ -387,27 +440,5 @@ AgriApp:
       "TBD"  
     ]  
   }  
-}  
-```  
-#### AgriApp NGSI-LD normalisé Exemple  
-Voici un exemple d'une AgriApp au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "TBD"  
-  ],  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "An app for wine tracking",  
-  "endpoint": "https://app.endpoint/download",  
-  "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Wine track",  
-  "type": "AgriApp",  
-  "version": "1.0"  
 }  
 ```  
