@@ -1,8 +1,9 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.1.0",
+    "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json",
-    "title": " Smart Data models - pen schema",
+    "title": " Smart Data models - Pen schema",
     "description": "Fenced area in a building or department or outside housing a group of animals. Animals in a pen can move and interact freely. Pens are often not completely separated from each other (half walls, iron bars, fences,\u2026), making it possible that animals from neighbouring pens can see/touch",
     "type": "object",
     "allOf": [
@@ -121,7 +122,7 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Property. Model:'https://schema.org/URL'. Unique identifier of the Compartment the Pen is located in."
+                    "description": "Relationship. Model:'https://schema.org/URL'. Unique identifier of the Compartment the Pen is located in."
                 },
                 "deadAnimalsSinceDateOfArrival": {
                     "type": "number",

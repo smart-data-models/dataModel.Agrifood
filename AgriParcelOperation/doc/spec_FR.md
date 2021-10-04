@@ -1,16 +1,17 @@
 Entité : AgriParcelOperation  
 ============================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'une opération générique effectuée sur une parcelle de terrain. Cette entité est principalement associée aux applications verticales agricoles et aux applications IdO connexes.**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Cette entité contient une description harmonisée d'une opération générique effectuée sur une parcelle de terre. Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes.**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `endedAt`: Horodatage de la fin effective de l'opération.  - `hasAgriParcel`: Référence à l'AgriParcel  - `hasAgriProductType`: Référence au type de produit agricole utilisé/appliqué.  - `hasOperator`: Référence à l'opérateur qui conduit l'opération  - `id`: Identifiant unique de l'entité  - `irrigationRecord`: Relation avec le dossier d'irrigation de l'exécution  - `name`: Le nom de cet article.  - `operationType`: Un choix dans une liste énumérée décrivant l'opération effectuée sur le colis. Enum : "engrais, inspection, pesticide, eau, autre".  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `plannedEndAt`: La date/heure de fin prévue pour l'opération. <br/><br/> Notez qu'il s'agit d'un avis et que l'heure réelle de fin de l'opération peut être antérieure ou postérieure à la fin prévue.  - `plannedStartAt`: La date/heure de début prévue pour l'opération. Notez qu'il s'agit d'un avis et que l'heure réelle de début de l'opération peut être antérieure ou postérieure à la date de début prévue  - `quantity`: La quantité totale d'eau ou de produit utilisée/appliquée. Il est recommandé de mesurer cette quantité en litres pour les liquides ou en kilogrammes pour les solides.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `reportedAt`: Horodatage de l'événement de défaut.  - `result`: Une description des résultats de l'opération. Enum : "ok, avorté, échoué  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `startedAt`: Horodatage de la date à laquelle l'opération a effectivement commencé à être effectuée.  - `status`: Un choix dans une liste énumérée décrivant le statut. Enum : "planifié, en cours, terminé, programmé, annulé".  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriParcelOperation  - `waterSource`: Enum : "forage, précipitations, rivière, captage d'eau de pluie, barrage, approvisionnement commercial".  - `workOrder`: Relation avec l'ordre de travail pour l'exécution  - `workRecord`: Relation avec le dossier de travail de l'exécution    
+- `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `endedAt`: Horodatage de la fin effective de l'opération.  - `hasAgriParcel`: Référence à l'AgriParcel  - `hasAgriProductType`: Référence à l'AgriProductType utilisé/appliqué.  - `hasOperator`: Référence à l'opérateur qui effectue l'opération  - `id`: Identifiant unique de l'entité  - `irrigationRecord`: Relation avec l'enregistrement de l'irrigation de l'exécution  - `name`: Le nom de cet élément.  - `operationType`: Un choix dans une liste énumérée décrivant l'opération effectuée sur la parcelle. Enum : "engrais, inspection, pesticide, eau, autre".  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `plannedEndAt`: La date/heure de fin prévue pour l'opération. <br/><br/>Notez que cette date est consultative et que l'heure réelle de fin de l'opération peut être antérieure ou postérieure à la fin prévue.  - `plannedStartAt`: La date/heure de début prévue pour l'opération. Notez qu'il s'agit d'un avis et que l'heure réelle de début de l'opération peut être antérieure ou postérieure à la date de début prévue.  - `quantity`: La quantité totale d'eau ou de produit utilisée/appliquée. Il est recommandé de la mesurer en litres pour les liquides ou en kilogrammes pour les solides.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `reportedAt`: Horodatage du moment où le défaut de l'événement a été signalé.  - `result`: Une description des résultats de l'opération. Enum : 'ok, aborted, failed' (ok, avorté, échoué)  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `startedAt`: Horodatage du début de l'exécution de l'opération.  - `status`: Un choix dans une liste énumérée décrivant le statut. Enum : "planifié, en cours, terminé, programmé, annulé  - `type`: Type d'entité NGSI. Il doit être AgriParcelOperation.  - `waterSource`: Enum : 'forage, pluie, rivière, captage d'eau de pluie, barrage d'eau, approvisionnement commercial'.  - `workOrder`: Relation avec le bon de travail pour l'exécution  - `workRecord`: Relation avec le dossier de travail de l'exécution    
 Propriétés requises  
 - `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`    
-Cette entité est principalement associée aux applications verticales agricoles et aux applications IdO connexes.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriParcelOperation:    
@@ -157,8 +158,8 @@ AgriParcelOperation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -221,8 +222,8 @@ AgriParcelOperation:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### AgriParcelOperation NGSI V2 - Exemple de valeurs clés  
-Voici un exemple d'AgriParcelOperation en format JSON comme valeurs clés. Ce format est compatible avec la version 2 de l'INSG lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+#### AgriParcelOperation NGSI-v2 valeurs-clés Exemple  
+Voici un exemple d'une AgriParcelOperation au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -258,8 +259,8 @@ AgriParcelOperation:
   "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1"  
 }  
 ```  
-#### AgriParcelOperation NGSI V2 normalisé Exemple  
-Voici un exemple d'AgriParcelOpération au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### AgriParcelOperation NGSI-v2 normalisée Exemple  
+Voici un exemple d'une AgriParcelOperation au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -350,148 +351,173 @@ AgriParcelOperation:
   }  
 }  
 ```  
-#### AgriParcelOperation NGSI-LD valeurs clés Exemple  
-Voici un exemple d'AgriParcelOperation en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "createdAt": "2017-01-01T01:20:00Z",  
- "description": "Monthly fertiliser application",  
- "endedAt": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"},  
- "hasAgriParcel": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb",  
- "hasAgriProductType": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec",  
- "hasOperator": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
- "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
- "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1",  
- "modifiedAt": "2017-05-04T12:30:00Z",  
- "operationType": "fertiliser",  
- "plannedEndAt": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"},  
- "plannedStartAt": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"},  
- "quantity": 40,  
- "relatedSource": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                    "applicationEntityId": "app:parcelop1"}],  
- "reportedAt": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"},  
- "result": "ok",  
- "seeAlso": ["https://example.org/concept/agriparcelop",  
-             "https://datamodel.org/example/agriparcelop"],  
- "startedAt": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"},  
- "status": "finished",  
- "type": "AgriParcelOperation",  
- "waterSource": "rainwater capture",  
- "workOrder": "https://example.com/agriparcelrecords/workorder1",  
- "workRecord": "https://example.com/agriparcelrecords/workrecord1"}  
-```  
-#### AgriParcelOperation NGSI-LD normalisé Exemple  
-Voici un exemple d'AgriParcelOperation au format JSON-LD tel que normalisé. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### AgriParcelOperation Valeurs-clés NGSI-LD Exemple  
+Voici un exemple d'une AgriParcelOperation au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ],  
-    "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
-    "type": "AgriParcelOperation",  
-    "createdAt": "2017-01-01T01:20:00Z",  
-    "modifiedAt": "2017-05-04T12:30:00Z",  
-    "relatedSource": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                "applicationEntityId": "app:parcelop1"  
-            }  
-        ]  
-    },  
-    "seeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "https://example.org/concept/agriparcelop",  
-            "https://datamodel.org/example/agriparcelop"  
-        ]  
-    },  
-    "hasAgriParcel": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb"  
-    },  
-    "operationType": {  
-        "type": "Property",  
-        "value": "fertiliser"  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Monthly fertiliser application"  
-    },  
-    "result": {  
-        "type": "Property",  
-        "value": "ok"  
-    },  
-    "plannedStartAt": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-22T10:18:16Z"  
-        }  
-    },  
-    "plannedEndAt": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-22T10:18:16Z"  
-        }  
-    },  
-    "status": {  
-        "type": "Property",  
-        "value": "finished"  
-    },  
-    "hasOperator": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-    },  
-    "startedAt": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-22T10:18:16Z"  
-        }  
-    },  
-    "endedAt": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-22T10:18:16Z"  
-        }  
-    },  
-    "reportedAt": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-22T10:18:16Z"  
-        }  
-    },  
-    "hasAgriProductType": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec"  
-    },  
-    "quantity": {  
-        "type": "Property",  
-        "value": 40,  
-        "unitCode": "KGM"  
-    },  
-    "waterSource": {  
-        "type": "Property",  
-        "value": "rainwater capture"  
-    },  
-    "workOrder": {  
-        "type": "Property",  
-        "value": "https://example.com/agriparcelrecords/workorder1"  
-    },  
-    "workRecord": {  
-        "type": "Property",  
-        "value": "https://example.com/agriparcelrecords/workrecord1"  
-    },  
-    "irrigationRecord": {  
-        "type": "Property",  
-        "value": "https://example.com/agriparcelrecords/irrigationrecord1"  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
+  "type": "AgriParcelOperation",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "relatedSource": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+        "applicationEntityId": "app:parcelop1"  
+      }  
+    ]  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "https://example.org/concept/agriparcelop",  
+      "https://datamodel.org/example/agriparcelop"  
+    ]  
+  },  
+  "hasAgriParcel": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb"  
+  },  
+  "operationType": {  
+    "type": "Property",  
+    "value": "fertiliser"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Monthly fertiliser application"  
+  },  
+  "result": {  
+    "type": "Property",  
+    "value": "ok"  
+  },  
+  "plannedStartAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-22T10:18:16Z"  
     }  
+  },  
+  "plannedEndAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-22T10:18:16Z"  
+    }  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "finished"  
+  },  
+  "hasOperator": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+  },  
+  "startedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-22T10:18:16Z"  
+    }  
+  },  
+  "endedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-22T10:18:16Z"  
+    }  
+  },  
+  "reportedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-22T10:18:16Z"  
+    }  
+  },  
+  "hasAgriProductType": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec"  
+  },  
+  "quantity": {  
+    "type": "Property",  
+    "value": 40,  
+    "unitCode": "KGM"  
+  },  
+  "waterSource": {  
+    "type": "Property",  
+    "value": "rainwater capture"  
+  },  
+  "workOrder": {  
+    "type": "Property",  
+    "value": "https://example.com/agriparcelrecords/workorder1"  
+  },  
+  "workRecord": {  
+    "type": "Property",  
+    "value": "https://example.com/agriparcelrecords/workrecord1"  
+  },  
+  "irrigationRecord": {  
+    "type": "Property",  
+    "value": "https://example.com/agriparcelrecords/irrigationrecord1"  
+  }  
+}  
+```  
+#### AgriParcelOperation NGSI-LD normalisé Exemple  
+Voici un exemple d'une AgriParcelOperation au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "Monthly fertiliser application",  
+  "endedAt": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-22T10:18:16Z"  
+  },  
+  "hasAgriParcel": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb",  
+  "hasAgriProductType": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec",  
+  "hasOperator": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
+  "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "operationType": "fertiliser",  
+  "plannedEndAt": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-22T10:18:16Z"  
+  },  
+  "plannedStartAt": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-22T10:18:16Z"  
+  },  
+  "quantity": 40,  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:parcelop1"  
+    }  
+  ],  
+  "reportedAt": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-22T10:18:16Z"  
+  },  
+  "result": "ok",  
+  "seeAlso": [  
+    "https://example.org/concept/agriparcelop",  
+    "https://datamodel.org/example/agriparcelop"  
+  ],  
+  "startedAt": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-22T10:18:16Z"  
+  },  
+  "status": "finished",  
+  "type": "AgriParcelOperation",  
+  "waterSource": "rainwater capture",  
+  "workOrder": "https://example.com/agriparcelrecords/workorder1",  
+  "workRecord": "https://example.com/agriparcelrecords/workrecord1"  
 }  
 ```  

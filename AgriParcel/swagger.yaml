@@ -11,7 +11,7 @@ info:
   description:  |
     This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.
   title: AgriParcel
-  version: "1.0.0"
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 

@@ -1,15 +1,16 @@
 Entidad: AgriParcelRecord  
 =========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
-Descripción global: **Esta entidad contiene una descripción armonizada de las condiciones registradas en una parcela de tierra. Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones de IO conexas**.  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **Esta entidad contiene una descripción armonizada de las condiciones registradas en una parcela. Esta entidad está asociada principalmente a las aplicaciones verticales agrícolas y a las aplicaciones IoT relacionadas.**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `atmosphericPressure`: La presión atmosférica nominalmente en unidades de hectopascales  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `depth`: Metadatos para indicar la profundidad asociada donde se toman las mediciones del suelo  - `description`: Una descripción de este artículo  - `hasAgriParcel`: Referencia a la Agri-Partida  - `hasDevice`: Referencia a los dispositivos de IO asociados a este elemento, es decir, sensores, controles.  - `id`: Identificador único de la entidad  - `leafRelativeHumidity`: La humedad relativa en la superficie de las hojas  - `leafTemperature`: La temperatura de la hoja observada nominalmente en grados centígrados  - `leafWetness`: Es un parámetro meteorológico que describe la cantidad de rocío y precipitación que queda en las superficies.  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  - `relativeHumidity`: Humedad Relativa un número entre 0 y 1 que representa el rango de 0% a 100%.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `soilMoistureEC`: Medido como Conductividad Eléctrica, EC nominalmente en unidades de Siemens por metro  - `soilMoistureVwc`: Medido como contenido volumétrico de agua, VWC como porcentaje. 0 ≤soilMoistureVwc ≤ 1  - `soilSalinity`: Es el contenido de sal en el suelo  - `soilTemperature`: La temperatura del suelo observada nominalmente en grados centígrados  - `solarRadiaton`: La radiación solar instantánea medida en kW/m2  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI. Tiene que ser AgriParcelRecord    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `atmosphericPressure`: Presión atmosférica nominalmente en unidades de hectopascales  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth`: Metadatos para indicar la profundidad asociada en la que se realizan las mediciones del suelo  - `description`: Una descripción de este artículo  - `hasAgriParcel`: Referencia a la parcela agrícola  - `hasDevice`: Referencia a los dispositivos IoT asociados a este elemento, es decir, sensores y controles.  - `id`: Identificador único de la entidad  - `leafRelativeHumidity`: Humedad relativa en la superficie de las hojas  - `leafTemperature`: La temperatura de la hoja observada nominalmente en grados centígrados  - `leafWetness`: Es un parámetro meteorológico que describe la cantidad de rocío y precipitación que queda en las superficies.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `relativeHumidity`: Humedad relativa un número entre 0 y 1 que representa el rango de 0% a 100%.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `soilMoistureEC`: Medida como conductividad eléctrica, EC nominalmente en unidades de Siemens por metro  - `soilMoistureVwc`: Medido como Contenido Volumétrico de Agua, VWC como porcentaje. 0 <= humedad del sueloVwc <= 1  - `soilSalinity`: Es el contenido de sal en el suelo  - `soilTemperature`: La temperatura del suelo observada, nominalmente en grados centígrados  - `solarRadiaton`: Radiación solar instantánea medida en kW/m2  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Debe ser AgriParcelRecord    
 Propiedades requeridas  
 - `hasAgriParcel`  - `id`  - `location`  - `type`    
-Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones conexas de IO.  
-## Modelo de datos Descripción de las propiedades  
+Esta entidad está asociada principalmente con el vertical agrícola y las aplicaciones de IoT relacionadas.  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -17,30 +18,29 @@ AgriParcelRecord:
   description: 'This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -128,10 +128,10 @@ AgriParcelRecord:
       x-ngsi:    
         model: http://schema.org/Number    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -151,7 +151,8 @@ AgriParcelRecord:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -174,7 +175,8 @@ AgriParcelRecord:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -199,7 +201,8 @@ AgriParcelRecord:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -221,7 +224,8 @@ AgriParcelRecord:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -246,7 +250,8 @@ AgriParcelRecord:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -273,7 +278,7 @@ AgriParcelRecord:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -305,8 +310,8 @@ AgriParcelRecord:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -319,7 +324,7 @@ AgriParcelRecord:
         model: http://schema.org/Number    
         units: 'siemens / m'    
     soilMoistureVwc:    
-      description: 'Measured as Volumetric Water Content, VWC as a percentage. 0 ≤soilMoistureVwc ≤ 1 '    
+      description: 'Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 '    
       maximum: 1    
       minimum: 0    
       type: Property    
@@ -358,9 +363,9 @@ AgriParcelRecord:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### Ejemplo de valores clave de AgriParcelRecord NGSI V2  
-Aquí hay un ejemplo de un AgriParcelRecord en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza `opciones=valores-clave` y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### AgriParcelRecord NGSI-v2 key-values Ejemplo  
+Este es un ejemplo de un AgriParcelRecord en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
@@ -403,8 +408,8 @@ AgriParcelRecord:
   "observedAt": "2017-05-04T10:18:16Z"  
 }  
 ```  
-#### AgriParcelRecord NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de un AgriParcelRecord en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriParcelRecord NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un AgriParcelRecord en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
@@ -598,188 +603,228 @@ AgriParcelRecord:
   }  
 }  
 ```  
-#### Ejemplo de valores clave de AgriParcelRecord NGSI-LD  
-Aquí hay un ejemplo de un AgriParcelRecord en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando se utiliza `opciones=valores-clave` y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "airTemperature": 20,  
- "atmosphericPressure": 1013.25,  
- "createdAt": "2017-01-01T01:20:00Z",  
- "description": "Monthly fertiliser application",  
- "hasAgriParcel": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed",  
- "hasDevice": ["urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-               "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-               "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-               "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"],  
- "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
- "leafRelativeHumidity": 0.25,  
- "leafTemperature": 25.1,  
- "leafWetness": 1.0,  
- "location": {"coordinates": [[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]],  
-              "type": "Polygon"},  
- "modifiedAt": "2017-05-04T12:30:00Z",  
- "observedAt": {"@type": "DateTime", "@value": "2017-05-04T12:30:00Z"},  
- "relatedSource": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                    "applicationEntityId": "app:parcelrec1"}],  
- "relativeHumidity": 0.15,  
- "seeAlso": ["https://example.org/concept/agriparcelrec",  
-             "https://datamodel.org/example/agriparcelrec"],  
- "soilMoistureEc": 17,  
- "soilMoistureVwc": 0.08,  
- "soilSalinity": 1198.11,  
- "soilTemperature": 27,  
- "solarRadiation": 15,  
- "type": "AgriParcelRecord"}  
-```  
-#### AgriParcelRecord NGSI-LD normalizado Ejemplo  
-Aquí hay un ejemplo de un AgriParcelRecord en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriParcelRecord NGSI-LD key-values Ejemplo  
+Este es un ejemplo de un AgriParcelRecord en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-	"@context": [  
-		"https://schema.lab.fiware.org/ld/context",  
-		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-	],  
-	"id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
-	"type": "AgriParcelRecord",  
-	"createdAt": "2017-01-01T01:20:00Z",  
-	"modifiedAt": "2017-05-04T12:30:00Z",  
-	"relatedSource": {  
-		"type": "Property",  
-		"value": [{  
-			"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-			"applicationEntityId": "app:parcelrec1"  
-		}]  
-	},  
-	"seeAlso": {  
-		"type": "Property",  
-		"value": [  
-			"https://example.org/concept/agriparcelrec",  
-			"https://datamodel.org/example/agriparcelrec"  
-		]  
-	},  
-	"hasAgriParcel": {  
-		"type": "Relationship",  
-		"object": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed"  
-	},  
-	"location": {  
-		"type": "GeoProperty",  
-		"value": {  
-			"type": "Polygon",  
-			"coordinates": [  
-				[  
-					100,  
-					0  
-				],  
-				[  
-					101,  
-					0  
-				],  
-				[  
-					101,  
-					1  
-				],  
-				[  
-					100,  
-					1  
-				],  
-				[  
-					100,  
-					0  
-				]  
-			]  
-		}  
-	},  
-	"soilTemperature": {  
-		"type": "Property",  
-		"value": 27,  
-		"unitCode": "CEL",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"soilMoistureVwc": {  
-		"type": "Property",  
-		"value": 0.08,  
-		"unitCode": "C62",  
-		"observedAt": "2017-05-04T12:30:00Z",  
-		"depth": {  
-			"type": "Property",  
-			"value": 20,  
-			"unitCode": "CMT"  
-		}  
-	},  
-	"soilMoistureEc": {  
-		"type": "Property",  
-		"value": 17,  
-		"unitCode": "D10",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"airTemperature": {  
-		"type": "Property",  
-		"value": 20,  
-		"unitCode": "CEL",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"solarRadiation": {  
-		"type": "Property",  
-		"value": 15,  
-		"unitCode": "N78",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"relativeHumidity": {  
-		"type": "Property",  
-		"value": 0.15,  
-		"unitCode": "C62",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"atmosphericPressure": {  
-		"type": "Property",  
-		"value": 1013.25,  
-		"unitCode": "A97",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"soilSalinity": {  
-		"type": "Property",  
-		"value": 1198.11,  
-		"unitCode": "D10",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"leafWetness": {  
-		"type": "Property",  
-		"value": 1.0,  
-		"unitCode": "P1",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"leafRelativeHumidity": {  
-		"type": "Property",  
-		"value": 0.25,  
-		"unitCode": "P1",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"leafTemperature": {  
-		"type": "Property",  
-		"value": 25.1,  
-		"unitCode": "CEL",  
-		"observedAt": "2017-05-04T12:30:00Z"  
-	},  
-	"description": {  
-		"type": "Property",  
-		"value": "Monthly fertiliser application"  
-	},  
-	"hasDevice": {  
-		"type": "Relationship",  
-		"object": [  
-			"urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-			"urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-			"urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-			"urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-		]  
-	},  
-	"observedAt": {  
-		"type": "Property",  
-		"value": {  
-			"@type": "DateTime",  
-			"@value": "2017-05-04T12:30:00Z"  
-		}  
-	}  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
+  "type": "AgriParcelRecord",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "relatedSource": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+        "applicationEntityId": "app:parcelrec1"  
+      }  
+    ]  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "https://example.org/concept/agriparcelrec",  
+      "https://datamodel.org/example/agriparcelrec"  
+    ]  
+  },  
+  "hasAgriParcel": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          100,  
+          0  
+        ],  
+        [  
+          101,  
+          0  
+        ],  
+        [  
+          101,  
+          1  
+        ],  
+        [  
+          100,  
+          1  
+        ],  
+        [  
+          100,  
+          0  
+        ]  
+      ]  
+    }  
+  },  
+  "soilTemperature": {  
+    "type": "Property",  
+    "value": 27,  
+    "unitCode": "CEL",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "soilMoistureVwc": {  
+    "type": "Property",  
+    "value": 0.08,  
+    "unitCode": "C62",  
+    "observedAt": "2017-05-04T12:30:00Z",  
+    "depth": {  
+      "type": "Property",  
+      "value": 20,  
+      "unitCode": "CMT"  
+    }  
+  },  
+  "soilMoistureEc": {  
+    "type": "Property",  
+    "value": 17,  
+    "unitCode": "D10",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "airTemperature": {  
+    "type": "Property",  
+    "value": 20,  
+    "unitCode": "CEL",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "solarRadiation": {  
+    "type": "Property",  
+    "value": 15,  
+    "unitCode": "N78",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "relativeHumidity": {  
+    "type": "Property",  
+    "value": 0.15,  
+    "unitCode": "C62",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "atmosphericPressure": {  
+    "type": "Property",  
+    "value": 1013.25,  
+    "unitCode": "A97",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "soilSalinity": {  
+    "type": "Property",  
+    "value": 1198.11,  
+    "unitCode": "D10",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "leafWetness": {  
+    "type": "Property",  
+    "value": 1.0,  
+    "unitCode": "P1",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "leafRelativeHumidity": {  
+    "type": "Property",  
+    "value": 0.25,  
+    "unitCode": "P1",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "leafTemperature": {  
+    "type": "Property",  
+    "value": 25.1,  
+    "unitCode": "CEL",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Monthly fertiliser application"  
+  },  
+  "hasDevice": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+      "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+      "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+      "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+    ]  
+  },  
+  "observedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-05-04T12:30:00Z"  
+    }  
+  }  
+}  
+```  
+#### AgriParcelRecord NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un AgriParcelRecord en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "airTemperature": 20,  
+  "atmosphericPressure": 1013.25,  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "Monthly fertiliser application",  
+  "hasAgriParcel": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed",  
+  "hasDevice": [  
+    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+  ],  
+  "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
+  "leafRelativeHumidity": 0.25,  
+  "leafTemperature": 25.1,  
+  "leafWetness": 1.0,  
+  "location": {  
+    "coordinates": [  
+      [  
+        100,  
+        0  
+      ],  
+      [  
+        101,  
+        0  
+      ],  
+      [  
+        101,  
+        1  
+      ],  
+      [  
+        100,  
+        1  
+      ],  
+      [  
+        100,  
+        0  
+      ]  
+    ],  
+    "type": "Polygon"  
+  },  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "observedAt": {  
+    "@type": "DateTime",  
+    "@value": "2017-05-04T12:30:00Z"  
+  },  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:parcelrec1"  
+    }  
+  ],  
+  "relativeHumidity": 0.15,  
+  "seeAlso": [  
+    "https://example.org/concept/agriparcelrec",  
+    "https://datamodel.org/example/agriparcelrec"  
+  ],  
+  "soilMoistureEc": 17,  
+  "soilMoistureVwc": 0.08,  
+  "soilSalinity": 1198.11,  
+  "soilTemperature": 27,  
+  "solarRadiation": 15,  
+  "type": "AgriParcelRecord"  
 }  
 ```  

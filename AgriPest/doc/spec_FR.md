@@ -1,16 +1,17 @@
 Entité : AgriPest  
 =================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriPest/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'un parasite agricole. **  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriPest/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Cette entité contient une description harmonisée d'un organisme nuisible agricole. **  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `agroVocConcept`: Référence au terme agrovoc associé à ce point  - `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasAgriProductType`: Référence aux types de produits recommandés qui peuvent être utilisés pour traiter ce parasite.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans les applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir d'AgriPest    
+- `agroVocConcept`: Référence au terme agrovoc associé à cet élément  - `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasAgriProductType`: Référence aux types de produits recommandés qui peuvent être utilisés pour traiter cet organisme nuisible.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il faut que ce soit AgriPest    
 Propriétés requises  
 - `id`  - `name`  - `type`    
-Cette entité est principalement associée aux applications verticales agricoles et aux applications IdO connexes.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriPest:    
@@ -83,8 +84,8 @@ AgriPest:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -106,8 +107,8 @@ AgriPest:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Exemple de valeurs clés de l'INSG V2 d'AgriPest  
-Voici un exemple d'AgriPest en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### AgriPest NGSI-v2 valeurs-clés Exemple  
+Voici un exemple d'un AgriPest au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
@@ -135,8 +136,8 @@ AgriPest:
   ]  
 }  
 ```  
-#### AgriPest NGSI V2 normalisé Exemple  
-Voici un exemple d'un AgriPest au format JSON tel que normalisé. Ce format est compatible avec la version 2 de l'INSG lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### AgriPest NGSI-v2 normalisé Exemple  
+Voici un exemple d'un AgriPest au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
@@ -186,78 +187,90 @@ AgriPest:
   }  
 }  
 ```  
-#### Exemple de valeurs clés de l'INSG-LD AgriPest  
-Voici un exemple d'AgriPest en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_31924",  
- "alternateName": "Chorthippus parallelus",  
- "createdAt": "2017-01-01T01:20:00Z",  
- "description": "Common European grasshopper",  
- "hasAgriProductType": ["urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
-                        "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
-                        "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"],  
- "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
- "modifiedAt": "2017-05-04T12:30:00Z",  
- "name": "Grasshopper",  
- "relatedSource": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                    "applicationEntityId": "app:farm1"}],  
- "seeAlso": ["https://example.org/concept/pest",  
-             "https://datamodel.org/example/pest"],  
- "type": "AgriPest"}  
-```  
-#### AgriPest NGSI-LD normalisé Exemple  
-Voici un exemple d'un AgriPest au format JSON-LD tel que normalisé. Ce format est compatible avec JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### AgriPest NGSI-LD valeurs-clés Exemple  
+Voici un exemple d'un AgriPest au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ],  
-    "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
-    "type": "AgriPest",  
-    "createdAt": "2017-01-01T01:20:00Z",  
-    "modifiedAt": "2017-05-04T12:30:00Z",  
-    "name": {  
-        "type": "Property",  
-        "value": "Grasshopper"  
-    },  
-    "alternateName": {  
-        "type": "Property",  
-        "value": "Chorthippus parallelus"  
-    },  
-    "relatedSource": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                "applicationEntityId": "app:farm1"  
-            }  
-        ]  
-    },  
-    "seeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "https://example.org/concept/pest",  
-            "https://datamodel.org/example/pest"  
-        ]  
-    },  
-    "agroVocConcept": {  
-        "type": "Property",  
-        "value": "http://aims.fao.org/aos/agrovoc/c_31924"  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Common European grasshopper"  
-    },  
-    "hasAgriProductType": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
-            "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
-            "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
-        ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
+  "type": "AgriPest",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": {  
+    "type": "Property",  
+    "value": "Grasshopper"  
+  },  
+  "alternateName": {  
+    "type": "Property",  
+    "value": "Chorthippus parallelus"  
+  },  
+  "relatedSource": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+        "applicationEntityId": "app:farm1"  
+      }  
+    ]  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "https://example.org/concept/pest",  
+      "https://datamodel.org/example/pest"  
+    ]  
+  },  
+  "agroVocConcept": {  
+    "type": "Property",  
+    "value": "http://aims.fao.org/aos/agrovoc/c_31924"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Common European grasshopper"  
+  },  
+  "hasAgriProductType": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
+      "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
+      "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
+    ]  
+  }  
+}  
+```  
+#### AgriPest NGSI-LD normalisé Exemple  
+Voici un exemple d'un AgriPest au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_31924",  
+  "alternateName": "Chorthippus parallelus",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "Common European grasshopper",  
+  "hasAgriProductType": [  
+    "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
+    "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
+    "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
+  ],  
+  "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": "Grasshopper",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:farm1"  
     }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/pest",  
+    "https://datamodel.org/example/pest"  
+  ],  
+  "type": "AgriPest"  
 }  
 ```  

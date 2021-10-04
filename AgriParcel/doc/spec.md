@@ -1,11 +1,13 @@
 Entity: AgriParcel  
 ==================  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `area`: The area of the parcel nominally in square meters.  - `areaServed`: The geographic area where a service or offered item is provided  - `belongsTo`: Entity the item belongs to  - `category`: The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**  - `cropStatus`: Enum:'seeded, justBorn, growing, maturing, readyForHarvesting'. A choice from an enumerated list describing the crop planting status  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAgriCrop`: Reference to the crop associated with this parcel  - `hasAgriParcelChildren`: Related sub AgriParcel records to which this entity relates  - `hasAgriParcelParent`: Reference to the parent AgriParcel  - `hasAgriSoil`: Reference to the soil associated with this parcel of land  - `hasDevices`: Reference to the IoT devices associated with this parcel i.e. sensors, controls.  - `id`: Unique identifier of the entity  - `lastPlantedAt`: Indicates the date when the crop was last planted  - `location`:   - `name`: The name of this item.  - `ownedBy`: Owner (Person or Organization) of the item  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type. It has to be AgriParcel    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `area`: The area of the parcel nominally in square meters.  - `areaServed`: The geographic area where a service or offered item is provided  - `belongsTo`: Entity the item belongs to  - `category`: The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**  - `cropStatus`: Enum:'seeded, justBorn, growing, maturing, readyForHarvesting'. A choice from an enumerated list describing the crop planting status  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAgriCrop`: Reference to the crop associated with this parcel  - `hasAgriParcelChildren`: Related sub AgriParcel records to which this entity relates  - `hasAgriParcelParent`: Reference to the parent AgriParcel  - `hasAgriSoil`: Reference to the soil associated with this parcel of land  - `hasDevices`: Reference to the IoT devices associated with this parcel i.e. sensors, controls.  - `id`: Unique identifier of the entity  - `lastPlantedAt`: Indicates the date when the crop was last planted  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `ownedBy`: Owner (Person or Organization) of the item  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type. It has to be AgriParcel    
 Required properties  
 - `area`  - `hasAgriCrop`  - `id`  - `location`  - `type`    
 This entity is primarily associated with the agricultural vertical and related IoT applications.  
@@ -17,45 +19,49 @@ AgriParcel:
   description: 'This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     area:    
       description: 'The area of the parcel nominally in square meters.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: m2    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     belongsTo:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -67,13 +73,14 @@ AgriParcel:
           format: uri    
           type: string    
       description: 'Entity the item belongs to'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     category:    
       description: 'The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**'    
-      type: Property    
       value: string    
       x-ngsi:    
         model: http://schema.org/Text    
+        type: Property    
     cropStatus:    
       description: 'Enum:''seeded, justBorn, growing, maturing, readyForHarvesting''. A choice from an enumerated list describing the crop planting status'    
       enum:    
@@ -82,21 +89,31 @@ AgriParcel:
         - growing    
         - maturing    
         - readyForHarvesting    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasAgriCrop:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -108,7 +125,8 @@ AgriParcel:
           format: uri    
           type: string    
       description: 'Reference to the crop associated with this parcel'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     hasAgriParcelChildren:    
       description: 'Related sub AgriParcel records to which this entity relates'    
       items:    
@@ -122,7 +140,9 @@ AgriParcel:
               format: uri    
               type: string    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasAgriParcelParent:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -134,7 +154,8 @@ AgriParcel:
           format: uri    
           type: string    
       description: 'Reference to the parent AgriParcel'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     hasAgriSoil:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -146,26 +167,32 @@ AgriParcel:
           format: uri    
           type: string    
       description: 'Reference to the soil associated with this parcel of land'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     hasDevices:    
       description: 'Reference to the IoT devices associated with this parcel i.e. sensors, controls.'    
       items:    
         - anyOf: *anyof    
           description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: *anyof    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     lastPlantedAt:    
       description: 'Indicates the date when the crop was last planted'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -185,7 +212,8 @@ AgriParcel:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +236,8 @@ AgriParcel:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -233,7 +262,8 @@ AgriParcel:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -255,7 +285,8 @@ AgriParcel:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -280,7 +311,8 @@ AgriParcel:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -307,10 +339,13 @@ AgriParcel:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     ownedBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -322,13 +357,16 @@ AgriParcel:
           format: uri    
           type: string    
       description: 'Owner (Person or Organization) of the item'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -339,26 +377,33 @@ AgriParcel:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type. It has to be AgriParcel'    
       enum:    
         - AgriParcel    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -366,11 +411,12 @@ AgriParcel:
     - area    
     - hasAgriCrop    
   type: object    
+  version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
-#### AgriParcel NGSI V2 key-values Example    
-Here is an example of a AgriParcel in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### AgriParcel NGSI-v2 key-values Example    
+Here is an example of a AgriParcel in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
@@ -413,8 +459,8 @@ AgriParcel:
   ]  
 }  
 ```  
-#### AgriParcel NGSI V2 normalized Example    
-Here is an example of a AgriParcel in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### AgriParcel NGSI-v2 normalized Example    
+Here is an example of a AgriParcel in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
@@ -505,149 +551,189 @@ AgriParcel:
 #### AgriParcel NGSI-LD key-values Example    
 Here is an example of a AgriParcel in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "area": 200,  
- "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
- "category": "arable",  
- "createdAt": "2017-01-01T01:20:00Z",  
- "cropStatus": "seeded",  
- "description": "Spring wheat",  
- "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
- "hasAgriParcelChildren": ["urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-                           "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"],  
- "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
- "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
- "hasDevice": ["urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-               "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-               "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-               "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"],  
- "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
- "lastPlantedAt": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"},  
- "location": {"coordinates": [[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]],  
-              "type": "Polygon"},  
- "modifiedAt": "2017-05-04T12:30:00Z",  
- "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
- "relatedSource": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                    "applicationEntityId": "app:parcel1"}],  
- "seeAlso": ["https://example.org/concept/agriparcel",  
-             "https://datamodel.org/example/agriparcel"],  
- "type": "AgriParcel"}  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+  "type": "AgriParcel",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          100,  
+          0  
+        ],  
+        [  
+          101,  
+          0  
+        ],  
+        [  
+          101,  
+          1  
+        ],  
+        [  
+          100,  
+          1  
+        ],  
+        [  
+          100,  
+          0  
+        ]  
+      ]  
+    }  
+  },  
+  "area": {  
+    "type": "Property",  
+    "value": 200  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Spring wheat"  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": "arable"  
+  },  
+  "relatedSource": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+        "applicationEntityId": "app:parcel1"  
+      }  
+    ]  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "https://example.org/concept/agriparcel",  
+      "https://datamodel.org/example/agriparcel"  
+    ]  
+  },  
+  "belongsTo": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
+  },  
+  "ownedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+  },  
+  "hasAgriParcelParent": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
+  },  
+  "hasAgriParcelChildren": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+      "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
+    ]  
+  },  
+  "hasAgriCrop": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
+  },  
+  "cropStatus": {  
+    "type": "Property",  
+    "value": "seeded"  
+  },  
+  "lastPlantedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-22T10:18:16Z"  
+    }  
+  },  
+  "hasAgriSoil": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
+  },  
+  "hasDevice": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+      "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+      "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+      "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+    ]  
+  }  
+}  
 ```  
 #### AgriParcel NGSI-LD normalized Example    
 Here is an example of a AgriParcel in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "area": 200,  
+  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+  "category": "arable",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "cropStatus": "seeded",  
+  "description": "Spring wheat",  
+  "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
+  "hasAgriParcelChildren": [  
+    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
+  ],  
+  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+  "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
+  "hasDevice": [  
+    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+  ],  
+  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+  "lastPlantedAt": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-22T10:18:16Z"  
+  },  
+  "location": {  
+    "coordinates": [  
+      [  
+        100,  
+        0  
+      ],  
+      [  
+        101,  
+        0  
+      ],  
+      [  
+        101,  
+        1  
+      ],  
+      [  
+        100,  
+        1  
+      ],  
+      [  
+        100,  
+        0  
+      ]  
     ],  
-    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-    "type": "AgriParcel",  
-    "createdAt": "2017-01-01T01:20:00Z",  
-    "modifiedAt": "2017-05-04T12:30:00Z",  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Polygon",  
-            "coordinates": [  
-                [  
-                    100,  
-                    0  
-                ],  
-                [  
-                    101,  
-                    0  
-                ],  
-                [  
-                    101,  
-                    1  
-                ],  
-                [  
-                    100,  
-                    1  
-                ],  
-                [  
-                    100,  
-                    0  
-                ]  
-            ]  
-        }  
-    },  
-    "area": {  
-        "type": "Property",  
-        "value": 200  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Spring wheat"  
-    },  
-    "category": {  
-        "type": "Property",  
-        "value": "arable"  
-    },  
-    "relatedSource": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                "applicationEntityId": "app:parcel1"  
-            }  
-        ]  
-    },  
-    "seeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "https://example.org/concept/agriparcel",  
-            "https://datamodel.org/example/agriparcel"  
-        ]  
-    },  
-    "belongsTo": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
-    },  
-    "ownedBy": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-    },  
-    "hasAgriParcelParent": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
-    },  
-    "hasAgriParcelChildren": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-            "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-        ]  
-    },  
-    "hasAgriCrop": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
-    },  
-    "cropStatus": {  
-        "type": "Property",  
-        "value": "seeded"  
-    },  
-    "lastPlantedAt": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-22T10:18:16Z"  
-        }  
-    },  
-    "hasAgriSoil": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
-    },  
-    "hasDevice": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-            "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-            "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-            "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-        ]  
+    "type": "Polygon"  
+  },  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:parcel1"  
     }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/agriparcel",  
+    "https://datamodel.org/example/agriparcel"  
+  ],  
+  "type": "AgriParcel"  
 }  
 ```  

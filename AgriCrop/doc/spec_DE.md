@@ -1,6 +1,7 @@
 Entität: AgriCrop  
 =================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen Kulturpflanze. Diese Entität ist in erster Linie mit der landwirtschaftlichen Vertikale und damit verbundenen IoT-Anwendungen verbunden.**  
 
 ## Liste der Eigenschaften  
@@ -150,8 +151,8 @@ AgriCrop:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    

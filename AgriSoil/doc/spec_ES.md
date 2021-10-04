@@ -1,15 +1,16 @@
 Entidad: AgriSoil  
 =================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriSoil/LICENSE.md)  
-Descripción global: **Esta entidad contiene una descripción armonizada de un suelo genérico. Esta entidad se asocia principalmente con las aplicaciones agrícolas verticales y las aplicaciones de IO conexas**.  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **Esta entidad contiene una descripción armonizada de un suelo genérico. Esta entidad está asociada principalmente a la vertical agrícola y a las aplicaciones IoT relacionadas.**.  
 
 ## Lista de propiedades  
 
-- `agroVocConcept`: Referencia al término agrovocal asociado a este tema  - `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAgriProductType`: Referencia a los tipos de productos recomendados (como el fertilizante) que pueden utilizarse para acondicionar este tipo de suelo.  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `relatedSource`: Lista de identificaciones que la entidad actual puede tener en aplicaciones externas  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI: Tiene que ser AgriSoil    
+- `agroVocConcept`: Referencia al término agrovoc asociado a este artículo  - `alternateName`: Un nombre alternativo para este artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAgriProductType`: Referencia a los tipos de productos recomendados (como el abono) que pueden utilizarse para acondicionar este tipo de suelo.  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser AgriSoil    
 Propiedades requeridas  
 - `id`  - `name`  - `type`    
-Esta entidad se asocia principalmente con las aplicaciones verticales agrícolas y las aplicaciones conexas de IO.  
-## Modelo de datos Descripción de las propiedades  
+Esta entidad está asociada principalmente con el vertical agrícola y las aplicaciones de IoT relacionadas.  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -81,8 +82,8 @@ AgriSoil:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -103,9 +104,9 @@ AgriSoil:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### Ejemplo de valores clave de AgriSoil NGSI V2  
-Aquí hay un ejemplo de un AgriSoil en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### AgriSoil NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un AgriSoil en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
@@ -132,8 +133,8 @@ AgriSoil:
   ]  
 }  
 ```  
-#### AgriSoil NGSI V2 normalizado Ejemplo  
-He aquí un ejemplo de un AgriSoil en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriSoil NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un AgriSoil en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
@@ -182,33 +183,12 @@ AgriSoil:
   }  
 }  
 ```  
-#### Ejemplo de valores clave de AgriSoil NGSI-LD  
-Aquí hay un ejemplo de un AgriSoil en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se usa "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
- "alternateName": "Heavy soil",  
- "createdAt": "2017-01-01T01:20:00Z",  
- "description": "Fine grained, poor draining soil. Particle size less than "  
-                "0.002mm",  
- "hasAgriProductType": ["urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
-                        "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"],  
- "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
- "modifiedAt": "2017-05-04T12:30:00Z",  
- "name": "Clay",  
- "relatedSource": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-                    "applicationEntityId": "app:clay"}],  
- "seeAlso": ["https://example.org/concept/clay",  
-             "https://datamodel.org/example/clay"],  
- "type": "AgriSoil"}  
-```  
-#### AgriSoil NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de un AgriSoil en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### AgriSoil NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un AgriSoil en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context",  
+    "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ],  
   "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
@@ -254,5 +234,37 @@ AgriSoil:
       "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
     ]  
   }  
+}  
+```  
+#### AgriSoil NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un AgriSoil en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
+  "alternateName": "Heavy soil",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "Fine grained, poor draining soil. Particle size less than 0.002mm",  
+  "hasAgriProductType": [  
+    "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
+    "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
+  ],  
+  "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": "Clay",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:clay"  
+    }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/clay",  
+    "https://datamodel.org/example/clay"  
+  ],  
+  "type": "AgriSoil"  
 }  
 ```  

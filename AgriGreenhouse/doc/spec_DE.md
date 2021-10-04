@@ -1,11 +1,12 @@
 Entität: AgriGreenhouse  
 =======================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung der Bedingungen, die innerhalb eines generischen Gewächshauses, einem Typ von AgriParcel, aufgezeichnet wurden**.  
 
 ## Liste der Eigenschaften  
 
-- `alternateName`: Ein alternativer Name für diesen Artikel  - `belongsTo`: Entität, zu der das Gewächshaus gehört  - `co2`: Die gemessene innere C02-Konzentration nominell in mg/L  - `dailyLight`: Täglich Akkumuliertes Licht gemessen in kW pro Quadratmeter  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `drainFlow`: Der beobachtete Abflussdurchfluss in Litern pro Sekunde  - `hasAgriParcelChildren`: Zugehörige Unter-AgriParcel-Datensätze, auf die sich diese Einheit bezieht  - `hasAgriParcelParent`: Verweis auf die AgriParcel-Einheit, auf die sich diese Einheit bezieht  - `hasDevice`: Verweis auf die IoT-Geräte, die mit diesem Gewächshaus verbunden sind, z. B. Sensoren, Steuerungen.  - `hasWaterQualityObserved`: Verweis auf einen oder mehrere aktuelle Wasserqualitätsbeobachtungssätze für diese Einheit  - `hasWeatherObserved`: Verweis auf den aktuellen Wetterbeobachtungssatz für diese Entität  - `id`: Eindeutiger Bezeichner der Entität  - `leafTemperature`: Die innere relative Luftfeuchtigkeit, ausgedrückt als Zahl zwischen 0 und 1, die den Bereich 0 % bis 100 % repräsentiert.<br/><br/>0 ≤ relativeHumidity ≤ 1  - `name`: Der Name dieses Elements.  - `ownedBy`: Eigentümer (Person oder Organisation) des AgriGreenhouse  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `relativeHumidity`: Die durchschnittliche Temperatur der Gewächshausluft, nominell in Grad Celsius.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-Entitätstyp. Es muss AgriGreenhouse sein    
+- `alternateName`: Ein alternativer Name für diesen Artikel  - `belongsTo`: Entität, zu der das Gewächshaus gehört  - `co2`: Die gemessene innere C02-Konzentration nominell in mg/L  - `dailyLight`: Täglich Akkumuliertes Licht gemessen in kW pro Quadratmeter  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `drainFlow`: Der beobachtete Abflussdurchfluss in Litern pro Sekunde  - `hasAgriParcelChildren`: Zugehörige Unter-AgriParcel-Datensätze, auf die sich diese Einheit bezieht  - `hasAgriParcelParent`: Verweis auf die AgriParcel-Einheit, auf die sich diese Einheit bezieht  - `hasDevice`: Verweis auf die IoT-Geräte, die mit diesem Gewächshaus verbunden sind, z. B. Sensoren, Steuerungen.  - `hasWaterQualityObserved`: Verweis auf einen oder mehrere aktuelle Wasserqualitätsbeobachtungssätze für diese Einheit  - `hasWeatherObserved`: Verweis auf den aktuellen Wetterbeobachtungssatz für diese Entität  - `id`: Eindeutiger Bezeichner der Entität  - `leafTemperature`: Die innere relative Luftfeuchtigkeit, ausgedrückt als Zahl zwischen 0 und 1, die den Bereich von 0 % bis 100 % repräsentiert.<br/><br/>0 <= relativeHumidity <= 1  - `name`: Der Name dieses Elements.  - `ownedBy`: Eigentümer (Person oder Organisation) des AgriGreenhouse  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `relativeHumidity`: Die durchschnittliche Temperatur der Gewächshausluft, nominell in Grad Celsius.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-Entitätstyp. Es muss AgriGreenhouse sein    
 Erforderliche Eigenschaften  
 - `hasAgriParcelParent`  - `id`  - `type`    
 Dieses Unternehmen ist in erster Linie mit der vertikalen Landwirtschaft und damit verbundenen IoT-Anwendungen verbunden.  
@@ -132,7 +133,7 @@ AgriGreenhouse:
       description: 'Unique identifier of the entity'    
       type: Property    
     leafTemperature:    
-      description: 'The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 ≤ relativeHumidity ≤ 1'    
+      description: 'The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1'    
       type: Property    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -180,8 +181,8 @@ AgriGreenhouse:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
