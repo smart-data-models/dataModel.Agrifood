@@ -2,11 +2,11 @@ Entität: AgriCrop
 =================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen Kulturpflanze. Diese Entität ist in erster Linie mit der landwirtschaftlichen Vertikale und damit verbundenen IoT-Anwendungen verbunden.**  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen Kulturpflanze. Diese Entität ist in erster Linie mit der vertikalen Landwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
 
 ## Liste der Eigenschaften  
 
-- `agroVocConcept`: Die Verknüpfung mit dem definierten Konzept in das AgroVoc-Vokabular  - `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `harvestingInterval`: Eine Liste der empfohlenen Erntedatumsintervalle für diese Kultur. Angegeben unter Verwendung von ISO8601-Wiederholungsdatumsintervallen: <br/><br/>**Intervall, Beschreibung**<br/><br/>Wobei **Intervall** in der Form **Startdatum/Enddatum**<br/><br/>--MM-TT/--MM-TT<br/><br/>Bedeutet: Wiederholung jedes Jahr von diesem Startdatum bis zu diesem Enddatum.  - `hasAgriFertiliser`: Hinweis auf die empfohlenen Düngemitteltypen, die für den Anbau dieser Kultur geeignet sind.  - `hasAgriPest`: Hinweis auf die bekannten Schädlinge, die diese Kultur angreifen  - `hasAgriSoil`: Hinweis auf die empfohlenen Bodentypen, die für den Anbau dieser Kultur geeignet sind.  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `plantingFrom`: Eine Liste der empfohlenen Pflanzungsintervalldaten für diese Kultur. Angegeben unter Verwendung von ISO8601-Wiederholungsdatumsintervallen: <br/><br/>**Intervall, Beschreibung**<br/><br/>Wobei **Intervall** in der Form **Startdatum/Enddatum**<br/><br/>--MM-TT/--MM-TT<br/><br/>Bedeutet: Wiederholung jedes Jahr von diesem Startdatum bis zu diesem Enddatum.  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI Entity Type. es muss AgriCrop sein  - `wateringFrequency`: Eine Beschreibung des empfohlenen Bewässerungsplans. Eine Auswahl aus einer aufgezählten Liste. Eine von: **Täglich, wöchentlich, zweiwöchentlich, monatlich, onDemand, sonstiges**. Enum:'täglich, wöchentlich, zweiwöchentlich, monatlich, onDemand, sonstiges'.    
+- `agroVocConcept`: Die Verknüpfung mit dem definierten Konzept in das AgroVoc-Vokabular  - `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `harvestingInterval`: Eine Liste der empfohlenen Erntedaten für diese Kultur. Angegeben unter Verwendung von sich wiederholenden ISO8601-Datumsintervallen: <br/><br/>**Intervall, Beschreibung**<br/><br/>wobei **Intervall** in der Form **Startdatum/Enddatum**<br/><br/>--MM-TT/--MM-TT<br/><br/>bedeutet, dass jedes Jahr von diesem Startdatum bis zu diesem Enddatum wiederholt wird.  - `hasAgriFertiliser`: Hinweis auf die empfohlenen Düngemitteltypen, die für den Anbau dieser Kultur geeignet sind.  - `hasAgriPest`: Hinweis auf die bekannten Schädlinge, die diese Pflanze befallen  - `hasAgriSoil`: Hinweis auf die empfohlenen Bodentypen, die für den Anbau dieser Pflanze geeignet sind.  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `plantingFrom`: Eine Liste der empfohlenen Pflanzintervalldaten für diese Kultur. Angegeben unter Verwendung von sich wiederholenden ISO8601-Datumsintervallen: <br/><br/>**Intervall, Beschreibung**<br/><br/>wobei **Intervall** in der Form **Startdatum/Enddatum**<br/><br/>--MM-TT/--MM-TT<br/><br/>bedeutet, dass jedes Jahr von diesem Startdatum bis zu diesem Enddatum wiederholt wird.  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI Entity Type. es muss AgriCrop sein  - `wateringFrequency`: Eine Beschreibung des empfohlenen Bewässerungsplans. Eine Auswahl aus einer aufgezählten Liste. Eine von: **täglich, wöchentlich, zweiwöchentlich, monatlich, onDemand, andere**. Enum:'täglich, wöchentlich, zweiwöchentlich, monatlich, onDemand, andere'    
 Erforderliche Eigenschaften  
 - `id`  - `name`  - `type`    
 Dieses Unternehmen ist in erster Linie mit der vertikalen Landwirtschaft und damit verbundenen IoT-Anwendungen verbunden.  
@@ -20,26 +20,37 @@ AgriCrop:
     agroVocConcept:    
       description: 'The link with the defined concept into the AgroVoc vocabulary'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     harvestingInterval:    
       description: 'A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.'    
       items:    
@@ -52,9 +63,10 @@ AgriCrop:
               type: string    
       maxItems: 2    
       minItems: 2    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     hasAgriFertiliser:    
       description: 'Reference to the recommended types of fertiliser suitable for growing this crop.'    
       items:    
@@ -67,9 +79,10 @@ AgriCrop:
             - description: 'Property. Identifier format of any NGSI entity'    
               format: uri    
               type: string    
-      type: Relationship    
+      type: array    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     hasAgriPest:    
       description: 'Reference to the pests known to attack this crop'    
       items:    
@@ -82,9 +95,10 @@ AgriCrop:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     hasAgriSoil:    
       description: 'Reference to the recommended types of soil suitable for growing this crop.'    
       items:    
@@ -97,9 +111,10 @@ AgriCrop:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     id:    
       anyOf: &agricrop_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -111,16 +126,21 @@ AgriCrop:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *agricrop_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     plantingFrom:    
       description: 'A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.'    
       items:    
@@ -133,9 +153,10 @@ AgriCrop:
               type: string    
       maxItems: 2    
       minItems: 2    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -146,7 +167,9 @@ AgriCrop:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -157,15 +180,20 @@ AgriCrop:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type. it has to be AgriCrop'    
       enum:    
         - AgriCrop    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     wateringFrequency:    
       description: 'A description of the recommended watering schedule. A choice from an enumerated list. One of: **daily, weekly, biweekly, monthly, onDemand, other**. Enum:''daily, weekly, biweekly, monthly, onDemand,    other'''    
       enum:    
@@ -175,9 +203,10 @@ AgriCrop:
         - monthly    
         - onDemand    
         - other    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Property    
         units: ""    
   required:    
     - id    
@@ -188,7 +217,7 @@ AgriCrop:
 </details>    
 ## Beispiel-Nutzlasten  
 #### AgriCrop NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für eine AgriCrop im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine AgriCrop im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -336,7 +365,7 @@ AgriCrop:
 }  
 ```  
 #### AgriCrop NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine AgriCrop im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine AgriCrop im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  
@@ -433,7 +462,7 @@ AgriCrop:
 }  
 ```  
 #### AgriCrop NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine AgriCrop im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine AgriCrop im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  
