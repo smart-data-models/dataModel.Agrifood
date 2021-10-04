@@ -24,7 +24,9 @@ Compartment:
           value:    
             type: string    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -46,34 +48,41 @@ Compartment:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     arrivalTimestamp:    
       description: 'Date and Time at which the animal were inserted in the compartment'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Datetime    
+        type: Property    
     avgGrowth:    
       description: 'The average growth in weight of the animals in this compartment'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number.    
+        type: Property    
     avgWeight:    
       description: 'The average weight of the pigs in this compartment'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     buildingId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -85,11 +94,14 @@ Compartment:
           format: uri    
           type: string    
       description: 'Unique identifier of a building the compartment is located in'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     co2:    
       description: 'The CO2 concentration in the compartment'    
       minimum: 0    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     companyId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -101,24 +113,35 @@ Compartment:
           format: uri    
           type: string    
       description: 'Unique identifier of a company'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     empty:    
       description: 'True/False value if the compartment is empty'    
-      type: Property    
+      type: boolean    
+      x-ngsi:    
+        type: Property    
     farmId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -130,18 +153,22 @@ Compartment:
           format: uri    
           type: string    
       description: 'Unique identifier of a farm where the compartment is located in'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     feedConsumption:    
       description: 'The total amount of food that has been eaten from the feeding station(s) in the compartment'    
       minimum: 0    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     humidity:    
       description: 'Quantity representing the amount of water vapour in the atmosphere in the compartment'    
       maximum: 1    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     id:    
       anyOf: &compartment_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -153,10 +180,13 @@ Compartment:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     lastUpdate:    
       description: 'Date and time at which the measurements in the compartment were taken. Unix timestamp'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -308,26 +338,33 @@ Compartment:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     luminosity:    
       description: 'The brightness of a light source of a certain wavelength at the compartment'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     numAnimals:    
       description: 'Number of animals in the compartment'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     parentCompartmentId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -339,7 +376,8 @@ Compartment:
           format: uri    
           type: string    
       description: 'Unique identifier of the  compartment where this compartment is a part of. It is used only when a compartment contains other compartments'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -350,7 +388,9 @@ Compartment:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -361,7 +401,8 @@ Compartment:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     sex:    
       description: 'The sex of the animals contained in the compartment'    
       enum:    
@@ -369,25 +410,37 @@ Compartment:
         - F    
         - unknown    
         - ""    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     temperature:    
       description: 'Temperature of the compartment.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. it has to be Compartment'    
       enum:    
         - Compartment    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     waterConsumption:    
       description: 'The total amount of water that came out from the tap or taps in the compartment'    
       minimum: 0    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     weightStDev:    
       description: 'The standard deviation associated to the average weight of the pigs/piglets contained in the compartment'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -555,6 +608,52 @@ Compartment:
 {  
   "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
   "type": "Compartment",  
+  "additionalInfo": [  
+    {  
+      "name": "Farm2FeedTray",  
+      "value": "4"  
+    },  
+    {  
+      "name": "Farm2ValveId",  
+      "value": ""  
+    },  
+    {  
+      "name": "Farm2DepartmentId",  
+      "value": "11"  
+    }  
+  ],  
+  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
+  "avgGrowth": 1.0,  
+  "avgWeight": 45.5,  
+  "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
+  "co2": 20,  
+  "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
+  "empty": false,  
+  "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
+  "feedConsumption": 8.3,  
+  "humidity": 0.7,  
+  "lastUpdate": 1589841011000,  
+  "luminosity": 3,  
+  "name": "",  
+  "numAnimals": 22,  
+  "outputFeed": 8.2,  
+  "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
+  "sex": "",  
+  "startWeight": 26,  
+  "temperature": 25,  
+  "waterConsumption": 23,  
+  "weightStDev": 2.3,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+  ]  
+}  
+```  
+#### Compartment NGSI-LD normalized Example    
+Here is an example of a Compartment in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+  "type": "Compartment",  
   "additionalInfo": {  
     "type": "array",  
     "value": [  
@@ -656,52 +755,6 @@ Compartment:
     "type": "number",  
     "value": 2.3  
   },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
-}  
-```  
-#### Compartment NGSI-LD normalized Example    
-Here is an example of a Compartment in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm2FeedTray",  
-      "value": "4"  
-    },  
-    {  
-      "name": "Farm2ValveId",  
-      "value": ""  
-    },  
-    {  
-      "name": "Farm2DepartmentId",  
-      "value": "11"  
-    }  
-  ],  
-  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
-  "avgGrowth": 1.0,  
-  "avgWeight": 45.5,  
-  "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
-  "co2": 20,  
-  "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
-  "empty": false,  
-  "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
-  "feedConsumption": 8.3,  
-  "humidity": 0.7,  
-  "lastUpdate": 1589841011000,  
-  "luminosity": 3,  
-  "name": "",  
-  "numAnimals": 22,  
-  "outputFeed": 8.2,  
-  "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
-  "sex": "",  
-  "startWeight": 26,  
-  "temperature": 25,  
-  "waterConsumption": 23,  
-  "weightStDev": 2.3,  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
   ]  
