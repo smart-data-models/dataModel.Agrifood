@@ -1,9 +1,6 @@
 {
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",
-  "type": {
-    "type": "string",
-    "value": "pen"
-  },
+  "type": "pen",
   "additionalInfo": {
     "type": "array",
     "value": [
