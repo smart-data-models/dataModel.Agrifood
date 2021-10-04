@@ -6,7 +6,7 @@ Entité : AgriSoil
 
 ## Liste des propriétés  
 
-- `agroVocConcept`: Référence au terme agrovoc associé à cet élément  - `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasAgriProductType`: Référence aux types de produits recommandés (comme les engrais) qui peuvent être utilisés pour conditionner ce type de sol.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il faut que ce soit AgriSoil    
+- `agroVocConcept`: Référence au terme agrovoc associé à cet élément  - `alternateName`: Un nom alternatif pour cet élément  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasAgriProductType`: Référence aux types de produits recommandés (comme les engrais) qui peuvent être utilisés pour conditionner ce type de sol.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il faut que ce soit AgriSoil    
 Propriétés requises  
 - `id`  - `name`  - `type`    
 Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
@@ -20,26 +20,37 @@ AgriSoil:
     agroVocConcept:    
       description: 'Reference to the agrovoc term associated with this item'    
       format: uri    
-      type: Relationship    
+      type: string    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasAgriProductType:    
       description: 'Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'    
       items:    
@@ -53,20 +64,27 @@ AgriSoil:
               format: uri    
               type: string    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     id:    
       anyOf: *agrisoil_-_properties_-_id_-_anyof    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *agrisoil_-_properties_-_id_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -77,7 +95,9 @@ AgriSoil:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -88,15 +108,20 @@ AgriSoil:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be AgriSoil'    
       enum:    
         - AgriSoil    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -187,10 +212,38 @@ AgriSoil:
 Voici un exemple d'un AgriSoil au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
+  "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+  "type": "AgriSoil",  
+  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
+  "alternateName": "Heavy soil",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "description": "Fine grained, poor draining soil. Particle size less than 0.002mm",  
+  "hasAgriProductType": [  
+    "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
+    "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
+  ],  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "name": "Clay",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:clay"  
+    }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/clay",  
+    "https://datamodel.org/example/clay"  
+  ],  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
+  ]  
+}  
+```  
+#### AgriSoil NGSI-LD normalisé Exemple  
+Voici un exemple d'un AgriSoil au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
   "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
   "type": "AgriSoil",  
   "createdAt": "2017-01-01T01:20:00Z",  
@@ -233,38 +286,10 @@ AgriSoil:
       "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
       "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
     ]  
-  }  
-}  
-```  
-#### AgriSoil NGSI-LD normalisé Exemple  
-Voici un exemple d'un AgriSoil au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "@context": [  
+  },  
+    "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
-  "alternateName": "Heavy soil",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Fine grained, poor draining soil. Particle size less than 0.002mm",  
-  "hasAgriProductType": [  
-    "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
-    "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
-  ],  
-  "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Clay",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:clay"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/clay",  
-    "https://datamodel.org/example/clay"  
-  ],  
-  "type": "AgriSoil"  
+  ]  
 }  
 ```  
