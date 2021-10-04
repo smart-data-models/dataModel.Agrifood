@@ -27,7 +27,9 @@ Pen:
               - type: number    
               - type: boolean    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -49,35 +51,42 @@ Pen:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     arrivalTimestamp:    
       description: 'Date and Time for the arrival of animals to the Pen'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     avgGrowth:    
       description: 'The average growth in weight of the animal in this pen'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     avgWeight:    
       description: 'The average weight of the animal in this Pen. '    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Kg    
     buildingId:    
       anyOf:    
@@ -90,15 +99,16 @@ Pen:
           format: uri    
           type: string    
       description: 'Unique identifier of the Building the item is located in'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     co2:    
       description: 'The CO2 concentration in the item'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     companyId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -110,9 +120,9 @@ Pen:
           format: uri    
           type: string    
       description: 'Unique identifier of a company'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     compartmentId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -124,29 +134,38 @@ Pen:
           format: uri    
           type: string    
       description: 'Unique identifier of the Compartment the Pen is located in.'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     deadAnimalsSinceDateOfArrival:    
       description: 'Number of dead animals since the date of arrival'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     farmId:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -158,31 +177,34 @@ Pen:
           format: uri    
           type: string    
       description: 'Unique identifier of the Farm the Pen is located in.'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     feedConsumption:    
       description: 'The total amount of food that has been eaten from the feeding station(s) in the pen.It is measured through feed intakes and specific structure to let only one animal at a time to eat'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Kg    
     humidity:    
       description: 'Quantity representing the amount of water vapour in the atmosphere in the pen. '    
       maximum: 1    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     id:    
       type: string    
     lastUpdate:    
       description: 'Date and time at which the measurements in the item were taken'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
         units: Seconds    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
@@ -335,23 +357,28 @@ Pen:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     luminosity:    
       description: 'The brightness of a light source of a certain wavelength at the item'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: LUX    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     numAnimals:    
       description: 'Number of animals contained in the Pen.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
@@ -365,7 +392,9 @@ Pen:
             format: uri    
             type: string    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -376,7 +405,9 @@ Pen:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -387,7 +418,8 @@ Pen:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     sex:    
       description: 'The sex of the animals contained in the pen'    
       enum:    
@@ -395,33 +427,41 @@ Pen:
         - F    
         - unknown    
         - ""    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     temperature:    
       description: 'Temperature of the Pen.  Unirs:'' Celsius degree'''    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     type:    
       description: 'NGSI Entity type. it has to be Pen'    
       enum:    
         - Pen    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     waterConsumption:    
       description: 'The total amount of water that came out from the tap or taps in the pen. It is measured through flowmeters and specific structure to let only one animal at a time drink.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     weightStDev:    
       description: 'The standard deviation associated to the average weight of the animals contained in the Pen.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
   required:    
     - id    
     - type    
@@ -434,6 +474,7 @@ Pen:
 Voici un exemple d'un stylo au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
+  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
   "type": "Pen",  
   "additionalInfo": [  
     {  
@@ -462,7 +503,6 @@ Pen:
   "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
   "empty": false,  
   "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
   "lastUpdate": "2020-04-12T20:44:55",  
   "sex": "",  
   "temperature": 25  
@@ -473,10 +513,7 @@ Pen:
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": {  
-    "type": "string",  
-    "value": "pen"  
-  },  
+  "type": "pen",  
   "additionalInfo": {  
     "type": "array",  
     "value": [  
@@ -541,10 +578,48 @@ Pen:
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": {  
-    "type": "string",  
-    "value": "pen"  
-  },  
+  "type": "Pen",  
+  "additionalInfo": [  
+    {  
+      "name": "Farm1FeedTray",  
+      "value": 1  
+    },  
+    {  
+      "name": "Farm1DepartmentId",  
+      "value": "43"  
+    },  
+    {  
+      "name": "Farm1ValveId",  
+      "value": "69"  
+    },  
+    {  
+      "name": "Farm1PenId",  
+      "value": "1"  
+    },  
+    {  
+      "name": "Farm1BuildingId",  
+      "value": "2"  
+    }  
+  ],  
+  "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
+  "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
+  "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
+  "empty": false,  
+  "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
+  "lastUpdate": "2020-04-12T20:44:55",  
+  "sex": "",  
+  "temperature": 25,  
+  "@context": [  
+    "https://smart-data-models.github.io/data-models/context.jsonld"  
+  ]  
+}  
+```  
+#### Pen NGSI-LD normalisé Exemple  
+Voici un exemple d'un stylo au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+  "type": "Pen",  
   "additionalInfo": {  
     "type": "array",  
     "value": [  
@@ -602,47 +677,6 @@ Pen:
     "type": "number",  
     "value": 25  
   },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
-}  
-```  
-#### Pen NGSI-LD normalisé Exemple  
-Voici un exemple d'un stylo au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "type": "Pen",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm1FeedTray",  
-      "value": 1  
-    },  
-    {  
-      "name": "Farm1DepartmentId",  
-      "value": "43"  
-    },  
-    {  
-      "name": "Farm1ValveId",  
-      "value": "69"  
-    },  
-    {  
-      "name": "Farm1PenId",  
-      "value": "1"  
-    },  
-    {  
-      "name": "Farm1BuildingId",  
-      "value": "2"  
-    }  
-  ],  
-  "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
-  "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
-  "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
-  "empty": false,  
-  "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "lastUpdate": "2020-04-12T20:44:55",  
-  "sex": "",  
-  "temperature": 25,  
   "@context": [  
     "https://smart-data-models.github.io/data-models/context.jsonld"  
   ]  
