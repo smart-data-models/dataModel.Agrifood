@@ -19,7 +19,9 @@ AgriGreenhouse:
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     belongsTo:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -31,36 +33,47 @@ AgriGreenhouse:
           format: uri    
           type: string    
       description: 'Entity the Greenhouse belongs to'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     co2:    
       description: 'The measured interior C02 concentration nominally in mg/L'    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: mg/L    
     dailyLight:    
       description: 'Daily Accumulated light measured in kW per square metre'    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: kw/m2    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     drainFlow:    
       description: 'The observed drain flow rate in litres per second'    
-      type: Property    
+      type: object    
       values:    
         maxValue:    
           minimum: 0    
@@ -75,6 +88,7 @@ AgriGreenhouse:
           type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: L/s    
     hasAgriParcelChildren:    
       description: 'Related sub AgriParcel records to which this entity relates'    
@@ -89,7 +103,9 @@ AgriGreenhouse:
               format: uri    
               type: string    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasAgriParcelParent:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -101,21 +117,25 @@ AgriGreenhouse:
           format: uri    
           type: string    
       description: 'Reference to the AgriParcel entity to which this entity relates'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     hasDevice:    
       description: 'Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.'    
       items:    
         - anyOf: *anyof    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
       x-ngsi:    
         model: http://schema.org/URL    
+        type: Relationship    
     hasWaterQualityObserved:    
       description: 'Reference to one or more water quality observation records current for this entity'    
       items:    
         - anyOf: *anyof    
           description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasWeatherObserved:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -127,19 +147,24 @@ AgriGreenhouse:
           format: uri    
           type: string    
       description: 'Reference to the weather observation record current for this entity'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     id:    
       anyOf: *anyof    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     leafTemperature:    
       description: 'The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1'    
-      type: Property    
+      type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     ownedBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -151,13 +176,16 @@ AgriGreenhouse:
           format: uri    
           type: string    
       description: 'Owner (Person or Organization) of the AgriGreenhouse'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
@@ -168,14 +196,17 @@ AgriGreenhouse:
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     relativeHumidity:    
       description: 'The average greenhouse air temperature nominally in degrees centigrade.'    
       maximum: 1.0    
       minimum: 0.0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
+        type: Property    
         units: 'Degrees centigrade'    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
@@ -187,15 +218,20 @@ AgriGreenhouse:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type. It has to be AgriGreenhouse'    
       enum:    
         - AgriGreenhouse    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -350,10 +386,58 @@ AgriGreenhouse:
 Aquí hay un ejemplo de un AgriGreenhouse en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
+  "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+  "type": "AgriGreenhouse",  
+  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+  "co2": 28,  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "dailyLight": 24,  
+  "drainFlow": {  
+    "maxValue": 50,  
+    "minValue": 25,  
+    "unitText": "Litre per second",  
+    "value": 33  
+  },  
+  "hasAgriParcelChildren": [  
+    "urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5",  
+    "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"  
+  ],  
+  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b",  
+  "hasDevice": [  
+    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+  ],  
+  "hasWaterQualityObserved": [  
+    "urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",  
+    "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"  
+  ],  
+  "hasWeatherObserved": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d",  
+  "leafTemperature": 22,  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:greenhouse1"  
+    }  
+  ],  
+  "relativeHumidity": 0.4,  
+  "seeAlso": [  
+    "https://example.org/concept/agrigreenhouse",  
+    "https://datamodel.org/example/agrigreenhouse"  
+  ],  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
+  ]  
+}  
+```  
+#### AgriGreenhouse NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un AgriGreenhouse en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
   "type": "AgriGreenhouse",  
   "createdAt": "2017-01-01T01:20:00Z",  
@@ -447,58 +531,10 @@ AgriGreenhouse:
       "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
       "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
     ]  
-  }  
-}  
-```  
-#### AgriGreenhouse NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un AgriGreenhouse en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "@context": [  
+  },  
+    "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
-  "co2": 28,  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "dailyLight": 24,  
-  "drainFlow": {  
-    "maxValue": 50,  
-    "minValue": 25,  
-    "unitText": "Litre per second",  
-    "value": 33  
-  },  
-  "hasAgriParcelChildren": [  
-    "urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5",  
-    "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"  
-  ],  
-  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b",  
-  "hasDevice": [  
-    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-  ],  
-  "hasWaterQualityObserved": [  
-    "urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",  
-    "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"  
-  ],  
-  "hasWeatherObserved": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d",  
-  "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "leafTemperature": 22,  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:greenhouse1"  
-    }  
-  ],  
-  "relativeHumidity": 0.4,  
-  "seeAlso": [  
-    "https://example.org/concept/agrigreenhouse",  
-    "https://datamodel.org/example/agrigreenhouse"  
-  ],  
-  "type": "AgriGreenhouse"  
+  ]  
 }  
 ```  
