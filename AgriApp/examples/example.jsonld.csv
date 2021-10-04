@@ -1,0 +1,2 @@
+"id_", "type_", "category__0_", "createdAt_", "description_", "endpoint_", "hasProvider_", "modifiedAt_", "name_", "version_", "@context__0_", "@context__1_"
+"urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a", "AgriApp", "TBD", "2017-01-01T01:20:00Z", "An app for wine tracking", "https://app.endpoint/download", "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c", "2017-05-04T12:30:00Z", "Wine track", "1.0", "https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
