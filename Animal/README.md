@@ -6,7 +6,7 @@ Version: 0.0.1
 An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/Animal/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/doc/spec.md)
 
