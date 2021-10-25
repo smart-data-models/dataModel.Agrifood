@@ -6,7 +6,7 @@ Version: 0.0.1
 This entity contains a harmonised description of an agricultural pest. 
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPest/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriPest/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPest/doc/spec.md)
 
