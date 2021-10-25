@@ -6,7 +6,7 @@ Version: 0.0.1
 This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriProductType/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriProductType/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriProductType/doc/spec.md)
 
