@@ -6,7 +6,7 @@ Version: 0.0.1
 Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/Compartment/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/doc/spec.md)
 
