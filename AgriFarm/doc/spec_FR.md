@@ -623,7 +623,7 @@ AgriFarm:
 }  
 ```  
 #### AgriFarm NGSI-LD key-values Exemple  
-Voici un exemple d'une AgriFarm au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'une AgriFarm au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "@context": [  
