@@ -6,7 +6,7 @@ Entità: AgriFarm
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `contactPoint`: I dettagli da contattare con l'articolo.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `hasAgriParcel`: Elenco delle parcelle agricole appartenenti all'azienda  - `hasBuilding`: Elenco degli edifici appartenenti alla fattoria  - `id`: Identificatore unico dell'entità  - `landLocation`:   - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `ownedBy`: Proprietario (persona o organizzazione) dell'azienda  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere AgriFarm    
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `contactPoint`: I dettagli da contattare con l'articolo.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `hasAgriParcel`: Elenco delle parcelle agricole appartenenti all'azienda  - `hasBuilding`: Elenco degli edifici appartenenti alla fattoria  - `id`: Identificatore unico dell'entità  - `landLocation`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `ownedBy`: Proprietario (persona o organizzazione) dell'azienda  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere AgriFarm    
 Proprietà richieste  
 - `id`  - `type`  ## Descrizione del modello di dati delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
@@ -17,7 +17,7 @@ AgriFarm:
   properties:    
     address:    
       description: 'The mailing address'    
-      properties: &agrifarm_-_properties_-_landlocation_-_properties_-_address_-_properties    
+      properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
@@ -127,166 +127,158 @@ AgriFarm:
       x-ngsi:    
         type: Property    
     landLocation:    
-      properties:    
-        address:    
-          description: 'Property. The mailing address. Model:''https://schema.org/address'''    
-          properties: *agrifarm_-_properties_-_landlocation_-_properties_-_address_-_properties    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf: &agrifarm_-_properties_-_location_-_oneof    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
           type: object    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
-          type: string    
-        location:    
-          description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-          oneOf: &agrifarm_-_properties_-_location_-_oneof    
-            - description: 'Geoproperty. Geojson reference to the item. Point'    
-              properties:    
-                bbox:    
-                  items:    
-                    type: number    
-                  minItems: 4    
-                  type: array    
-                coordinates:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
                   items:    
                     type: number    
                   minItems: 2    
                   type: array    
-                type:    
-                  enum:    
-                    - Point    
-                  type: string    
-              required:    
-                - type    
-                - coordinates    
-              title: 'GeoJSON Point'    
-              type: object    
-            - description: 'Geoproperty. Geojson reference to the item. LineString'    
-              properties:    
-                bbox:    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
                   items:    
                     type: number    
-                  minItems: 4    
+                  minItems: 2    
                   type: array    
-                coordinates:    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
                   items:    
                     items:    
                       type: number    
                     minItems: 2    
                     type: array    
-                  minItems: 2    
-                  type: array    
-                type:    
-                  enum:    
-                    - LineString    
-                  type: string    
-              required:    
-                - type    
-                - coordinates    
-              title: 'GeoJSON LineString'    
-              type: object    
-            - description: 'Geoproperty. Geojson reference to the item. Polygon'    
-              properties:    
-                bbox:    
-                  items:    
-                    type: number    
                   minItems: 4    
                   type: array    
-                coordinates:    
-                  items:    
-                    items:    
-                      items:    
-                        type: number    
-                      minItems: 2    
-                      type: array    
-                    minItems: 4    
-                    type: array    
-                  type: array    
-                type:    
-                  enum:    
-                    - Polygon    
-                  type: string    
-              required:    
-                - type    
-                - coordinates    
-              title: 'GeoJSON Polygon'    
-              type: object    
-            - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
-              properties:    
-                bbox:    
-                  items:    
-                    type: number    
-                  minItems: 4    
-                  type: array    
-                coordinates:    
-                  items:    
-                    items:    
-                      type: number    
-                    minItems: 2    
-                    type: array    
-                  type: array    
-                type:    
-                  enum:    
-                    - MultiPoint    
-                  type: string    
-              required:    
-                - type    
-                - coordinates    
-              title: 'GeoJSON MultiPoint'    
-              type: object    
-            - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
-              properties:    
-                bbox:    
-                  items:    
-                    type: number    
-                  minItems: 4    
-                  type: array    
-                coordinates:    
-                  items:    
-                    items:    
-                      items:    
-                        type: number    
-                      minItems: 2    
-                      type: array    
-                    minItems: 2    
-                    type: array    
-                  type: array    
-                type:    
-                  enum:    
-                    - MultiLineString    
-                  type: string    
-              required:    
-                - type    
-                - coordinates    
-              title: 'GeoJSON MultiLineString'    
-              type: object    
-            - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
-              properties:    
-                bbox:    
-                  items:    
-                    type: number    
-                  minItems: 4    
-                  type: array    
-                coordinates:    
-                  items:    
-                    items:    
-                      items:    
-                        items:    
-                          type: number    
-                        minItems: 2    
-                        type: array    
-                      minItems: 4    
-                      type: array    
-                    type: array    
-                  type: array    
-                type:    
-                  enum:    
-                    - MultiPolygon    
-                  type: string    
-              required:    
-                - type    
-                - coordinates    
-              title: 'GeoJSON MultiPolygon'    
-              type: object    
-      type: object    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      x-ngsi:    
+        type: Geoproperty    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf: *agrifarm_-_properties_-_location_-_oneof    
@@ -364,7 +356,7 @@ AgriFarm:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriFarm/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriFarm/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Esempio di payloads  
@@ -418,86 +410,6 @@ AgriFarm:
 ```  
 #### AgriFarm NGSI-v2 normalizzato Esempio  
 Ecco un esempio di una AgriFarm in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
-  "id": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriFarm",  
-  "dateCreated": {  
-    "type": "DateTime",  
-    "value": "2017-01-01T01:20:00Z"  
-  },  
-  "dateModified": {  
-    "type": "DateTime",  
-    "value": "2017-05-04T12:30:00Z"  
-  },  
-  "name": {  
-    "value": "Wheat farm"  
-  },  
-  "description": {  
-    "value": "A farm producing wheat"  
-  },  
-  "relatedSource": {  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:farm1"  
-      }  
-    ]  
-  },  
-  "seeAlso": {  
-    "value": [  
-      "https://example.org/concept/farm",  
-      "https://datamodel.org/example/farm"  
-    ]  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [101, 0]  
-    }  
-  },  
-  "landLocation": {  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]  
-    }  
-  },  
-  "address": {  
-    "type": "PostalAddress",  
-    "value": {  
-      "addressLocality": "Valdepeñas",  
-      "addressCountry": "ES",  
-      "streetAddress": "Camino de Membrilla 17"  
-    }  
-  },  
-  "contactPoint": {  
-    "type": "ContactPoint",  
-    "value": {  
-      "email": "wheatfarm@email.com",  
-      "telephone": "00349674532"  
-    }  
-  },  
-  "ownedBy": {  
-    "type": "Relationship",  
-    "value": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "hasBuilding": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:Building:a6ba44e0-4474-11e8-8ed1-ab9e0ea93827",  
-      "urn:ngsi-ld:Building:d95b8874-4474-11e8-8d6b-dbe144258354"  
-    ]  
-  },  
-  "hasAgriParcel": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-      "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-    ]  
-  }  
-}  
-```  
 #### AgriFarm NGSI-LD valori chiave Esempio  
 Ecco un esempio di una AgriFarm in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
