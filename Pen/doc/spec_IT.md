@@ -6,7 +6,7 @@ Entità: Penna
 
 ## Elenco delle proprietà  
 
-- `additionalInfo`: elenco di tutti i valori grezzi inviati dal sensore/piattaforma con tutte le possibili proprietà extra che non sono incluse nella struttura principale. È una struttura JSON simile a questa: {'nome': 'temperatura', 'valore' : 32}  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `arrivalTimestamp`: Data e ora di arrivo degli animali nel recinto  - `avgGrowth`: La crescita media del peso dell'animale in questo recinto  - `avgWeight`: Il peso medio dell'animale in questo recinto.  - `buildingId`: Identificatore unico dell'edificio in cui si trova l'elemento  - `co2`: La concentrazione di CO2 nell'oggetto  - `companyId`: Identificatore unico di un'azienda  - `compartmentId`: Identificatore unico del Compartimento in cui si trova la penna.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `deadAnimalsSinceDateOfArrival`: Numero di animali morti dalla data di arrivo  - `description`: Una descrizione di questo articolo  - `farmId`: Identificatore unico della fattoria in cui si trova la penna.  - `feedConsumption`: La quantità totale di cibo che è stato mangiato dalla/e stazione/i di alimentazione nel recinto.Si misura attraverso l'assunzione di mangime e la struttura specifica per permettere a un solo animale alla volta di mangiare  - `humidity`: Quantità che rappresenta la quantità di vapore acqueo nell'atmosfera nella penna.  - `id`:   - `lastUpdate`: Data e ora in cui sono state effettuate le misurazioni nell'elemento  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `luminosity`: La luminosità di una sorgente luminosa di una certa lunghezza d'onda all'oggetto  - `name`: Il nome di questo articolo.  - `numAnimals`: Numero di animali contenuti nel Pen.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `sex`: Il sesso degli animali contenuti nel recinto  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `temperature`: Temperatura della penna.  Unirs:' grado Celsius'  - `type`: Tipo di entità NGSI. deve essere Pen  - `waterConsumption`: La quantità totale di acqua che è uscita dal rubinetto o dai rubinetti del recinto. Viene misurata tramite flussometri e struttura specifica per far bere un solo animale alla volta.  - `weightStDev`: La deviazione standard associata al peso medio degli animali contenuti nel Pen.    
+- `additionalInfo`: elenco di tutti i valori grezzi inviati dal sensore/piattaforma con tutte le possibili proprietà extra che non sono incluse nella struttura principale. È una struttura JSON simile a questa: {'nome': 'temperatura', 'valore' : 32}  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `arrivalTimestamp`: Data e ora di arrivo degli animali nel recinto  - `avgGrowth`: La crescita media del peso dell'animale in questo recinto  - `avgWeight`: Il peso medio dell'animale in questo recinto.  - `buildingId`: Identificatore unico dell'edificio in cui si trova l'elemento  - `co2`: La concentrazione di CO2 nell'oggetto  - `companyId`: Identificatore unico di un'azienda  - `compartmentId`: Identificatore unico del Compartimento in cui si trova la penna.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `deadAnimalsSinceDateOfArrival`: Numero di animali morti dalla data di arrivo  - `description`: Una descrizione di questo articolo  - `farmId`: Identificatore unico della fattoria in cui si trova la penna.  - `feedConsumption`: La quantità totale di cibo che è stato mangiato dalle stazioni di alimentazione nel recinto, è misurata attraverso l'assunzione di cibo e la struttura specifica per permettere a un solo animale alla volta di mangiare  - `humidity`: Quantità che rappresenta la quantità di vapore acqueo nell'atmosfera nella penna.  - `id`: Identificatore unico dell'entità  - `lastUpdate`: Data e ora in cui sono state effettuate le misurazioni nell'elemento  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `luminosity`: La luminosità di una sorgente luminosa di una certa lunghezza d'onda all'oggetto  - `name`: Il nome di questo articolo.  - `numAnimals`: Numero di animali contenuti nel Pen.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `sex`: Il sesso degli animali contenuti nel recinto  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `temperature`: Temperatura della penna.  Unirs:' grado Celsius'  - `type`: Tipo di entità NGSI. deve essere Pen  - `waterConsumption`: La quantità totale di acqua che è uscita dal rubinetto o dai rubinetti del recinto. Viene misurata tramite flussometri e struttura specifica per far bere un solo animale alla volta.  - `weightStDev`: La deviazione standard associata al peso medio degli animali contenuti nel Pen.    
 Proprietà richieste  
 - `id`  - `lastUpdate`  - `type`  ## Descrizione del modello di dati delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
@@ -197,7 +197,18 @@ Pen:
         model: https://schema.org/Number    
         type: Property    
     id:    
-      type: string    
+      anyOf: &pen_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
     lastUpdate:    
       description: 'Date and time at which the measurements in the item were taken'    
       format: date-time    
@@ -382,15 +393,7 @@ Pen:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: &values_-_application_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            format: uri    
-            type: string    
+        anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -401,7 +404,7 @@ Pen:
         - type: object    
           values:    
             application:    
-              anyOf: *values_-_application_-_anyof    
+              anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
@@ -472,7 +475,7 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.0    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Esempio di payloads  
