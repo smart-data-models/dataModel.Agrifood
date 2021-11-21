@@ -6,7 +6,7 @@ Entität: Stift
 
 ## Liste der Eigenschaften  
 
-- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es handelt sich um eine JSON-Struktur ähnlich der folgenden: {'Name': 'Temperatur', 'Wert' : 32}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit der Ankunft der Tiere im Stall  - `avgGrowth`: Die durchschnittliche Gewichtszunahme des Tieres in dieser Bucht  - `avgWeight`: Das Durchschnittsgewicht des Tieres in diesem Pferch.  - `buildingId`: Eindeutige Kennung des Gebäudes, in dem sich das Objekt befindet  - `co2`: Die CO2-Konzentration im Artikel  - `companyId`: Eindeutige Kennung eines Unternehmens  - `compartmentId`: Eindeutige Kennung des Fachs, in dem sich der Stift befindet.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `deadAnimalsSinceDateOfArrival`: Anzahl der toten Tiere seit dem Tag der Ankunft  - `description`: Eine Beschreibung dieses Artikels  - `farmId`: Eindeutige Kennung des Betriebs, in dem sich der Pferch befindet.  - `feedConsumption`: Die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Stall gefressen wurde; sie wird anhand der Futteraufnahme und der spezifischen Struktur gemessen, die es jeweils nur einem Tier erlaubt, zu fressen.  - `humidity`: Menge, die die Menge an Wasserdampf in der Atmosphäre in dem Stift darstellt.  - `id`:   - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen in der Position vorgenommen wurden  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge am Gegenstand  - `name`: Der Name dieses Artikels.  - `numAnimals`: Anzahl der im Pferch enthaltenen Tiere.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `sex`: Das Geschlecht der Tiere in der Bucht  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `temperature`: Temperatur des Stiftes.  Unirs:' Celsius Grad'  - `type`: NGSI Entity type. es muss Pen sein  - `waterConsumption`: Die gesamte Wassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Stall austritt. Sie wird mit Hilfe von Durchflussmessern und einer speziellen Struktur gemessen, damit immer nur ein Tier gleichzeitig trinken kann.  - `weightStDev`: Die Standardabweichung bezogen auf das Durchschnittsgewicht der in der Bucht enthaltenen Tiere.    
+- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es handelt sich um eine JSON-Struktur ähnlich der folgenden: {'Name': 'Temperatur', 'Wert' : 32}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit der Ankunft der Tiere im Stall  - `avgGrowth`: Die durchschnittliche Gewichtszunahme des Tieres in dieser Bucht  - `avgWeight`: Das Durchschnittsgewicht des Tieres in diesem Pferch.  - `buildingId`: Eindeutige Kennung des Gebäudes, in dem sich der Gegenstand befindet  - `co2`: Die CO2-Konzentration im Artikel  - `companyId`: Eindeutige Kennung eines Unternehmens  - `compartmentId`: Eindeutige Kennung des Fachs, in dem sich der Stift befindet.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `deadAnimalsSinceDateOfArrival`: Anzahl der toten Tiere seit dem Tag der Ankunft  - `description`: Eine Beschreibung dieses Artikels  - `farmId`: Eindeutige Kennung des Betriebs, in dem sich der Pferch befindet.  - `feedConsumption`: Die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Stall gefressen wurde; sie wird anhand der Futteraufnahme und der spezifischen Struktur gemessen, die es jeweils nur einem Tier erlaubt, zu fressen.  - `humidity`: Menge, die die Menge an Wasserdampf in der Atmosphäre in dem Stift darstellt.  - `id`: Eindeutiger Bezeichner der Entität  - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen in der Position vorgenommen wurden  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge am Gegenstand  - `name`: Der Name dieses Artikels.  - `numAnimals`: Anzahl der im Pferch enthaltenen Tiere.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `sex`: Das Geschlecht der Tiere in der Bucht  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `temperature`: Temperatur des Stiftes.  Unirs:' Celsius Grad'  - `type`: NGSI Entity type. es muss Pen sein  - `waterConsumption`: Die gesamte Wassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Stall austritt. Sie wird mit Hilfe von Durchflussmessern und einer speziellen Struktur gemessen, damit immer nur ein Tier gleichzeitig trinken kann.  - `weightStDev`: Die Standardabweichung bezogen auf das Durchschnittsgewicht der in der Bucht enthaltenen Tiere.    
 Erforderliche Eigenschaften  
 - `id`  - `lastUpdate`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -197,7 +197,18 @@ Pen:
         model: https://schema.org/Number    
         type: Property    
     id:    
-      type: string    
+      anyOf: &pen_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
     lastUpdate:    
       description: 'Date and time at which the measurements in the item were taken'    
       format: date-time    
@@ -382,15 +393,7 @@ Pen:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: &values_-_application_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            format: uri    
-            type: string    
+        anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -401,7 +404,7 @@ Pen:
         - type: object    
           values:    
             application:    
-              anyOf: *values_-_application_-_anyof    
+              anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
@@ -467,6 +470,12 @@ Pen:
     - type    
     - lastUpdate    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
+  x-model-tags: ""    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
@@ -509,7 +518,7 @@ Pen:
 }  
 ```  
 #### Stift NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Pen im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Pen im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
