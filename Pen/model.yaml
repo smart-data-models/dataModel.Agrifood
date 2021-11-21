@@ -183,7 +183,18 @@ Pen:
         model: https://schema.org/Number
         type: Property
     id:
-      type: string
+      anyOf: &pen_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      x-ngsi:
+        type: Property
     lastUpdate:
       description: 'Date and time at which the measurements in the item were taken'
       format: date-time
@@ -368,15 +379,7 @@ Pen:
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: &values_-_application_-_anyof
-          - description: 'Property. Identifier format of any NGSI entity'
-            maxLength: 256
-            minLength: 1
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-            type: string
-          - description: 'Property. Identifier format of any NGSI entity'
-            format: uri
-            type: string
+        anyOf: *pen_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
@@ -387,7 +390,7 @@ Pen:
         - type: object
           values:
             application:
-              anyOf: *values_-_application_-_anyof
+              anyOf: *pen_-_properties_-_owner_-_items_-_anyof
               description: 'Property. Unique identifier of the entity'
             applicationEntityId:
               type: string
@@ -458,4 +461,4 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json
   x-model-tags: ""
-  x-version: 0.1.0
+  x-version: 0.2.0
