@@ -6,7 +6,7 @@
 
 ## プロパティのリスト  
 
-- `additionalInfo`: センサー／プラットフォームから送信されたすべての生の値のリストで、メインの構造に含まれていない可能性のあるすべての追加プロパティを含みます。これは以下のようなJSON構造になっています。{'name': 'temperature', 'value': 32}。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `arrivalTimestamp`: 動物がペンに到着する日時  - `avgGrowth`: このペンの動物の平均的な体重の伸びは  - `avgWeight`: このペンの動物の平均体重です。  - `buildingId`: アイテムが設置されているビルの固有識別子  - `co2`: アイテムのCO2濃度  - `companyId`: 企業の一意の識別子  - `compartmentId`: ペンが配置されているコンパートメントのユニークな識別子。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `deadAnimalsSinceDateOfArrival`: 到着日以降に死んだ動物の数  - `description`: このアイテムの説明  - `farmId`: ペンが置かれているファームの一意の識別子。  - `feedConsumption`: ペン内の給餌ステーションから食べられた餌の総量。餌の摂取量と、一度に1匹しか食べられないような特定の構造によって測定される。  - `humidity`: ペンに含まれる大気中の水蒸気の量を表す量。  - `id`:   - `lastUpdate`: アイテムの測定が行われた日付と時間  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `luminosity`: ある波長の光源の明るさを、アイテムで  - `name`: このアイテムの名前です。  - `numAnimals`: ペンに入っている動物の数  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `sex`: ペンに入っている動物の性別  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: ペンの温度  Unirs:' Celsius degree' (摂氏)  - `type`: NGSI エンティティタイプ。それはペンでなければなりません。  - `waterConsumption`: ペンの中にある蛇口から出てきた水の総量。流量計で計測し、一度に1匹しか飲めないような特殊な構造になっている。  - `weightStDev`: ペンに入っている動物の平均体重に関連する標準偏差です。    
+- `additionalInfo`: センサー／プラットフォームから送信されたすべての生の値のリストで、メインの構造に含まれていない可能性のあるすべての追加プロパティを含みます。これは以下のようなJSON構造になっています。{'name': 'temperature', 'value': 32}。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `arrivalTimestamp`: 動物がペンに到着する日時  - `avgGrowth`: このペンの動物の平均的な体重の伸びは  - `avgWeight`: このペンの動物の平均体重です。  - `buildingId`: アイテムが設置されているビルの固有識別子  - `co2`: アイテムのCO2濃度  - `companyId`: 企業の一意の識別子  - `compartmentId`: ペンが配置されているコンパートメントのユニークな識別子。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `deadAnimalsSinceDateOfArrival`: 到着日以降に死んだ動物の数  - `description`: このアイテムの説明  - `farmId`: ペンが置かれているファームの一意の識別子。  - `feedConsumption`: ペン内の給餌ステーションから食べられた餌の総量。餌の摂取量と、一度に1匹しか食べられないような特定の構造によって測定される。  - `humidity`: ペンに含まれる大気中の水蒸気の量を表す量。  - `id`: エンティティのユニークな識別子  - `lastUpdate`: アイテムの測定が行われた日付と時間  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `luminosity`: ある波長の光源の明るさを、アイテムで  - `name`: このアイテムの名前です。  - `numAnimals`: ペンに入っている動物の数  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `sex`: ペンに入っている動物の性別  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: ペンの温度  Unirs:' Celsius degree' (摂氏)  - `type`: NGSI エンティティタイプ。それはペンでなければなりません。  - `waterConsumption`: ペンの中にある蛇口から出てきた水の総量。流量計で計測し、一度に1匹しか飲めないような特殊な構造になっている。  - `weightStDev`: ペンに入っている動物の平均体重に関連する標準偏差です。    
 必須項目  
 - `id`  - `lastUpdate`  - `type`  ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます）  
@@ -197,7 +197,18 @@ Pen:
         model: https://schema.org/Number    
         type: Property    
     id:    
-      type: string    
+      anyOf: &pen_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
     lastUpdate:    
       description: 'Date and time at which the measurements in the item were taken'    
       format: date-time    
@@ -382,15 +393,7 @@ Pen:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: &values_-_application_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            format: uri    
-            type: string    
+        anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -401,7 +404,7 @@ Pen:
         - type: object    
           values:    
             application:    
-              anyOf: *values_-_application_-_anyof    
+              anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
@@ -472,7 +475,7 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.0    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## ペイロードの例  
@@ -580,7 +583,7 @@ Pen:
 }  
 ```  
 #### ペン NGSI-LD のキーバリューの例  
-Key-ValuesとしてJSON-LD形式のPenの例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+Key-ValuesとしてJSON-LD形式でPenを作成した例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
