@@ -6,7 +6,7 @@ Entity: Pen
 
 ## List of properties  
 
-- `additionalInfo`: list of all the raw values sent by the sensor/platform with all the possible extra properties that are not included in the main structure. It is a JSON structure similar to this: {'name': 'temperature', 'value' : 32}  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `arrivalTimestamp`: Date and Time for the arrival of animals to the Pen  - `avgGrowth`: The average growth in weight of the animal in this pen  - `avgWeight`: The average weight of the animal in this Pen.   - `buildingId`: Unique identifier of the Building the item is located in  - `co2`: The CO2 concentration in the item  - `companyId`: Unique identifier of a company  - `compartmentId`: Unique identifier of the Compartment the Pen is located in.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `deadAnimalsSinceDateOfArrival`: Number of dead animals since the date of arrival  - `description`: A description of this item  - `farmId`: Unique identifier of the Farm the Pen is located in.  - `feedConsumption`: The total amount of food that has been eaten from the feeding station(s) in the pen.It is measured through feed intakes and specific structure to let only one animal at a time to eat  - `humidity`: Quantity representing the amount of water vapour in the atmosphere in the pen.   - `id`:   - `lastUpdate`: Date and time at which the measurements in the item were taken  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `luminosity`: The brightness of a light source of a certain wavelength at the item  - `name`: The name of this item.  - `numAnimals`: Number of animals contained in the Pen.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`: list of uri pointing to additional resources about the item  - `sex`: The sex of the animals contained in the pen  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`: Temperature of the Pen.  Unirs:' Celsius degree'  - `type`: NGSI Entity type. it has to be Pen  - `waterConsumption`: The total amount of water that came out from the tap or taps in the pen. It is measured through flowmeters and specific structure to let only one animal at a time drink.  - `weightStDev`: The standard deviation associated to the average weight of the animals contained in the Pen.    
+- `additionalInfo`: list of all the raw values sent by the sensor/platform with all the possible extra properties that are not included in the main structure. It is a JSON structure similar to this: {'name': 'temperature', 'value' : 32}  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `arrivalTimestamp`: Date and Time for the arrival of animals to the Pen  - `avgGrowth`: The average growth in weight of the animal in this pen  - `avgWeight`: The average weight of the animal in this Pen.   - `buildingId`: Unique identifier of the Building the item is located in  - `co2`: The CO2 concentration in the item  - `companyId`: Unique identifier of a company  - `compartmentId`: Unique identifier of the Compartment the Pen is located in.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `deadAnimalsSinceDateOfArrival`: Number of dead animals since the date of arrival  - `description`: A description of this item  - `farmId`: Unique identifier of the Farm the Pen is located in.  - `feedConsumption`: The total amount of food that has been eaten from the feeding station(s) in the pen.It is measured through feed intakes and specific structure to let only one animal at a time to eat  - `humidity`: Quantity representing the amount of water vapour in the atmosphere in the pen.   - `id`: Unique identifier of the entity  - `lastUpdate`: Date and time at which the measurements in the item were taken  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `luminosity`: The brightness of a light source of a certain wavelength at the item  - `name`: The name of this item.  - `numAnimals`: Number of animals contained in the Pen.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`: list of uri pointing to additional resources about the item  - `sex`: The sex of the animals contained in the pen  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`: Temperature of the Pen.  Unirs:' Celsius degree'  - `type`: NGSI Entity type. it has to be Pen  - `waterConsumption`: The total amount of water that came out from the tap or taps in the pen. It is measured through flowmeters and specific structure to let only one animal at a time drink.  - `weightStDev`: The standard deviation associated to the average weight of the animals contained in the Pen.    
 Required properties  
 - `id`  - `lastUpdate`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -197,7 +197,18 @@ Pen:
         model: https://schema.org/Number    
         type: Property    
     id:    
-      type: string    
+      anyOf: &pen_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
     lastUpdate:    
       description: 'Date and time at which the measurements in the item were taken'    
       format: date-time    
@@ -382,15 +393,7 @@ Pen:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: &values_-_application_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            format: uri    
-            type: string    
+        anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -401,7 +404,7 @@ Pen:
         - type: object    
           values:    
             application:    
-              anyOf: *values_-_application_-_anyof    
+              anyOf: *pen_-_properties_-_owner_-_items_-_anyof    
               description: 'Property. Unique identifier of the entity'    
             applicationEntityId:    
               type: string    
@@ -467,6 +470,12 @@ Pen:
     - type    
     - lastUpdate    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
+  x-model-tags: ""    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Example payloads    
