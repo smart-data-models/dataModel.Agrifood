@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.2",
+    "$schemaVersion": "0.0.3",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriFarm/schema.json",
     "title": "Smart Data Models - Agri Farm",
@@ -26,7 +26,7 @@
                     "description": "Property. NGSI Entity Type. It has to be AgriFarm"
                 },
                 "landLocation": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
                 "contactPoint": {
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
