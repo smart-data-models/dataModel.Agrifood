@@ -58,7 +58,7 @@ AgriParcelOperation:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
-      description: 'Reference to the AgriProductType used/ applied.'
+      description: 'Reference to the AgriProductType used/applied.'
       x-ngsi:
         type: Relationship
     hasOperator:
@@ -211,7 +211,7 @@ AgriParcelOperation:
       x-ngsi:
         type: Property
     waterSource:
-      description: 'Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'
+      description: 'Type of water sources. Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'
       enum:
         - borehole
         - rainfall
@@ -249,4 +249,4 @@ AgriParcelOperation:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
