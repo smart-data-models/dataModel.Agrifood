@@ -6,7 +6,7 @@
 
 ## プロパティのリスト  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `endedAt`: 操作が実際に終了した際のタイムスタンプ。  - `hasAgriParcel`: アグリパーセルへの言及  - `hasAgriProductType`: 使用/適用されるAgriProductTypeへの参照。  - `hasOperator`: 操作を行うオペレーターへの言及  - `id`: エンティティのユニークな識別子  - `irrigationRecord`: 実行時の灌漑記録との関係  - `name`: このアイテムの名前です。  - `operationType`: パーセルに対して行われた操作を説明する列挙型リストからの選択です。Enum:'fertiliser, inspection, pesticide, water, other' (肥料、検査、農薬、水、その他)  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `plannedEndAt`: 操作の終了予定日/タイムスタンプ。<br/><br/>これはアドバイスであり、実際のオペレーションの終了時刻は、予定された終了時刻の前後になる可能性があることに注意してください。  - `plannedStartAt`: 操作の開始予定日／タイムスタンプです。これはあくまでも目安であり、実際の運用開始時刻は、計画された開始時刻の前後になる可能性があることに注意してください。  - `quantity`: 使用された水や製品の総量、または適用された量。液体の場合はリットル単位、固体の場合はキログラム単位で測定することが推奨される。  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `reportedAt`: イベント障害が報告されたタイムスタンプ。  - `result`: 操作の結果の説明です。Enum:'ok, aborted, failed' です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startedAt`: 実際に操作を開始した時のタイムスタンプ。  - `status`: ステータスを説明する列挙型リストからの選択です。Enum:'planned, ongoing, finished, scheduled, canceled'.  - `type`: NGSI Entity Typeです。AgriParcelOperationである必要があります。  - `waterSource`: Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'.  - `workOrder`: 実行のためのワークオーダーとの関係  - `workRecord`: 実行時の作業記録との関係    
+- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `endedAt`: 操作が実際に終了した際のタイムスタンプ。  - `hasAgriParcel`: アグリパーセルへの言及  - `hasAgriProductType`: 使用/適用されたAgriProductTypeへの参照。  - `hasOperator`: 操作を行うオペレーターへの言及  - `id`: エンティティのユニークな識別子  - `irrigationRecord`: 実行時の灌漑記録との関係  - `name`: このアイテムの名前です。  - `operationType`: パーセルに対して行われた操作を説明する列挙型リストからの選択です。Enum:'fertiliser, inspection, pesticide, water, other' (肥料、検査、農薬、水、その他)  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `plannedEndAt`: 操作の終了予定日/タイムスタンプ。<br/><br/>これはアドバイスであり、実際のオペレーションの終了時刻は、予定された終了時刻の前後になる可能性があることに注意してください。  - `plannedStartAt`: 操作の開始予定日/タイムスタンプです。これはあくまでも目安であり、実際の運用開始時刻は、計画された開始時刻の前後になる可能性があることに注意してください。  - `quantity`: 使用された水や製品の総量、または適用された量。液体の場合はリットル単位、固体の場合はキログラム単位で測定することが推奨される。  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `reportedAt`: イベント障害が報告されたタイムスタンプ。  - `result`: 操作の結果の説明です。Enum:'ok, aborted, failed' です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startedAt`: 実際に操作を開始した時のタイムスタンプ。  - `status`: ステータスを説明する列挙型リストからの選択です。Enum:'planned, ongoing, finished, scheduled, canceled'.  - `type`: NGSI Entity Typeです。AgriParcelOperationである必要があります。  - `waterSource`: 水源の種類。Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'.  - `workOrder`: 実行のためのワークオーダーとの関係  - `workRecord`: 実行時の作業記録との関係    
 必須項目  
 - `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`    
 この事業体は、主に農業の縦割りと関連するIoTアプリケーションに関連しています。  
@@ -74,7 +74,7 @@ AgriParcelOperation:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
-      description: 'Reference to the AgriProductType used/ applied.'    
+      description: 'Reference to the AgriProductType used/applied.'    
       x-ngsi:    
         type: Relationship    
     hasOperator:    
@@ -227,7 +227,7 @@ AgriParcelOperation:
       x-ngsi:    
         type: Property    
     waterSource:    
-      description: 'Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'    
+      description: 'Type of water sources. Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'    
       enum:    
         - borehole    
         - rainfall    
@@ -265,7 +265,7 @@ AgriParcelOperation:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
