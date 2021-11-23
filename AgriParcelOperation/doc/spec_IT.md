@@ -6,7 +6,7 @@ Entità: AgriParcelOperation
 
 ## Elenco delle proprietà  
 
-- `alternateName`: Un nome alternativo per questa voce  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `endedAt`: Timestamp quando l'operazione è effettivamente terminata.  - `hasAgriParcel`: Riferimento all'AgriParcel  - `hasAgriProductType`: Riferimento all'AgriProductType usato/applicato.  - `hasOperator`: Riferimento all'operatore che conduce l'operazione  - `id`: Identificatore unico dell'entità  - `irrigationRecord`: Relazione con il record di irrigazione dell'esecuzione  - `name`: Il nome di questo articolo.  - `operationType`: Una scelta da un elenco enumerato che descrive l'operazione eseguita sulla parcella. Enum:'fertilizzante, ispezione, pesticida, acqua, altro'.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `plannedEndAt`: La data/ora di fine prevista per l'operazione. <br/><br/>Nota che questo è indicativo e l'ora effettiva in cui l'operazione finisce può essere prima o dopo la fine pianificata.  - `plannedStartAt`: La data/timbro d'inizio prevista per l'operazione. Si noti che questo è indicativo e l'ora effettiva di inizio dell'operazione può essere prima o dopo l'inizio pianificato  - `quantity`: La quantità totale di acqua o prodotto usato/applicato. Si raccomanda di misurarla in litri per i liquidi o in chilogrammi per i solidi.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `reportedAt`: Timestamp in cui è stato segnalato il guasto dell'evento.  - `result`: Una descrizione dei risultati dell'operazione. Enum:'ok, abortito, fallito'.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `startedAt`: Timestamp quando l'operazione ha effettivamente iniziato ad essere eseguita.  - `status`: Una scelta da una lista enumerata che descrive lo stato. Enum:'pianificato, in corso, finito, programmato, cancellato'.  - `type`: Tipo di entità NGSI. Deve essere AgriParcelOperation  - `waterSource`: Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'.  - `workOrder`: Relazione con l'ordine di lavoro per l'esecuzione  - `workRecord`: Relazione con il record di lavoro dell'esecuzione    
+- `alternateName`: Un nome alternativo per questa voce  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `endedAt`: Timestamp quando l'operazione è effettivamente terminata.  - `hasAgriParcel`: Riferimento all'AgriParcel  - `hasAgriProductType`: Riferimento all'AgriProductType usato/applicato.  - `hasOperator`: Riferimento all'operatore che conduce l'operazione  - `id`: Identificatore unico dell'entità  - `irrigationRecord`: Relazione con il record di irrigazione dell'esecuzione  - `name`: Il nome di questo articolo.  - `operationType`: Una scelta da un elenco enumerato che descrive l'operazione eseguita sulla parcella. Enum:'fertilizzante, ispezione, pesticida, acqua, altro'.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `plannedEndAt`: La data/ora di fine prevista per l'operazione. <br/><br/>Nota che questo è indicativo e l'ora effettiva in cui l'operazione finisce può essere prima o dopo la fine pianificata.  - `plannedStartAt`: La data/timbro d'inizio prevista per l'operazione. Si noti che questo è indicativo e l'ora effettiva di inizio dell'operazione può essere prima o dopo l'inizio pianificato  - `quantity`: La quantità totale di acqua o prodotto usato/applicato. Si raccomanda di misurarla in litri per i liquidi o in chilogrammi per i solidi.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `reportedAt`: Timestamp in cui è stato segnalato il guasto dell'evento.  - `result`: Una descrizione dei risultati dell'operazione. Enum:'ok, abortito, fallito'.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `startedAt`: Timestamp quando l'operazione ha effettivamente iniziato ad essere eseguita.  - `status`: Una scelta da una lista enumerata che descrive lo stato. Enum:'pianificato, in corso, finito, programmato, cancellato'.  - `type`: Tipo di entità NGSI. Deve essere AgriParcelOperation  - `waterSource`: Tipo di fonti d'acqua. Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'.  - `workOrder`: Relazione con l'ordine di lavoro per l'esecuzione  - `workRecord`: Relazione con il record di lavoro dell'esecuzione    
 Proprietà richieste  
 - `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`    
 Questa entità è principalmente associata al verticale agricolo e alle relative applicazioni IoT.  
@@ -74,7 +74,7 @@ AgriParcelOperation:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
-      description: 'Reference to the AgriProductType used/ applied.'    
+      description: 'Reference to the AgriProductType used/applied.'    
       x-ngsi:    
         type: Relationship    
     hasOperator:    
@@ -227,7 +227,7 @@ AgriParcelOperation:
       x-ngsi:    
         type: Property    
     waterSource:    
-      description: 'Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'    
+      description: 'Type of water sources. Enum:''borehole, rainfall, river, rainwater capture, water dam, commercial supply''.'    
       enum:    
         - borehole    
         - rainfall    
@@ -265,7 +265,7 @@ AgriParcelOperation:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Esempio di payloads  
