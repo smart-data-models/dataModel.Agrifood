@@ -76,17 +76,17 @@ Pen:
         units: Kg
     buildingId:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: 'Property. Identifier with format of any NGSI entity'
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: 'Property. Identifier format of any NGSI entity.'
           format: uri
           type: string
       description: 'Unique identifier of the Building the item is located in'
       x-ngsi:
-        model: https://schema.org/URL
+        model: https://schema.org/URL.
         type: Relationship
     co2:
       description: 'The CO2 concentration in the item'
@@ -461,4 +461,4 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json
   x-model-tags: ""
-  x-version: 0.2.0
+  x-version: 0.2.1
