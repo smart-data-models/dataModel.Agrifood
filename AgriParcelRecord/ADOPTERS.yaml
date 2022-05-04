@@ -1,10 +1,10 @@
 description: This is a compilation list of the current adopters of the data model AgriParcelRecord of the Subject dataModel.Agrifood.
 currentAdopters:
 -
- adopter: Las Rozas Innova
+ adopter:
  description:
- mail: jpena@lasrozasinnova.es
- organization: Municipality of Las Rozas (Spain)
- project: https://lasrozasinnova.es/cosmos-plataforma-de-ciudad-inteligente-de-las-rozas/
+ mail:
+ organization:
+ project:
  comments: 
- startDate: 1-1-2022
+ startDate:
