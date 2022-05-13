@@ -1,0 +1,2 @@
+"id_", "type_", "date__type_", "date__value_", "animal__type_", "animal__value_", "initialWeight__type_", "initialWeight__value_", "weight__type_", "weight__value_"
+"urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01", "Carcass", "Date-time", "2022-01-01T01:20:00Z", "Relationship", "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01", "number", "389", "number", "234"
