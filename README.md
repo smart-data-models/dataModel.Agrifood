@@ -26,14 +26,26 @@ The following entity types are available:
 
 - [Animal](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/README.md). An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.
 
+- [AnimalDisease](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AnimalDisease/README.md). Object modelling an animal disease for a livestock farm.
+
+- [AnimalMovement](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AnimalMovement/README.md). Object modelling of an animal movement for a livestock farm.
+
+- [Carcass](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Carcass/README.md). Object modelling a carcass of an animal for a livestock farm.
+
 - [Compartment](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/README.md). Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.
 
+- [FeedRegistry](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/FeedRegistry/README.md). Object modelling a feed registry for a livestock farm.
+
+- [MeatProduct](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/MeatProduct/README.md). Object modelling a meat product for a livestock farm.
+
 - [Pen](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/README.md). Fenced area in a building or department or outside housing a group of animals. Animals in a pen can move and interact freely. Pens are often not completely separated from each other (half walls, iron bars, fences,…), making it possible that animals from neighbouring pens can see/touch
+
+- [VeterinarianTreatment](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/VeterinarianTreatment/README.md). Object modelling a veterinary treatment for a livestock farm.
 
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 6 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 7 current contributors of the data models of this Subject.
 
 
 ### Contribution
