@@ -1,0 +1,2 @@
+"id_", "type_", "disease_", "diagnosticTest_", "date_", "animals__0_", "animals__1_", "veterinarianTreatment_", "veterinarian_"
+"urn:ngsi-ld:AnimalDisease:ca3f1295-500c-4aa3-b745-d143097d5c01", "AnimalDisease", "Lameness", "Visual inspection", "2022-01-01T01:20:00Z", "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01", "urn:ngsi-ld:Animal:bb3f1295-500c-4aa3-b745-d143097d4321", "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c65", "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11"
