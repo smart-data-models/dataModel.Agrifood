@@ -152,6 +152,27 @@
                             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                         }
                     ]
+                },
+                 "soilType": {
+                    "type": "string",
+                    "description": "Property. Enum: 'clay, loamy, sandy, silty, stony",
+                    "enum": [
+                        "clay",
+                        "loamy",
+                        "sandy",
+                        "silty",
+                        "stony"
+                    ]
+                },
+                 "irrigationSystemType": {
+                    "type": "string",
+                    "description": "Property. Enum: 'channel, pivot, drip, reel",
+                    "enum": [
+                        "channel",
+                        "pivot",
+                        "drip",
+                        "reel"
+                    ]
                 }
             }
         }
