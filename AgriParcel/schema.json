@@ -153,25 +153,36 @@
                         }
                     ]
                 },
-                 "soilType": {
+                 "soilTextureType": {
                     "type": "string",
-                    "description": "Property. Enum: 'clay, loamy, sandy, silty, stony",
+                    "description": "Property. Enum: 'Clay', 'Clay, Sandy', 'Clay, Silty', 'Loam', 'Loam, Clay', 'Loam, Sandy', 'Loam, Sandy Clay', 'Loam, Silty', 'Loam, Silty Clay', 'Sand', 'Sand, Loamy', 'Silt'",
                     "enum": [
-                        "clay",
-                        "loamy",
-                        "sandy",
-                        "silty",
-                        "stony"
+                        "Clay",
+                        "Clay, Sandy",
+                        "Clay, Silty",
+                        "Loam",
+                        "Loam, Clay", 
+                        "Loam, Sandy",
+                        "Loam, Sandy Clay",
+                        "Loam, Silty",
+                        "Loam, Silty Clay",
+                        "Sand",
+                        "Sand, Loamy",
+                        "Silt"
                     ]
                 },
                  "irrigationSystemType": {
                     "type": "string",
-                    "description": "Property. Enum: 'channel, pivot, drip, reel",
+                    "description": "Property. Enum: 'Surface irrigation', 'Localized irrigation', 'Drip irrigation', 'Sprinkler irrigation', 'Center pivot irrigation', 'Lateral move irrigation', 'Sub-irrigation', 'Manual irrigation'",
                     "enum": [
-                        "channel",
-                        "pivot",
-                        "drip",
-                        "reel"
+                        "Surface irrigation",
+                        "Localized irrigation",
+                        "Drip irrigation",
+                        "Sprinkler irrigation",
+                        "Center pivot irrigation",
+                        "Lateral move irrigation",
+                        "Sub-irrigation",
+                        "Manual irrigation"
                     ]
                 }
             }
