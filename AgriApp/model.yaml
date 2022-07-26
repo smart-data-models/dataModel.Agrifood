@@ -40,7 +40,7 @@ AgriApp:
     category:
       description: 'List of categories of the app'
       items:
-        - type: string
+        type: string
       type: array
       x-ngsi:
         type: Property
@@ -268,13 +268,13 @@ AgriApp:
     relatedSource:
       description: 'List of IDs the current entity may have in external applications'
       items:
-        - type: object
-          values:
-            application:
-              anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof
-              description: 'Property. Unique identifier of the entity'
-            applicationEntityId:
-              type: string
+        properties:
+          application:
+            anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof
+            description: 'Property. Unique identifier of the entity'
+          applicationEntityId:
+            type: string
+        type: object
       type: array
       x-ngsi:
         type: Property
@@ -316,4 +316,4 @@ AgriApp:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriApp/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriApp/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
