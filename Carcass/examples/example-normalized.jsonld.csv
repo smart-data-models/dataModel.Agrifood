@@ -1,0 +1,2 @@
+"id_", "type_", "date__type_", "date__value__@type_", "date__value__@value_", "animal__type_", "animal__object_", "initialWeight__type_", "initialWeight__value_", "weight__type_", "weight__value_", "@context__0_"
+"urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01", "Carcass", "Property", "Date-time", "2022-01-01T01:20:00Z", "Relationship", "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01", "Property", "389", "Property", "234", "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld"

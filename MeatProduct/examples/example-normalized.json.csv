@@ -1,0 +1,2 @@
+"id_", "type_", "name__type_", "name__value_", "date__type_", "date__value_", "carcass__type_", "carcass__value_", "weight__type_", "weight__value_"
+"urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01", "MeatProduct", "Text", "Lomo alto de ternera", "Date-Time", "2022-01-01T01:20:00Z", "Relationship", "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01", "number", "350"

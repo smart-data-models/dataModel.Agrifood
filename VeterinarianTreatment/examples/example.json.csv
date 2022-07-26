@@ -1,0 +1,2 @@
+"id_", "type_", "appliedProduct_", "date_", "quantity_", "phaseOutPeriod_", "deliveryNote_", "animals__0_", "animals__1_", "veterinarian_"
+"urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01", "VeterinarianTreatment", "Pisadug", "2022-01-01T01:20:00Z", "1", "4", "Primera entrega 2022", "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01", "urn:ngsi-ld:Animal:bb3f1295-500c-4aa3-b745-d143097d4321", "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11"
