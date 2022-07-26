@@ -1,9 +1,10 @@
-Entity: AgriParcel  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: AgriParcel  
 ==================  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
-version: 0.0.1  
+version: 0.0.2  
 
 ## List of properties  
 
@@ -77,7 +78,7 @@ AgriParcel:
         type: Relationship    
     category:    
       description: 'The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**'    
-      value: string    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Text    
         type: Property    
@@ -411,7 +412,12 @@ AgriParcel:
     - area    
     - hasAgriCrop    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Example payloads    
@@ -552,190 +558,188 @@ AgriParcel:
 Here is an example of a AgriParcel in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriParcel",  
-  "area": 200,  
-  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
-  "category": "arable",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "cropStatus": "seeded",  
-  "description": "Spring wheat",  
-  "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
-  "hasAgriParcelChildren": [  
-    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-  ],  
-  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-  "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
-  "hasDevice": [  
-    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-  ],  
-  "lastPlantedAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "location": {  
-    "coordinates": [  
-      [  
-        100,  
-        0  
-      ],  
-      [  
-        101,  
-        0  
-      ],  
-      [  
-        101,  
-        1  
-      ],  
-      [  
-        100,  
-        1  
-      ],  
-      [  
-        100,  
-        0  
-      ]  
+    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriParcel",  
+    "area": 200,  
+    "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+    "category": "arable",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "cropStatus": "seeded",  
+    "description": "Spring wheat",  
+    "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
+    "hasAgriParcelChildren": [  
+        "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+        "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
     ],  
-    "type": "Polygon"  
-  },  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:parcel1"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/agriparcel",  
-    "https://datamodel.org/example/agriparcel"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+    "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
+    "hasDevice": [  
+        "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+        "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+        "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+        "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+    ],  
+    "lastPlantedAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "location": {  
+        "coordinates": [  
+            [  
+                100,  
+                0  
+            ],  
+            [  
+                101,  
+                0  
+            ],  
+            [  
+                101,  
+                1  
+            ],  
+            [  
+                100,  
+                1  
+            ],  
+            [  
+                100,  
+                0  
+            ]  
+        ],  
+        "type": "Polygon"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:parcel1"  
+        }  
+    ],  
+    "seeAlso": [  
+        "https://example.org/concept/agriparcel",  
+        "https://datamodel.org/example/agriparcel"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriParcel NGSI-LD normalized Example    
 Here is an example of a AgriParcel in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriParcel",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          100,  
-          0  
-        ],  
-        [  
-          101,  
-          0  
-        ],  
-        [  
-          101,  
-          1  
-        ],  
-        [  
-          100,  
-          1  
-        ],  
-        [  
-          100,  
-          0  
+    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriParcel",  
+    "area": {  
+        "type": "Property",  
+        "value": 200  
+    },  
+    "belongsTo": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": "arable"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "cropStatus": {  
+        "type": "Property",  
+        "value": "seeded"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Spring wheat"  
+    },  
+    "hasAgriCrop": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
+    },  
+    "hasAgriParcelChildren": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+            "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
         ]  
-      ]  
-    }  
-  },  
-  "area": {  
-    "type": "Property",  
-    "value": 200  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Spring wheat"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "arable"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:parcel1"  
-      }  
+    },  
+    "hasAgriParcelParent": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
+    },  
+    "hasAgriSoil": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
+    },  
+    "hasDevice": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+            "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+            "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+            "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+        ]  
+    },  
+    "lastPlantedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    100,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    0  
+                ]  
+            ]  
+        }  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:parcel1"  
+            }  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/agriparcel",  
+            "https://datamodel.org/example/agriparcel"  
+        ]  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/agriparcel",  
-      "https://datamodel.org/example/agriparcel"  
-    ]  
-  },  
-  "belongsTo": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
-  },  
-  "ownedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "hasAgriParcelParent": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
-  },  
-  "hasAgriParcelChildren": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-      "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-    ]  
-  },  
-  "hasAgriCrop": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
-  },  
-  "cropStatus": {  
-    "type": "Property",  
-    "value": "seeded"  
-  },  
-  "lastPlantedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "hasAgriSoil": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
-  },  
-  "hasDevice": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-      "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-      "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-      "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-    ]  
-  }  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
