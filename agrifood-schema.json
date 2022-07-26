@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json",
   "title": "AgriFood Commons schema",
-  "description": "Common defintions to describe FIWARE agri food data models",
+  "description": "Common definitions to describe agri food data models",
   "definitions": {
     "AgriFood-Commons": {
       "type": "object",
@@ -10,19 +10,17 @@
         "relatedSource": {
           "type": "array",
           "description": "Property. List of IDs the current entity may have in external applications",
-          "items": [
-            {
-              "type": "object",
-              "values": {
-                "application": {
-                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-                },
-                "applicationEntityId": {
-                  "type": "string"
-                }
+          "items": {
+            "type": "object",
+            "properties": {
+              "application": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "applicationEntityId": {
+                "type": "string"
               }
             }
-          ]
+          }
         }
       }
     }
