@@ -1,8 +1,10 @@
-Entity: AgriCrop  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: AgriCrop  
 ================  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic crop. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -213,6 +215,12 @@ AgriCrop:
     - type    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -368,159 +376,157 @@ AgriCrop:
 Here is an example of a AgriCrop in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "type": "AgriCrop",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Wheat"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Triticum aestivum"  
-  },  
-  "agroVocConcept": {  
-    "type": "Property",  
-    "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/wheat",  
-      "https://datamodel.org/example/wheat"  
+    "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+    "type": "AgriCrop",  
+    "agroVocConcept": {  
+        "type": "Property",  
+        "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Triticum aestivum"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Spring wheat"  
+    },  
+    "harvestingInterval": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dateRange": "-03-21/-04-01",  
+                "description": "Best Season"  
+            },  
+            {  
+                "dateRange": "-04-02/-04-15",  
+                "description": "Season OK"  
+            }  
+        ]  
+    },  
+    "hasAgriFertiliser": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+            "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+        ]  
+    },  
+    "hasAgriPest": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+            "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+        ]  
+    },  
+    "hasAgriSoil": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+            "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
+        ]  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Wheat"  
+    },  
+    "plantingFrom": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dateRange": "-09-28/-10-12",  
+                "description": "Best Season"  
+            },  
+            {  
+                "dateRange": "-10-11/-10-18",  
+                "description": "Season OK"  
+            }  
+        ]  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:weat"  
+            }  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/wheat",  
+            "https://datamodel.org/example/wheat"  
+        ]  
+    },  
+    "wateringFrequency": {  
+        "type": "Property",  
+        "value": "daily"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Spring wheat"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:weat"  
-      }  
-    ]  
-  },  
-  "hasAgriSoil": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-      "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
-    ]  
-  },  
-  "hasAgriFertiliser": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-      "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-    ]  
-  },  
-  "hasAgriPest": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-      "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-    ]  
-  },  
-  "plantingFrom": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dateRange": "-09-28/-10-12",  
-        "description": "Best Season"  
-      },  
-      {  
-        "dateRange": "-10-11/-10-18",  
-        "description": "Season OK"  
-      }  
-    ]  
-  },  
-  "harvestingInterval": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dateRange": "-03-21/-04-01",  
-        "description": "Best Season"  
-      },  
-      {  
-        "dateRange": "-04-02/-04-15",  
-        "description": "Season OK"  
-      }  
-    ]  
-  },  
-  "wateringFrequency": {  
-    "type": "Property",  
-    "value": "daily"  
-  }  
 }  
 ```  
 #### AgriCrop NGSI-LD normalized Example    
 Here is an example of a AgriCrop in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
-  "alternateName": "Triticum aestivum",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Spring wheat",  
-  "harvestingInterval": [  
-    {  
-      "dateRange": "-03-21/-04-01",  
-      "description": "Best Season"  
-    },  
-    {  
-      "dateRange": "-04-02/-04-15",  
-      "description": "Season OK"  
-    }  
-  ],  
-  "hasAgriFertiliser": [  
-    "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-    "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-  ],  
-  "hasAgriPest": [  
-    "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-    "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-  ],  
-  "hasAgriSoil": [  
-    "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-    "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
-  ],  
-  "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Wheat",  
-  "plantingFrom": [  
-    {  
-      "dateRange": "-09-28/-10-12",  
-      "description": "Best Season"  
-    },  
-    {  
-      "dateRange": "-10-11/-10-18",  
-      "description": "Season OK"  
-    }  
-  ],  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:weat"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/wheat",  
-    "https://datamodel.org/example/wheat"  
-  ],  
-  "type": "AgriCrop",  
-  "wateringFrequency": "daily"  
+    "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+    "type": "AgriCrop",  
+    "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
+    "alternateName": "Triticum aestivum",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "Spring wheat",  
+    "harvestingInterval": [  
+        {  
+            "dateRange": "-03-21/-04-01",  
+            "description": "Best Season"  
+        },  
+        {  
+            "dateRange": "-04-02/-04-15",  
+            "description": "Season OK"  
+        }  
+    ],  
+    "hasAgriFertiliser": [  
+        "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+        "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+    ],  
+    "hasAgriPest": [  
+        "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+        "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+    ],  
+    "hasAgriSoil": [  
+        "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+        "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
+    ],  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Wheat",  
+    "plantingFrom": [  
+        {  
+            "dateRange": "-09-28/-10-12",  
+            "description": "Best Season"  
+        },  
+        {  
+            "dateRange": "-10-11/-10-18",  
+            "description": "Season OK"  
+        }  
+    ],  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:weat"  
+        }  
+    ],  
+    "seeAlso": [  
+        "https://example.org/concept/wheat",  
+        "https://datamodel.org/example/wheat"  
+    ],  
+    "wateringFrequency": "daily",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
