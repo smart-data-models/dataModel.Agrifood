@@ -38,16 +38,16 @@ AgriPest:
     hasAgriProductType:
       description: 'Reference to the recommended types of product that can be used to treat this pest.'
       items:
-        - anyOf: &agripest_-_properties_-_id_-_anyof
-            - description: 'Property. Identifier format of any NGSI entity'
-              maxLength: 256
-              minLength: 1
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-              type: string
-            - description: 'Property. Identifier format of any NGSI entity'
-              format: uri
-              type: string
-          description: 'Property. Unique identifier of the entity'
+        anyOf: &agripest_-_properties_-_id_-_anyof
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
+        description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
         model: http://schema.org/URL
@@ -73,13 +73,13 @@ AgriPest:
     relatedSource:
       description: 'List of IDs the current entity may have in external applications'
       items:
-        - type: object
-          values:
-            application:
-              anyOf: *agripest_-_properties_-_id_-_anyof
-              description: 'Property. Unique identifier of the entity'
-            applicationEntityId:
-              type: string
+        properties:
+          application:
+            anyOf: *agripest_-_properties_-_id_-_anyof
+            description: 'Property. Unique identifier of the entity'
+          applicationEntityId:
+            type: string
+        type: object
       type: array
       x-ngsi:
         type: Property
@@ -117,4 +117,4 @@ AgriPest:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPest/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
