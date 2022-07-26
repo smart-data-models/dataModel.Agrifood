@@ -1,15 +1,17 @@
-エンティティコンパートメント  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティコンパートメント  
 ==============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルの説明です。**特定のセンサーで測定される建物や部署内の人工的な領域。区画は必ずしも物理的な区切りではありません。部署であったり、同じセンサーで測定されている部署内の複数のペンをまとめたものであったりする。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**建物または部門内の、特定のセンサーによって測定される人工的な領域。区画は必ずしも物理的な区切りではありません。それは部門または同じセンサーによって測定されている部門内のいくつかのペンのグループ化であることができます**。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `additionalInfo`: センサー／プラットフォームから送信されたすべての生の値のリストで、メインの構造に含まれていない可能性のあるすべての追加プロパティを含みます。これは以下のようなJSON構造になっています。{ 'temperature': '32', 'huridation': '42'}.  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `arrivalTimestamp`: 動物がコンパートメントに挿入された日付と時刻  - `avgGrowth`: この区画の動物の体重の平均的な伸びは  - `avgWeight`: この区画の豚の平均体重は  - `buildingId`: コンパートメントが設置されている建物の固有識別子  - `co2`: コンパートメント内のCO2濃度  - `companyId`: 企業の一意の識別子  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `empty`: コンパートメントが空の場合の真/偽値  - `farmId`: コンパートメントが設置されている農場の固有識別子  - `feedConsumption`: コンパートメント内の給餌ステーションから食べられた餌の総量  - `humidity`: 区画内の大気中の水蒸気の量を表す量  - `id`: エンティティのユニークな識別子  - `lastUpdate`: コンパートメントの測定が行われた日時。Unixのタイムスタンプ  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `luminosity`: ある波長の光源の明るさを、区画  - `name`: このアイテムの名前です。  - `numAnimals`: コンパートメント内の動物の数  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `parentCompartmentId`: このコンパートメントが含まれるコンパートメントの一意の識別子。コンパートメントが他のコンパートメントを含む場合にのみ使用されます。  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `sex`: コンパートメントに含まれる動物の性別  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: コンパートメントの温度  - `type`: NGSIのEntityタイプ。Compartmentでなければならない。  - `waterConsumption`: 区画内のタップ（蛇口）から出てきた水の総量  - `weightStDev`: コンパートメントに収容された豚／子豚の平均体重に関連する標準偏差    
-必須項目  
-- `id`  - `lastUpdate`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `additionalInfo`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{ '温度': '32'、'湿度':'42'}。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `arrivalTimestamp`: 動物が挿入された日付と時間  - `avgGrowth`: この区画の動物の平均的な体重の増加量  - `avgWeight`: この区画の豚の平均体重  - `buildingId`: コンパートメントが位置する建物の一意な識別子  - `co2`: コンパートメント内のCO2濃度  - `companyId`: 企業の一意な識別子  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `empty`: コンパートメントが空の場合、真/偽の値  - `farmId`: の区画がある農場の固有識別子。  - `feedConsumption`: コンパートメント内の給餌ステーションから食べられた餌の総量  - `humidity`: コンパートメント内の大気中の水蒸気量を表す量  - `id`: エンティティの一意な識別子  - `lastUpdate`: コンパートメント内の測定が行われた日付と時刻。Unixタイムスタンプ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity`: ある波長の光源がコンパートメントにあるときの明るさ  - `name`: このアイテムの名称です。  - `numAnimals`: コンパートメント内の動物数  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `parentCompartmentId`: このコンパートメントが含まれるコンパートメントの一意の識別子。コンパートメントが他のコンパートメントを含むときのみ使用される。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: 収納されている動物の性別  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: コンパートメントの温度。  - `type`: NGSI エンティティタイプ。  - `waterConsumption`: コンパートメント内の蛇口から出た水の総量  - `weightStDev`: 豚/子豚の平均重量に関連する標準偏差は、コンパートメントに含まれている    
+必要なプロパティ  
+- `id`  - `lastUpdate`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Compartment:    
@@ -455,8 +457,8 @@ Compartment:
 ```  
 </details>    
 ## ペイロードの例  
-#### コンパートメント NGSI-v2 キー・バリューの例  
-ここではコンパートメントをキーバリューとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### コンパートメント NGSI-v2 キー値例  
+以下は、CompartmentをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0",  
@@ -499,7 +501,7 @@ Compartment:
 }  
 ```  
 #### コンパートメント NGSI-v2 正規化例  
-JSON-LD 形式の Compartment を正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化された JSON-LD 形式の Compartment の例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0"  
@@ -608,163 +610,163 @@ Compartment:
   }  
 }  
 ```  
-#### コンパートメント NGSI-LD のキーバリューの例  
-ここではコンパートメントをキーバリューとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### コンパートメント NGSI-LD キー値例  
+ここでは、CompartmentをJSON-LD形式でkey-valuesとして表現した例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm2FeedTray",  
-      "value": "4"  
-    },  
-    {  
-      "name": "Farm2ValveId",  
-      "value": ""  
-    },  
-    {  
-      "name": "Farm2DepartmentId",  
-      "value": "11"  
-    }  
-  ],  
-  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
-  "avgGrowth": 1.0,  
-  "avgWeight": 45.5,  
-  "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
-  "co2": 20,  
-  "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
-  "empty": false,  
-  "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
-  "feedConsumption": 8.3,  
-  "humidity": 0.7,  
-  "lastUpdate": 1589841011000,  
-  "luminosity": 3,  
-  "name": "",  
-  "numAnimals": 22,  
-  "outputFeed": 8.2,  
-  "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
-  "sex": "",  
-  "startWeight": 26,  
-  "temperature": 25,  
-  "waterConsumption": 23,  
-  "weightStDev": 2.3,  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
-}  
-```  
-#### コンパートメント NGSI-LDの正規化例  
-JSON-LD 形式の Compartment を正規化した例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm2FeedTray",  
-        "value": "4"  
-      },  
-      {  
-        "name": "Farm2ValveId",  
-        "value": ""  
-      },  
-      {  
-        "name": "Farm2DepartmentId",  
-        "value": "11"  
-      }  
+    "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+    "type": "Compartment",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm2FeedTray",  
+            "value": "4"  
+        },  
+        {  
+            "name": "Farm2ValveId",  
+            "value": ""  
+        },  
+        {  
+            "name": "Farm2DepartmentId",  
+            "value": "11"  
+        }  
+    ],  
+    "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
+    "avgGrowth": 1.0,  
+    "avgWeight": 45.5,  
+    "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
+    "co2": 20,  
+    "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
+    "empty": false,  
+    "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
+    "feedConsumption": 8.3,  
+    "humidity": 0.7,  
+    "lastUpdate": 1589841011000,  
+    "luminosity": 3,  
+    "name": "",  
+    "numAnimals": 22,  
+    "outputFeed": 8.2,  
+    "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
+    "sex": "",  
+    "startWeight": 26,  
+    "temperature": 25,  
+    "waterConsumption": 23,  
+    "weightStDev": 2.3,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
-  },  
-  "arrivalTimestamp": {  
-    "type": "string",  
-    "value": "2020-04-14T22:00:00.000Z"  
-  },  
-  "avgGrowth": {  
-    "type": "boolean",  
-    "value": true  
-  },  
-  "avgWeight": {  
-    "type": "number",  
-    "value": 45.5  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
-  },  
-  "co2": {  
-    "type": "number",  
-    "value": 20  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": false  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
-  },  
-  "feedConsumption": {  
-    "type": "number",  
-    "value": 8.3  
-  },  
-  "humidity": {  
-    "type": "number",  
-    "value": 0.7  
-  },  
-  "lastUpdate": {  
-    "type": "number",  
-    "value": 1589841011000  
-  },  
-  "luminosity": {  
-    "type": "number",  
-    "value": 3  
-  },  
-  "name": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "numAnimals": {  
-    "type": "number",  
-    "value": 22  
-  },  
-  "outputFeed": {  
-    "type": "number",  
-    "value": 8.2  
-  },  
-  "parentCompartmentId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "startWeight": {  
-    "type": "number",  
-    "value": 26  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "waterConsumption": {  
-    "type": "number",  
-    "value": 23  
-  },  
-  "weightStDev": {  
-    "type": "number",  
-    "value": 2.3  
-  },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+#### コンパートメント NGSI-LD 正規化例  
+以下は、正規化された JSON-LD 形式の Compartment の例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+    "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+    "type": "Compartment",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm2FeedTray",  
+                "value": "4"  
+            },  
+            {  
+                "name": "Farm2ValveId",  
+                "value": ""  
+            },  
+            {  
+                "name": "Farm2DepartmentId",  
+                "value": "11"  
+            }  
+        ]  
+    },  
+    "arrivalTimestamp": {  
+        "type": "string",  
+        "value": "2020-04-14T22:00:00.000Z"  
+    },  
+    "avgGrowth": {  
+        "type": "boolean",  
+        "value": true  
+    },  
+    "avgWeight": {  
+        "type": "number",  
+        "value": 45.5  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
+    },  
+    "co2": {  
+        "type": "number",  
+        "value": 20  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": false  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
+    },  
+    "feedConsumption": {  
+        "type": "number",  
+        "value": 8.3  
+    },  
+    "humidity": {  
+        "type": "number",  
+        "value": 0.7  
+    },  
+    "lastUpdate": {  
+        "type": "number",  
+        "value": 1589841011000  
+    },  
+    "luminosity": {  
+        "type": "number",  
+        "value": 3  
+    },  
+    "name": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "numAnimals": {  
+        "type": "number",  
+        "value": 22  
+    },  
+    "outputFeed": {  
+        "type": "number",  
+        "value": 8.2  
+    },  
+    "parentCompartmentId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "startWeight": {  
+        "type": "number",  
+        "value": 26  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "waterConsumption": {  
+        "type": "number",  
+        "value": 23  
+    },  
+    "weightStDev": {  
+        "type": "number",  
+        "value": 2.3  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+    ]  
+}  
+```  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
