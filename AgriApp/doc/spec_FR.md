@@ -1,8 +1,10 @@
-Entité : AgriApp  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : AgriApp  
 ================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriApp/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée d'une appli générique faite pour le domaine de l'agroalimentaire. Cette entité est principalement associée au secteur vertical de l'agriculture et aux applications IoT connexes**.  
+version : 0.0.2  
 
 ## Liste des propriétés  
 
@@ -54,7 +56,7 @@ AgriApp:
     category:    
       description: 'List of categories of the app'    
       items:    
-        - type: string    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -282,13 +284,13 @@ AgriApp:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -325,6 +327,12 @@ AgriApp:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriApp/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriApp/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -384,63 +392,61 @@ AgriApp:
 Voici un exemple d'une AgriApp au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriApp",  
-  "category": [  
-    "TBD"  
-  ],  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "An app for wine tracking",  
-  "endpoint": "https://app.endpoint/download",  
-  "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Wine track",  
-  "version": "1.0",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriApp",  
+    "category": [  
+        "TBD"  
+    ],  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "An app for wine tracking",  
+    "endpoint": "https://app.endpoint/download",  
+    "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Wine track",  
+    "version": "1.0",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriApp NGSI-LD normalisé Exemple  
 Voici un exemple d'une AgriApp au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriApp",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Wine track"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "An app for wine tracking"  
-  },  
-  "version": {  
-    "type": "Property",  
-    "value": "1.0"  
-  },  
-  "hasProvider": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "endpoint": {  
-    "type": "Property",  
-    "value": "https://app.endpoint/download"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "TBD"  
+{  
+    "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriApp",  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "TBD"  
+        ]  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "An app for wine tracking"  
+    },  
+    "endpoint": {  
+        "type": "Property",  
+        "value": "https://app.endpoint/download"  
+    },  
+    "hasProvider": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Wine track"  
+    },  
+    "version": {  
+        "type": "Property",  
+        "value": "1.0"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  }  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
