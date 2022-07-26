@@ -1,8 +1,10 @@
-Entity: Pen  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Pen  
 ===========  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Fenced area in a building or department or outside housing a group of animals. Animals in a pen can move and interact freely. Pens are often not completely separated from each other (half walls, iron bars, fences,…), making it possible that animals from neighbouring pens can see/touch**  
+version: 0.2.1  
 
 ## List of properties  
 
@@ -90,17 +92,17 @@ Pen:
         units: Kg    
     buildingId:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier with format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier format of any NGSI entity.'    
           format: uri    
           type: string    
       description: 'Unique identifier of the Building the item is located in'    
       x-ngsi:    
-        model: https://schema.org/URL    
+        model: https://schema.org/URL.    
         type: Relationship    
     co2:    
       description: 'The CO2 concentration in the item'    
@@ -475,7 +477,7 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## Example payloads    
@@ -586,110 +588,110 @@ Pen:
 Here is an example of a Pen in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm1FeedTray",  
-      "value": 1  
-    },  
-    {  
-      "name": "Farm1DepartmentId",  
-      "value": "43"  
-    },  
-    {  
-      "name": "Farm1ValveId",  
-      "value": "69"  
-    },  
-    {  
-      "name": "Farm1PenId",  
-      "value": "1"  
-    },  
-    {  
-      "name": "Farm1BuildingId",  
-      "value": "2"  
-    }  
-  ],  
-  "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
-  "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
-  "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
-  "empty": false,  
-  "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
-  "lastUpdate": "2020-04-12T20:44:55",  
-  "sex": "",  
-  "temperature": 25,  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm1FeedTray",  
+            "value": 1  
+        },  
+        {  
+            "name": "Farm1DepartmentId",  
+            "value": "43"  
+        },  
+        {  
+            "name": "Farm1ValveId",  
+            "value": "69"  
+        },  
+        {  
+            "name": "Farm1PenId",  
+            "value": "1"  
+        },  
+        {  
+            "name": "Farm1BuildingId",  
+            "value": "2"  
+        }  
+    ],  
+    "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
+    "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
+    "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
+    "empty": false,  
+    "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
+    "lastUpdate": "2020-04-12T20:44:55",  
+    "sex": "",  
+    "temperature": 25,  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Pen NGSI-LD normalized Example    
 Here is an example of a Pen in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm1FeedTray",  
-        "value": 1  
-      },  
-      {  
-        "name": "Farm1DepartmentId",  
-        "value": "43"  
-      },  
-      {  
-        "name": "Farm1ValveId",  
-        "value": "69"  
-      },  
-      {  
-        "name": "Farm1PenId",  
-        "value": "1"  
-      },  
-      {  
-        "name": "Farm1BuildingId",  
-        "value": "2"  
-      }  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm1FeedTray",  
+                "value": 1  
+            },  
+            {  
+                "name": "Farm1DepartmentId",  
+                "value": "43"  
+            },  
+            {  
+                "name": "Farm1ValveId",  
+                "value": "69"  
+            },  
+            {  
+                "name": "Farm1PenId",  
+                "value": "1"  
+            },  
+            {  
+                "name": "Farm1BuildingId",  
+                "value": "2"  
+            }  
+        ]  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
+    },  
+    "compartmentId": {  
+        "type": "string",  
+        "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": "false"  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
+    },  
+    "lastUpdate": {  
+        "type": "string",  
+        "value": "2020-04-12T20:44:55"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld"  
     ]  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
-  },  
-  "compartmentId": {  
-    "type": "string",  
-    "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": "false"  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
-  },  
-  "lastUpdate": {  
-    "type": "string",  
-    "value": "2020-04-12T20:44:55"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
