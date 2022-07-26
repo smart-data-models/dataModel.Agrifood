@@ -1,8 +1,10 @@
-Entity: Animal  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Animal  
 ==============  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Animal/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -449,6 +451,12 @@ Animal:
     - legalId    
     - sex    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -568,140 +576,138 @@ Animal:
 Here is an example of a Animal in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "Animal",  
-  "birthdate": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-01T01:20:00Z"  
-  },  
-  "breed": "Merina",  
-  "calvedBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
-  "fedWith": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081",  
-  "healthCondition": "healthy",  
-  "legalId": "ES142589652140",  
-  "locatedAt": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-  "location": {  
-    "coordinates": [  
-      -4.754444444,  
-      41.640833333  
+    "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "Animal",  
+    "birthdate": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-01T01:20:00Z"  
+    },  
+    "breed": "Merina",  
+    "calvedBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
+    "fedWith": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081",  
+    "healthCondition": "healthy",  
+    "legalId": "ES142589652140",  
+    "locatedAt": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+    "location": {  
+        "coordinates": [  
+            -4.754444444,  
+            41.640833333  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": "http://person.org/leon",  
+    "phenologicalCondition": "adult",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:sheep1"  
+        }  
     ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "http://person.org/leon",  
-  "phenologicalCondition": "adult",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:sheep1"  
-    }  
-  ],  
-  "reproductiveCondition": "inCalf",  
-  "sex": "female",  
-  "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
-  "species": "sheep",  
-  "weight": 65.3,  
-  "welfareCondition": "adequate",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "reproductiveCondition": "inCalf",  
+    "sex": "female",  
+    "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
+    "species": "sheep",  
+    "weight": 65.3,  
+    "welfareCondition": "adequate",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Animal NGSI-LD normalized Example    
 Here is an example of a Animal in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "Animal",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "species": {  
-    "type": "Property",  
-    "value": "sheep"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:sheep1"  
-      }  
+    "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "Animal",  
+    "birthdate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-01T01:20:00Z"  
+        }  
+    },  
+    "breed": {  
+        "type": "Property",  
+        "value": "Merina"  
+    },  
+    "calvedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
+    },  
+    "fedWith": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"  
+    },  
+    "healthCondition": {  
+        "type": "Property",  
+        "value": "healthy"  
+    },  
+    "legalId": {  
+        "type": "Property",  
+        "value": "ES142589652140"  
+    },  
+    "locatedAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.754444444,  
+                41.640833333  
+            ]  
+        }  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": {  
+        "type": "Relationship",  
+        "object": "http://person.org/leon"  
+    },  
+    "phenologicalCondition": {  
+        "type": "Property",  
+        "value": "adult"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:sheep1"  
+            }  
+        ]  
+    },  
+    "reproductiveCondition": {  
+        "type": "Property",  
+        "value": "inCalf"  
+    },  
+    "sex": {  
+        "type": "Property",  
+        "value": "female"  
+    },  
+    "siredBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
+    },  
+    "species": {  
+        "type": "Property",  
+        "value": "sheep"  
+    },  
+    "weight": {  
+        "type": "Property",  
+        "value": 65.3  
+    },  
+    "welfareCondition": {  
+        "type": "Property",  
+        "value": "adequate"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "legalId": {  
-    "type": "Property",  
-    "value": "ES142589652140"  
-  },  
-  "birthdate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-01T01:20:00Z"  
-    }  
-  },  
-  "sex": {  
-    "type": "Property",  
-    "value": "female"  
-  },  
-  "breed": {  
-    "type": "Property",  
-    "value": "Merina"  
-  },  
-  "calvedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
-  },  
-  "siredBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.754444444,  
-        41.640833333  
-      ]  
-    }  
-  },  
-  "weight": {  
-    "type": "Property",  
-    "value": 65.3  
-  },  
-  "ownedBy": {  
-    "type": "Relationship",  
-    "object": "http://person.org/leon"  
-  },  
-  "locatedAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
-  },  
-  "phenologicalCondition": {  
-    "type": "Property",  
-    "value": "adult"  
-  },  
-  "reproductiveCondition": {  
-    "type": "Property",  
-    "value": "inCalf"  
-  },  
-  "healthCondition": {  
-    "type": "Property",  
-    "value": "healthy"  
-  },  
-  "fedWith": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"  
-  },  
-  "welfareCondition": {  
-    "type": "Property",  
-    "value": "adequate"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
