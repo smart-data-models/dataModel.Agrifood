@@ -1,12 +1,14 @@
-Entité : Animal  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Animal  
 ===============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Animal/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Observation des conditions d'un animal à un endroit et à un moment donnés. Ce modèle de données a été développé pour le projet IoF2020 UC ShareBeef par UCO et SensoWave.**  
+version : 0.0.1  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `birthdate`: Date de naissance de l'animal  - `breed`: Race de l'animal  - `calvedBy`: Mère de l'animal  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `fedWith`: Nourriture utilisée pour l'animal  - `healthCondition`: État phénologique de l'animal. Enum:' healthy, sick, inTreatment' (sain, malade, en traitement)  - `id`: Identifiant unique de l'entité  - `legalId`: Identification légale de l'animal  - `locatedAt`: Id de la relation AgriParcel  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `ownedBy`: Le propriétaire de l'animal  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phenologicalCondition`: Condition phénologique de l'animal. Enum : 'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `reproductiveCondition`: État reproductif de l'animal. Enum : 'noStatus, inactive, inCalf, inHeat, active'.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `sex`: Sexe de l'animal. Enum : "mâle, femelle  - `siredBy`: Père de l'animal  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `species`: Espèce à laquelle appartient l'animal. Cet enum peut être augmenté  - `type`: Type d'entité NGSI : Il doit s'agir d'un animal  - `weight`: Le poids de l'animal en chiffre  - `welfareCondition`: Indicateur du bien-être animal. Enum : "problème, adéquat    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `birthdate`: Date de naissance de l'animal  - `breed`: Race de l'animal  - `calvedBy`: Mère de l'animal  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `fedWith`: Nourriture utilisée pour l'animal  - `healthCondition`: État phénologique de l'animal. Enum:' healthy, sick, inTreatment' (sain, malade, en traitement)  - `id`: Identifiant unique de l'entité  - `legalId`: Identification légale de l'animal  - `locatedAt`: Id de la relation AgriParcel  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `ownedBy`: Le propriétaire de l'animal  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phenologicalCondition`: Condition phénologique de l'animal. Enum : 'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `reproductiveCondition`: État reproductif de l'animal. Enum : 'noStatus, inactive, inCalf, inHeat, active'.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex`: Sexe de l'animal. Enum : "mâle, femelle  - `siredBy`: Père de l'animal  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `species`: Espèce à laquelle appartient l'animal. Cet enum peut être augmenté  - `type`: Type d'entité NGSI : Il doit s'agir d'un animal  - `weight`: Le poids de l'animal en chiffre  - `welfareCondition`: Indicateur du bien-être animal. Enum : "problème, adéquat    
 Propriétés requises  
 - `id`  - `legalId`  - `sex`  - `species`  - `type`    
 Le modèle de données animales proposé a été élaboré d'un point de vue plus général, en essayant de l'adapter aux informations provenant des dispositifs et des capteurs utilisés dans l'UC. Le diagramme suivant décrit la chaîne de la viande bovine. Dans ce diagramme, les différents acteurs de la chaîne de la viande sont décrits ainsi que certaines de leurs interactions. ![ ](../resources/diagram1.jpg). Lors de l'utilisation de ce modèle de données, il sera nécessaire de définir plusieurs entités pour traiter les informations générées par la solution proposée. Parmi toutes ces entités, l'entité animal qui est le centre de la solution se distingue en premier lieu  
@@ -449,6 +451,12 @@ Animal:
     - legalId    
     - sex    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/LICENSE.md    
+  x-model-schema: ""    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -565,143 +573,141 @@ Animal:
 }  
 ```  
 #### Valeurs-clés NGSI-LD pour animaux Exemple  
-Voici un exemple d'animal au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'animal au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "Animal",  
-  "birthdate": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-01T01:20:00Z"  
-  },  
-  "breed": "Merina",  
-  "calvedBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
-  "fedWith": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081",  
-  "healthCondition": "healthy",  
-  "legalId": "ES142589652140",  
-  "locatedAt": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-  "location": {  
-    "coordinates": [  
-      -4.754444444,  
-      41.640833333  
+    "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "Animal",  
+    "birthdate": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-01T01:20:00Z"  
+    },  
+    "breed": "Merina",  
+    "calvedBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
+    "fedWith": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081",  
+    "healthCondition": "healthy",  
+    "legalId": "ES142589652140",  
+    "locatedAt": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+    "location": {  
+        "coordinates": [  
+            -4.754444444,  
+            41.640833333  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": "http://person.org/leon",  
+    "phenologicalCondition": "adult",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:sheep1"  
+        }  
     ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "http://person.org/leon",  
-  "phenologicalCondition": "adult",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:sheep1"  
-    }  
-  ],  
-  "reproductiveCondition": "inCalf",  
-  "sex": "female",  
-  "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
-  "species": "sheep",  
-  "weight": 65.3,  
-  "welfareCondition": "adequate",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "reproductiveCondition": "inCalf",  
+    "sex": "female",  
+    "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",  
+    "species": "sheep",  
+    "weight": 65.3,  
+    "welfareCondition": "adequate",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Animal NGSI-LD normalisé Exemple  
 Voici un exemple d'un animal au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "Animal",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "species": {  
-    "type": "Property",  
-    "value": "sheep"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:sheep1"  
-      }  
+    "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "Animal",  
+    "birthdate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-01T01:20:00Z"  
+        }  
+    },  
+    "breed": {  
+        "type": "Property",  
+        "value": "Merina"  
+    },  
+    "calvedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
+    },  
+    "fedWith": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"  
+    },  
+    "healthCondition": {  
+        "type": "Property",  
+        "value": "healthy"  
+    },  
+    "legalId": {  
+        "type": "Property",  
+        "value": "ES142589652140"  
+    },  
+    "locatedAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.754444444,  
+                41.640833333  
+            ]  
+        }  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": {  
+        "type": "Relationship",  
+        "object": "http://person.org/leon"  
+    },  
+    "phenologicalCondition": {  
+        "type": "Property",  
+        "value": "adult"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:sheep1"  
+            }  
+        ]  
+    },  
+    "reproductiveCondition": {  
+        "type": "Property",  
+        "value": "inCalf"  
+    },  
+    "sex": {  
+        "type": "Property",  
+        "value": "female"  
+    },  
+    "siredBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
+    },  
+    "species": {  
+        "type": "Property",  
+        "value": "sheep"  
+    },  
+    "weight": {  
+        "type": "Property",  
+        "value": 65.3  
+    },  
+    "welfareCondition": {  
+        "type": "Property",  
+        "value": "adequate"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "legalId": {  
-    "type": "Property",  
-    "value": "ES142589652140"  
-  },  
-  "birthdate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-01T01:20:00Z"  
-    }  
-  },  
-  "sex": {  
-    "type": "Property",  
-    "value": "female"  
-  },  
-  "breed": {  
-    "type": "Property",  
-    "value": "Merina"  
-  },  
-  "calvedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
-  },  
-  "siredBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.754444444,  
-        41.640833333  
-      ]  
-    }  
-  },  
-  "weight": {  
-    "type": "Property",  
-    "value": 65.3  
-  },  
-  "ownedBy": {  
-    "type": "Relationship",  
-    "object": "http://person.org/leon"  
-  },  
-  "locatedAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
-  },  
-  "phenologicalCondition": {  
-    "type": "Property",  
-    "value": "adult"  
-  },  
-  "reproductiveCondition": {  
-    "type": "Property",  
-    "value": "inCalf"  
-  },  
-  "healthCondition": {  
-    "type": "Property",  
-    "value": "healthy"  
-  },  
-  "fedWith": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"  
-  },  
-  "welfareCondition": {  
-    "type": "Property",  
-    "value": "adequate"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
