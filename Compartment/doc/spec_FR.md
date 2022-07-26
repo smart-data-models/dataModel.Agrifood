@@ -1,12 +1,14 @@
-Entité : Compartiment  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Compartiment  
 =====================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Zone artificielle dans un bâtiment ou un service qui est mesurée par certains capteurs. Un compartiment n'est pas nécessairement un séparateur physique. Il peut s'agir d'un département ou d'un regroupement de plusieurs enclos dans un département qui sont mesurés par le même capteur.**  
+version : 0.0.1  
 
 ## Liste des propriétés  
 
-- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'température' : '32', 'humidité' : '42'}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure auxquelles l'animal a été inséré dans le compartiment  - `avgGrowth`: La croissance moyenne du poids des animaux de ce compartiment  - `avgWeight`: Le poids moyen des porcs dans ce compartiment  - `buildingId`: Identifiant unique d'un bâtiment dans lequel le compartiment est situé  - `co2`: La concentration de CO2 dans le compartiment  - `companyId`: Identifiant unique d'une entreprise  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `empty`: Valeur True/False si le compartiment est vide  - `farmId`: Identifiant unique d'une exploitation agricole où se trouve le compartiment dans  - `feedConsumption`: La quantité totale de nourriture qui a été consommée à partir de la ou des stations d'alimentation du compartiment.  - `humidity`: Quantité représentant la quantité de vapeur d'eau dans l'atmosphère du compartiment.  - `id`: Identifiant unique de l'entité  - `lastUpdate`: Date et heure auxquelles les mesures du compartiment ont été effectuées. Horodatage Unix  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde au compartiment  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux dans le compartiment  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `parentCompartmentId`: Identifiant unique du compartiment dont ce compartiment fait partie. Il n'est utilisé que lorsqu'un compartiment contient d'autres compartiments.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `sex`: Le sexe des animaux contenus dans le compartiment  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température du compartiment.  - `type`: Type d'entité NGSI. Il doit s'agir d'un compartiment.  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets du compartiment.  - `weightStDev`: L'écart-type associé au poids moyen des porcs/porcelets contenus dans le compartiment.    
+- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'température' : '32', 'humidité' : '42'}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure auxquelles l'animal a été inséré dans le compartiment  - `avgGrowth`: La croissance moyenne du poids des animaux de ce compartiment  - `avgWeight`: Le poids moyen des porcs dans ce compartiment  - `buildingId`: Identifiant unique d'un bâtiment dans lequel le compartiment est situé  - `co2`: La concentration de CO2 dans le compartiment  - `companyId`: Identifiant unique d'une entreprise  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `empty`: Valeur True/False si le compartiment est vide  - `farmId`: Identifiant unique d'une exploitation agricole où se trouve le compartiment dans  - `feedConsumption`: La quantité totale de nourriture qui a été consommée à partir de la ou des stations d'alimentation du compartiment.  - `humidity`: Quantité représentant la quantité de vapeur d'eau dans l'atmosphère du compartiment.  - `id`: Identifiant unique de l'entité  - `lastUpdate`: Date et heure auxquelles les mesures du compartiment ont été effectuées. Horodatage Unix  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde au compartiment  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux dans le compartiment  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `parentCompartmentId`: Identifiant unique du compartiment dont ce compartiment fait partie. Il n'est utilisé que lorsqu'un compartiment contient d'autres compartiments.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex`: Le sexe des animaux contenus dans le compartiment  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température du compartiment.  - `type`: Type d'entité NGSI. Il doit s'agir d'un compartiment.  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets du compartiment.  - `weightStDev`: L'écart-type associé au poids moyen des porcs/porcelets contenus dans le compartiment.    
 Propriétés requises  
 - `id`  - `lastUpdate`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -446,6 +448,12 @@ Compartment:
     - type    
     - lastUpdate    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -606,159 +614,159 @@ Compartment:
 Voici un exemple de compartiment au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm2FeedTray",  
-      "value": "4"  
-    },  
-    {  
-      "name": "Farm2ValveId",  
-      "value": ""  
-    },  
-    {  
-      "name": "Farm2DepartmentId",  
-      "value": "11"  
-    }  
-  ],  
-  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
-  "avgGrowth": 1.0,  
-  "avgWeight": 45.5,  
-  "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
-  "co2": 20,  
-  "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
-  "empty": false,  
-  "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
-  "feedConsumption": 8.3,  
-  "humidity": 0.7,  
-  "lastUpdate": 1589841011000,  
-  "luminosity": 3,  
-  "name": "",  
-  "numAnimals": 22,  
-  "outputFeed": 8.2,  
-  "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
-  "sex": "",  
-  "startWeight": 26,  
-  "temperature": 25,  
-  "waterConsumption": 23,  
-  "weightStDev": 2.3,  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+    "type": "Compartment",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm2FeedTray",  
+            "value": "4"  
+        },  
+        {  
+            "name": "Farm2ValveId",  
+            "value": ""  
+        },  
+        {  
+            "name": "Farm2DepartmentId",  
+            "value": "11"  
+        }  
+    ],  
+    "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
+    "avgGrowth": 1.0,  
+    "avgWeight": 45.5,  
+    "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
+    "co2": 20,  
+    "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
+    "empty": false,  
+    "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
+    "feedConsumption": 8.3,  
+    "humidity": 0.7,  
+    "lastUpdate": 1589841011000,  
+    "luminosity": 3,  
+    "name": "",  
+    "numAnimals": 22,  
+    "outputFeed": 8.2,  
+    "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
+    "sex": "",  
+    "startWeight": 26,  
+    "temperature": 25,  
+    "waterConsumption": 23,  
+    "weightStDev": 2.3,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Compartiment NGSI-LD normalisé Exemple  
 Voici un exemple de Compartiment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm2FeedTray",  
-        "value": "4"  
-      },  
-      {  
-        "name": "Farm2ValveId",  
+    "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+    "type": "Compartment",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm2FeedTray",  
+                "value": "4"  
+            },  
+            {  
+                "name": "Farm2ValveId",  
+                "value": ""  
+            },  
+            {  
+                "name": "Farm2DepartmentId",  
+                "value": "11"  
+            }  
+        ]  
+    },  
+    "arrivalTimestamp": {  
+        "type": "string",  
+        "value": "2020-04-14T22:00:00.000Z"  
+    },  
+    "avgGrowth": {  
+        "type": "boolean",  
+        "value": true  
+    },  
+    "avgWeight": {  
+        "type": "number",  
+        "value": 45.5  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
+    },  
+    "co2": {  
+        "type": "number",  
+        "value": 20  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": false  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
+    },  
+    "feedConsumption": {  
+        "type": "number",  
+        "value": 8.3  
+    },  
+    "humidity": {  
+        "type": "number",  
+        "value": 0.7  
+    },  
+    "lastUpdate": {  
+        "type": "number",  
+        "value": 1589841011000  
+    },  
+    "luminosity": {  
+        "type": "number",  
+        "value": 3  
+    },  
+    "name": {  
+        "type": "string",  
         "value": ""  
-      },  
-      {  
-        "name": "Farm2DepartmentId",  
-        "value": "11"  
-      }  
+    },  
+    "numAnimals": {  
+        "type": "number",  
+        "value": 22  
+    },  
+    "outputFeed": {  
+        "type": "number",  
+        "value": 8.2  
+    },  
+    "parentCompartmentId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "startWeight": {  
+        "type": "number",  
+        "value": 26  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "waterConsumption": {  
+        "type": "number",  
+        "value": 23  
+    },  
+    "weightStDev": {  
+        "type": "number",  
+        "value": 2.3  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
     ]  
-  },  
-  "arrivalTimestamp": {  
-    "type": "string",  
-    "value": "2020-04-14T22:00:00.000Z"  
-  },  
-  "avgGrowth": {  
-    "type": "boolean",  
-    "value": true  
-  },  
-  "avgWeight": {  
-    "type": "number",  
-    "value": 45.5  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
-  },  
-  "co2": {  
-    "type": "number",  
-    "value": 20  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": false  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
-  },  
-  "feedConsumption": {  
-    "type": "number",  
-    "value": 8.3  
-  },  
-  "humidity": {  
-    "type": "number",  
-    "value": 0.7  
-  },  
-  "lastUpdate": {  
-    "type": "number",  
-    "value": 1589841011000  
-  },  
-  "luminosity": {  
-    "type": "number",  
-    "value": 3  
-  },  
-  "name": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "numAnimals": {  
-    "type": "number",  
-    "value": 22  
-  },  
-  "outputFeed": {  
-    "type": "number",  
-    "value": 8.2  
-  },  
-  "parentCompartmentId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "startWeight": {  
-    "type": "number",  
-    "value": 26  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "waterConsumption": {  
-    "type": "number",  
-    "value": 23  
-  },  
-  "weightStDev": {  
-    "type": "number",  
-    "value": 2.3  
-  },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
