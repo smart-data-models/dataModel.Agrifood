@@ -1,17 +1,19 @@
-エンティティアグリクロップ  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティアグリクロップ  
 =============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、一般的な作物の調和された記述を含んでいます。このエンティティは、主に農業の垂直方向と関連するIoTアプリケーションに関連付けられています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**このエンティティは、一般的な作物の調和された記述を含む。このエンティティは、主に農業の垂直方向と関連する IoT アプリケーションに関連するものである**。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `agroVocConcept`: 定義されたコンセプトとAgroVocの語彙とのリンク  - `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `harvestingInterval`: この作物の推奨収穫間隔日のリスト。ISO8601の繰り返しの日付間隔を使って指定されています。<br/><br/>**interval, description**<br/><br/>ここで**interval**は**start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>この開始日からこの終了日まで、毎年繰り返すことを意味します。  - `hasAgriFertiliser`: この作物の栽培に適した推奨される肥料の種類を参照。  - `hasAgriPest`: この作物を攻撃することが知られている害虫についての言及  - `hasAgriSoil`: この作物の栽培に適した推奨される土壌の種類を参照してください。  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `plantingFrom`: この作物の推奨植え付け間隔日のリスト。ISO8601の繰り返しの日付間隔を使って指定します。<br/><br/>**interval, description**<br/><br/>ここで**interval**は**start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>この開始日からこの終了日まで、毎年繰り返すことを意味します。  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type. AgriCropである必要があります。  - `wateringFrequency`: 推奨される散水スケジュールの説明。列挙されたリストからの選択。以下のいずれかです。**daily、weekly、biweekly、monthly、onDemand、other**。Enum:'毎日、毎週、隔週、毎月、オンデマンド、その他'    
-必須項目  
+- `agroVocConcept`: 定義された概念とアグロボックボキャブラリーとのリンク  - `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `harvestingInterval`: この作物について推奨される収穫間隔の日付（複数可）のリスト。ISO8601の反復日付間隔を使用して指定される。<br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date...この開始日〜終了日まで毎年繰り返すことを意味する。  - `hasAgriFertiliser`: この作物の栽培に適した推奨肥料の種類を参照すること。  - `hasAgriPest`: この作物を襲うことが知られている病害虫への言及  - `hasAgriSoil`: この作物の栽培に適した推奨土壌の種類を参照すること。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `plantingFrom`: この作物に対して推奨される植え付け間隔の日付（複数可）のリスト。ISO8601の繰り返し日付間隔を使用して指定される。<br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date...この開始日から終了日までは毎年繰り返すという意味。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type.はAgriCropでなければならない。  - `wateringFrequency`: 推奨される散水スケジュールについての説明。列挙されたリストからの選択。のいずれか。**daily, weekly, biweekly, monthly, onDemand, other**.Enum:'daily, weekly, biweekly, monthly, onDemand, other' （毎日、毎週、隔週、毎月、オンデマンド、その他）。    
+必要なプロパティ  
 - `id`  - `name`  - `type`    
-この事業体は、主に農業の縦割りと関連するIoTアプリケーションに関連しています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+この事業体は、主に農業の垂直統合と関連するIoTアプリケーションに関連しています。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriCrop:    
@@ -213,11 +215,17 @@ AgriCrop:
     - type    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### AgriCrop NGSI-v2 キー・バリューの例  
-AgriCropをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriCrop NGSI-v2 key-value の例。  
+ここでは、AgriCropをJSON-LD形式でkey-valuesとして表現した例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -273,8 +281,8 @@ AgriCrop:
   "wateringFrequency": "daily"  
 }  
 ```  
-#### AgriCrop NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のAgriCropの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriCrop NGSI-v2 正規化例  
+以下は、AgriCropをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -364,163 +372,161 @@ AgriCrop:
   }  
 }  
 ```  
-#### AgriCrop NGSI-LDのキーバリューの例  
-AgriCropをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriCrop NGSI-LD キー値の例  
+ここでは、AgriCropをJSON-LD形式でkey-valuesとして表現した例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "type": "AgriCrop",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Wheat"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Triticum aestivum"  
-  },  
-  "agroVocConcept": {  
-    "type": "Property",  
-    "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/wheat",  
-      "https://datamodel.org/example/wheat"  
+    "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+    "type": "AgriCrop",  
+    "agroVocConcept": {  
+        "type": "Property",  
+        "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Triticum aestivum"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Spring wheat"  
+    },  
+    "harvestingInterval": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dateRange": "-03-21/-04-01",  
+                "description": "Best Season"  
+            },  
+            {  
+                "dateRange": "-04-02/-04-15",  
+                "description": "Season OK"  
+            }  
+        ]  
+    },  
+    "hasAgriFertiliser": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+            "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+        ]  
+    },  
+    "hasAgriPest": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+            "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+        ]  
+    },  
+    "hasAgriSoil": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+            "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
+        ]  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Wheat"  
+    },  
+    "plantingFrom": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dateRange": "-09-28/-10-12",  
+                "description": "Best Season"  
+            },  
+            {  
+                "dateRange": "-10-11/-10-18",  
+                "description": "Season OK"  
+            }  
+        ]  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:weat"  
+            }  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/wheat",  
+            "https://datamodel.org/example/wheat"  
+        ]  
+    },  
+    "wateringFrequency": {  
+        "type": "Property",  
+        "value": "daily"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Spring wheat"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:weat"  
-      }  
-    ]  
-  },  
-  "hasAgriSoil": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-      "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
-    ]  
-  },  
-  "hasAgriFertiliser": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-      "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-    ]  
-  },  
-  "hasAgriPest": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-      "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-    ]  
-  },  
-  "plantingFrom": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dateRange": "-09-28/-10-12",  
-        "description": "Best Season"  
-      },  
-      {  
-        "dateRange": "-10-11/-10-18",  
-        "description": "Season OK"  
-      }  
-    ]  
-  },  
-  "harvestingInterval": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dateRange": "-03-21/-04-01",  
-        "description": "Best Season"  
-      },  
-      {  
-        "dateRange": "-04-02/-04-15",  
-        "description": "Season OK"  
-      }  
-    ]  
-  },  
-  "wateringFrequency": {  
-    "type": "Property",  
-    "value": "daily"  
-  }  
 }  
 ```  
-#### AgriCrop NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のAgriCropの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriCrop NGSI-LD正規化例  
+以下は、AgriCropをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
-  "alternateName": "Triticum aestivum",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Spring wheat",  
-  "harvestingInterval": [  
-    {  
-      "dateRange": "-03-21/-04-01",  
-      "description": "Best Season"  
-    },  
-    {  
-      "dateRange": "-04-02/-04-15",  
-      "description": "Season OK"  
-    }  
-  ],  
-  "hasAgriFertiliser": [  
-    "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-    "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-  ],  
-  "hasAgriPest": [  
-    "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
-    "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
-  ],  
-  "hasAgriSoil": [  
-    "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-    "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
-  ],  
-  "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Wheat",  
-  "plantingFrom": [  
-    {  
-      "dateRange": "-09-28/-10-12",  
-      "description": "Best Season"  
-    },  
-    {  
-      "dateRange": "-10-11/-10-18",  
-      "description": "Season OK"  
-    }  
-  ],  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:weat"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/wheat",  
-    "https://datamodel.org/example/wheat"  
-  ],  
-  "type": "AgriCrop",  
-  "wateringFrequency": "daily"  
+    "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+    "type": "AgriCrop",  
+    "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
+    "alternateName": "Triticum aestivum",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "Spring wheat",  
+    "harvestingInterval": [  
+        {  
+            "dateRange": "-03-21/-04-01",  
+            "description": "Best Season"  
+        },  
+        {  
+            "dateRange": "-04-02/-04-15",  
+            "description": "Season OK"  
+        }  
+    ],  
+    "hasAgriFertiliser": [  
+        "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+        "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+    ],  
+    "hasAgriPest": [  
+        "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",  
+        "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"  
+    ],  
+    "hasAgriSoil": [  
+        "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+        "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"  
+    ],  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Wheat",  
+    "plantingFrom": [  
+        {  
+            "dateRange": "-09-28/-10-12",  
+            "description": "Best Season"  
+        },  
+        {  
+            "dateRange": "-10-11/-10-18",  
+            "description": "Season OK"  
+        }  
+    ],  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:weat"  
+        }  
+    ],  
+    "seeAlso": [  
+        "https://example.org/concept/wheat",  
+        "https://datamodel.org/example/wheat"  
+    ],  
+    "wateringFrequency": "daily",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
