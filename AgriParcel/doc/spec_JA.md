@@ -1,17 +1,19 @@
-エンティティアグリパーセル  
-=============  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+事業者アグリパーセル  
+==========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、一般的な土地の区画の調和のとれた説明を含んでいます。このエンティティは、主に農業分野と関連するIoTアプリケーションに関連付けられています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、一般的な土地の区画の調和された記述を含む。このエンティティは、主に農業の垂直方向と関連する IoT アプリケーションに関連している。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `area`: 名目上の区画の面積を平方メートルで表示しています。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `belongsTo`: アイテムが所属するEntity  - `category`: 土地の区画のカテゴリー 例。**耕作地、草地、ブドウ園、果樹園、混合作物、低地、高地、セットアサイド、林業、湿地など。  - `cropStatus`: Enum:'seeded, justBorn, growing, maturing, readyForHarvesting'.作物の植え付け状態を記述する列挙リストからの選択  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `hasAgriCrop`: このパーセルに関連する作物への言及  - `hasAgriParcelChildren`: このエンティティが関連するサブAgriParcelレコード  - `hasAgriParcelParent`: 親のアグリパーセルへの参照  - `hasAgriSoil`: この区画に関連する土壌への言及  - `hasDevices`: この区画に関連するIoTデバイス（センサー、制御装置など）への言及。  - `id`: エンティティのユニークな識別子  - `lastPlantedAt`: 作物が最後に植えられた日を示す  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `ownedBy`: アイテムの所有者（個人または組織  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。AgriParcelである必要があります。    
-必須項目  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `area`: 区画の面積を平方メートルで公称する。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `belongsTo`: アイテムが所属するエンティティ  - `category`: 土地の区画のカテゴリー。**耕作地、草地、ブドウ園、果樹園、複合作物、低地、高地、セットサイド、林業、湿地。  - `cropStatus`: Enum:'seeded, justBorn, growing, maturing, readyForHarvesting' （播種済み、生まれたて、成長中、成熟中、収穫準備中）。作物の植え付け状態を記述する列挙されたリストからの選択  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasAgriCrop`: この区画に関連する作物への言及  - `hasAgriParcelChildren`: このエンティティに関連するサブAgriParcelの記録  - `hasAgriParcelParent`: 親AgriParcelへの参照  - `hasAgriSoil`: この区画に関連する土壌に関する言及  - `hasDevices`: この区画に関連するIoTデバイス（センサー、制御装置など）への言及。  - `id`: エンティティの一意な識別子  - `lastPlantedAt`: 作物が最後に植え付けられた日を示す。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `ownedBy`: アイテムの所有者（個人または団体  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type。AgriParcelでなければならない。    
+必要なプロパティ  
 - `area`  - `hasAgriCrop`  - `id`  - `location`  - `type`    
-この事業体は、主に農業の縦割りと関連するIoTアプリケーションに関連しています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+この事業体は、主に農業の垂直統合と関連するIoTアプリケーションに関連しています。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriParcel:    
@@ -419,8 +421,8 @@ AgriParcel:
 ```  
 </details>    
 ## ペイロードの例  
-#### AgriParcel NGSI-v2 キー・バリューの例  
-AgriParcelをkey-valuesとしてJSON-LD形式で表現した例です。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriParcel NGSI-v2キーバリューの例  
+AgriParcelをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
@@ -463,8 +465,8 @@ AgriParcel:
   ]  
 }  
 ```  
-#### AgriParcel NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のAgriParcelの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriParcel NGSI-v2 正規化例  
+以下は、AgriParcelをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
@@ -553,193 +555,191 @@ AgriParcel:
 }  
 ```  
 #### AgriParcel NGSI-LD のキーバリューの例  
-AgriParcelをkey-valuesとしてJSON-LD形式で表現した例です。これは`options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+AgriParcelをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用したときにNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriParcel",  
-  "area": 200,  
-  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
-  "category": "arable",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "cropStatus": "seeded",  
-  "description": "Spring wheat",  
-  "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
-  "hasAgriParcelChildren": [  
-    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-  ],  
-  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-  "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
-  "hasDevice": [  
-    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-  ],  
-  "lastPlantedAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "location": {  
-    "coordinates": [  
-      [  
-        100,  
-        0  
-      ],  
-      [  
-        101,  
-        0  
-      ],  
-      [  
-        101,  
-        1  
-      ],  
-      [  
-        100,  
-        1  
-      ],  
-      [  
-        100,  
-        0  
-      ]  
+    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriParcel",  
+    "area": 200,  
+    "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+    "category": "arable",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "cropStatus": "seeded",  
+    "description": "Spring wheat",  
+    "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
+    "hasAgriParcelChildren": [  
+        "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+        "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
     ],  
-    "type": "Polygon"  
-  },  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:parcel1"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/agriparcel",  
-    "https://datamodel.org/example/agriparcel"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+    "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
+    "hasDevice": [  
+        "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+        "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+        "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+        "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+    ],  
+    "lastPlantedAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "location": {  
+        "coordinates": [  
+            [  
+                100,  
+                0  
+            ],  
+            [  
+                101,  
+                0  
+            ],  
+            [  
+                101,  
+                1  
+            ],  
+            [  
+                100,  
+                1  
+            ],  
+            [  
+                100,  
+                0  
+            ]  
+        ],  
+        "type": "Polygon"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:parcel1"  
+        }  
+    ],  
+    "seeAlso": [  
+        "https://example.org/concept/agriparcel",  
+        "https://datamodel.org/example/agriparcel"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### AgriParcel NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のAgriParcelの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriParcel NGSI-LD正規化例  
+以下は、AgriParcelをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriParcel",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          100,  
-          0  
-        ],  
-        [  
-          101,  
-          0  
-        ],  
-        [  
-          101,  
-          1  
-        ],  
-        [  
-          100,  
-          1  
-        ],  
-        [  
-          100,  
-          0  
+    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriParcel",  
+    "area": {  
+        "type": "Property",  
+        "value": 200  
+    },  
+    "belongsTo": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": "arable"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "cropStatus": {  
+        "type": "Property",  
+        "value": "seeded"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Spring wheat"  
+    },  
+    "hasAgriCrop": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
+    },  
+    "hasAgriParcelChildren": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+            "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
         ]  
-      ]  
-    }  
-  },  
-  "area": {  
-    "type": "Property",  
-    "value": 200  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Spring wheat"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "arable"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:parcel1"  
-      }  
+    },  
+    "hasAgriParcelParent": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
+    },  
+    "hasAgriSoil": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
+    },  
+    "hasDevice": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+            "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+            "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+            "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+        ]  
+    },  
+    "lastPlantedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    100,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    0  
+                ]  
+            ]  
+        }  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:parcel1"  
+            }  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/agriparcel",  
+            "https://datamodel.org/example/agriparcel"  
+        ]  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/agriparcel",  
-      "https://datamodel.org/example/agriparcel"  
-    ]  
-  },  
-  "belongsTo": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
-  },  
-  "ownedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "hasAgriParcelParent": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
-  },  
-  "hasAgriParcelChildren": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-      "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-    ]  
-  },  
-  "hasAgriCrop": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
-  },  
-  "cropStatus": {  
-    "type": "Property",  
-    "value": "seeded"  
-  },  
-  "lastPlantedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "hasAgriSoil": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
-  },  
-  "hasDevice": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-      "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-      "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-      "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-    ]  
-  }  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
