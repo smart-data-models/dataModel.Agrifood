@@ -1,12 +1,14 @@
-Entité : Pen  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Pen  
 ============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Espace clôturé dans un bâtiment ou un service ou à l'extérieur abritant un groupe d'animaux. Les animaux dans un enclos peuvent se déplacer et interagir librement. Souvent, les enclos ne sont pas complètement séparés les uns des autres (demi-murs, barres de fer, clôtures,...), ce qui fait que les animaux des enclos voisins peuvent se voir/toucher**.  
+version : 0.2.1  
 
 ## Liste des propriétés  
 
-- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'name' : 'temperature', 'value' : 32}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure d'arrivée des animaux dans l'enclos  - `avgGrowth`: La croissance moyenne du poids de l'animal dans cet enclos  - `avgWeight`: Le poids moyen de l'animal dans cet enclos.  - `buildingId`: Identifiant unique du bâtiment dans lequel se trouve l'élément.  - `co2`: La concentration de CO2 dans l'article  - `companyId`: Identifiant unique d'une entreprise  - `compartmentId`: Identifiant unique du compartiment dans lequel se trouve le stylo.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `deadAnimalsSinceDateOfArrival`: Nombre d'animaux morts depuis la date d'arrivée  - `description`: Une description de cet article  - `farmId`: Identifiant unique de l'exploitation agricole dans laquelle se trouve l'enclos.  - `feedConsumption`: La quantité totale d'aliments qui a été consommée à partir de la ou des stations d'alimentation dans l'enclos. Elle est mesurée par la consommation d'aliments et la structure spécifique pour ne laisser manger qu'un seul animal à la fois.  - `humidity`: Quantité représentant la quantité de vapeur d'eau présente dans l'atmosphère dans le stylo.  - `id`: Identifiant unique de l'entité  - `lastUpdate`: Date et heure auxquelles les mesures de l'article ont été prises.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde à l'article  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux contenus dans l'enclos.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `sex`: Le sexe des animaux contenus dans l'enclos  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température de la plume.  Unirs:' degré Celsius'  - `type`: Type d'entité NGSI. Il doit s'agir de Pen  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets de l'enclos. Elle est mesurée par des débitmètres et une structure spécifique pour ne laisser boire qu'un seul animal à la fois.  - `weightStDev`: L'écart-type associé au poids moyen des animaux contenus dans l'enclos.    
+- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'name' : 'temperature', 'value' : 32}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure d'arrivée des animaux dans l'enclos  - `avgGrowth`: La croissance moyenne du poids de l'animal dans cet enclos  - `avgWeight`: Le poids moyen de l'animal dans cet enclos.  - `buildingId`: Identifiant unique du bâtiment dans lequel se trouve l'élément.  - `co2`: La concentration de CO2 dans l'article  - `companyId`: Identifiant unique d'une entreprise  - `compartmentId`: Identifiant unique du compartiment dans lequel se trouve le stylo.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `deadAnimalsSinceDateOfArrival`: Nombre d'animaux morts depuis la date d'arrivée  - `description`: Une description de cet article  - `farmId`: Identifiant unique de l'exploitation agricole dans laquelle se trouve l'enclos.  - `feedConsumption`: La quantité totale d'aliments qui a été consommée à partir de la ou des stations d'alimentation dans l'enclos. Elle est mesurée par la consommation d'aliments et la structure spécifique permettant de laisser un seul animal manger à la fois.  - `humidity`: Quantité représentant la quantité de vapeur d'eau présente dans l'atmosphère dans le stylo.  - `id`: Identifiant unique de l'entité  - `lastUpdate`: Date et heure auxquelles les mesures de l'article ont été prises.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde à l'article  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux contenus dans l'enclos.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex`: Le sexe des animaux contenus dans l'enclos  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température de la plume.  Unirs:' degré Celsius'  - `type`: Type d'entité NGSI. il doit s'agir de Pen  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets de l'enclos. Elle est mesurée par des débitmètres et une structure spécifique pour ne laisser boire qu'un seul animal à la fois.  - `weightStDev`: L'écart-type associé au poids moyen des animaux contenus dans l'enclos.    
 Propriétés requises  
 - `id`  - `lastUpdate`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -90,17 +92,17 @@ Pen:
         units: Kg    
     buildingId:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier with format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier format of any NGSI entity.'    
           format: uri    
           type: string    
       description: 'Unique identifier of the Building the item is located in'    
       x-ngsi:    
-        model: https://schema.org/URL    
+        model: https://schema.org/URL.    
         type: Relationship    
     co2:    
       description: 'The CO2 concentration in the item'    
@@ -475,12 +477,12 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## Exemples de charges utiles  
 #### Pen NGSI-v2 valeurs-clés Exemple  
-Voici un exemple d'un stylo au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un Pen au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -586,110 +588,110 @@ Pen:
 Voici un exemple d'un stylo au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm1FeedTray",  
-      "value": 1  
-    },  
-    {  
-      "name": "Farm1DepartmentId",  
-      "value": "43"  
-    },  
-    {  
-      "name": "Farm1ValveId",  
-      "value": "69"  
-    },  
-    {  
-      "name": "Farm1PenId",  
-      "value": "1"  
-    },  
-    {  
-      "name": "Farm1BuildingId",  
-      "value": "2"  
-    }  
-  ],  
-  "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
-  "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
-  "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
-  "empty": false,  
-  "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
-  "lastUpdate": "2020-04-12T20:44:55",  
-  "sex": "",  
-  "temperature": 25,  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm1FeedTray",  
+            "value": 1  
+        },  
+        {  
+            "name": "Farm1DepartmentId",  
+            "value": "43"  
+        },  
+        {  
+            "name": "Farm1ValveId",  
+            "value": "69"  
+        },  
+        {  
+            "name": "Farm1PenId",  
+            "value": "1"  
+        },  
+        {  
+            "name": "Farm1BuildingId",  
+            "value": "2"  
+        }  
+    ],  
+    "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
+    "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
+    "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
+    "empty": false,  
+    "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
+    "lastUpdate": "2020-04-12T20:44:55",  
+    "sex": "",  
+    "temperature": 25,  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Pen NGSI-LD normalisé Exemple  
 Voici un exemple d'un stylo au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm1FeedTray",  
-        "value": 1  
-      },  
-      {  
-        "name": "Farm1DepartmentId",  
-        "value": "43"  
-      },  
-      {  
-        "name": "Farm1ValveId",  
-        "value": "69"  
-      },  
-      {  
-        "name": "Farm1PenId",  
-        "value": "1"  
-      },  
-      {  
-        "name": "Farm1BuildingId",  
-        "value": "2"  
-      }  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm1FeedTray",  
+                "value": 1  
+            },  
+            {  
+                "name": "Farm1DepartmentId",  
+                "value": "43"  
+            },  
+            {  
+                "name": "Farm1ValveId",  
+                "value": "69"  
+            },  
+            {  
+                "name": "Farm1PenId",  
+                "value": "1"  
+            },  
+            {  
+                "name": "Farm1BuildingId",  
+                "value": "2"  
+            }  
+        ]  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
+    },  
+    "compartmentId": {  
+        "type": "string",  
+        "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": "false"  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
+    },  
+    "lastUpdate": {  
+        "type": "string",  
+        "value": "2020-04-12T20:44:55"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld"  
     ]  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
-  },  
-  "compartmentId": {  
-    "type": "string",  
-    "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": "false"  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
-  },  
-  "lastUpdate": {  
-    "type": "string",  
-    "value": "2020-04-12T20:44:55"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
