@@ -1,8 +1,10 @@
-Entity: Compartment  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Compartment  
 ===================  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -446,6 +448,12 @@ Compartment:
     - type    
     - lastUpdate    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -606,159 +614,159 @@ Compartment:
 Here is an example of a Compartment in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm2FeedTray",  
-      "value": "4"  
-    },  
-    {  
-      "name": "Farm2ValveId",  
-      "value": ""  
-    },  
-    {  
-      "name": "Farm2DepartmentId",  
-      "value": "11"  
-    }  
-  ],  
-  "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
-  "avgGrowth": 1.0,  
-  "avgWeight": 45.5,  
-  "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
-  "co2": 20,  
-  "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
-  "empty": false,  
-  "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
-  "feedConsumption": 8.3,  
-  "humidity": 0.7,  
-  "lastUpdate": 1589841011000,  
-  "luminosity": 3,  
-  "name": "",  
-  "numAnimals": 22,  
-  "outputFeed": 8.2,  
-  "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
-  "sex": "",  
-  "startWeight": 26,  
-  "temperature": 25,  
-  "waterConsumption": 23,  
-  "weightStDev": 2.3,  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+    "type": "Compartment",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm2FeedTray",  
+            "value": "4"  
+        },  
+        {  
+            "name": "Farm2ValveId",  
+            "value": ""  
+        },  
+        {  
+            "name": "Farm2DepartmentId",  
+            "value": "11"  
+        }  
+    ],  
+    "arrivalTimestamp": "2020-04-14T22:00:00.000Z",  
+    "avgGrowth": 1.0,  
+    "avgWeight": 45.5,  
+    "buildingId": "urn:ngsi-ld:f6ce5251-e959-4269-9040-8056c6a093d9:001",  
+    "co2": 20,  
+    "companyId": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:002",  
+    "empty": false,  
+    "farmId": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:005",  
+    "feedConsumption": 8.3,  
+    "humidity": 0.7,  
+    "lastUpdate": 1589841011000,  
+    "luminosity": 3,  
+    "name": "",  
+    "numAnimals": 22,  
+    "outputFeed": 8.2,  
+    "parentCompartmentId": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001",  
+    "sex": "",  
+    "startWeight": 26,  
+    "temperature": 25,  
+    "waterConsumption": 23,  
+    "weightStDev": 2.3,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Compartment NGSI-LD normalized Example    
 Here is an example of a Compartment in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
-  "type": "Compartment",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm2FeedTray",  
-        "value": "4"  
-      },  
-      {  
-        "name": "Farm2ValveId",  
+    "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
+    "type": "Compartment",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm2FeedTray",  
+                "value": "4"  
+            },  
+            {  
+                "name": "Farm2ValveId",  
+                "value": ""  
+            },  
+            {  
+                "name": "Farm2DepartmentId",  
+                "value": "11"  
+            }  
+        ]  
+    },  
+    "arrivalTimestamp": {  
+        "type": "string",  
+        "value": "2020-04-14T22:00:00.000Z"  
+    },  
+    "avgGrowth": {  
+        "type": "boolean",  
+        "value": true  
+    },  
+    "avgWeight": {  
+        "type": "number",  
+        "value": 45.5  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
+    },  
+    "co2": {  
+        "type": "number",  
+        "value": 20  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": false  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
+    },  
+    "feedConsumption": {  
+        "type": "number",  
+        "value": 8.3  
+    },  
+    "humidity": {  
+        "type": "number",  
+        "value": 0.7  
+    },  
+    "lastUpdate": {  
+        "type": "number",  
+        "value": 1589841011000  
+    },  
+    "luminosity": {  
+        "type": "number",  
+        "value": 3  
+    },  
+    "name": {  
+        "type": "string",  
         "value": ""  
-      },  
-      {  
-        "name": "Farm2DepartmentId",  
-        "value": "11"  
-      }  
+    },  
+    "numAnimals": {  
+        "type": "number",  
+        "value": 22  
+    },  
+    "outputFeed": {  
+        "type": "number",  
+        "value": 8.2  
+    },  
+    "parentCompartmentId": {  
+        "type": "string",  
+        "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "startWeight": {  
+        "type": "number",  
+        "value": 26  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "waterConsumption": {  
+        "type": "number",  
+        "value": 23  
+    },  
+    "weightStDev": {  
+        "type": "number",  
+        "value": 2.3  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
     ]  
-  },  
-  "arrivalTimestamp": {  
-    "type": "string",  
-    "value": "2020-04-14T22:00:00.000Z"  
-  },  
-  "avgGrowth": {  
-    "type": "boolean",  
-    "value": true  
-  },  
-  "avgWeight": {  
-    "type": "number",  
-    "value": 45.5  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "f6ce5251-e959-4269-9040-8056c6a093d9"  
-  },  
-  "co2": {  
-    "type": "number",  
-    "value": 20  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:1401c9e0-c441-4bd1-b8d3-fb1194479aa7:007"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": false  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:7438345c-fdff-45c9-a02f-1d764cbc03a7:001"  
-  },  
-  "feedConsumption": {  
-    "type": "number",  
-    "value": 8.3  
-  },  
-  "humidity": {  
-    "type": "number",  
-    "value": 0.7  
-  },  
-  "lastUpdate": {  
-    "type": "number",  
-    "value": 1589841011000  
-  },  
-  "luminosity": {  
-    "type": "number",  
-    "value": 3  
-  },  
-  "name": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "numAnimals": {  
-    "type": "number",  
-    "value": 22  
-  },  
-  "outputFeed": {  
-    "type": "number",  
-    "value": 8.2  
-  },  
-  "parentCompartmentId": {  
-    "type": "string",  
-    "value": "urn:ngsi-ld:f0ddd929-5a18-479b-9ad6-5947cc2cd05b:001"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "startWeight": {  
-    "type": "number",  
-    "value": 26  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "waterConsumption": {  
-    "type": "number",  
-    "value": 23  
-  },  
-  "weightStDev": {  
-    "type": "number",  
-    "value": 2.3  
-  },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
