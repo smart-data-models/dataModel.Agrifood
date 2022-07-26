@@ -1,12 +1,14 @@
-Entität: Stift  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Stift  
 ==============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Eingezäunter Bereich in einem Gebäude oder einer Abteilung oder im Freien, in dem eine Gruppe von Tieren untergebracht ist. Die Tiere in einem Pferch können sich frei bewegen und interagieren. Die Ställe sind oft nicht vollständig voneinander getrennt (halbe Wände, Eisenstangen, Zäune,...), so dass Tiere aus benachbarten Ställen sich sehen/berühren können**  
+Version: 0.2.1  
 
 ## Liste der Eigenschaften  
 
-- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es handelt sich um eine JSON-Struktur ähnlich der folgenden: {'Name': 'Temperatur', 'Wert' : 32}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit der Ankunft der Tiere im Stall  - `avgGrowth`: Die durchschnittliche Gewichtszunahme des Tieres in dieser Bucht  - `avgWeight`: Das Durchschnittsgewicht des Tieres in diesem Pferch.  - `buildingId`: Eindeutige Kennung des Gebäudes, in dem sich der Gegenstand befindet  - `co2`: Die CO2-Konzentration im Artikel  - `companyId`: Eindeutige Kennung eines Unternehmens  - `compartmentId`: Eindeutige Kennung des Fachs, in dem sich der Stift befindet.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `deadAnimalsSinceDateOfArrival`: Anzahl der toten Tiere seit dem Tag der Ankunft  - `description`: Eine Beschreibung dieses Artikels  - `farmId`: Eindeutige Kennung des Betriebs, in dem sich der Pferch befindet.  - `feedConsumption`: Die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Stall gefressen wurde; sie wird anhand der Futteraufnahme und der spezifischen Struktur gemessen, die es jeweils nur einem Tier erlaubt, zu fressen.  - `humidity`: Menge, die die Menge an Wasserdampf in der Atmosphäre in dem Stift darstellt.  - `id`: Eindeutiger Bezeichner der Entität  - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen in der Position vorgenommen wurden  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge am Gegenstand  - `name`: Der Name dieses Artikels.  - `numAnimals`: Anzahl der im Pferch enthaltenen Tiere.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `sex`: Das Geschlecht der Tiere in der Bucht  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `temperature`: Temperatur des Stiftes.  Unirs:' Celsius Grad'  - `type`: NGSI Entity type. es muss Pen sein  - `waterConsumption`: Die gesamte Wassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Stall austritt. Sie wird mit Hilfe von Durchflussmessern und einer speziellen Struktur gemessen, damit immer nur ein Tier gleichzeitig trinken kann.  - `weightStDev`: Die Standardabweichung bezogen auf das Durchschnittsgewicht der in der Bucht enthaltenen Tiere.    
+- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es handelt sich um eine JSON-Struktur ähnlich der folgenden: {'Name': 'Temperatur', 'Wert' : 32}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit der Ankunft der Tiere im Stall  - `avgGrowth`: Die durchschnittliche Gewichtszunahme des Tieres in dieser Bucht  - `avgWeight`: Das Durchschnittsgewicht des Tieres in diesem Pferch.  - `buildingId`: Eindeutige Kennung des Gebäudes, in dem sich der Gegenstand befindet  - `co2`: Die CO2-Konzentration im Artikel  - `companyId`: Eindeutige Kennung eines Unternehmens  - `compartmentId`: Eindeutige Kennung des Fachs, in dem sich der Stift befindet.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `deadAnimalsSinceDateOfArrival`: Anzahl der toten Tiere seit dem Tag der Ankunft  - `description`: Eine Beschreibung dieses Artikels  - `farmId`: Eindeutige Kennung des Betriebs, in dem sich der Pferch befindet.  - `feedConsumption`: Die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Stall gefressen wurde; sie wird anhand der Futteraufnahme und der spezifischen Struktur gemessen, um jeweils nur ein Tier fressen zu lassen  - `humidity`: Menge, die die Menge an Wasserdampf in der Atmosphäre in dem Stift darstellt.  - `id`: Eindeutiger Bezeichner der Entität  - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen in der Position vorgenommen wurden  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge am Gegenstand  - `name`: Der Name dieses Artikels.  - `numAnimals`: Anzahl der im Pferch enthaltenen Tiere.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `sex`: Das Geschlecht der Tiere in der Bucht  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `temperature`: Temperatur des Stiftes.  Unirs:' Celsius Grad'  - `type`: NGSI Entity type. es muss Pen sein  - `waterConsumption`: Die gesamte Wassermenge, die aus dem Wasserhahn oder den Wasserhähnen im Stall austritt. Sie wird mit Hilfe von Durchflussmessern und einer speziellen Struktur gemessen, damit immer nur ein Tier gleichzeitig trinken kann.  - `weightStDev`: Die Standardabweichung bezogen auf das Durchschnittsgewicht der in der Bucht enthaltenen Tiere.    
 Erforderliche Eigenschaften  
 - `id`  - `lastUpdate`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -90,17 +92,17 @@ Pen:
         units: Kg    
     buildingId:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier with format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier format of any NGSI entity.'    
           format: uri    
           type: string    
       description: 'Unique identifier of the Building the item is located in'    
       x-ngsi:    
-        model: https://schema.org/URL    
+        model: https://schema.org/URL.    
         type: Relationship    
     co2:    
       description: 'The CO2 concentration in the item'    
@@ -475,12 +477,12 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
 #### Stift NGSI-v2 Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen Pen im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Pen im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -518,7 +520,7 @@ Pen:
 }  
 ```  
 #### Stift NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Pen im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Pen im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -586,110 +588,110 @@ Pen:
 Hier ist ein Beispiel für einen Pen im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm1FeedTray",  
-      "value": 1  
-    },  
-    {  
-      "name": "Farm1DepartmentId",  
-      "value": "43"  
-    },  
-    {  
-      "name": "Farm1ValveId",  
-      "value": "69"  
-    },  
-    {  
-      "name": "Farm1PenId",  
-      "value": "1"  
-    },  
-    {  
-      "name": "Farm1BuildingId",  
-      "value": "2"  
-    }  
-  ],  
-  "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
-  "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
-  "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
-  "empty": false,  
-  "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
-  "lastUpdate": "2020-04-12T20:44:55",  
-  "sex": "",  
-  "temperature": 25,  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm1FeedTray",  
+            "value": 1  
+        },  
+        {  
+            "name": "Farm1DepartmentId",  
+            "value": "43"  
+        },  
+        {  
+            "name": "Farm1ValveId",  
+            "value": "69"  
+        },  
+        {  
+            "name": "Farm1PenId",  
+            "value": "1"  
+        },  
+        {  
+            "name": "Farm1BuildingId",  
+            "value": "2"  
+        }  
+    ],  
+    "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
+    "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
+    "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
+    "empty": false,  
+    "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
+    "lastUpdate": "2020-04-12T20:44:55",  
+    "sex": "",  
+    "temperature": 25,  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Stift NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für einen Pen im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm1FeedTray",  
-        "value": 1  
-      },  
-      {  
-        "name": "Farm1DepartmentId",  
-        "value": "43"  
-      },  
-      {  
-        "name": "Farm1ValveId",  
-        "value": "69"  
-      },  
-      {  
-        "name": "Farm1PenId",  
-        "value": "1"  
-      },  
-      {  
-        "name": "Farm1BuildingId",  
-        "value": "2"  
-      }  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm1FeedTray",  
+                "value": 1  
+            },  
+            {  
+                "name": "Farm1DepartmentId",  
+                "value": "43"  
+            },  
+            {  
+                "name": "Farm1ValveId",  
+                "value": "69"  
+            },  
+            {  
+                "name": "Farm1PenId",  
+                "value": "1"  
+            },  
+            {  
+                "name": "Farm1BuildingId",  
+                "value": "2"  
+            }  
+        ]  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
+    },  
+    "compartmentId": {  
+        "type": "string",  
+        "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": "false"  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
+    },  
+    "lastUpdate": {  
+        "type": "string",  
+        "value": "2020-04-12T20:44:55"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld"  
     ]  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
-  },  
-  "compartmentId": {  
-    "type": "string",  
-    "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": "false"  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
-  },  
-  "lastUpdate": {  
-    "type": "string",  
-    "value": "2020-04-12T20:44:55"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
 }  
 ```  
-
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
