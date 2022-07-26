@@ -1,8 +1,10 @@
-Entity: AgriParcelOperation  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: AgriParcelOperation  
 ===========================  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
+version: 0.0.2  
 
 ## List of properties  
 
@@ -402,171 +404,169 @@ AgriParcelOperation:
 Here is an example of a AgriParcelOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
-  "type": "AgriParcelOperation",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Monthly fertiliser application",  
-  "endedAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "hasAgriParcel": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb",  
-  "hasAgriProductType": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec",  
-  "hasOperator": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "operationType": "fertiliser",  
-  "plannedEndAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "plannedStartAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "quantity": 40,  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:parcelop1"  
-    }  
-  ],  
-  "reportedAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "result": "ok",  
-  "seeAlso": [  
-    "https://example.org/concept/agriparcelop",  
-    "https://datamodel.org/example/agriparcelop"  
-  ],  
-  "startedAt": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-22T10:18:16Z"  
-  },  
-  "status": "finished",  
-  "waterSource": "rainwater capture",  
-  "workOrder": "https://example.com/agriparcelrecords/workorder1",  
-  "workRecord": "https://example.com/agriparcelrecords/workrecord1",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
+    "type": "AgriParcelOperation",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "Monthly fertiliser application",  
+    "endedAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "hasAgriParcel": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb",  
+    "hasAgriProductType": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec",  
+    "hasOperator": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+    "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1",  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "operationType": "fertiliser",  
+    "plannedEndAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "plannedStartAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "quantity": 40,  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:parcelop1"  
+        }  
+    ],  
+    "reportedAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "result": "ok",  
+    "seeAlso": [  
+        "https://example.org/concept/agriparcelop",  
+        "https://datamodel.org/example/agriparcelop"  
+    ],  
+    "startedAt": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-22T10:18:16Z"  
+    },  
+    "status": "finished",  
+    "waterSource": "rainwater capture",  
+    "workOrder": "https://example.com/agriparcelrecords/workorder1",  
+    "workRecord": "https://example.com/agriparcelrecords/workrecord1",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriParcelOperation NGSI-LD normalized Example    
 Here is an example of a AgriParcelOperation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
-  "type": "AgriParcelOperation",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:parcelop1"  
-      }  
-    ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/agriparcelop",  
-      "https://datamodel.org/example/agriparcelop"  
-    ]  
-  },  
-  "hasAgriParcel": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb"  
-  },  
-  "operationType": {  
-    "type": "Property",  
-    "value": "fertiliser"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Monthly fertiliser application"  
-  },  
-  "result": {  
-    "type": "Property",  
-    "value": "ok"  
-  },  
-  "plannedStartAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "plannedEndAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "finished"  
-  },  
-  "hasOperator": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "startedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "endedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "reportedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "hasAgriProductType": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec"  
-  },  
-  "quantity": {  
-    "type": "Property",  
-    "value": 40,  
-    "unitCode": "KGM"  
-  },  
-  "waterSource": {  
-    "type": "Property",  
-    "value": "rainwater capture"  
-  },  
-  "workOrder": {  
-    "type": "Property",  
-    "value": "https://example.com/agriparcelrecords/workorder1"  
-  },  
-  "workRecord": {  
-    "type": "Property",  
-    "value": "https://example.com/agriparcelrecords/workrecord1"  
-  },  
-  "irrigationRecord": {  
-    "type": "Property",  
-    "value": "https://example.com/agriparcelrecords/irrigationrecord1"  
-  },  
+    "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
+    "type": "AgriParcelOperation",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Monthly fertiliser application"  
+    },  
+    "endedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "hasAgriParcel": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb"  
+    },  
+    "hasAgriProductType": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec"  
+    },  
+    "hasOperator": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+    },  
+    "irrigationRecord": {  
+        "type": "Property",  
+        "value": "https://example.com/agriparcelrecords/irrigationrecord1"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "operationType": {  
+        "type": "Property",  
+        "value": "fertiliser"  
+    },  
+    "plannedEndAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "plannedStartAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "quantity": {  
+        "type": "Property",  
+        "value": 40,  
+        "unitCode": "KGM"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:parcelop1"  
+            }  
+        ]  
+    },  
+    "reportedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "result": {  
+        "type": "Property",  
+        "value": "ok"  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/agriparcelop",  
+            "https://datamodel.org/example/agriparcelop"  
+        ]  
+    },  
+    "startedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "finished"  
+    },  
+    "waterSource": {  
+        "type": "Property",  
+        "value": "rainwater capture"  
+    },  
+    "workOrder": {  
+        "type": "Property",  
+        "value": "https://example.com/agriparcelrecords/workorder1"  
+    },  
+    "workRecord": {  
+        "type": "Property",  
+        "value": "https://example.com/agriparcelrecords/workrecord1"  
+    },  
     "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
