@@ -1,17 +1,19 @@
-エンティティアグリペスト  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティアグリペスト  
 ============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriPest/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、農業害虫の調和された記述を含む。**  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**このエンティティは、農業害虫の調和された記述を含んでいます。**  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `agroVocConcept`: このアイテムに関連するアグロボック用語の参照  - `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `hasAgriProductType`: この害虫を処理するために使用できる推奨される製品の種類の参照。  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。AgriPestでなければならない    
-必須項目  
+- `agroVocConcept`: この項目に関連するアグロボック用語への言及  - `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasAgriProductType`: この害虫を処理するために使用できる推奨される製品の種類についての言及。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。AgriPestである必要があります。    
+必要なプロパティ  
 - `id`  - `name`  - `type`    
-この事業体は、主に農業の縦割りと関連するIoTアプリケーションに関連しています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+この事業体は、主に農業の垂直統合と関連するIoTアプリケーションに関連しています。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriPest:    
@@ -54,16 +56,16 @@ AgriPest:
     hasAgriProductType:    
       description: 'Reference to the recommended types of product that can be used to treat this pest.'    
       items:    
-        - anyOf: &agripest_-_properties_-_id_-_anyof    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              maxLength: 256    
-              minLength: 1    
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-              type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              format: uri    
-              type: string    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: &agripest_-_properties_-_id_-_anyof    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
@@ -89,13 +91,13 @@ AgriPest:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *agripest_-_properties_-_id_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agripest_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -133,12 +135,12 @@ AgriPest:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPest/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriPest/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### AgriPest NGSI-v2 key-values 例  
-AgriPestをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriPest NGSI-v2 key-value の例。  
+ここでは、AgriPestをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
@@ -166,8 +168,8 @@ AgriPest:
   ]  
 }  
 ```  
-#### AgriPest NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のAgriPestの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriPest NGSI-v2 正規化例  
+以下は、AgriPestをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
@@ -217,92 +219,90 @@ AgriPest:
   }  
 }  
 ```  
-#### AgriPest NGSI-LDのキーバリューの例  
-AgriPestをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriPest NGSI-LD キー値例  
+AgriPestをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
-  "type": "AgriPest",  
-  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_31924",  
-  "alternateName": "Chorthippus parallelus",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Common European grasshopper",  
-  "hasAgriProductType": [  
-    "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
-    "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
-    "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
-  ],  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Grasshopper",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:farm1"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/pest",  
-    "https://datamodel.org/example/pest"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
+    "type": "AgriPest",  
+    "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_31924",  
+    "alternateName": "Chorthippus parallelus",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "Common European grasshopper",  
+    "hasAgriProductType": [  
+        "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
+        "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
+        "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
+    ],  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Grasshopper",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:farm1"  
+        }  
+    ],  
+    "seeAlso": [  
+        "https://example.org/concept/pest",  
+        "https://datamodel.org/example/pest"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### AgriPest NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のAgriPestの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriPest NGSI-LD 正規化例  
+以下は、AgriPestをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
-  "type": "AgriPest",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Grasshopper"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Chorthippus parallelus"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:farm1"  
-      }  
+    "id": "urn:ngsi-ld:AgriPest:fb3f1295-500c-4aa3-b995-c909097d5c01",  
+    "type": "AgriPest",  
+    "agroVocConcept": {  
+        "type": "Property",  
+        "value": "http://aims.fao.org/aos/agrovoc/c_31924"  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Chorthippus parallelus"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Common European grasshopper"  
+    },  
+    "hasAgriProductType": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
+            "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
+            "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
+        ]  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Grasshopper"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:farm1"  
+            }  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/pest",  
+            "https://datamodel.org/example/pest"  
+        ]  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/pest",  
-      "https://datamodel.org/example/pest"  
-    ]  
-  },  
-  "agroVocConcept": {  
-    "type": "Property",  
-    "value": "http://aims.fao.org/aos/agrovoc/c_31924"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Common European grasshopper"  
-  },  
-  "hasAgriProductType": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",  
-      "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",  
-      "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
