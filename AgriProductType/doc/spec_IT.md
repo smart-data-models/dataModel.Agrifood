@@ -1,16 +1,18 @@
-Entità: AgriProductType  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: AgriProductType  
 =======================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriProductType/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Questa entità contiene una descrizione armonizzata di un tipo di prodotto agricolo generico. Questa entità è principalmente associata al verticale agricolo e alle relative applicazioni IoT. L'AgriProductType include una struttura gerarchica che permette di raggruppare i tipi di prodotto in modo flessibile.**  
+Descrizione globale: **Questa entità contiene una descrizione armonizzata di un tipo generico di prodotto agricolo. Questa entità è associata principalmente al verticale agricolo e alle relative applicazioni IoT. L'AgriProductType include una struttura gerarchica che consente di raggruppare i tipi di prodotto in modo flessibile **.  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-- `agroVocConcept`: Riferimento al termine agrovoc associato a questa voce  - `alternateName`: Un nome alternativo per questa voce  - `category`: Categoria del prodotto. Enum:'fertilizzante, cropNutrition, cropProtection, cropVariety, harvestCommodity'.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `hasAgriProductTypeChildren`: Riferimento ai tipi di prodotto figli, cioè immediatamente sotto questa entità nella gerarchia  - `hasAgriProductTypeParent`: Riferimento al tipo di prodotto padre, cioè immediatamente sopra l'entità nella gerarchia.  - `id`: Identificatore unico dell'entità  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `root`: Un indicatore logico che questo prodotto è la radice di una gerarchia AgriProductType. Vero logico indica che è la radice.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI: Deve essere AgriProductType    
+- `agroVocConcept`: Riferimento al termine agrovoc associato a questa voce  - `alternateName`: Un nome alternativo per questa voce  - `category`: Categoria del prodotto. Enum:'fertilizzante, nutrizione delle colture, protezione delle colture, varietà di colture, prodotto del raccolto'.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `hasAgriProductTypeChildren`: Riferimento ai tipi di prodotto figli, cioè immediatamente sotto questa entità nella gerarchia.  - `hasAgriProductTypeParent`: Riferimento al tipo di prodotto padre, cioè immediatamente sopra l'entità nella gerarchia.  - `id`: Identificatore univoco dell'entità  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne.  - `root`: Indicatore logico che questo prodotto è la radice di una gerarchia di AgriProductType. Il valore logico true indica che si tratta della radice.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI: Deve essere AgriProductType    
 Proprietà richieste  
 - `id`  - `name`  - `root`  - `type`    
-Questa entità è principalmente associata al verticale agricolo e alle relative applicazioni IoT. L'AgriProductType include una struttura gerarchica che permette di raggruppare i tipi di prodotto in modo flessibile.  
-## Descrizione del modello di dati delle proprietà  
+Questa entità è associata principalmente al settore agricolo verticale e alle relative applicazioni IoT. AgriProductType include una struttura gerarchica che consente di raggruppare i tipi di prodotto in modo flessibile.  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -168,9 +170,9 @@ AgriProductType:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### AgriProductType NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un AgriProductType in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### Valori chiave di AgriProductType NGSI-v2 Esempio  
+Ecco un esempio di AgriProductType in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -197,7 +199,7 @@ AgriProductType:
 }  
 ```  
 #### AgriProductType NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un AgriProductType in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di AgriProductType in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -248,95 +250,93 @@ AgriProductType:
   }  
 }  
 ```  
-#### AgriProductType NGSI-LD valori chiave Esempio  
-Ecco un esempio di un AgriProductType in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### AgriProductType Valori chiave NGSI-LD Esempio  
+Ecco un esempio di AgriProductType in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
-  "type": "AgriProductType",  
-  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_3128",  
-  "category": [  
-    "cropVariety"  
-  ],  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Soft edible fruits",  
-  "hasAgriProductTypeChildren": [  
-    "urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",  
-    "urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db",  
-    "urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555"  
-  ],  
-  "hasAgriProductTypeParent": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Soft Fruits",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:product1"  
-    }  
-  ],  
-  "root": true,  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
+    "type": "AgriProductType",  
+    "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_3128",  
+    "category": [  
+        "cropVariety"  
+    ],  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "Soft edible fruits",  
+    "hasAgriProductTypeChildren": [  
+        "urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",  
+        "urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db",  
+        "urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555"  
+    ],  
+    "hasAgriProductTypeParent": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e",  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Soft Fruits",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:product1"  
+        }  
+    ],  
+    "root": true,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriProductType NGSI-LD normalizzato Esempio  
-Ecco un esempio di un AgriProductType in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di AgriProductType in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
-  "type": "AgriProductType",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Soft Fruits"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Soft edible fruits"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:product1"  
-      }  
+    "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
+    "type": "AgriProductType",  
+    "agroVocConcept": {  
+        "type": "Property",  
+        "value": "http://aims.fao.org/aos/agrovoc/c_3128"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "cropVariety"  
+        ]  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Soft edible fruits"  
+    },  
+    "hasAgriProductTypeChildren": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",  
+            "urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db",  
+            "urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555"  
+        ]  
+    },  
+    "hasAgriProductTypeParent": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Soft Fruits"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:product1"  
+            }  
+        ]  
+    },  
+    "root": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "agroVocConcept": {  
-    "type": "Property",  
-    "value": "http://aims.fao.org/aos/agrovoc/c_3128"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "cropVariety"  
-    ]  
-  },  
-  "root": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "hasAgriProductTypeParent": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e"  
-  },  
-  "hasAgriProductTypeChildren": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",  
-      "urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db",  
-      "urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
