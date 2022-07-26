@@ -1,8 +1,10 @@
-Entity: AgriSoil  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: AgriSoil  
 ================  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriSoil/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic soil. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -127,6 +129,12 @@ AgriSoil:
     - type    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriSoil/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -212,86 +220,84 @@ AgriSoil:
 Here is an example of a AgriSoil in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-  "type": "AgriSoil",  
-  "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
-  "alternateName": "Heavy soil",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "Fine grained, poor draining soil. Particle size less than 0.002mm",  
-  "hasAgriProductType": [  
-    "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
-    "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
-  ],  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Clay",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:clay"  
-    }  
-  ],  
-  "seeAlso": [  
-    "https://example.org/concept/clay",  
-    "https://datamodel.org/example/clay"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+    "type": "AgriSoil",  
+    "agroVocConcept": "http://aims.fao.org/aos/agrovoc/c_7951",  
+    "alternateName": "Heavy soil",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "Fine grained, poor draining soil. Particle size less than 0.002mm",  
+    "hasAgriProductType": [  
+        "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
+        "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
+    ],  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Clay",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:clay"  
+        }  
+    ],  
+    "seeAlso": [  
+        "https://example.org/concept/clay",  
+        "https://datamodel.org/example/clay"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriSoil NGSI-LD normalized Example    
 Here is an example of a AgriSoil in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
-  "type": "AgriSoil",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Clay"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Heavy soil"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Fine grained, poor draining soil. Particle size less than 0.002mm"  
-  },  
-  "agroVocConcept": {  
-    "type": "Property",  
-    "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/clay",  
-      "https://datamodel.org/example/clay"  
-    ]  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:clay"  
-      }  
-    ]  
-  },  
-  "hasAgriProductType": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
-      "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
-    ]  
-  },  
+    "id": "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",  
+    "type": "AgriSoil",  
+    "agroVocConcept": {  
+        "type": "Property",  
+        "value": "http://aims.fao.org/aos/agrovoc/c_7951"  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Heavy soil"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Fine grained, poor draining soil. Particle size less than 0.002mm"  
+    },  
+    "hasAgriProductType": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",  
+            "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"  
+        ]  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Clay"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:clay"  
+            }  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/clay",  
+            "https://datamodel.org/example/clay"  
+        ]  
+    },  
     "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
