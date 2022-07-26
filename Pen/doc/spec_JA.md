@@ -1,15 +1,17 @@
-エンティティペン  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティペン  
 ========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**建物や部署の中、または屋外にある柵に囲まれたエリアで、動物の集団を収容すること。ペンの中の動物は、自由に移動したり、交流したりすることができる。ペン同士は完全には離れていないことが多く（半壁、鉄棒、フェンスなど）、隣のペンの動物が見たり触ったりすることが可能である**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**建物や部署、または屋外にある、動物の群れを収容するフェンスで囲まれたエリア。檻の中の動物は自由に動き、交流することができる。檻の中は完全に仕切られていないことが多く（半壁、鉄棒、フェンスなど）、隣の檻の動物が見えたり触れたりする可能性がある**。  
+バージョン: 0.2.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `additionalInfo`: センサー／プラットフォームから送信されたすべての生の値のリストで、メインの構造に含まれていない可能性のあるすべての追加プロパティを含みます。これは以下のようなJSON構造になっています。{'name': 'temperature', 'value': 32}。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `arrivalTimestamp`: 動物がペンに到着する日時  - `avgGrowth`: このペンの動物の平均的な体重の伸びは  - `avgWeight`: このペンの動物の平均体重です。  - `buildingId`: アイテムが設置されているビルの固有識別子  - `co2`: アイテムのCO2濃度  - `companyId`: 企業の一意の識別子  - `compartmentId`: ペンが配置されているコンパートメントのユニークな識別子。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `deadAnimalsSinceDateOfArrival`: 到着日以降に死んだ動物の数  - `description`: このアイテムの説明  - `farmId`: ペンが置かれているファームの一意の識別子。  - `feedConsumption`: ペン内の給餌ステーションから食べられた餌の総量。餌の摂取量と、一度に1匹しか食べられないような特定の構造によって測定される。  - `humidity`: ペンに含まれる大気中の水蒸気の量を表す量。  - `id`: エンティティのユニークな識別子  - `lastUpdate`: アイテムの測定が行われた日付と時間  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `luminosity`: ある波長の光源の明るさを、アイテムで  - `name`: このアイテムの名前です。  - `numAnimals`: ペンに入っている動物の数  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 外部アプリケーションで現在のエンティティが持つ可能性のあるIDのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `sex`: ペンに入っている動物の性別  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: ペンの温度  Unirs:' Celsius degree' (摂氏)  - `type`: NGSI エンティティタイプ。それはペンでなければなりません。  - `waterConsumption`: ペンの中にある蛇口から出てきた水の総量。流量計で計測し、一度に1匹しか飲めないような特殊な構造になっている。  - `weightStDev`: ペンに入っている動物の平均体重に関連する標準偏差です。    
-必須項目  
-- `id`  - `lastUpdate`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `additionalInfo`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{'name': 'temperature', 'value' : 32} のようなJSON構造です。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `arrivalTimestamp`: ペンに動物が到着する日付と時間  - `avgGrowth`: このペンの動物の体重の平均成長率  - `avgWeight`: このペンの動物の平均体重です。  - `buildingId`: アイテムが配置されているビルの一意な識別子  - `co2`: 項目中のCO2濃度  - `companyId`: 企業の一意な識別子  - `compartmentId`: ペンが配置されているコンパートメントの一意な識別子。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `deadAnimalsSinceDateOfArrival`: 到着日以降の死体数  - `description`: このアイテムの説明  - `farmId`: ペンが位置する農場の一意な識別子。  - `feedConsumption`: ペン内の給餌ステーションから食べられた餌の総量。餌の摂取量と、一度に1匹だけに食べさせる特定の構造によって測定されます。  - `humidity`: ペンの中の大気中の水蒸気量を表す量。  - `id`: エンティティの一意な識別子  - `lastUpdate`: 項目内の測定が行われた日付と時刻  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity`: ある波長の光源が項目で示す明るさ  - `name`: このアイテムの名称です。  - `numAnimals`: ペンに収容されている動物の数。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: ペンに収容されている動物の性別  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: ペンの温度  ユニルス：' セルシウス度'  - `type`: NGSIエンティティタイプは、Penでなければなりません。  - `waterConsumption`: ペンの中にある蛇口やタップから出た水の総量。流量計で測定し、一度に1匹だけに飲ませる具体的な構造になっている。  - `weightStDev`: ペンに収容された動物の平均体重に関連する標準偏差。    
+必要なプロパティ  
+- `id`  - `lastUpdate`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pen:    
@@ -90,17 +92,17 @@ Pen:
         units: Kg    
     buildingId:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier with format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: 'Property. Identifier format of any NGSI entity.'    
           format: uri    
           type: string    
       description: 'Unique identifier of the Building the item is located in'    
       x-ngsi:    
-        model: https://schema.org/URL    
+        model: https://schema.org/URL.    
         type: Relationship    
     co2:    
       description: 'The CO2 concentration in the item'    
@@ -475,12 +477,12 @@ Pen:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Pen/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Pen/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### ペン NGSI-v2 キーバリューの例  
-Key-ValuesとしてJSON-LD形式でPenを作成した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### Pen NGSI-v2キーバリューの例  
+ここでは、PenをJSON-LD形式でkey-valuesとした場合の例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -518,7 +520,7 @@ Pen:
 }  
 ```  
 #### ペン NGSI-v2 正規化例  
-ここでは、JSON-LD形式のPenを正規化した例を紹介します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、PenをJSON-LD形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -582,114 +584,114 @@ Pen:
   }  
 }  
 ```  
-#### ペン NGSI-LD のキーバリューの例  
-Key-ValuesとしてJSON-LD形式でPenを作成した例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### Pen NGSI-LD キー値の例  
+ここでは、PenをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": [  
-    {  
-      "name": "Farm1FeedTray",  
-      "value": 1  
-    },  
-    {  
-      "name": "Farm1DepartmentId",  
-      "value": "43"  
-    },  
-    {  
-      "name": "Farm1ValveId",  
-      "value": "69"  
-    },  
-    {  
-      "name": "Farm1PenId",  
-      "value": "1"  
-    },  
-    {  
-      "name": "Farm1BuildingId",  
-      "value": "2"  
-    }  
-  ],  
-  "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
-  "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
-  "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
-  "empty": false,  
-  "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
-  "lastUpdate": "2020-04-12T20:44:55",  
-  "sex": "",  
-  "temperature": 25,  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
-}  
-```  
-#### ペン NGSI-LDの正規化例  
-ここでは、JSON-LD形式のPenを正規化した例を紹介します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
-  "type": "Pen",  
-  "additionalInfo": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "name": "Farm1FeedTray",  
-        "value": 1  
-      },  
-      {  
-        "name": "Farm1DepartmentId",  
-        "value": "43"  
-      },  
-      {  
-        "name": "Farm1ValveId",  
-        "value": "69"  
-      },  
-      {  
-        "name": "Farm1PenId",  
-        "value": "1"  
-      },  
-      {  
-        "name": "Farm1BuildingId",  
-        "value": "2"  
-      }  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": [  
+        {  
+            "name": "Farm1FeedTray",  
+            "value": 1  
+        },  
+        {  
+            "name": "Farm1DepartmentId",  
+            "value": "43"  
+        },  
+        {  
+            "name": "Farm1ValveId",  
+            "value": "69"  
+        },  
+        {  
+            "name": "Farm1PenId",  
+            "value": "1"  
+        },  
+        {  
+            "name": "Farm1BuildingId",  
+            "value": "2"  
+        }  
+    ],  
+    "buildingId": "5ee3dbc8-343b-40a7-ac04-dec67215ff98",  
+    "companyId": "4579b77f-31c1-44ef-b200-9a2407cc82e9",  
+    "compartmentId": "ab8680c6-3e82-40fb-8577-f6a0ab717586",  
+    "empty": false,  
+    "farmId": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff",  
+    "lastUpdate": "2020-04-12T20:44:55",  
+    "sex": "",  
+    "temperature": 25,  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
-  },  
-  "buildingId": {  
-    "type": "string",  
-    "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
-  },  
-  "companyId": {  
-    "type": "string",  
-    "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
-  },  
-  "compartmentId": {  
-    "type": "string",  
-    "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
-  },  
-  "empty": {  
-    "type": "boolean",  
-    "value": "false"  
-  },  
-  "farmId": {  
-    "type": "string",  
-    "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
-  },  
-  "lastUpdate": {  
-    "type": "string",  
-    "value": "2020-04-12T20:44:55"  
-  },  
-  "sex": {  
-    "type": "string",  
-    "value": ""  
-  },  
-  "temperature": {  
-    "type": "number",  
-    "value": 25  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+#### ペン NGSI-LD 正規化例  
+以下は、JSON-LD形式のPenを正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
+    "type": "Pen",  
+    "additionalInfo": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "name": "Farm1FeedTray",  
+                "value": 1  
+            },  
+            {  
+                "name": "Farm1DepartmentId",  
+                "value": "43"  
+            },  
+            {  
+                "name": "Farm1ValveId",  
+                "value": "69"  
+            },  
+            {  
+                "name": "Farm1PenId",  
+                "value": "1"  
+            },  
+            {  
+                "name": "Farm1BuildingId",  
+                "value": "2"  
+            }  
+        ]  
+    },  
+    "buildingId": {  
+        "type": "string",  
+        "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"  
+    },  
+    "companyId": {  
+        "type": "string",  
+        "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"  
+    },  
+    "compartmentId": {  
+        "type": "string",  
+        "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"  
+    },  
+    "empty": {  
+        "type": "boolean",  
+        "value": "false"  
+    },  
+    "farmId": {  
+        "type": "string",  
+        "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"  
+    },  
+    "lastUpdate": {  
+        "type": "string",  
+        "value": "2020-04-12T20:44:55"  
+    },  
+    "sex": {  
+        "type": "string",  
+        "value": ""  
+    },  
+    "temperature": {  
+        "type": "number",  
+        "value": 25  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld"  
+    ]  
+}  
+```  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
