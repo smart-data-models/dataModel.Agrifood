@@ -1,16 +1,18 @@
-Entità: AgriGreenhouse  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: AgriGreenhouse  
 ======================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Questa entità contiene una descrizione armonizzata delle condizioni registrate all'interno di una serra generica, un tipo di AgriParcel.**  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-- `alternateName`: Un nome alternativo per questa voce  - `belongsTo`: Entità a cui appartiene la serra  - `co2`: La concentrazione interna di C02 misurata nominalmente in mg/L  - `dailyLight`: Luce giornaliera accumulata misurata in kW per metro quadrato  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `drainFlow`: La portata di scarico osservata in litri al secondo  - `hasAgriParcelChildren`: Registrazioni sub AgriParcel correlate a cui questa entità si riferisce  - `hasAgriParcelParent`: Riferimento all'entità AgriParcel a cui si riferisce questa entità  - `hasDevice`: Riferimento ai dispositivi IoT associati a questa serra, cioè sensori, controlli.  - `hasWaterQualityObserved`: Riferimento a uno o più registri di osservazione della qualità dell'acqua attuali per questa entità  - `hasWeatherObserved`: Riferimento al record di osservazione meteorologica corrente per questa entità  - `id`: Identificatore unico dell'entità  - `leafTemperature`: L'umidità relativa interna espressa come un numero tra 0 e 1 che rappresenta l'intervallo da 0% a 100 (%).<br/><br/>0 <= relativeHumidity <= 1  - `name`: Il nome di questo articolo.  - `ownedBy`: Proprietario (persona o organizzazione) dell'AgriGreenhouse  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne  - `relativeHumidity`: La temperatura media dell'aria della serra nominalmente in gradi centigradi.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere AgriGreenhouse    
+- `alternateName`: Un nome alternativo per questa voce  - `belongsTo`: Entità a cui appartiene la serra  - `co2`: La concentrazione interna di C02 misurata nominalmente in mg/L  - `dailyLight`: Luce giornaliera accumulata misurata in kW per metro quadro  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `drainFlow`: La portata di scarico osservata in litri al secondo  - `hasAgriParcelChildren`: Registri sub AgriParcel correlati a cui questa entità si riferisce  - `hasAgriParcelParent`: Riferimento all'entità AgriParcel a cui si riferisce questa entità.  - `hasDevice`: Riferimento ai dispositivi IoT associati a questa serra, ad esempio sensori e controlli.  - `hasWaterQualityObserved`: Riferimento a uno o più registri di osservazione della qualità dell'acqua aggiornati per questa entità.  - `hasWeatherObserved`: Riferimento al record di osservazione meteorologica corrente per questa entità.  - `id`: Identificatore univoco dell'entità  - `leafTemperature`: L'umidità relativa interna espressa come numero compreso tra 0 e 1 che rappresenta un intervallo da 0% a 100 (%).<br/><br/>0 <= relativeHumidity <= 1  - `name`: Il nome di questo elemento.  - `ownedBy`: Proprietario (persona o organizzazione) della serra agricola  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne.  - `relativeHumidity`: La temperatura media dell'aria della serra, nominalmente espressa in gradi centigradi.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere AgriGreenhouse    
 Proprietà richieste  
 - `hasAgriParcelParent`  - `id`  - `type`    
-Questa entità è principalmente associata al verticale agricolo e alle relative applicazioni IoT.  
-## Descrizione del modello di dati delle proprietà  
+Questa entità è principalmente associata al settore agricolo verticale e alle relative applicazioni IoT.  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -245,9 +247,9 @@ AgriGreenhouse:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### AgriGreenhouse NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un AgriGreenhouse in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### AgriGreenhouse NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di una serra in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -295,7 +297,7 @@ AgriGreenhouse:
 }  
 ```  
 #### AgriGreenhouse NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un AgriGreenhouse in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di AgriGreenhouse in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -388,161 +390,159 @@ AgriGreenhouse:
   }  
 }  
 ```  
-#### AgriGreenhouse NGSI-LD valori chiave Esempio  
-Ecco un esempio di un AgriGreenhouse in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### AgriGreenhouse NGSI-LD valori-chiave Esempio  
+Ecco un esempio di una serra in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "type": "AgriGreenhouse",  
-  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
-  "co2": 28,  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "dailyLight": 24,  
-  "drainFlow": {  
-    "maxValue": 50,  
-    "minValue": 25,  
-    "unitText": "Litre per second",  
-    "value": 33  
-  },  
-  "hasAgriParcelChildren": [  
-    "urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5",  
-    "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"  
-  ],  
-  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b",  
-  "hasDevice": [  
-    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-  ],  
-  "hasWaterQualityObserved": [  
-    "urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",  
-    "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"  
-  ],  
-  "hasWeatherObserved": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d",  
-  "leafTemperature": 22,  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "relatedSource": [  
-    {  
-      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-      "applicationEntityId": "app:greenhouse1"  
-    }  
-  ],  
-  "relativeHumidity": 0.4,  
-  "seeAlso": [  
-    "https://example.org/concept/agrigreenhouse",  
-    "https://datamodel.org/example/agrigreenhouse"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+    "type": "AgriGreenhouse",  
+    "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+    "co2": 28,  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "dailyLight": 24,  
+    "drainFlow": {  
+        "maxValue": 50,  
+        "minValue": 25,  
+        "unitText": "Litre per second",  
+        "value": 33  
+    },  
+    "hasAgriParcelChildren": [  
+        "urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5",  
+        "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"  
+    ],  
+    "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b",  
+    "hasDevice": [  
+        "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+        "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+        "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+        "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+    ],  
+    "hasWaterQualityObserved": [  
+        "urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",  
+        "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"  
+    ],  
+    "hasWeatherObserved": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d",  
+    "leafTemperature": 22,  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+    "relatedSource": [  
+        {  
+            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+            "applicationEntityId": "app:greenhouse1"  
+        }  
+    ],  
+    "relativeHumidity": 0.4,  
+    "seeAlso": [  
+        "https://example.org/concept/agrigreenhouse",  
+        "https://datamodel.org/example/agrigreenhouse"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriGreenhouse NGSI-LD normalizzato Esempio  
-Ecco un esempio di un AgriGreenhouse in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di AgriGreenhouse in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
-  "type": "AgriGreenhouse",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "ownedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "relatedSource": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-        "applicationEntityId": "app:greenhouse1"  
-      }  
-    ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "https://example.org/concept/agrigreenhouse",  
-      "https://datamodel.org/example/agrigreenhouse"  
-    ]  
-  },  
-  "belongsTo": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
-  },  
-  "hasAgriParcelParent": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b"  
-  },  
-  "hasAgriParcelChildren": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5",  
-      "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"  
-    ]  
-  },  
-  "hasWeatherObserved": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d"  
-  },  
-  "hasWaterQualityObserved": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",  
-      "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"  
-    ]  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 0.4,  
-    "unitCode": "C62",  
-    "observedAt": "2016-08-22T19:20Z"  
-  },  
-  "leafTemperature": {  
-    "type": "Property",  
-    "value": 22,  
-    "unitCode": "CEL",  
-    "observedAt": "2016-08-22T19:20Z"  
-  },  
-  "co2": {  
-    "type": "Property",  
-    "value": 28,  
-    "unitCode": "M1",  
-    "observedAt": "2016-08-22T19:20Z"  
-  },  
-  "dailyLight": {  
-    "type": "Property",  
-    "value": 24,  
-    "unitCode": "N78",  
-    "observedAt": "2016-08-22T19:20Z"  
-  },  
-  "drainFlow": {  
-    "type": "Property",  
-    "value": {  
-      "value": 33,  
-      "maxValue": 50,  
-      "minValue": 25,  
-      "unitText": "Litre per second"  
+    "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
+    "type": "AgriGreenhouse",  
+    "belongsTo": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
     },  
-    "unitCode": "G51",  
-    "observedAt": "2016-08-22T19:20Z"  
-  },  
-  "hasDevice": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-      "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-      "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-      "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-    ]  
-  },  
+    "co2": {  
+        "type": "Property",  
+        "value": 28,  
+        "unitCode": "M1",  
+        "observedAt": "2016-08-22T19:20Z"  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "dailyLight": {  
+        "type": "Property",  
+        "value": 24,  
+        "unitCode": "N78",  
+        "observedAt": "2016-08-22T19:20Z"  
+    },  
+    "drainFlow": {  
+        "type": "Property",  
+        "value": {  
+            "value": 33,  
+            "maxValue": 50,  
+            "minValue": 25,  
+            "unitText": "Litre per second"  
+        },  
+        "unitCode": "G51",  
+        "observedAt": "2016-08-22T19:20Z"  
+    },  
+    "hasAgriParcelChildren": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5",  
+            "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"  
+        ]  
+    },  
+    "hasAgriParcelParent": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b"  
+    },  
+    "hasDevice": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+            "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+            "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+            "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+        ]  
+    },  
+    "hasWaterQualityObserved": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",  
+            "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"  
+        ]  
+    },  
+    "hasWeatherObserved": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d"  
+    },  
+    "leafTemperature": {  
+        "type": "Property",  
+        "value": 22,  
+        "unitCode": "CEL",  
+        "observedAt": "2016-08-22T19:20Z"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "ownedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+    },  
+    "relatedSource": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+                "applicationEntityId": "app:greenhouse1"  
+            }  
+        ]  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 0.4,  
+        "unitCode": "C62",  
+        "observedAt": "2016-08-22T19:20Z"  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "https://example.org/concept/agrigreenhouse",  
+            "https://datamodel.org/example/agrigreenhouse"  
+        ]  
+    },  
     "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
