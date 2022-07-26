@@ -1,12 +1,14 @@
-Entität: AgriApp  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: AgriApp  
 ================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriApp/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen App für den Bereich Agrifood. Diese Entität ist in erster Linie mit der vertikalen Landwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen App für den Agrar- und Lebensmittelbereich. Diese Entität ist in erster Linie mit der vertikalen Landwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
+Version: 0.0.2  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Liste der Kategorien der App  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `endpoint`: Der digitale Anschlusspunkt für die App  - `hasProvider`: Anbieter (Person oder Organisation) der Anwendung  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI Entity Type. es muss AgriApp sein  - `version`: Die Version der App    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Liste der Kategorien der App  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `endpoint`: Der digitale Anschlusspunkt für die App  - `hasProvider`: Anbieter (Person oder Organisation) der Anwendung  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI Entity Type. es muss AgriApp sein  - `version`: Die Version der App    
 Erforderliche Eigenschaften  
 - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -54,7 +56,7 @@ AgriApp:
     category:    
       description: 'List of categories of the app'    
       items:    
-        - type: string    
+        type: string    
       type: array    
       x-ngsi:    
         type: Property    
@@ -282,13 +284,13 @@ AgriApp:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agriapp_-_properties_-_owner_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -325,11 +327,17 @@ AgriApp:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriApp/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriApp/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
 #### AgriApp NGSI-v2 Schlüssel-Werte Beispiel  
-Hier ist ein Beispiel für eine AgriApp im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine AgriApp im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
@@ -384,63 +392,61 @@ AgriApp:
 Hier ist ein Beispiel für eine AgriApp im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriApp",  
-  "category": [  
-    "TBD"  
-  ],  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "description": "An app for wine tracking",  
-  "endpoint": "https://app.endpoint/download",  
-  "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": "Wine track",  
-  "version": "1.0",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriApp",  
+    "category": [  
+        "TBD"  
+    ],  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": "An app for wine tracking",  
+    "endpoint": "https://app.endpoint/download",  
+    "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": "Wine track",  
+    "version": "1.0",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### AgriApp NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine AgriApp im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-  "type": "AgriApp",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "name": {  
-    "type": "Property",  
-    "value": "Wine track"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "An app for wine tracking"  
-  },  
-  "version": {  
-    "type": "Property",  
-    "value": "1.0"  
-  },  
-  "hasProvider": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
-  },  
-  "endpoint": {  
-    "type": "Property",  
-    "value": "https://app.endpoint/download"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "TBD"  
+{  
+    "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+    "type": "AgriApp",  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "TBD"  
+        ]  
+    },  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "An app for wine tracking"  
+    },  
+    "endpoint": {  
+        "type": "Property",  
+        "value": "https://app.endpoint/download"  
+    },  
+    "hasProvider": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "name": {  
+        "type": "Property",  
+        "value": "Wine track"  
+    },  
+    "version": {  
+        "type": "Property",  
+        "value": "1.0"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  }  
 }  
 ```  
-
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
