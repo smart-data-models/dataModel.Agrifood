@@ -81,5 +81,13 @@
       "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",
       "urn:ngsi-ld:Device:6f44b54e-4474-11e8-8577-d7ff6a8ef551"
     ]
+  },
+  "soilTextureType": {
+      "type": "string",
+      "value": "Clay"
+  },
+  "irrigationSystemType": {
+      "type": "string",
+      "value": "Drip irrigation"
   }
 }
