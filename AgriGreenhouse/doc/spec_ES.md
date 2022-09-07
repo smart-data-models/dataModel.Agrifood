@@ -4,7 +4,7 @@
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad contiene una descripción armonizada de las condiciones registradas dentro de un invernadero genérico, un tipo de AgriParcela.**  
-versión: 0.0.1  
+versión: 0.0.2  
 
 ## Lista de propiedades  
 
@@ -75,8 +75,7 @@ AgriGreenhouse:
         type: Property    
     drainFlow:    
       description: 'The observed drain flow rate in litres per second'    
-      type: object    
-      values:    
+      properties:    
         maxValue:    
           minimum: 0    
           type: number    
@@ -88,6 +87,7 @@ AgriGreenhouse:
         value:    
           minimum: 0    
           type: number    
+      type: object    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
@@ -95,16 +95,16 @@ AgriGreenhouse:
     hasAgriParcelChildren:    
       description: 'Related sub AgriParcel records to which this entity relates'    
       items:    
-        - anyOf: &anyof    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              maxLength: 256    
-              minLength: 1    
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-              type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              format: uri    
-              type: string    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: &agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -124,8 +124,8 @@ AgriGreenhouse:
     hasDevice:    
       description: 'Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.'    
       items:    
-        - anyOf: *anyof    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
@@ -133,8 +133,8 @@ AgriGreenhouse:
     hasWaterQualityObserved:    
       description: 'Reference to one or more water quality observation records current for this entity'    
       items:    
-        - anyOf: *anyof    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -152,7 +152,7 @@ AgriGreenhouse:
       x-ngsi:    
         type: Relationship    
     id:    
-      anyOf: *anyof    
+      anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
       description: 'Unique identifier of the entity'    
       x-ngsi:    
         type: Property    
@@ -183,7 +183,7 @@ AgriGreenhouse:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *anyof    
+        anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -191,13 +191,13 @@ AgriGreenhouse:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -240,11 +240,11 @@ AgriGreenhouse:
     - hasAgriParcelParent    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
