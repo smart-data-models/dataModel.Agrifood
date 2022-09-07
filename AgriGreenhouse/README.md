@@ -1,6 +1,5 @@
-[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
-# AgriGreenhouse
-Version: 0.0.1
+# AgriGreenhouse
+Version: 0.0.2
 
 ## Description 
 
