@@ -4,11 +4,11 @@
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée des conditions enregistrées dans une serre générique, un type d'AgriParcelle.**  
-version : 0.0.1  
+version : 0.0.2  
 
 ## Liste des propriétés  
 
-- `alternateName`: Un nom alternatif pour cet élément  - `belongsTo`: Entité à laquelle appartient la serre  - `co2`: La concentration intérieure mesurée de C02 nominalement en mg/L  - `dailyLight`: Lumière accumulée quotidienne mesurée en kW par mètre carré  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `drainFlow`: Le débit observé du drain en litres par seconde  - `hasAgriParcelChildren`: Sous-enregistrements AgriParcel connexes auxquels cette entité se rapporte.  - `hasAgriParcelParent`: Référence à l'entité AgriParcel à laquelle cette entité se rapporte  - `hasDevice`: Référence aux dispositifs IoT associés à cette serre, c'est-à-dire les capteurs, les contrôles.  - `hasWaterQualityObserved`: Référence à un ou plusieurs enregistrements d'observation de la qualité de l'eau en cours pour cette entité  - `hasWeatherObserved`: Référence à l'enregistrement des observations météorologiques en cours pour cette entité  - `id`: Identifiant unique de l'entité  - `leafTemperature`: L'humidité relative intérieure exprimée sous la forme d'un nombre compris entre 0 et 1 représentant la plage de 0% à 100 (%).<br/><br/>0 <= relativeHumidity <= 1  - `name`: Le nom de cet élément.  - `ownedBy`: Propriétaire (personne ou organisation) de l'AgriGreenhouse  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `relativeHumidity`: La température moyenne de l'air dans les serres, exprimée en degrés centigrades.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriGreenhouse    
+- `alternateName`: Un nom alternatif pour cet élément  - `belongsTo`: Entité à laquelle appartient la serre  - `co2`: La concentration intérieure mesurée de C02 nominalement en mg/L  - `dailyLight`: Lumière cumulée quotidienne mesurée en kW par mètre carré  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `drainFlow`: Le débit observé du drain en litres par seconde  - `hasAgriParcelChildren`: Sous-enregistrements AgriParcel connexes auxquels cette entité se rapporte.  - `hasAgriParcelParent`: Référence à l'entité AgriParcel à laquelle cette entité se rapporte  - `hasDevice`: Référence aux dispositifs IoT associés à cette serre, c'est-à-dire les capteurs, les contrôles.  - `hasWaterQualityObserved`: Référence à un ou plusieurs enregistrements d'observation de la qualité de l'eau en cours pour cette entité  - `hasWeatherObserved`: Référence à l'enregistrement des observations météorologiques en cours pour cette entité  - `id`: Identifiant unique de l'entité  - `leafTemperature`: L'humidité relative intérieure exprimée sous la forme d'un nombre compris entre 0 et 1 représentant la plage de 0% à 100 (%).<br/><br/>0 <= relativeHumidity <= 1  - `name`: Le nom de cet élément.  - `ownedBy`: Propriétaire (personne ou organisation) de l'AgriGreenhouse  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `relativeHumidity`: La température moyenne de l'air dans les serres, exprimée en degrés centigrades.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriGreenhouse    
 Propriétés requises  
 - `hasAgriParcelParent`  - `id`  - `type`    
 Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
@@ -75,8 +75,7 @@ AgriGreenhouse:
         type: Property    
     drainFlow:    
       description: 'The observed drain flow rate in litres per second'    
-      type: object    
-      values:    
+      properties:    
         maxValue:    
           minimum: 0    
           type: number    
@@ -88,6 +87,7 @@ AgriGreenhouse:
         value:    
           minimum: 0    
           type: number    
+      type: object    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
@@ -95,16 +95,16 @@ AgriGreenhouse:
     hasAgriParcelChildren:    
       description: 'Related sub AgriParcel records to which this entity relates'    
       items:    
-        - anyOf: &anyof    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              maxLength: 256    
-              minLength: 1    
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-              type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              format: uri    
-              type: string    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: &agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -124,8 +124,8 @@ AgriGreenhouse:
     hasDevice:    
       description: 'Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.'    
       items:    
-        - anyOf: *anyof    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
@@ -133,8 +133,8 @@ AgriGreenhouse:
     hasWaterQualityObserved:    
       description: 'Reference to one or more water quality observation records current for this entity'    
       items:    
-        - anyOf: *anyof    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -152,7 +152,7 @@ AgriGreenhouse:
       x-ngsi:    
         type: Relationship    
     id:    
-      anyOf: *anyof    
+      anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
       description: 'Unique identifier of the entity'    
       x-ngsi:    
         type: Property    
@@ -183,7 +183,7 @@ AgriGreenhouse:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *anyof    
+        anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -191,13 +191,13 @@ AgriGreenhouse:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -240,11 +240,11 @@ AgriGreenhouse:
     - hasAgriParcelParent    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Exemples de charges utiles  
