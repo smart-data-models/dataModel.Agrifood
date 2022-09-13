@@ -120,7 +120,6 @@
         "veterinarianTreatment": "https://smartdatamodels.org/dataModel.Agrifood/veterinarianTreatment",
         "waterConsumption": "https://smartdatamodels.org/dataModel.Agrifood/waterConsumption",
         "waterSource": "https://smartdatamodels.org/dataModel.Agrifood/waterSource",
-        "wateringFrequency": "https://smartdatamodels.org/dataModel.Agrifood/wateringFrequency",
         "weight": "https://smartdatamodels.org/dataModel.Agrifood/weight",
         "weightStDev": "https://smartdatamodels.org/dataModel.Agrifood/weightStDev",
         "welfareCondition": "https://smartdatamodels.org/dataModel.Agrifood/welfareCondition",
