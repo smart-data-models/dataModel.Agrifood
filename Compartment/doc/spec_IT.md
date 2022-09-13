@@ -8,7 +8,7 @@
 
 ## Elenco delle proprietà  
 
-- `additionalInfo`: elenco di tutti i valori grezzi inviati dal sensore/piattaforma con tutte le possibili proprietà extra non incluse nella struttura principale. Si tratta di una struttura JSON simile a questa: {"temperatura": "32", "umidità": "42"}.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `arrivalTimestamp`: Data e ora in cui l'animale è stato inserito nel compartimento  - `avgGrowth`: La crescita media di peso degli animali in questo compartimento  - `avgWeight`: Il peso medio dei suini in questo compartimento  - `buildingId`: Identificatore univoco dell'edificio in cui si trova il comparto  - `co2`: La concentrazione di CO2 nel compartimento  - `companyId`: Identificatore univoco di un'azienda  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `empty`: Valore vero/falso se lo scomparto è vuoto  - `farmId`: Identificatore univoco di un'azienda agricola in cui si trova il compartimento  - `feedConsumption`: La quantità totale di cibo che è stata consumata dalle stazioni di alimentazione nello scomparto.  - `humidity`: Quantità che rappresenta la quantità di vapore acqueo presente nell'atmosfera del compartimento.  - `id`: Identificatore univoco dell'entità  - `lastUpdate`: Data e ora in cui sono state effettuate le misurazioni nello scomparto. Timestamp Unix  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `luminosity`: La luminosità di una sorgente luminosa di una certa lunghezza d'onda al comparto  - `name`: Il nome di questo elemento.  - `numAnimals`: Numero di animali nel compartimento  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentCompartmentId`: Identificatore univoco dello scomparto di cui fa parte questo scomparto. Viene utilizzato solo quando un compartimento contiene altri compartimenti.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `sex`: Il sesso degli animali contenuti nello scomparto  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `temperature`: Temperatura dello scomparto.  - `type`: Tipo di entità NGSI. deve essere Compartimento.  - `waterConsumption`: La quantità totale di acqua che è uscita dal rubinetto o dai rubinetti del compartimento  - `weightStDev`: La deviazione standard associata al peso medio dei suini/suinetti contenuti nel compartimento    
+- `additionalInfo`: elenco di tutti i valori grezzi inviati dal sensore/piattaforma con tutte le possibili proprietà extra non incluse nella struttura principale. Si tratta di una struttura JSON simile a questa: {"temperatura": "32", "umidità": "42"}.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `arrivalTimestamp`: Data e ora in cui l'animale è stato inserito nel compartimento  - `avgGrowth`: La crescita media del peso degli animali in questo compartimento  - `avgWeight`: Il peso medio dei suini in questo compartimento  - `buildingId`: Identificatore univoco dell'edificio in cui si trova il comparto  - `co2`: La concentrazione di CO2 nel compartimento  - `companyId`: Identificatore univoco di un'azienda  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `empty`: Valore vero/falso se lo scomparto è vuoto  - `farmId`: Identificatore univoco di un'azienda agricola in cui si trova il compartimento  - `feedConsumption`: La quantità totale di cibo consumato dalle stazioni di alimentazione nel compartimento.  - `humidity`: Quantità che rappresenta la quantità di vapore acqueo presente nell'atmosfera del compartimento.  - `id`: Identificatore univoco dell'entità  - `lastUpdate`: Data e ora in cui sono state effettuate le misurazioni nello scomparto. Timestamp Unix  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `luminosity`: La luminosità di una sorgente luminosa di una certa lunghezza d'onda al compartimento  - `name`: Il nome di questo elemento.  - `numAnimals`: Numero di animali nel compartimento  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentCompartmentId`: Identificatore univoco dello scomparto di cui fa parte questo scomparto. Viene utilizzato solo quando un compartimento contiene altri compartimenti.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `sex`: Il sesso degli animali contenuti nello scomparto  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `temperature`: Temperatura dello scomparto.  - `type`: Tipo di entità NGSI. deve essere Compartimento.  - `waterConsumption`: La quantità totale di acqua che è uscita dal rubinetto o dai rubinetti del compartimento  - `weightStDev`: La deviazione standard associata al peso medio dei suini/suinetti contenuti nel compartimento    
 Proprietà richieste  
 - `id`  - `lastUpdate`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
@@ -383,13 +383,13 @@ Compartment:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -449,7 +449,7 @@ Compartment:
     - lastUpdate    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json    
   x-model-tags: ""    
@@ -658,7 +658,7 @@ Compartment:
 }  
 ```  
 #### Compartimento NGSI-LD normalizzato Esempio  
-Ecco un esempio di un Compartimento in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di un Compartimento in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
