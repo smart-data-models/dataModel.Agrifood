@@ -4,11 +4,11 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述です。**このエンティティは、一般的な作物の調和された記述を含む。このエンティティは、主に農業の垂直方向と関連する IoT アプリケーションに関連するものである**。  
-バージョン: 0.0.1  
+バージョン: 0.0.4  
 
 ## プロパティ一覧  
 
-- `agroVocConcept`: 定義された概念とアグロボックボキャブラリーとのリンク  - `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `harvestingInterval`: この作物について推奨される収穫間隔の日付（複数可）のリスト。ISO8601の反復日付間隔を使用して指定される。<br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date...この開始日〜終了日まで毎年繰り返すことを意味する。  - `hasAgriFertiliser`: この作物の栽培に適した推奨肥料の種類を参照すること。  - `hasAgriPest`: この作物を襲うことが知られている病害虫への言及  - `hasAgriSoil`: この作物の栽培に適した推奨土壌の種類を参照すること。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `plantingFrom`: この作物に対して推奨される植え付け間隔の日付（複数可）のリスト。ISO8601の繰り返し日付間隔を使用して指定される。<br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date...この開始日から終了日までは毎年繰り返すという意味。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type.はAgriCropでなければならない。  - `wateringFrequency`: 推奨される散水スケジュールについての説明。列挙されたリストからの選択。のいずれか。**daily, weekly, biweekly, monthly, onDemand, other**.Enum:'daily, weekly, biweekly, monthly, onDemand, other' （毎日、毎週、隔週、毎月、オンデマンド、その他）。    
+- `agroVocConcept`: 定義された概念とアグロボックボキャブラリーとのリンク  - `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `harvestingInterval`: この作物について推奨される収穫間隔の日付（複数可）のリスト。ISO8601の反復日付間隔を使用して指定される。<br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date...この開始日〜終了日まで毎年繰り返すことを意味する。  - `hasAgriFertiliser`: この作物の栽培に適した推奨肥料の種類を参照すること。  - `hasAgriPest`: この作物を襲うことが知られている病害虫への言及  - `hasAgriSoil`: この作物の栽培に適した推奨土壌の種類を参照すること。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `plantingFrom`: この作物の推奨植え付け間隔の日付のリスト。ISO8601の繰り返し日付間隔を使用して指定される。<br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date...この開始日から終了日までは毎年繰り返すという意味。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type.はAgriCropでなければならない。    
 必要なプロパティ  
 - `id`  - `name`  - `type`    
 この事業体は、主に農業の垂直統合と関連するIoTアプリケーションに関連しています。  
@@ -56,13 +56,13 @@ AgriCrop:
     harvestingInterval:    
       description: 'A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.'    
       items:    
-        - type: object    
-          values:    
-            dateRange:    
-              pattern: ^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$    
-              type: string    
-            description:    
-              type: string    
+        properties:    
+          dateRange:    
+            pattern: ^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$    
+            type: string    
+          description:    
+            type: string    
+        type: object    
       maxItems: 2    
       minItems: 2    
       type: array    
@@ -72,15 +72,15 @@ AgriCrop:
     hasAgriFertiliser:    
       description: 'Reference to the recommended types of fertiliser suitable for growing this crop.'    
       items:    
-        - anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              maxLength: 256    
-              minLength: 1    
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-              type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              format: uri    
-              type: string    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
@@ -146,13 +146,13 @@ AgriCrop:
     plantingFrom:    
       description: 'A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.'    
       items:    
-        - type: object    
-          values:    
-            dateRange:    
-              pattern: ^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$    
-              type: string    
-            description:    
-              type: string    
+        properties:    
+          dateRange:    
+            pattern: ^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$    
+            type: string    
+          description:    
+            type: string    
+        type: object    
       maxItems: 2    
       minItems: 2    
       type: array    
@@ -162,13 +162,13 @@ AgriCrop:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *agricrop_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agricrop_-_properties_-_owner_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -196,31 +196,17 @@ AgriCrop:
       type: string    
       x-ngsi:    
         type: Property    
-    wateringFrequency:    
-      description: 'A description of the recommended watering schedule. A choice from an enumerated list. One of: **daily, weekly, biweekly, monthly, onDemand, other**. Enum:''daily, weekly, biweekly, monthly, onDemand,    other'''    
-      enum:    
-        - daily    
-        - weekly    
-        - biweekly    
-        - monthly    
-        - onDemand    
-        - other    
-      type: string    
-      x-ngsi:    
-        model: http://schema.org/URL    
-        type: Property    
-        units: ""    
   required:    
     - id    
     - type    
     - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.4    
 ```  
 </details>    
 ## ペイロードの例  
@@ -373,7 +359,7 @@ AgriCrop:
 }  
 ```  
 #### AgriCrop NGSI-LD キー値の例  
-ここでは、AgriCropをJSON-LD形式でkey-valuesとして表現した例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、AgriCropをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
