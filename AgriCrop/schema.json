@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.4",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json",
   "title": "Smart Data Models - Agri Food",
@@ -92,7 +92,7 @@
           "description": "Property. Model:'http://schema.org/URL'. A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.",
           "items": {
             "type": "object",
-            "values": {
+            "properties": {
               "dateRange": {
                 "type": "string",
                 "pattern": "^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$"
@@ -136,7 +136,6 @@
           "other"
         ]
       }
-    }
     }
   ],
   "required": [
