@@ -3,12 +3,12 @@
 ===============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Künstlicher Bereich in einem Gebäude oder einer Abteilung, der von bestimmten Sensoren gemessen wird. Ein Bereich ist nicht unbedingt eine physische Trennwand. Es kann sich um eine Abteilung oder eine Gruppierung mehrerer Stifte innerhalb einer Abteilung handeln, die von demselben Sensor gemessen werden.**  
+Globale Beschreibung: **Künstlicher Bereich in einem Gebäude oder einer Abteilung, der von bestimmten Sensoren gemessen wird. Ein Bereich ist nicht unbedingt eine physische Trennwand. Es kann eine Abteilung oder eine Gruppierung mehrerer Stifte innerhalb einer Abteilung sein, die von demselben Sensor gemessen werden.**  
 Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es handelt sich um eine JSON-Struktur ähnlich der folgenden: { 'Temperatur': '32', 'Luftfeuchtigkeit':'42'}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit, zu der die Tiere in das Kompartiment eingesetzt wurden  - `avgGrowth`: Die durchschnittliche Gewichtszunahme der Tiere in diesem Abteil  - `avgWeight`: Das Durchschnittsgewicht der Schweine in diesem Abteil  - `buildingId`: Eindeutige Kennung des Gebäudes, in dem sich das Fach befindet  - `co2`: Die CO2-Konzentration im Kompartiment  - `companyId`: Eindeutige Kennung eines Unternehmens  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `empty`: Wahr/Falsch-Wert, wenn das Fach leer ist  - `farmId`: Eindeutige Kennung des Betriebs, in dem sich das Kompartiment befindet  - `feedConsumption`: die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Kompartiment gefressen wurde  - `humidity`: Menge, die die Wasserdampfmenge in der Atmosphäre des Kompartiments darstellt  - `id`: Eindeutiger Bezeichner der Entität  - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen im Compartment vorgenommen wurden. Unix-Zeitstempel  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge im Fach  - `name`: Der Name dieses Artikels.  - `numAnimals`: Anzahl der Tiere im Kompartiment  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parentCompartmentId`: Eindeutige Kennung des Fachs, zu dem dieses Fach gehört. Er wird nur verwendet, wenn ein Fach andere Fächer enthält.  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `sex`: Das Geschlecht der im Kompartiment enthaltenen Tiere  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `temperature`: Temperatur des Fachs.  - `type`: NGSI Entity type. es muss Compartment sein  - `waterConsumption`: Die Gesamtwassermenge, die aus dem Wasserhahn oder den Wasserhähnen des Fachs austrat  - `weightStDev`: Die Standardabweichung des Durchschnittsgewichts der im Kompartiment enthaltenen Schweine/Ferkel    
+- `additionalInfo`: Liste aller vom Sensor/Plattform gesendeten Rohwerte mit allen möglichen zusätzlichen Eigenschaften, die nicht in der Hauptstruktur enthalten sind. Es handelt sich um eine JSON-Struktur ähnlich der folgenden: { 'Temperatur': '32', 'Luftfeuchtigkeit':'42'}  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `arrivalTimestamp`: Datum und Uhrzeit, zu der die Tiere in das Kompartiment eingesetzt wurden  - `avgGrowth`: Die durchschnittliche Gewichtszunahme der Tiere in diesem Abteil  - `avgWeight`: Das Durchschnittsgewicht der Schweine in diesem Abteil  - `buildingId`: Eindeutige Kennung des Gebäudes, in dem sich das Fach befindet  - `co2`: Die CO2-Konzentration im Kompartiment  - `companyId`: Eindeutige Kennung eines Unternehmens  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `empty`: Wahr/Falsch-Wert, wenn das Fach leer ist  - `farmId`: Eindeutige Kennung des Betriebs, in dem sich das Kompartiment befindet  - `feedConsumption`: die Gesamtmenge an Futter, die von der/den Fütterungsstation(en) im Kompartiment gefressen wurde  - `humidity`: Menge, die die Wasserdampfmenge in der Atmosphäre des Kompartiments darstellt  - `id`: Eindeutiger Bezeichner der Entität  - `lastUpdate`: Datum und Uhrzeit, zu der die Messungen im Compartment vorgenommen wurden. Unix-Zeitstempel  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `luminosity`: Die Helligkeit einer Lichtquelle mit einer bestimmten Wellenlänge im Fach  - `name`: Der Name dieses Artikels.  - `numAnimals`: Anzahl der Tiere im Kompartiment  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parentCompartmentId`: Eindeutige Kennung des Fachs, zu dem dieses Fach gehört. Er wird nur verwendet, wenn ein Fach andere Fächer enthält.  - `relatedSource`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `sex`: Das Geschlecht der im Kompartiment enthaltenen Tiere  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `temperature`: Temperatur des Fachs.  - `type`: NGSI Entity type. es muss Compartment sein  - `waterConsumption`: Die Gesamtwassermenge, die aus dem Wasserhahn oder den Wasserhähnen des Fachs austrat  - `weightStDev`: Die Standardabweichung des Durchschnittsgewichts der im Kompartiment enthaltenen Schweine/Ferkel    
 Erforderliche Eigenschaften  
 - `id`  - `lastUpdate`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -383,13 +383,13 @@ Compartment:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -449,7 +449,7 @@ Compartment:
     - lastUpdate    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json    
   x-model-tags: ""    
@@ -658,7 +658,7 @@ Compartment:
 }  
 ```  
 #### Compartment NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für ein Compartment im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein Compartment im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
