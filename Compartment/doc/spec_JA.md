@@ -3,12 +3,12 @@
 ==============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**建物または部門内の、特定のセンサーによって測定される人工的な領域。区画は必ずしも物理的な区切りではありません。それは部門または同じセンサーによって測定されている部門内のいくつかのペンのグループ化であることができます**。  
+グローバルな説明。**建物または部門内の、特定のセンサーによって測定される人工的な領域。区画は必ずしも物理的な区切りではありません。それは部門または同じセンサーによって測定されている部門内のいくつかのペンのグループ化であることができます**。  
 バージョン: 0.0.1  
 
 ## プロパティ一覧  
 
-- `additionalInfo`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{ '温度': '32'、'湿度':'42'}。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `arrivalTimestamp`: 動物が挿入された日付と時間  - `avgGrowth`: この区画の動物の平均的な体重の増加量  - `avgWeight`: この区画の豚の平均体重  - `buildingId`: コンパートメントが位置する建物の一意な識別子  - `co2`: コンパートメント内のCO2濃度  - `companyId`: 企業の一意な識別子  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `empty`: コンパートメントが空の場合、真/偽の値  - `farmId`: の区画がある農場の固有識別子。  - `feedConsumption`: コンパートメント内の給餌ステーションから食べられた餌の総量  - `humidity`: コンパートメント内の大気中の水蒸気量を表す量  - `id`: エンティティの一意な識別子  - `lastUpdate`: コンパートメント内の測定が行われた日付と時刻。Unixタイムスタンプ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity`: ある波長の光源がコンパートメントにあるときの明るさ  - `name`: このアイテムの名称です。  - `numAnimals`: コンパートメント内の動物数  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `parentCompartmentId`: このコンパートメントが含まれるコンパートメントの一意の識別子。コンパートメントが他のコンパートメントを含むときのみ使用される。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: 収納されている動物の性別  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: コンパートメントの温度。  - `type`: NGSI エンティティタイプ。  - `waterConsumption`: コンパートメント内の蛇口から出た水の総量  - `weightStDev`: 豚/子豚の平均重量に関連する標準偏差は、コンパートメントに含まれている    
+- `additionalInfo`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{ '温度': '32'、'湿度':'42'}。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `arrivalTimestamp`: 動物が挿入された日付と時間  - `avgGrowth`: この区画の動物の平均的な体重の増加量  - `avgWeight`: この区画の豚の平均重量  - `buildingId`: コンパートメントが位置する建物の一意な識別子  - `co2`: コンパートメント内のCO2濃度  - `companyId`: 企業の一意な識別子  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `empty`: コンパートメントが空の場合、真/偽の値  - `farmId`: の区画がある農場の固有識別子。  - `feedConsumption`: コンパートメント内の給餌ステーションから食べられた餌の総量  - `humidity`: コンパートメント内の大気中の水蒸気量を表す量  - `id`: エンティティの一意な識別子  - `lastUpdate`: コンパートメント内の測定が行われた日付と時刻。Unixタイムスタンプ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity`: ある波長の光源がコンパートメントにあるときの明るさ  - `name`: このアイテムの名称です。  - `numAnimals`: コンパートメント内の動物数  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `parentCompartmentId`: このコンパートメントが含まれるコンパートメントの一意の識別子。コンパートメントが他のコンパートメントを含むときのみ使用される。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: 収納されている動物の性別  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: コンパートメントの温度。  - `type`: NGSI エンティティタイプ。  - `waterConsumption`: コンパートメント内の蛇口から出た水の総量  - `weightStDev`: 豚/子豚の平均重量に関連する標準偏差は、コンパートメントに含まれている    
 必要なプロパティ  
 - `id`  - `lastUpdate`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
@@ -383,13 +383,13 @@ Compartment:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *compartment_-_properties_-_owner_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -449,7 +449,7 @@ Compartment:
     - lastUpdate    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Compartment/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/Compartment/schema.json    
   x-model-tags: ""    
