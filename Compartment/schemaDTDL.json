@@ -1,0 +1,325 @@
+{
+    "@id": "dtmi:com:ngsi-ld:Compartment;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": " Smart Data models - Compartment schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/Compartment/schema.json",
+    "description": "Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.",
+    "displayName": "Compartment",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "arrivalTimestamp",
+            "writable": true,
+            "displayName": "arrivalTimestamp",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Date and Time at which the animal were inserted in the compartment"
+        },
+        {
+            "name": "avgGrowth",
+            "writable": true,
+            "displayName": "avgGrowth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The average growth in weight of the animals in this compartment"
+        },
+        {
+            "name": "avgWeight",
+            "writable": true,
+            "displayName": "avgWeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The average weight of the pigs in this compartment"
+        },
+        {
+            "name": "buildingId",
+            "writable": true,
+            "displayName": "buildingId"
+        },
+        {
+            "name": "co2",
+            "writable": true,
+            "displayName": "co2",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The CO2 concentration in the compartment"
+        },
+        {
+            "name": "companyId",
+            "writable": true,
+            "displayName": "companyId"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "empty",
+            "writable": true,
+            "displayName": "empty",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "True/False value if the compartment is empty"
+        },
+        {
+            "name": "farmId",
+            "writable": true,
+            "displayName": "farmId"
+        },
+        {
+            "name": "feedConsumption",
+            "writable": true,
+            "displayName": "feedConsumption",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The total amount of food that has been eaten from the feeding station(s) in the compartment"
+        },
+        {
+            "name": "humidity",
+            "writable": true,
+            "displayName": "humidity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Quantity representing the amount of water vapour in the atmosphere in the compartment"
+        },
+        {
+            "name": "lastUpdate",
+            "writable": true,
+            "displayName": "lastUpdate",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Date and time at which the measurements in the compartment were taken. Unix timestamp"
+        },
+        {
+            "name": "luminosity",
+            "writable": true,
+            "displayName": "luminosity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The brightness of a light source of a certain wavelength at the compartment"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "numAnimals",
+            "writable": true,
+            "displayName": "numAnimals",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of animals in the compartment"
+        },
+        {
+            "name": "parentCompartmentId",
+            "writable": true,
+            "displayName": "parentCompartmentId"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "temperature",
+            "writable": true,
+            "displayName": "temperature",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Temperature of the compartment."
+        },
+        {
+            "name": "waterConsumption",
+            "writable": true,
+            "displayName": "waterConsumption",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The total amount of water that came out from the tap or taps in the compartment"
+        },
+        {
+            "name": "weightStDev",
+            "writable": true,
+            "displayName": "weightStDev",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The standard deviation associated to the average weight of the pigs/piglets contained in the compartment"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "additionalInfo",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "list of all the raw values sent by the sensor/platform with all the possible extra properties that are not included in the main structure. It is a JSON structure similar to this: { 'temperature': '32', 'humidity':'42'}",
+            "displayName": "additionalInfo"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "relatedSource",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "List of IDs the current entity may have in external applications",
+            "displayName": "relatedSource"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "sex",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "M",
+                        "displayName": "M",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "F",
+                        "displayName": "F",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "unknown",
+                        "displayName": "unknown",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "",
+                        "displayName": "",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        }
+    ]
+}
