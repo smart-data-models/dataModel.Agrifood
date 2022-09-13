@@ -40,6 +40,39 @@ AgriFarm:
     contactPoint:
       description: 'The details to contact with the item.'
       properties:
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'
+          type: string
+        availabilityRestriction:
+          anyOf:
+            - description: 'Property. Array of identifiers format of any NGSI entity.'
+              items:
+                maxLength: 256
+                minLength: 1
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                type: string
+              type: array
+            - description: 'Property. Array of identifiers format of any NGSI entity.'
+              items:
+                format: uri
+                type: string
+              type: array
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'
+        availableLanguage:
+          anyOf:
+            - anyOf:
+                - type: string
+                - items:
+                    type: string
+                  type: array
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+        contactOption:
+          anyOf:
+            - type: string
+            - items:
+                type: string
+              type: array
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
         contactType:
           description: 'Property. Contact type of this item.'
           type: string
@@ -47,8 +80,14 @@ AgriFarm:
           description: 'Property. Email address of owner.'
           format: idn-email
           type: string
+        faxNumber:
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'
+          type: string
         name:
           description: 'Property. The name of this item.'
+          type: string
+        productSupported:
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
           type: string
         telephone:
           description: 'Property. Telephone of this contact.'
@@ -86,29 +125,29 @@ AgriFarm:
     hasAgriParcel:
       description: 'List of agri parcels belonging to the farm'
       items:
-        - anyOf: &anyof
-            - description: 'Property. Identifier format of any NGSI entity'
-              maxLength: 256
-              minLength: 1
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-              type: string
-            - description: 'Property. Identifier format of any NGSI entity'
-              format: uri
-              type: string
-          description: 'Property. Unique identifier of the entity'
+        anyOf: &agrifarm_-_properties_-_hasbuilding_-_items_-_anyof
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
+        description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
         type: Relationship
     hasBuilding:
       description: 'List of buildings belonging to the farm'
       items:
-        - anyOf: *anyof
-          description: 'Property. Unique identifier of the entity'
+        anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
         type: Relationship
     id:
-      anyOf: *anyof
+      anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof
       description: 'Unique identifier of the entity'
       x-ngsi:
         type: Property
@@ -291,7 +330,7 @@ AgriFarm:
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: *anyof
+        anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
@@ -299,13 +338,13 @@ AgriFarm:
     relatedSource:
       description: 'List of IDs the current entity may have in external applications'
       items:
-        - type: object
-          values:
-            application:
-              anyOf: *anyof
-              description: 'Property. Unique identifier of the entity'
-            applicationEntityId:
-              type: string
+        properties:
+          application:
+            anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof
+            description: 'Property. Unique identifier of the entity'
+          applicationEntityId:
+            type: string
+        type: object
       type: array
       x-ngsi:
         type: Property
@@ -338,8 +377,8 @@ AgriFarm:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriFarm/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriFarm/schema.json
   x-model-tags: ""
-  x-version: 0.0.3
+  x-version: 0.0.5
