@@ -138,25 +138,25 @@
             },
             "soilTextureType": {
                 "type": "string",
-                "description": "Property. Enum: 'Clay', 'Clay, Sandy', 'Clay, Silty', 'Loam', 'Loam, Clay', 'Loam, Sandy', 'Loam, Sandy Clay', 'Loam, Silty', 'Loam, Silty Clay', 'Sand', 'Sand, Loamy', 'Silt'",
+                "description": "Property. Enum: 'Sands', 'Loamy sands', 'Sandy loams', 'Loam', 'Silt loam', 'Silt', 'Sandy clay loam', 'Clay loam', 'Silty clay loam', 'Sandy clay', 'Silty clay', 'Clay'. Based on the soil texture classification of the United States Department of Agriculture (USDA): https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262",
                 "enum": [
-                    "Clay",
-                    "Clay, Sandy",
-                    "Clay, Silty",
+                    "Sands",
+                    "Loamy sands",
+                    "Sandy loams",
                     "Loam",
-                    "Loam, Clay",
-                    "Loam, Sandy",
-                    "Loam, Sandy Clay",
-                    "Loam, Silty",
-                    "Loam, Silty Clay",
-                    "Sand",
-                    "Sand, Loamy",
-                    "Silt"
+                    "Silt loam",
+                    "Silt",
+                    "Sandy clay loam",
+                    "Clay loam",
+                    "Silty clay loam",
+                    "Sandy clay",
+                    "Silty clay",
+                    "Clay"
                 ]
             },
             "irrigationSystemType": {
                 "type": "string",
-                "description": "Property. Enum: 'Surface irrigation', 'Localized irrigation', 'Drip irrigation', 'Sprinkler irrigation', 'Center pivot irrigation', 'Lateral move irrigation', 'Sub-irrigation', 'Manual irrigation'",
+                "description": "Property. Enum: 'Surface irrigation', 'Localized irrigation', 'Drip irrigation', 'Sprinkler irrigation', 'Center pivot irrigation', 'Lateral move irrigation', 'Sub-irrigation', 'Manual irrigation'. Based on common types of irrigation systems as defined by Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/healthywater/other/agricultural/types.html",
                 "enum": [
                     "Surface irrigation",
                     "Localized irrigation",
