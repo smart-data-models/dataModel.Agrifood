@@ -1,0 +1,385 @@
+{
+    "@id": "dtmi:com:ngsi-ld:AgriParcel;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Agri Parcel adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriParcel/schema.json",
+    "description": "This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.",
+    "displayName": "AgriParcel",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "area",
+            "writable": true,
+            "displayName": "area",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The area of the parcel nominally in square meters."
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "belongsTo",
+            "writable": true,
+            "displayName": "belongsTo"
+        },
+        {
+            "name": "category",
+            "writable": true,
+            "displayName": "category",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "hasAgriCrop",
+            "writable": true,
+            "displayName": "hasAgriCrop"
+        },
+        {
+            "name": "hasAgriParcelParent",
+            "writable": true,
+            "displayName": "hasAgriParcelParent"
+        },
+        {
+            "name": "hasAgriSoil",
+            "writable": true,
+            "displayName": "hasAgriSoil"
+        },
+        {
+            "name": "lastPlantedAt",
+            "writable": true,
+            "displayName": "lastPlantedAt",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Indicates the date when the crop was last planted"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "ownedBy",
+            "writable": true,
+            "displayName": "ownedBy"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "hasAgriParcelChildren",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Related sub AgriParcel records to which this entity relates",
+            "displayName": "hasAgriParcelChildren"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "hasDevices",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Reference to the IoT devices associated with this parcel i.e. sensors, controls.",
+            "displayName": "hasDevices"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "relatedSource",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "List of IDs the current entity may have in external applications",
+            "displayName": "relatedSource"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "cropStatus",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "seeded",
+                        "displayName": "seeded",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "justBorn",
+                        "displayName": "justBorn",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "growing",
+                        "displayName": "growing",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "maturing",
+                        "displayName": "maturing",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "readyForHarvesting",
+                        "displayName": "readyForHarvesting",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "irrigationSystemType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Surface irrigation",
+                        "displayName": "Surface irrigation",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Localized irrigation",
+                        "displayName": "Localized irrigation",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Drip irrigation",
+                        "displayName": "Drip irrigation",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Sprinkler irrigation",
+                        "displayName": "Sprinkler irrigation",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "Center pivot irrigation",
+                        "displayName": "Center pivot irrigation",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "Lateral move irrigation",
+                        "displayName": "Lateral move irrigation",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "Sub-irrigation",
+                        "displayName": "Sub-irrigation",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "Manual irrigation",
+                        "displayName": "Manual irrigation",
+                        "enumValue": 8
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "soilTextureType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Sands",
+                        "displayName": "Sands",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Loamy sands",
+                        "displayName": "Loamy sands",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Sandy loams",
+                        "displayName": "Sandy loams",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Loam",
+                        "displayName": "Loam",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "Silt loam",
+                        "displayName": "Silt loam",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "Silt",
+                        "displayName": "Silt",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "Sandy clay loam",
+                        "displayName": "Sandy clay loam",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "Clay loam",
+                        "displayName": "Clay loam",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "Silty clay loam",
+                        "displayName": "Silty clay loam",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "Sandy clay",
+                        "displayName": "Sandy clay",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "Silty clay",
+                        "displayName": "Silty clay",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "Clay",
+                        "displayName": "Clay",
+                        "enumValue": 12
+                    }
+                ]
+            }
+        }
+    ]
+}
