@@ -4,11 +4,11 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述。**このエンティティは、一般的な土地の区画の調和された記述を含む。このエンティティは、主に農業の垂直方向と関連する IoT アプリケーションに関連している。  
-バージョン: 0.0.2  
+バージョン: 0.0.4  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `area`: 区画の面積を平方メートルで公称する。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `belongsTo`: アイテムが所属するエンティティ  - `category`: 土地の区画のカテゴリー。**耕作地、草地、ブドウ園、果樹園、複合作物、低地、高地、セットサイド、林業、湿地。  - `cropStatus`: Enum:'seeded, justBorn, growing, maturing, readyForHarvesting' （播種済み、生まれたて、成長中、成熟中、収穫準備中）。作物の植え付け状態を記述する列挙されたリストからの選択  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasAgriCrop`: この区画に関連する作物への言及  - `hasAgriParcelChildren`: このエンティティに関連するサブAgriParcelの記録  - `hasAgriParcelParent`: 親AgriParcelへの参照  - `hasAgriSoil`: この区画に関連する土壌に関する言及  - `hasDevices`: この区画に関連するIoTデバイス（センサー、制御装置など）への言及。  - `id`: エンティティの一意な識別子  - `lastPlantedAt`: 作物が最後に植え付けられた日を示す。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `ownedBy`: アイテムの所有者（個人または団体  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type。AgriParcelでなければならない。    
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `area`: 区画の面積を平方メートルで公称する。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `belongsTo`: アイテムが所属するエンティティ  - `category`: 土地の区画のカテゴリー 例：**arable, grassland, vineyard, mixed crop, lowland, upland, set-aside, forestry, wetland:**耕作地、草地、ブドウ園、果樹園、複合作物、低地、高地、セットサイド、林業、湿地。  - `cropStatus`: Enum:'seeded, justBorn, growing, maturing, readyForHarvesting' （播種済み、生まれたて、成長中、成熟中、収穫準備中）。作物の植え付け状態を記述する列挙されたリストからの選択  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasAgriCrop`: この区画に関連する作物への言及  - `hasAgriParcelChildren`: このエンティティに関連するサブAgriParcelの記録  - `hasAgriParcelParent`: 親AgriParcelへの参照  - `hasAgriSoil`: この区画に関連する土壌に関する言及  - `hasDevices`: この区画に関連するIoTデバイス（センサー、制御装置など）への言及。  - `id`: エンティティの一意な識別子  - `irrigationSystemType`: 項目：'Surface irrigation', 'Localized irrigation', 'Drip irrigation', 'Sprinkler irrigation', 'Center pivot irrigation', 'Lateral move irrigation', 'Sub-irrigation', 'Manual irrigation'（地表灌漑）.疾病管理予防センター（CDC）が定義する一般的な灌漑システムの種類に基づく https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt`: 作物が最後に植え付けられた日を示す。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `ownedBy`: アイテムの所有者（個人または団体  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `soilTextureType`: Enum: 'Sands', 'Loamy sands', 'Sandy loams', 'Loam', 'Silt loam', 'Silt', 'Sandy clay loam', 'Clay loam', 'Silty clay loam', 'Sandy clay', 'Silty clay', 'Clay'（Sandy clayは、砂質ローム、泥質ローム、泥質粘土の意。米国農務省（USDA）の土壌の質感分類に基づく https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type。AgriParcelでなければならない。    
 必要なプロパティ  
 - `area`  - `hasAgriCrop`  - `id`  - `location`  - `type`    
 この事業体は、主に農業の垂直統合と関連するIoTアプリケーションに関連しています。  
@@ -131,16 +131,16 @@ AgriParcel:
     hasAgriParcelChildren:    
       description: 'Related sub AgriParcel records to which this entity relates'    
       items:    
-        - anyOf: &anyof    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              maxLength: 256    
-              minLength: 1    
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-              type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
-              format: uri    
-              type: string    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: &agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -173,14 +173,28 @@ AgriParcel:
     hasDevices:    
       description: 'Reference to the IoT devices associated with this parcel i.e. sensors, controls.'    
       items:    
-        - anyOf: *anyof    
-          description: 'Property. Unique identifier of the entity'    
+        anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: *anyof    
+      anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
       description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
+    irrigationSystemType:    
+      description: 'Enum: ''Surface irrigation'', ''Localized irrigation'', ''Drip irrigation'', ''Sprinkler irrigation'', ''Center pivot irrigation'', ''Lateral move irrigation'', ''Sub-irrigation'', ''Manual irrigation''. Based on common types of irrigation systems as defined by Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/healthywater/other/agricultural/types.html'    
+      enum:    
+        - 'Surface irrigation'    
+        - 'Localized irrigation'    
+        - 'Drip irrigation'    
+        - 'Sprinkler irrigation'    
+        - 'Center pivot irrigation'    
+        - 'Lateral move irrigation'    
+        - Sub-irrigation    
+        - 'Manual irrigation'    
+      type: string    
       x-ngsi:    
         type: Property    
     lastPlantedAt:    
@@ -363,7 +377,7 @@ AgriParcel:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *anyof    
+        anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
@@ -371,13 +385,13 @@ AgriParcel:
     relatedSource:    
       description: 'List of IDs the current entity may have in external applications'    
       items:    
-        - type: object    
-          values:    
-            application:    
-              anyOf: *anyof    
-              description: 'Property. Unique identifier of the entity'    
-            applicationEntityId:    
-              type: string    
+        properties:    
+          application:    
+            anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          applicationEntityId:    
+            type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -391,6 +405,24 @@ AgriParcel:
           type: array    
         - format: uri    
           type: string    
+      x-ngsi:    
+        type: Property    
+    soilTextureType:    
+      description: 'Enum: ''Sands'', ''Loamy sands'', ''Sandy loams'', ''Loam'', ''Silt loam'', ''Silt'', ''Sandy clay loam'', ''Clay loam'', ''Silty clay loam'', ''Sandy clay'', ''Silty clay'', ''Clay''. Based on the soil texture classification of the United States Department of Agriculture (USDA): https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262'    
+      enum:    
+        - Sands    
+        - 'Loamy sands'    
+        - 'Sandy loams'    
+        - Loam    
+        - 'Silt loam'    
+        - Silt    
+        - 'Sandy clay loam'    
+        - 'Clay loam'    
+        - 'Silty clay loam'    
+        - 'Sandy clay'    
+        - 'Silty clay'    
+        - Clay    
+      type: string    
       x-ngsi:    
         type: Property    
     source:    
@@ -413,11 +445,11 @@ AgriParcel:
     - hasAgriCrop    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.4    
 ```  
 </details>    
 ## ペイロードの例  
@@ -462,7 +494,9 @@ AgriParcel:
     "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
     "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
     "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-  ]  
+  ],  
+  "soilTextureType": "Clay",  
+  "irrigationSystemType": "Drip irrigation"  
 }  
 ```  
 #### AgriParcel NGSI-v2 正規化例  
@@ -551,6 +585,14 @@ AgriParcel:
       "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
       "urn:ngsi-ld:Device:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
     ]  
+  },  
+  "soilTextureType": {  
+      "type": "string",  
+      "value": "Clay"  
+  },  
+  "irrigationSystemType": {  
+      "type": "string",  
+      "value": "Drip irrigation"  
   }  
 }  
 ```  
