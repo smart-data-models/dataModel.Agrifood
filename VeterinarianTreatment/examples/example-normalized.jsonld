@@ -34,5 +34,8 @@
   "veterinarian": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11"
-  }
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
+  ]
 }
