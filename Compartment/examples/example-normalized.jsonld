@@ -103,6 +103,7 @@
         "value": 2.3
     },
     "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
     ]
 }
