@@ -38,16 +38,16 @@ AgriSoil:
     hasAgriProductType:
       description: 'Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type.'
       items:
-        - anyOf: &agrisoil_-_properties_-_id_-_anyof
-            - description: 'Property. Identifier format of any NGSI entity'
-              maxLength: 256
-              minLength: 1
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-              type: string
-            - description: 'Property. Identifier format of any NGSI entity'
-              format: uri
-              type: string
-          description: 'Property. Unique identifier of the entity'
+        anyOf: &agrisoil_-_properties_-_id_-_anyof
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
+        description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
         type: Relationship
@@ -72,13 +72,13 @@ AgriSoil:
     relatedSource:
       description: 'List of IDs the current entity may have in external applications'
       items:
-        - type: object
-          values:
-            application:
-              anyOf: *agrisoil_-_properties_-_id_-_anyof
-              description: 'Property. Unique identifier of the entity'
-            applicationEntityId:
-              type: string
+        properties:
+          application:
+            anyOf: *agrisoil_-_properties_-_id_-_anyof
+            description: 'Property. Unique identifier of the entity'
+          applicationEntityId:
+            type: string
+        type: object
       type: array
       x-ngsi:
         type: Property
@@ -112,8 +112,8 @@ AgriSoil:
     - name
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriSoil/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriSoil/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
