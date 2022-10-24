@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティペン  
-========  
+========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**建物や部署、または屋外にある、動物の群れを収容するフェンスで囲まれたエリア。檻の中の動物は自由に動き、交流することができる。檻の中は完全に仕切られていないことが多く（半壁、鉄棒、フェンスなど）、隣の檻の動物が見えたり触れたりする可能性がある**。  
 バージョン: 0.2.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `additionalInfo`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{'name': 'temperature', 'value' : 32} のようなJSON構造です。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `arrivalTimestamp`: ペンに動物が到着する日付と時間  - `avgGrowth`: このペンの動物の体重の平均成長率  - `avgWeight`: このペンの動物の平均体重です。  - `buildingId`: アイテムが配置されているビルの一意な識別子  - `co2`: 項目中のCO2濃度  - `companyId`: 企業の一意な識別子  - `compartmentId`: ペンが配置されているコンパートメントの一意な識別子。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `deadAnimalsSinceDateOfArrival`: 到着日以降の死体数  - `description`: このアイテムの説明  - `farmId`: ペンが位置する農場の一意な識別子。  - `feedConsumption`: ペン内の給餌ステーションから食べられた餌の総量。餌の摂取量と、一度に1匹だけに食べさせる特定の構造によって測定されます。  - `humidity`: ペンの中の大気中の水蒸気量を表す量。  - `id`: エンティティの一意な識別子  - `lastUpdate`: 項目内の測定が行われた日付と時刻  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity`: ある波長の光源が項目で示す明るさ  - `name`: このアイテムの名称です。  - `numAnimals`: ペンに収容されている動物の数。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: ペンに収容されている動物の性別  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: ペンの温度  ユニルス：' セルシウス度'  - `type`: NGSIエンティティタイプは、Penでなければなりません。  - `waterConsumption`: ペンの中にある蛇口やタップから出た水の総量。流量計で測定し、一度に1匹だけに飲ませる具体的な構造になっている。  - `weightStDev`: ペンに収容された動物の平均体重に関連する標準偏差。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `additionalInfo[array]`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{'name': 'temperature', 'value' : 32} のようなJSON構造です。  - `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `arrivalTimestamp[string]`: ペンに動物が到着する日付と時間  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `avgGrowth[number]`: このペンの動物の体重の平均成長率  . Model: [https://schema.org/Number](https://schema.org/Number)- `avgWeight[number]`: このペンの動物の平均体重です。  . Model: [https://schema.org/Number](https://schema.org/Number)- `buildingId[*]`: アイテムが配置されているビルの一意な識別子  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `co2[number]`: 項目中のCO2濃度  . Model: [https://schema.org/Number](https://schema.org/Number)- `companyId[*]`: 企業の一意な識別子  . Model: [https://schema.org/URL](https://schema.org/URL)- `compartmentId[*]`: ペンが配置されているコンパートメントの一意な識別子。  . Model: [https://schema.org/URL](https://schema.org/URL)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `deadAnimalsSinceDateOfArrival[number]`: 到着日以降の死体数  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: このアイテムの説明  - `farmId[*]`: ペンが位置する農場の一意な識別子。  . Model: [https://schema.org/URL](https://schema.org/URL)- `feedConsumption[number]`: ペン内の給餌ステーションから食べられた餌の総量。餌の摂取量と、一度に1匹だけに食べさせる特定の構造によって測定されます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `humidity[number]`: ペンの中の大気中の水蒸気量を表す量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意な識別子  - `lastUpdate[string]`: 項目内の測定が行われた日付と時刻  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity[number]`: ある波長の光源が項目で示す明るさ  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: このアイテムの名称です。  - `numAnimals[number]`: ペンに収容されている動物の数。  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `sex[string]`: ペンに収容されている動物の性別  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature[number]`: ペンの温度  ユニルス：' セルシウス度'  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSIエンティティタイプは、Penでなければなりません。  - `waterConsumption[number]`: ペンの中にある蛇口やタップから出た水の総量。流量計で測定し、一度に1匹だけに飲ませる具体的な構造になっている。  . Model: [https://schema.org/Number](https://schema.org/Number)- `weightStDev[number]`: ペンに収容された動物の平均体重に関連する標準偏差。  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `lastUpdate`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `lastUpdate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pen:    
@@ -480,9 +494,14 @@ Pen:
   x-version: 0.2.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### Pen NGSI-v2キーバリューの例  
 ここでは、PenをJSON-LD形式でkey-valuesとした場合の例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -519,8 +538,10 @@ Pen:
   "temperature": 25  
 }  
 ```  
+</details>  
 #### ペン NGSI-v2 正規化例  
 ここでは、PenをJSON-LD形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -584,8 +605,10 @@ Pen:
   }  
 }  
 ```  
+</details>  
 #### Pen NGSI-LD キー値の例  
 ここでは、PenをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -626,8 +649,10 @@ Pen:
     ]  
 }  
 ```  
+</details>  
 #### ペン NGSI-LD 正規化例  
 以下は、JSON-LD形式のPenを正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -690,8 +715,17 @@ Pen:
         "value": 25  
     },  
     "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld"  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
