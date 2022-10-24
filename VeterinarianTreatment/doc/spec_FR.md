@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : VétérinaireTraitement  
-==============================  
+==============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/VeterinarianTreatment/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Objet modélisant un traitement vétérinaire pour une exploitation d'élevage.**  
 version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `animals`: Animaux traités avec le produit appliqué  - `appliedProduct`: Produit vétérinaire appliqué  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `date`: Date de la demande  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phaseOutPeriod`: Il s'agit de la période de temps en jours entre la dernière administration du médicament vétérinaire à un animal, dans des conditions normales d'utilisation, et la production de denrées alimentaires à partir de cet animal.  - `quantity`: Quantité de produit vétérinaire appliquée  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Entité NGSI VétérinaireProduit  - `veterinarian`: Identifiant de l'entité stockant les données du vétérinaire prescripteur.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `animals[array]`: Animaux traités avec le produit appliqué  . Model: [https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/schema.json](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/schema.json)- `appliedProduct[string]`: Produit vétérinaire appliqué  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `date[string]`: Date de la demande  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phaseOutPeriod[number]`: Il s'agit de la période de temps en jours entre la dernière administration du médicament vétérinaire à un animal, dans des conditions normales d'utilisation, et la production de denrées alimentaires à partir de cet animal.  - `quantity[number]`: Quantité de produit vétérinaire appliquée  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Entité NGSI VétérinaireProduit  - `veterinarian[string]`: Identifiant de l'entité stockant les données du vétérinaire prescripteur.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `appliedProduct`  - `id`  - `type`  ## Description des propriétés du modèle de données  
+- `appliedProduct`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 VeterinarianTreatment:    
@@ -329,9 +343,14 @@ VeterinarianTreatment:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Traitement-vétérinaire Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple d'un VeterinarianTreatment au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -348,8 +367,10 @@ VeterinarianTreatment:
   "veterinarian": "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11"  
 }  
 ```  
+</details>  
 #### Traitement vétérinaire NGSI-v2 normalisé Exemple  
 Voici un exemple d'un VeterinarianTreatment au format JSON-LD tel que normalisé. Ce format est compatible avec la norme NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -387,29 +408,34 @@ VeterinarianTreatment:
   }  
 }  
 ```  
+</details>  
 #### VétérinaireTraitement Valeurs-clés NGSI-LD Exemple  
 Voici un exemple d'un VeterinarianTreatment au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "VeterinarianTreatment",  
-  "appliedProduct": "Pisadug",  
-  "date": "2022-01-01T01:20:00Z",  
-  "quantity": 1,  
-  "phaseOutPeriod": 4,  
-  "deliveryNote": "Primera entrega 2022",  
-  "animals": [  
-    "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-    "urn:ngsi-ld:Animal:bb3f1295-500c-4aa3-b745-d143097d4321"  
-  ],  
-  "veterinarian": "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11",  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "VeterinarianTreatment",  
+    "appliedProduct": "Pisadug",  
+    "date": "2022-01-01T01:20:00Z",  
+    "quantity": 1,  
+    "phaseOutPeriod": 4,  
+    "deliveryNote": "Primera entrega 2022",  
+    "animals": [  
+        "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+        "urn:ngsi-ld:Animal:bb3f1295-500c-4aa3-b745-d143097d4321"  
+    ],  
+    "veterinarian": "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### Traitement vétérinaire NGSI-LD normalisé Exemple  
 Voici un exemple d'un VeterinarianTreatment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -447,7 +473,18 @@ VeterinarianTreatment:
   "veterinarian": {  
     "type": "Relationship",  
     "object": "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11"  
-  }  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
