@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 事業者アグリグリーンハウス  
-=============  
+=============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**このエンティティは、AgriParcel の一種である一般的な温室内に記録された条件の調和された記述を含んでいる**。  
 バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `alternateName`: この項目の別称  - `belongsTo`: 温室が属する主体  - `co2`: 室内C02濃度測定値（公称値：mg/L  - `dailyLight`: 1平方メートルあたりのkWで測定した日次積算光量  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `drainFlow`: 観測されたドレン流量（単位：リットル/秒  - `hasAgriParcelChildren`: このエンティティに関連するサブAgriParcelの記録  - `hasAgriParcelParent`: このエンティティが関連するAgriParcelエンティティへの参照。  - `hasDevice`: この温室に関連するIoTデバイス（センサー、制御装置など）への言及。  - `hasWaterQualityObserved`: この事業体に関する最新の水質観測記録（1件以上）への言及  - `hasWeatherObserved`: このエンティティに関する現在の気象観測記録への参照。  - `id`: エンティティの一意な識別子  - `leafTemperature`: 内部の相対湿度を0％～100％（0～1）で表す。  - `name`: このアイテムの名称です。  - `ownedBy`: アグリグリーンハウスの所有者（個人または団体）。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `relativeHumidity`: 温室効果ガスの平均気温の公称値（摂氏）。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type。AgriGreenhouseでなければならない。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `belongsTo[*]`: 温室が属する主体  - `co2[integer]`: 測定された室内C02濃度（公称値：mg/L）。  . Model: [http://schema.org/Number](http://schema.org/Number)- `dailyLight[integer]`: 1平方メートルあたりのkWで測定された日次積算光量  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `drainFlow[object]`: 観測されたドレン流量（単位：リットル/秒  . Model: [http://schema.org/Number](http://schema.org/Number)- `hasAgriParcelChildren[array]`: このエンティティに関連するサブAgriParcelの記録  - `hasAgriParcelParent[*]`: このエンティティが関連するAgriParcelエンティティへの参照。  - `hasDevice[array]`: この温室に関連するIoTデバイス（センサー、制御装置など）への言及。  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasWaterQualityObserved[array]`: この事業体に関する最新の水質観測記録（1件以上）への言及  - `hasWeatherObserved[*]`: このエンティティに関する現在の気象観測記録への参照。  - `id[*]`: エンティティの一意な識別子  - `leafTemperature[integer]`: 内部の相対湿度を0％～100％（0～1）で表す。  . Model: [http://schema.org/Number](http://schema.org/Number)- `name[string]`: このアイテムの名称です。  - `ownedBy[*]`: アグリグリーンハウスの所有者（個人または団体）。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `relativeHumidity[number]`: 温室効果ガスの平均気温の公称値（摂氏）。  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entity Type。AgriGreenhouseでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `hasAgriParcelParent`  - `id`  - `type`    
+- `hasAgriParcelParent`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 この事業体は、主に農業の垂直統合と関連するIoTアプリケーションに関連しています。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriGreenhouse:    
@@ -247,9 +260,14 @@ AgriGreenhouse:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### AgriGreenhouse NGSI-v2 key-value 例  
 ここでは、AgriGreenhouseをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -296,8 +314,10 @@ AgriGreenhouse:
   ]  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-v2 正規化例  
 以下は、AgriGreenhouseをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -390,8 +410,10 @@ AgriGreenhouse:
   }  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-LD キー値例  
 ここでは、AgriGreenhouseをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -442,8 +464,10 @@ AgriGreenhouse:
     ]  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-LD 正規化例  
 以下は、AgriGreenhouseをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -541,8 +565,17 @@ AgriGreenhouse:
         ]  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
