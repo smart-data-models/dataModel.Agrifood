@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : AgriProductType  
-========================  
+========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriProductType/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée d'un type de produit agricole générique. Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes. L'AgriProductType comprend une structure hiérarchique qui permet de regrouper les types de produits de manière flexible.**.  
 version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `agroVocConcept`: Référence au terme agrovoc associé à cet élément  - `alternateName`: Un nom alternatif pour cet élément  - `category`: Catégorie du produit. Enum : 'fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity'.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasAgriProductTypeChildren`: Référence aux types de produits enfants, c'est-à-dire immédiatement inférieurs à cette entité dans la hiérarchie.  - `hasAgriProductTypeParent`: Référence au type de produit parent, c'est-à-dire immédiatement au-dessus de l'entité dans la hiérarchie.  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `root`: Indicateur logique que ce produit est la racine d'une hiérarchie d'AgriProductType. La valeur logique true indique qu'il s'agit de la racine.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de AgriProductType    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `agroVocConcept[string]`: Référence au terme agrovoc associé à cet élément  . Model: [http://schema.org/URL](http://schema.org/URL)- `alternateName[string]`: Un nom alternatif pour cet élément  - `category[array]`: Catégorie du produit. Enum : 'fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity'.  . Model: [http://schema.org/URL](http://schema.org/URL)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `hasAgriProductTypeChildren[array]`: Référence aux types de produits enfants, c'est-à-dire immédiatement inférieurs à cette entité dans la hiérarchie.  - `hasAgriProductTypeParent[*]`: Référence au type de produit parent, c'est-à-dire immédiatement au-dessus de l'entité dans la hiérarchie.  - `id[*]`: Identifiant unique de l'entité  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `root[boolean]`: Indicateur logique que ce produit est la racine d'une hiérarchie d'AgriProductType. La valeur logique true indique qu'il s'agit de la racine.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI : Il doit s'agir de AgriProductType  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `name`  - `root`  - `type`    
+- `id`  - `name`  - `root`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes. L'AgriProductType comprend une structure hiérarchique qui permet de regrouper les types de produits de manière flexible.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriProductType:    
@@ -170,9 +183,14 @@ AgriProductType:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### AgriProductType NGSI-v2 valeurs-clés Exemple  
+#### AgriProductType Valeurs-clés de la NGSI-v2 Exemple  
 Voici un exemple d'un AgriProductType au format JSON-LD comme valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -198,8 +216,10 @@ AgriProductType:
   ]  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-v2 normalisé Exemple  
 Voici un exemple d'un AgriProductType au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -250,8 +270,10 @@ AgriProductType:
   }  
 }  
 ```  
+</details>  
 #### AgriProductType Valeurs-clés NGSI-LD Exemple  
 Voici un exemple d'un AgriProductType au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -283,8 +305,10 @@ AgriProductType:
     ]  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-LD normalisé Exemple  
 Voici un exemple d'un AgriProductType au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -335,8 +359,17 @@ AgriProductType:
         "value": true  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
