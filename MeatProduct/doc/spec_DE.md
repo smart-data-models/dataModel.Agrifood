@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: FleischErzeugnis  
-=========================  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/MeatProduct/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Objekt, das ein Fleischprodukt für einen Viehzuchtbetrieb modelliert.**  
 Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `carcass`: Beziehung zu der Stelle, die die Herkunft des Schlachtkörpers des Fleischerzeugnisses lagert  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `date`: Datum der Anmeldung  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-Entitätstyp. Es muss MeatProduct sein  - `weight`: Gewicht des Produkts    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `carcass[string]`: Beziehung zu der Stelle, die die Herkunft des Schlachtkörpers des Fleischerzeugnisses lagert  . Model: [https://github.com/smart-data-models/incubated/blob/master/I4TRUST/Farm4All/MeatIndustry/Carcass/schema.json](https://github.com/smart-data-models/incubated/blob/master/I4TRUST/Farm4All/MeatIndustry/Carcass/schema.json)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `date[string]`: Datum der Anmeldung  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type[string]`: NGSI-Entitätstyp. Es muss MeatProduct sein  - `weight[integer]`: Gewicht des Produkts  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `carcass`  - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `carcass`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 MeatProduct:    
@@ -309,9 +323,14 @@ MeatProduct:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### MeatProduct NGSI-v2 Schlüsselwerte Beispiel  
 Hier ein Beispiel für ein MeatProduct im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -322,8 +341,10 @@ MeatProduct:
   "weight": 350  
 }  
 ```  
+</details>  
 #### FleischProdukt NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein MeatProduct im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -346,49 +367,63 @@ MeatProduct:
   }  
 }  
 ```  
+</details>  
 #### MeatProduct NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für ein MeatProduct im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "MeatProduct",  
-  "name": "Lomo alto de ternera",  
-  "date": "2022-01-01T01:20:00Z",  
-  "carcass": "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "weight": 350,  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "MeatProduct",  
+    "name": "Lomo alto de ternera",  
+    "date": "2022-01-01T01:20:00Z",  
+    "carcass": "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "weight": 350,  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### FleischProdukt NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für ein MeatProduct im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01",  
-  "type": "MeatProduct",  
-  "name": {  
-    "type": "Property",  
-    "value": "Lomo alto de ternera"  
-  },  
-  "date": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "Date-Time",  
-      "@value": "2022-01-01T01:20:00Z"  
-    }  
-  },  
-  "carcass": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01"  
-  },  
-  "weight": {  
-    "type": "Property",  
-    "value": 350  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:MeatProduct:ca3f1295-500c-4aa3-b745-d143097d5c01",  
+    "type": "MeatProduct",  
+    "name": {  
+        "type": "Property",  
+        "value": "Lomo alto de ternera"  
+    },  
+    "date": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "Date-Time",  
+            "@value": "2022-01-01T01:20:00Z"  
+        }  
+    },  
+    "carcass": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01"  
+    },  
+    "weight": {  
+        "type": "Property",  
+        "value": 350  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Agrifood/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
