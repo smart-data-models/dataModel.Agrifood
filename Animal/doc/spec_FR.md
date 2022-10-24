@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : Animal  
-===============  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Animal/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Observation des conditions d'un animal à un endroit et à un moment donnés. Ce modèle de données a été développé pour le projet IoF2020 UC ShareBeef par UCO et SensoWave.**  
 version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `birthdate`: Date de naissance de l'animal  - `breed`: Race de l'animal  - `calvedBy`: Mère de l'animal  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `fedWith`: Nourriture utilisée pour l'animal  - `healthCondition`: État phénologique de l'animal. Enum:' healthy, sick, inTreatment' (sain, malade, en traitement)  - `id`: Identifiant unique de l'entité  - `legalId`: Identification légale de l'animal  - `locatedAt`: Id de la relation AgriParcel  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `ownedBy`: Le propriétaire de l'animal  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phenologicalCondition`: Condition phénologique de l'animal. Enum : 'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `reproductiveCondition`: État reproductif de l'animal. Enum : 'noStatus, inactive, inCalf, inHeat, active'.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex`: Sexe de l'animal. Enum : "mâle, femelle  - `siredBy`: Père de l'animal  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `species`: Espèce à laquelle appartient l'animal. Cet enum peut être augmenté  - `type`: Type d'entité NGSI : Il doit s'agir d'un animal  - `weight`: Le poids de l'animal en chiffre  - `welfareCondition`: Indicateur du bien-être animal. Enum : "problème, adéquat    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `birthdate[string]`: Date de naissance de l'animal  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `breed[string]`: Race de l'animal  - `calvedBy[*]`: Mère de l'animal  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `fedWith[*]`: Nourriture utilisée pour l'animal  - `healthCondition[string]`: État phénologique de l'animal. Enum:' healthy, sick, inTreatment' (sain, malade, en traitement)  - `id[*]`: Identifiant unique de l'entité  - `legalId[string]`: Identification légale de l'animal  - `locatedAt[*]`: Id de la relation AgriParcel  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `ownedBy[*]`: Le propriétaire de l'animal  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `phenologicalCondition[string]`: Condition phénologique de l'animal. Enum : 'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `reproductiveCondition[string]`: État reproductif de l'animal. Enum : 'noStatus, inactive, inCalf, inHeat, active'.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex[string]`: Sexe de l'animal. Enum : "mâle, femelle  - `siredBy[*]`: Père de l'animal  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `species[string]`: Espèce à laquelle appartient l'animal. Cet enum peut être augmenté  . Model: [Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text](Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text)- `type[string]`: Type d'entité NGSI : Il doit s'agir d'un animal  - `weight[number]`: Le poids de l'animal en chiffre  . Model: [http://schema.org/Number](http://schema.org/Number)- `welfareCondition[string]`: Indicateur du bien-être animal. Enum : "problème, adéquat  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `legalId`  - `sex`  - `species`  - `type`    
+- `id`  - `legalId`  - `sex`  - `species`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Le modèle de données animales proposé a été élaboré d'un point de vue plus général, en essayant de l'adapter aux informations provenant des dispositifs et des capteurs utilisés dans l'UC. Le diagramme suivant décrit la chaîne de la viande bovine. Dans ce diagramme, les différents acteurs de la chaîne de la viande sont décrits ainsi que certaines de leurs interactions. ![ ](../resources/diagram1.jpg). Lors de l'utilisation de ce modèle de données, il sera nécessaire de définir plusieurs entités pour traiter les informations générées par la solution proposée. Parmi toutes ces entités, l'entité animal qui est le centre de la solution se distingue en premier lieu  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Animal:    
@@ -459,9 +472,14 @@ Animal:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Valeurs-clés NGSI-v2 pour animaux Exemple  
 Voici un exemple d'animal au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -494,8 +512,10 @@ Animal:
   "welfareCondition": "adequate"  
 }  
 ```  
+</details>  
 #### Animal NGSI-v2 normalisé Exemple  
 Voici un exemple d'un animal au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -572,8 +592,10 @@ Animal:
   }  
 }  
 ```  
+</details>  
 #### Valeurs-clés NGSI-LD pour animaux Exemple  
-Voici un exemple d'animal au format JSON-LD en tant que key-values. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'animal au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -616,8 +638,10 @@ Animal:
     ]  
 }  
 ```  
+</details>  
 #### Animal NGSI-LD normalisé Exemple  
 Voici un exemple d'un animal au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -706,8 +730,17 @@ Animal:
         "value": "adequate"  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
