@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : AgriGreenhouse  
-=======================  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée des conditions enregistrées dans une serre générique, un type d'AgriParcelle.**  
 version : 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `alternateName`: Un nom alternatif pour cet élément  - `belongsTo`: Entité à laquelle appartient la serre  - `co2`: La concentration intérieure mesurée de C02 nominalement en mg/L  - `dailyLight`: Lumière cumulée quotidienne mesurée en kW par mètre carré  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `drainFlow`: Le débit observé du drain en litres par seconde  - `hasAgriParcelChildren`: Sous-enregistrements AgriParcel connexes auxquels cette entité se rapporte.  - `hasAgriParcelParent`: Référence à l'entité AgriParcel à laquelle cette entité se rapporte  - `hasDevice`: Référence aux dispositifs IoT associés à cette serre, c'est-à-dire les capteurs, les contrôles.  - `hasWaterQualityObserved`: Référence à un ou plusieurs enregistrements d'observation de la qualité de l'eau en cours pour cette entité  - `hasWeatherObserved`: Référence à l'enregistrement des observations météorologiques en cours pour cette entité  - `id`: Identifiant unique de l'entité  - `leafTemperature`: L'humidité relative intérieure exprimée sous la forme d'un nombre compris entre 0 et 1 représentant la plage de 0% à 100 (%).<br/><br/>0 <= relativeHumidity <= 1  - `name`: Le nom de cet élément.  - `ownedBy`: Propriétaire (personne ou organisation) de l'AgriGreenhouse  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `relativeHumidity`: La température moyenne de l'air dans les serres, exprimée en degrés centigrades.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'AgriGreenhouse    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `alternateName[string]`: Un nom alternatif pour cet élément  - `belongsTo[*]`: Entité à laquelle appartient la serre  - `co2[integer]`: La concentration intérieure mesurée de C02 nominalement en mg/L  . Model: [http://schema.org/Number](http://schema.org/Number)- `dailyLight[integer]`: Lumière accumulée quotidienne mesurée en kW par mètre carré  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `drainFlow[object]`: Le débit observé du drain en litres par seconde  . Model: [http://schema.org/Number](http://schema.org/Number)- `hasAgriParcelChildren[array]`: Sous-enregistrements AgriParcel connexes auxquels cette entité se rapporte.  - `hasAgriParcelParent[*]`: Référence à l'entité AgriParcel à laquelle cette entité se rapporte  - `hasDevice[array]`: Référence aux dispositifs IoT associés à cette serre, c'est-à-dire les capteurs, les contrôles.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasWaterQualityObserved[array]`: Référence à un ou plusieurs enregistrements d'observation de la qualité de l'eau en cours pour cette entité  - `hasWeatherObserved[*]`: Référence à l'enregistrement des observations météorologiques en cours pour cette entité  - `id[*]`: Identifiant unique de l'entité  - `leafTemperature[integer]`: L'humidité relative intérieure exprimée sous la forme d'un nombre compris entre 0 et 1 représentant la plage de 0% à 100 (%).<br/><br/>0 <= relativeHumidity <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `name[string]`: Le nom de cet élément.  - `ownedBy[*]`: Propriétaire (personne ou organisation) de l'AgriGreenhouse  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `relativeHumidity[number]`: La température moyenne de l'air dans les serres, exprimée en degrés centigrades.  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir d'AgriGreenhouse  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `hasAgriParcelParent`  - `id`  - `type`    
+- `hasAgriParcelParent`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriGreenhouse:    
@@ -247,9 +260,14 @@ AgriGreenhouse:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### AgriGreenhouse NGSI-v2 valeurs-clés Exemple  
 Voici un exemple d'une AgriGreenhouse au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -296,8 +314,10 @@ AgriGreenhouse:
   ]  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-v2 normalisé Exemple  
 Voici un exemple d'une AgriGreenhouse au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -390,8 +410,10 @@ AgriGreenhouse:
   }  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-LD valeurs-clés Exemple  
 Voici un exemple d'une AgriGreenhouse au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -442,8 +464,10 @@ AgriGreenhouse:
     ]  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-LD normalisé Exemple  
 Voici un exemple d'une AgriGreenhouse au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -541,8 +565,17 @@ AgriGreenhouse:
         ]  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
