@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ動物  
-========  
+========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Animal/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述。**ある場所と時間における動物の状態を観察すること。このデータモデルは、UCOとSensoWaveがIoF2020 UC ShareBeefのために開発したものである**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `birthdate`: 動物の生年月日  - `breed`: 動物の品種  - `calvedBy`: 動物のお母さん  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `fedWith`: 動物に使用する食品  - `healthCondition`: 動物のフェノロジーの状態。Enum:' 健康, 病気, 治療中'.  - `id`: エンティティの一意な識別子  - `legalId`: 動物のリーガルID  - `locatedAt`: AgriParcel関係のId  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `ownedBy`: 動物の所有者  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `phenologicalCondition`: 動物の季節的な状態。Enum:'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'.  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `reproductiveCondition`: 動物の生殖状態。Enum:'noStatus, inactive, inCalf, inHeat, active'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: 動物の性別。Enum:'オス, メス'  - `siredBy`: 動物の父  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `species`: その動物が属する種。この列挙型は増やすことができる。  - `type`: NGSIエンティティタイプ。動物である必要があります  - `weight`: 動物の体重を数値で表したもの  - `welfareCondition`: 動物愛護の指標。Enum:'issue, adequate'    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `birthdate[string]`: 動物の生年月日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `breed[string]`: 動物の品種  - `calvedBy[*]`: 動物のお母さん  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `fedWith[*]`: 動物に使用する食品  - `healthCondition[string]`: 動物のフェノロジーの状態。Enum:' 健康, 病気, 治療中'.  - `id[*]`: エンティティの一意な識別子  - `legalId[string]`: 動物のリーガルID  - `locatedAt[*]`: AgriParcel関係のId  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `ownedBy[*]`: 動物の所有者  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `phenologicalCondition[string]`: 動物の季節的な状態。Enum:'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'（授乳中の赤ちゃん、放牧中の赤ちゃん、雄成人、雌成人、雄若年、雌若年）。  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `reproductiveCondition[string]`: 動物の生殖状態。Enum:'noStatus, inactive, inCalf, inHeat, active'.  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `sex[string]`: 動物の性別。Enum:'オス, メス'  - `siredBy[*]`: 動物の父  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `species[string]`: その動物が属する種。この列挙型は増やすことができる。  . Model: [Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text](Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text)- `type[string]`: NGSIエンティティタイプ。動物である必要があります  - `weight[number]`: 動物の体重を数値で表したもの  . Model: [http://schema.org/Number](http://schema.org/Number)- `welfareCondition[string]`: 動物愛護の指標。Enum:'issue, adequate'  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `legalId`  - `sex`  - `species`  - `type`    
+- `id`  - `legalId`  - `sex`  - `species`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 提案する動物データモデルは、より一般的な観点から、UCで使用される機器やセンサーから来る情報に適応するように作られています。次の図は、牛肉チェーンについて説明したものです。この図では、ミートチェーンのさまざまなステークホルダーが、その相互作用の一部を記述しています。図1.jpg）。このデータモデルを使用する際には、提案するソリューションで生成される情報を処理するために、いくつかのエンティティを定義する必要がある。これらのエンティティの中で、このソリューションの中心である動物のエンティティは、まず第一に目立つ。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Animal:    
@@ -459,9 +472,14 @@ Animal:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### 動物NGSI-v2鍵盤の例  
 ここでは、AnimalをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -494,8 +512,10 @@ Animal:
   "welfareCondition": "adequate"  
 }  
 ```  
+</details>  
 #### 動物 NGSI-v2 正規化例  
 以下は、AnimalをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -572,8 +592,10 @@ Animal:
   }  
 }  
 ```  
+</details>  
 #### 動物 NGSI-LD キー値例  
 ここでは、AnimalをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -616,8 +638,10 @@ Animal:
     ]  
 }  
 ```  
+</details>  
 #### 動物 NGSI-LD 正規化例  
 以下は、AnimalをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",  
@@ -706,8 +730,17 @@ Animal:
         "value": "adequate"  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
