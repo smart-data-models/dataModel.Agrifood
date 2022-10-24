@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entità: Penna  
-=============  
+=============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descrizione globale: **Area recintata in un edificio o in un reparto o all'esterno che ospita un gruppo di animali. Gli animali in un recinto possono muoversi e interagire liberamente. Spesso i recinti non sono completamente separati l'uno dall'altro (mezze pareti, sbarre di ferro, recinzioni,...), il che rende possibile che gli animali dei recinti vicini si vedano/si tocchino**.  
 versione: 0.2.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `additionalInfo`: elenco di tutti i valori grezzi inviati dal sensore/piattaforma con tutte le possibili proprietà extra non incluse nella struttura principale. Si tratta di una struttura JSON simile a questa: {'name': 'temperature', 'value' : 32}  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `arrivalTimestamp`: Data e ora per l'arrivo degli animali al recinto  - `avgGrowth`: La crescita media del peso dell'animale in questo recinto  - `avgWeight`: Il peso medio dell'animale in questa Penna.  - `buildingId`: Identificatore univoco dell'Edificio in cui si trova l'elemento  - `co2`: La concentrazione di CO2 nell'oggetto  - `companyId`: Identificatore univoco di un'azienda  - `compartmentId`: Identificatore univoco dello scomparto in cui si trova la penna.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `deadAnimalsSinceDateOfArrival`: Numero di animali morti dalla data di arrivo  - `description`: Descrizione dell'articolo  - `farmId`: Identificatore univoco della Fattoria in cui si trova la Penna.  - `feedConsumption`: La quantità totale di cibo che è stata mangiata dalle postazioni di alimentazione nel recinto. È misurata attraverso l'assunzione di mangime e la struttura specifica per permettere a un solo animale alla volta di mangiare.  - `humidity`: Quantità che rappresenta la quantità di vapore acqueo presente nell'atmosfera nella penna.  - `id`: Identificatore univoco dell'entità  - `lastUpdate`: Data e ora in cui sono state effettuate le misurazioni dell'elemento  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `luminosity`: La luminosità di una sorgente luminosa di una certa lunghezza d'onda in corrispondenza dell'elemento  - `name`: Il nome di questo elemento.  - `numAnimals`: Numero di animali contenuti nel recinto.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `relatedSource`: Elenco di ID che l'entità corrente può avere in applicazioni esterne.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `sex`: Il sesso degli animali contenuti nel recinto  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `temperature`: Temperatura della penna.  Unirs:' grado Celsius'  - `type`: Tipo di entità NGSI. deve essere Pen  - `waterConsumption`: La quantità totale di acqua che esce dal rubinetto o dai rubinetti del recinto. Viene misurata attraverso misuratori di portata e una struttura specifica per far bere solo un animale alla volta.  - `weightStDev`: La deviazione standard associata al peso medio degli animali contenuti nella Penna.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `additionalInfo[array]`: elenco di tutti i valori grezzi inviati dal sensore/piattaforma con tutte le possibili proprietà extra non incluse nella struttura principale. Si tratta di una struttura JSON simile a questa: {'name': 'temperature', 'value' : 32}  - `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `arrivalTimestamp[string]`: Data e ora di arrivo degli animali al recinto  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `avgGrowth[number]`: La crescita media del peso dell'animale in questo recinto  . Model: [https://schema.org/Number](https://schema.org/Number)- `avgWeight[number]`: Il peso medio dell'animale in questa Penna.  . Model: [https://schema.org/Number](https://schema.org/Number)- `buildingId[*]`: Identificatore univoco dell'Edificio in cui si trova l'elemento  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `co2[number]`: La concentrazione di CO2 nell'oggetto  . Model: [https://schema.org/Number](https://schema.org/Number)- `companyId[*]`: Identificatore univoco di un'azienda  . Model: [https://schema.org/URL](https://schema.org/URL)- `compartmentId[*]`: Identificatore univoco dello scomparto in cui si trova la penna.  . Model: [https://schema.org/URL](https://schema.org/URL)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `deadAnimalsSinceDateOfArrival[number]`: Numero di animali morti dalla data di arrivo  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: Descrizione dell'articolo  - `farmId[*]`: Identificatore univoco della Fattoria in cui si trova la Penna.  . Model: [https://schema.org/URL](https://schema.org/URL)- `feedConsumption[number]`: La quantità totale di cibo che è stata mangiata dalle postazioni di alimentazione nel recinto. È misurata attraverso l'assunzione di mangime e la struttura specifica per permettere a un solo animale alla volta di mangiare.  . Model: [https://schema.org/Number](https://schema.org/Number)- `humidity[number]`: Quantità che rappresenta la quantità di vapore acqueo presente nell'atmosfera nella penna.  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificatore univoco dell'entità  - `lastUpdate[string]`: Data e ora in cui sono state effettuate le misurazioni dell'elemento  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `luminosity[number]`: La luminosità di una sorgente luminosa di una certa lunghezza d'onda in corrispondenza dell'elemento  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: Il nome di questo elemento.  - `numAnimals[number]`: Numero di animali contenuti nel recinto.  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `relatedSource[array]`: Elenco di ID che l'entità corrente può avere in applicazioni esterne.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `sex[string]`: Il sesso degli animali contenuti nel recinto  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `temperature[number]`: Temperatura della penna.  Unirs:' grado Celsius'  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: Tipo di entità NGSI. deve essere Pen  - `waterConsumption[number]`: La quantità totale di acqua che esce dal rubinetto o dai rubinetti del recinto. Viene misurata attraverso misuratori di portata e una struttura specifica per far bere solo un animale alla volta.  . Model: [https://schema.org/Number](https://schema.org/Number)- `weightStDev[number]`: La deviazione standard associata al peso medio degli animali contenuti nella Penna.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `lastUpdate`  - `type`  ## Modello di dati descrizione delle proprietà  
+- `id`  - `lastUpdate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pen:    
@@ -480,9 +494,14 @@ Pen:
   x-version: 0.2.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Esempi di payload  
 #### Penna NGSI-v2 valori-chiave Esempio  
 Ecco un esempio di Pen in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -519,8 +538,10 @@ Pen:
   "temperature": 25  
 }  
 ```  
+</details>  
 #### Pen NGSI-v2 normalizzato Esempio  
 Ecco un esempio di Pen in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -584,8 +605,10 @@ Pen:
   }  
 }  
 ```  
+</details>  
 #### Penna NGSI-LD valori-chiave Esempio  
 Ecco un esempio di Pen in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -626,8 +649,10 @@ Pen:
     ]  
 }  
 ```  
+</details>  
 #### Penna NGSI-LD normalizzata Esempio  
 Ecco un esempio di Pen in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -690,8 +715,17 @@ Pen:
         "value": 25  
     },  
     "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld"  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
