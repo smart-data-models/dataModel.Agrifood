@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: Compartimento  
-======================  
+======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Área artificial en un edificio o departamento que es medida por ciertos sensores. Un compartimento no es necesariamente un separador físico. Puede ser un departamento o una agrupación de varios corrales dentro de un departamento que están siendo medidos por el mismo sensor.**  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `additionalInfo`: lista de todos los valores crudos enviados por el sensor/plataforma con todas las posibles propiedades extra que no están incluidas en la estructura principal. Es una estructura JSON similar a esta: { 'temperatura': '32', 'humedad':'42'}  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `arrivalTimestamp`: Fecha y hora en la que se introdujo el animal en el compartimento  - `avgGrowth`: El crecimiento medio del peso de los animales en este compartimento  - `avgWeight`: El peso medio de los cerdos en este compartimento  - `buildingId`: Identificador único de un edificio en el que se encuentra el compartimento  - `co2`: La concentración de CO2 en el compartimento  - `companyId`: Identificador único de una empresa  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `empty`: Valor verdadero/falso si el compartimento está vacío  - `farmId`: Identificador único de una granja en la que se encuentra el compartimento  - `feedConsumption`: La cantidad total de comida que se ha consumido en los puestos de alimentación del compartimento  - `humidity`: Cantidad que representa la cantidad de vapor de agua en la atmósfera del compartimento  - `id`: Identificador único de la entidad  - `lastUpdate`: Fecha y hora en que se tomaron las mediciones en el compartimento. Marca de tiempo Unix  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `luminosity`: El brillo de una fuente de luz de una determinada longitud de onda en el compartimento  - `name`: El nombre de este artículo.  - `numAnimals`: Número de animales en el compartimento  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parentCompartmentId`: Identificador único del compartimento del que forma parte este compartimento. Se utiliza sólo cuando un compartimento contiene otros compartimentos  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `sex`: El sexo de los animales contenidos en el compartimento  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `temperature`: Temperatura del compartimento.  - `type`: Tipo de entidad NGSI. Tiene que ser Compartimento  - `waterConsumption`: La cantidad total de agua que salió del grifo o los grifos del compartimento  - `weightStDev`: La desviación estándar asociada al peso medio de los cerdos/lechones contenidos en el compartimento    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `additionalInfo[array]`: lista de todos los valores crudos enviados por el sensor/plataforma con todas las posibles propiedades extra que no están incluidas en la estructura principal. Es una estructura JSON similar a esta: { 'temperatura': '32', 'humedad':'42'}  - `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `arrivalTimestamp[string]`: Fecha y hora en la que se introdujo el animal en el compartimento  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `avgGrowth[number]`: El crecimiento medio del peso de los animales en este compartimento  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `avgWeight[number]`: El peso medio de los cerdos en este compartimento  . Model: [https://schema.org/Number](https://schema.org/Number)- `buildingId[*]`: Identificador único de un edificio en el que se encuentra el compartimento  - `co2[number]`: La concentración de CO2 en el compartimento  - `companyId[*]`: Identificador único de una empresa  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `empty[boolean]`: Valor verdadero/falso si el compartimento está vacío  - `farmId[*]`: Identificador único de una granja en la que se encuentra el compartimento  - `feedConsumption[number]`: La cantidad total de comida que se ha consumido en los puestos de alimentación del compartimento  - `humidity[number]`: Cantidad que representa la cantidad de vapor de agua en la atmósfera del compartimento  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `lastUpdate[number]`: Fecha y hora en que se tomaron las mediciones en el compartimento. Marca de tiempo Unix  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `luminosity[number]`: El brillo de una fuente de luz de una determinada longitud de onda en el compartimento  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: El nombre de este artículo.  - `numAnimals[number]`: Número de animales en el compartimento  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parentCompartmentId[*]`: Identificador único del compartimento del que forma parte este compartimento. Se utiliza sólo cuando un compartimento contiene otros compartimentos  - `relatedSource[array]`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `sex[string]`: El sexo de los animales contenidos en el compartimento  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `temperature[number]`: Temperatura del compartimento.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser Compartimento  - `waterConsumption[number]`: La cantidad total de agua que salió del grifo o los grifos del compartimento  - `weightStDev[number]`: La desviación estándar asociada al peso medio de los cerdos/lechones contenidos en el compartimento  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `lastUpdate`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `lastUpdate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Compartment:    
@@ -456,9 +470,14 @@ Compartment:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Compartimento NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un compartimento en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0",  
@@ -500,8 +519,10 @@ Compartment:
   "weightStDev": 2.3  
 }  
 ```  
+</details>  
 #### Compartimento NGSI-v2 normalizado Ejemplo  
 Este es un ejemplo de un compartimento en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0"  
@@ -610,8 +631,10 @@ Compartment:
   }  
 }  
 ```  
+</details>  
 #### Compartimento NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un compartimento en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
@@ -657,8 +680,10 @@ Compartment:
     ]  
 }  
 ```  
+</details>  
 #### Compartimento NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un compartimento en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
@@ -765,8 +790,17 @@ Compartment:
         "value": 2.3  
     },  
     "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
