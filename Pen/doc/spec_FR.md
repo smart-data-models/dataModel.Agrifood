@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : Pen  
-============  
+============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Pen/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Espace clôturé dans un bâtiment ou un service ou à l'extérieur abritant un groupe d'animaux. Les animaux dans un enclos peuvent se déplacer et interagir librement. Souvent, les enclos ne sont pas complètement séparés les uns des autres (demi-murs, barres de fer, clôtures,...), ce qui fait que les animaux des enclos voisins peuvent se voir/toucher**.  
 version : 0.2.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `additionalInfo`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {'name' : 'temperature', 'value' : 32}  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `arrivalTimestamp`: Date et heure d'arrivée des animaux dans l'enclos  - `avgGrowth`: La croissance moyenne du poids de l'animal dans cet enclos  - `avgWeight`: Le poids moyen de l'animal dans cet enclos.  - `buildingId`: Identifiant unique du bâtiment dans lequel se trouve l'élément.  - `co2`: La concentration de CO2 dans l'article  - `companyId`: Identifiant unique d'une entreprise  - `compartmentId`: Identifiant unique du compartiment dans lequel se trouve le stylo.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `deadAnimalsSinceDateOfArrival`: Nombre d'animaux morts depuis la date d'arrivée  - `description`: Une description de cet article  - `farmId`: Identifiant unique de l'exploitation agricole dans laquelle se trouve l'enclos.  - `feedConsumption`: La quantité totale d'aliments qui a été consommée à partir de la ou des stations d'alimentation dans l'enclos. Elle est mesurée par la consommation d'aliments et la structure spécifique permettant de laisser un seul animal manger à la fois.  - `humidity`: Quantité représentant la quantité de vapeur d'eau présente dans l'atmosphère dans le stylo.  - `id`: Identifiant unique de l'entité  - `lastUpdate`: Date et heure auxquelles les mesures de l'article ont été prises.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity`: La luminosité d'une source lumineuse d'une certaine longueur d'onde à l'article  - `name`: Le nom de cet élément.  - `numAnimals`: Nombre d'animaux contenus dans l'enclos.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex`: Le sexe des animaux contenus dans l'enclos  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température de la plume.  Unirs:' degré Celsius'  - `type`: Type d'entité NGSI. il doit s'agir de Pen  - `waterConsumption`: La quantité totale d'eau qui est sortie du ou des robinets de l'enclos. Elle est mesurée par des débitmètres et une structure spécifique pour ne laisser boire qu'un seul animal à la fois.  - `weightStDev`: L'écart-type associé au poids moyen des animaux contenus dans l'enclos.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `additionalInfo[array]`: liste de toutes les valeurs brutes envoyées par le capteur/la plateforme avec toutes les propriétés supplémentaires éventuelles qui ne sont pas incluses dans la structure principale. Il s'agit d'une structure JSON similaire à celle-ci : {nom' : 'température', 'valeur' : 32}  - `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `arrivalTimestamp[string]`: Date et heure d'arrivée des animaux dans l'enclos  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `avgGrowth[number]`: La croissance moyenne du poids de l'animal dans cet enclos  . Model: [https://schema.org/Number](https://schema.org/Number)- `avgWeight[number]`: Le poids moyen de l'animal dans cet enclos.  . Model: [https://schema.org/Number](https://schema.org/Number)- `buildingId[*]`: Identifiant unique du bâtiment dans lequel se trouve l'élément.  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `co2[number]`: La concentration de CO2 dans l'article  . Model: [https://schema.org/Number](https://schema.org/Number)- `companyId[*]`: Identifiant unique d'une entreprise  . Model: [https://schema.org/URL](https://schema.org/URL)- `compartmentId[*]`: Identifiant unique du compartiment dans lequel se trouve le stylo.  . Model: [https://schema.org/URL](https://schema.org/URL)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `deadAnimalsSinceDateOfArrival[number]`: Nombre d'animaux morts depuis la date d'arrivée  . Model: [https://schema.org/Number](https://schema.org/Number)- `description[string]`: Une description de cet article  - `farmId[*]`: Identifiant unique de l'exploitation agricole dans laquelle se trouve l'enclos.  . Model: [https://schema.org/URL](https://schema.org/URL)- `feedConsumption[number]`: La quantité totale d'aliments qui a été consommée à partir de la ou des stations d'alimentation dans l'enclos. Elle est mesurée par la consommation d'aliments et la structure spécifique permettant de laisser un seul animal manger à la fois.  . Model: [https://schema.org/Number](https://schema.org/Number)- `humidity[number]`: Quantité représentant la quantité de vapeur d'eau présente dans l'atmosphère dans le stylo.  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `lastUpdate[string]`: Date et heure auxquelles les mesures de l'article ont été prises.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `luminosity[number]`: La luminosité d'une source lumineuse d'une certaine longueur d'onde à l'article  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: Le nom de cet élément.  - `numAnimals[number]`: Nombre d'animaux contenus dans l'enclos.  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `sex[string]`: Le sexe des animaux contenus dans l'enclos  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature[number]`: Température de la plume.  Unirs:' degré Celsius'  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: Type d'entité NGSI. il doit s'agir de Pen  - `waterConsumption[number]`: La quantité totale d'eau qui est sortie du ou des robinets de l'enclos. Elle est mesurée par des débitmètres et une structure spécifique pour ne laisser boire qu'un seul animal à la fois.  . Model: [https://schema.org/Number](https://schema.org/Number)- `weightStDev[number]`: L'écart-type associé au poids moyen des animaux contenus dans l'enclos.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `lastUpdate`  - `type`  ## Description des propriétés du modèle de données  
+- `id`  - `lastUpdate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pen:    
@@ -480,9 +494,14 @@ Pen:
   x-version: 0.2.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Pen NGSI-v2 valeurs-clés Exemple  
-Voici un exemple d'un Pen au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un stylo au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -519,8 +538,10 @@ Pen:
   "temperature": 25  
 }  
 ```  
+</details>  
 #### Pen NGSI-v2 normalisé Exemple  
 Voici un exemple d'un stylo au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -584,8 +605,10 @@ Pen:
   }  
 }  
 ```  
+</details>  
 #### Pen NGSI-LD key-values Exemple  
 Voici un exemple d'un stylo au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -626,8 +649,10 @@ Pen:
     ]  
 }  
 ```  
+</details>  
 #### Pen NGSI-LD normalisé Exemple  
 Voici un exemple d'un stylo au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",  
@@ -690,8 +715,17 @@ Pen:
         "value": 25  
     },  
     "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld"  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
