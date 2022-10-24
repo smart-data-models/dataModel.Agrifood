@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティコンパートメント  
-==============  
+==============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな説明。**建物または部門内の、特定のセンサーによって測定される人工的な領域。区画は必ずしも物理的な区切りではありません。それは部門または同じセンサーによって測定されている部門内のいくつかのペンのグループ化であることができます**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `additionalInfo`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{ '温度': '32'、'湿度':'42'}。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `arrivalTimestamp`: 動物が挿入された日付と時間  - `avgGrowth`: この区画の動物の平均的な体重の増加量  - `avgWeight`: この区画の豚の平均重量  - `buildingId`: コンパートメントが位置する建物の一意な識別子  - `co2`: コンパートメント内のCO2濃度  - `companyId`: 企業の一意な識別子  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `empty`: コンパートメントが空の場合、真/偽の値  - `farmId`: の区画がある農場の固有識別子。  - `feedConsumption`: コンパートメント内の給餌ステーションから食べられた餌の総量  - `humidity`: コンパートメント内の大気中の水蒸気量を表す量  - `id`: エンティティの一意な識別子  - `lastUpdate`: コンパートメント内の測定が行われた日付と時刻。Unixタイムスタンプ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity`: ある波長の光源がコンパートメントにあるときの明るさ  - `name`: このアイテムの名称です。  - `numAnimals`: コンパートメント内の動物数  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `parentCompartmentId`: このコンパートメントが含まれるコンパートメントの一意の識別子。コンパートメントが他のコンパートメントを含むときのみ使用される。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `sex`: 収納されている動物の性別  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: コンパートメントの温度。  - `type`: NGSI エンティティタイプ。  - `waterConsumption`: コンパートメント内の蛇口から出た水の総量  - `weightStDev`: 豚/子豚の平均重量に関連する標準偏差は、コンパートメントに含まれている    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `additionalInfo[array]`: センサー/プラットフォームから送信されたすべての生の値のリストで、メイン構造には含まれない可能性のあるすべての追加プロパティを含みます。これは、以下のようなJSON構造体である。{ '温度': '32'、'湿度':'42'}。  - `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `arrivalTimestamp[string]`: 動物が挿入された日付と時間  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `avgGrowth[number]`: この区画の動物の平均的な体重の増加量  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `avgWeight[number]`: この区画の豚の平均重量  . Model: [https://schema.org/Number](https://schema.org/Number)- `buildingId[*]`: コンパートメントが位置する建物の一意な識別子  - `co2[number]`: コンパートメント内のCO2濃度  - `companyId[*]`: 企業の一意な識別子  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `empty[boolean]`: コンパートメントが空の場合、真/偽の値  - `farmId[*]`: の区画がある農場の固有識別子。  - `feedConsumption[number]`: コンパートメント内の給餌ステーションから食べられた餌の総量  - `humidity[number]`: コンパートメント内の大気中の水蒸気量を表す量  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意な識別子  - `lastUpdate[number]`: コンパートメント内の測定が行われた日付と時刻。Unixタイムスタンプ  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `luminosity[number]`: ある波長の光源がコンパートメントにあるときの明るさ  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: このアイテムの名称です。  - `numAnimals[number]`: コンパートメント内の動物数  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `parentCompartmentId[*]`: このコンパートメントが含まれるコンパートメントの一意の識別子。コンパートメントが他のコンパートメントを含むときのみ使用される。  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `sex[string]`: 収納されている動物の性別  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature[number]`: コンパートメントの温度。  - `type[string]`: NGSI エンティティタイプ。  - `waterConsumption[number]`: コンパートメント内の蛇口から出た水の総量  - `weightStDev[number]`: 豚/子豚の平均重量に関連する標準偏差は、コンパートメントに含まれている  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `lastUpdate`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `lastUpdate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Compartment:    
@@ -456,9 +470,14 @@ Compartment:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### コンパートメント NGSI-v2 キー値例  
 以下は、CompartmentをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0",  
@@ -500,8 +519,10 @@ Compartment:
   "weightStDev": 2.3  
 }  
 ```  
+</details>  
 #### コンパートメント NGSI-v2 正規化例  
 以下は、正規化された JSON-LD 形式の Compartment の例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0"  
@@ -610,8 +631,10 @@ Compartment:
   }  
 }  
 ```  
+</details>  
 #### コンパートメント NGSI-LD キー値例  
 ここでは、CompartmentをJSON-LD形式でkey-valuesとして表現した例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
@@ -657,8 +680,10 @@ Compartment:
     ]  
 }  
 ```  
+</details>  
 #### コンパートメント NGSI-LD 正規化例  
 以下は、正規化された JSON-LD 形式の Compartment の例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
@@ -765,8 +790,17 @@ Compartment:
         "value": 2.3  
     },  
     "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
