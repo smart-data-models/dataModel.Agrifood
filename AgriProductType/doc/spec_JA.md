@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティAgriProductType  
-=====================  
+=====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriProductType/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述。**このエンティティは、一般的な農産物タイプの調和された記述を含む。このエンティティは、主に農業の垂直方向と関連する IoT アプリケーションに関連するものである。AgriProductType は、製品タイプを柔軟な方法でグループ化できる階層構造を含んでいる。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `agroVocConcept`: この項目に関連するアグロボック用語への言及  - `alternateName`: この項目の別称  - `category`: 商品のカテゴリー。Enum:'fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity'（肥料、作物栄養、作物保護、作物品種、収穫物）。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasAgriProductTypeChildren`: 子製品タイプへの参照、すなわち階層内のこのエンティティの直下にある。  - `hasAgriProductTypeParent`: 親製品タイプへの参照、すなわち、階層内のエンティティのすぐ上にある。  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedSource`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `root`: この製品が AgriProductType 階層のルートであることを示す論理的なインジケータである。論理的な真はルートであることを示す。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Type。AgriProductTypeである必要があります。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `agroVocConcept[string]`: この項目に関連するアグロボック用語への言及  . Model: [http://schema.org/URL](http://schema.org/URL)- `alternateName[string]`: この項目の別称  - `category[array]`: 商品のカテゴリー。Enum:'fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity'（肥料、作物栄養、作物保護、作物品種、収穫物）。  . Model: [http://schema.org/URL](http://schema.org/URL)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `hasAgriProductTypeChildren[array]`: 子製品タイプへの参照、すなわち階層内のこのエンティティの直下にある。  - `hasAgriProductTypeParent[*]`: 親製品タイプへの参照、すなわち、階層内のエンティティのすぐ上にある。  - `id[*]`: エンティティの一意な識別子  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `root[boolean]`: この製品が AgriProductType 階層のルートであることを示す論理的なインジケータである。論理的な真はルートであることを示す。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entity Type。AgriProductTypeである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `name`  - `root`  - `type`    
+- `id`  - `name`  - `root`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 このエンティティは、主に農業の垂直方向と関連する IoT アプリケーションに関連する。AgriProductTypeは、製品タイプを柔軟にグループ化できる階層構造を含む。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriProductType:    
@@ -170,9 +183,14 @@ AgriProductType:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### AgriProductType NGSI-v2 key-value 例．  
 AgriProductTypeをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -198,8 +216,10 @@ AgriProductType:
   ]  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-v2 正規化例  
 以下は、AgriProductType を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -250,8 +270,10 @@ AgriProductType:
   }  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-LD キー値例  
 AgriProductTypeをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -283,8 +305,10 @@ AgriProductType:
     ]  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-LD 正規化例  
 以下は、AgriProductType を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -335,8 +359,17 @@ AgriProductType:
         "value": true  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
