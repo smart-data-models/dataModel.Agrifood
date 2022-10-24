@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: AgriProductType  
-========================  
+========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriProductType/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Esta entidad contiene una descripción armonizada de un tipo de producto agrícola genérico. Esta entidad se asocia principalmente con el vertical agrícola y las aplicaciones IoT relacionadas. El AgriProductType incluye una estructura jerárquica que permite agrupar los tipos de productos de forma flexible.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descripción global: **Esta entidad contiene una descripción armonizada de un tipo de producto agrícola genérico. Esta entidad se asocia principalmente con el vertical agrícola y las aplicaciones de IoT relacionadas. El AgriProductType incluye una estructura jerárquica que permite agrupar los tipos de productos de forma flexible.**  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `agroVocConcept`: Referencia al término agrovoc asociado a este artículo  - `alternateName`: Un nombre alternativo para este artículo  - `category`: Categoría del producto. Enum:'fertilizante, cultivoNutrición, cultivoProtección, cultivoVariedad, cosechaMateria prima'.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAgriProductTypeChildren`: Referencia a los tipos de productos inferiores, es decir, inmediatamente por debajo de esta entidad en la jerarquía  - `hasAgriProductTypeParent`: Referencia al tipo de producto padre, es decir, inmediatamente superior a la entidad en la jerarquía.  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `root`: Un indicador lógico de que este producto es la raíz de una jerarquía AgriProductType. Lógico verdadero indica que es la raíz.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI: Tiene que ser AgriProductType    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `agroVocConcept[string]`: Referencia al término agrovoc asociado a este artículo  . Model: [http://schema.org/URL](http://schema.org/URL)- `alternateName[string]`: Un nombre alternativo para este artículo  - `category[array]`: Categoría del producto. Enum:'fertilizante, cultivoNutrición, cultivoProtección, cultivoVariedad, cosechaMateria prima'.  . Model: [http://schema.org/URL](http://schema.org/URL)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `hasAgriProductTypeChildren[array]`: Referencia a los tipos de productos inferiores, es decir, inmediatamente por debajo de esta entidad en la jerarquía  - `hasAgriProductTypeParent[*]`: Referencia al tipo de producto padre, es decir, inmediatamente superior a la entidad en la jerarquía.  - `id[*]`: Identificador único de la entidad  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource[array]`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `root[boolean]`: Un indicador lógico de que este producto es la raíz de una jerarquía AgriProductType. Lógico verdadero indica que es la raíz.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI: Tiene que ser AgriProductType  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `name`  - `root`  - `type`    
+- `id`  - `name`  - `root`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Esta entidad se asocia principalmente con el vertical agrícola y las aplicaciones IoT relacionadas. El AgriProductType incluye una estructura jerárquica que permite agrupar los tipos de productos de forma flexible.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriProductType:    
@@ -170,9 +183,14 @@ AgriProductType:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### AgriProductType NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un AgriProductType en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -198,8 +216,10 @@ AgriProductType:
   ]  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-v2 normalizado Ejemplo  
 Este es un ejemplo de un AgriProductType en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -250,8 +270,10 @@ AgriProductType:
   }  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un AgriProductType en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -283,8 +305,10 @@ AgriProductType:
     ]  
 }  
 ```  
+</details>  
 #### AgriProductType NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un AgriProductType en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",  
@@ -335,8 +359,17 @@ AgriProductType:
         "value": true  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
