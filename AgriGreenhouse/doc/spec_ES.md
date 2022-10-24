@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: AgriGreenhouse  
-=======================  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriGreenhouse/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Esta entidad contiene una descripción armonizada de las condiciones registradas dentro de un invernadero genérico, un tipo de AgriParcela.**  
 versión: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `alternateName`: Un nombre alternativo para este artículo  - `belongsTo`: Entidad a la que pertenece el invernadero  - `co2`: La concentración interior de C02 medida nominalmente en mg/L  - `dailyLight`: Luz acumulada diaria medida en kW por metro cuadrado  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `drainFlow`: El caudal de desagüe observado en litros por segundo  - `hasAgriParcelChildren`: Subregistros de AgriParcela relacionados con esta entidad  - `hasAgriParcelParent`: Referencia a la entidad AgriParcel a la que se refiere esta entidad  - `hasDevice`: Referencia a los dispositivos IoT asociados a este invernadero, es decir, sensores y controles.  - `hasWaterQualityObserved`: Referencia a uno o más registros de observación de la calidad del agua vigentes para esta entidad  - `hasWeatherObserved`: Referencia al registro de observación meteorológica actual para esta entidad  - `id`: Identificador único de la entidad  - `leafTemperature`: La humedad relativa interior expresada como un número entre 0 y 1 que representa el rango de 0% a 100 (%).<br/><br/>0 <= humedad relativa <= 1  - `name`: El nombre de este artículo.  - `ownedBy`: Propietario (persona u organización) del agroinvernadero  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `relativeHumidity`: La temperatura media del aire del invernadero, nominalmente en grados centígrados.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser AgriGreenhouse    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `belongsTo[*]`: Entidad a la que pertenece el invernadero  - `co2[integer]`: La concentración interior de C02 medida nominalmente en mg/L  . Model: [http://schema.org/Number](http://schema.org/Number)- `dailyLight[integer]`: Luz acumulada diaria medida en kW por metro cuadrado  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `drainFlow[object]`: El caudal de desagüe observado en litros por segundo  . Model: [http://schema.org/Number](http://schema.org/Number)- `hasAgriParcelChildren[array]`: Subregistros de AgriParcela relacionados con esta entidad  - `hasAgriParcelParent[*]`: Referencia a la entidad AgriParcel a la que se refiere esta entidad  - `hasDevice[array]`: Referencia a los dispositivos IoT asociados a este invernadero, es decir, sensores y controles.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasWaterQualityObserved[array]`: Referencia a uno o más registros de observación de la calidad del agua vigentes para esta entidad  - `hasWeatherObserved[*]`: Referencia al registro de observación meteorológica actual para esta entidad  - `id[*]`: Identificador único de la entidad  - `leafTemperature[integer]`: La humedad relativa interior expresada como un número entre 0 y 1 que representa el rango de 0% a 100 (%).<br/><br/>0 <= humedad relativa <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `name[string]`: El nombre de este artículo.  - `ownedBy[*]`: Propietario (persona u organización) del agroinvernadero  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedSource[array]`: Lista de identificadores que la entidad actual puede tener en aplicaciones externas  - `relativeHumidity[number]`: La temperatura media del aire del invernadero, nominalmente en grados centígrados.  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser AgriGreenhouse  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `hasAgriParcelParent`  - `id`  - `type`    
+- `hasAgriParcelParent`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Esta entidad está asociada principalmente con el vertical agrícola y las aplicaciones de IoT relacionadas.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriGreenhouse:    
@@ -247,9 +260,14 @@ AgriGreenhouse:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### AgriGreenhouse NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un AgriGreenhouse en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -296,8 +314,10 @@ AgriGreenhouse:
   ]  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-v2 normalizado Ejemplo  
-Aquí hay un ejemplo de un AgriGreenhouse en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Este es un ejemplo de un AgriGreenhouse en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -390,8 +410,10 @@ AgriGreenhouse:
   }  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un AgriGreenhouse en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -442,8 +464,10 @@ AgriGreenhouse:
     ]  
 }  
 ```  
+</details>  
 #### AgriGreenhouse NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un AgriGreenhouse en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",  
@@ -541,8 +565,17 @@ AgriGreenhouse:
         ]  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
