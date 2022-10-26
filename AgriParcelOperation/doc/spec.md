@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entity: AgriParcelOperation  
-===========================  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
 version: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endedAt`: Timestamp when the operation actually finished.  - `hasAgriParcel`: Reference to the AgriParcel  - `hasAgriProductType`: Reference to the AgriProductType used/applied.  - `hasOperator`: Reference to the operator conducting the operation  - `id`: Unique identifier of the entity  - `irrigationRecord`: Relationship with the irrigation record of the execution  - `name`: The name of this item.  - `operationType`: A choice from an enumerated list describing the operation performed on the parcel. Enum:'fertiliser, inspection, pesticide, water, other'  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `plannedEndAt`: The planned end date/timestamp for the operation. <br/><br/>Note that this is advisory and the actual time the operation finishes may be before or after the planned end.  - `plannedStartAt`: The planned start date/timestamp for the operation. Note that this is advisory and the actual time the operation starts may be before or after the planned start  - `quantity`: The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids.  - `relatedSource`: List of IDs the current entity may have in external applications  - `reportedAt`: Timestamp when the event fault was reported.  - `result`: A description of the results of the operation. Enum:'ok, aborted, failed'  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startedAt`: Timestamp when the operation actually started to be performed.  - `status`: A choice from an enumerated list describing the status. Enum:'planned, ongoing, finished, scheduled, cancelled'  - `type`: NGSI Entity Type. It has to be AgriParcelOperation  - `waterSource`: Type of water sources. Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'.  - `workOrder`: Relationship with the workorder for the execution  - `workRecord`: Relationship with the work record of the execution    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `alternateName[string]`: An alternative name for this item  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `endedAt[string]`: Timestamp when the operation actually finished.  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `hasAgriParcel[*]`: Reference to the AgriParcel  - `hasAgriProductType[*]`: Reference to the AgriProductType used/applied.  - `hasOperator[*]`: Reference to the operator conducting the operation  - `id[*]`: Unique identifier of the entity  - `irrigationRecord[string]`: Relationship with the irrigation record of the execution  . Model: [http://schema.org/URL](http://schema.org/URL)- `name[string]`: The name of this item.  - `operationType[string]`: A choice from an enumerated list describing the operation performed on the parcel. Enum:'fertiliser, inspection, pesticide, water, other'  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `plannedEndAt[string]`: The planned end date/timestamp for the operation. <br/><br/>Note that this is advisory and the actual time the operation finishes may be before or after the planned end.  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `plannedStartAt[string]`: The planned start date/timestamp for the operation. Note that this is advisory and the actual time the operation starts may be before or after the planned start  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `quantity[number]`: The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids.  . Model: [http://schema.org/Number](http://schema.org/Number)- `relatedSource[array]`: List of IDs the current entity may have in external applications  - `reportedAt[string]`: Timestamp when the event fault was reported.  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `result[string]`: A description of the results of the operation. Enum:'ok, aborted, failed'  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startedAt[string]`: Timestamp when the operation actually started to be performed.  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `status[string]`: A choice from an enumerated list describing the status. Enum:'planned, ongoing, finished, scheduled, cancelled'  - `type[string]`: NGSI Entity Type. It has to be AgriParcelOperation  - `waterSource[string]`: Type of water sources. Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `workOrder[string]`: Relationship with the workorder for the execution  . Model: [http://schema.org/URL](http://schema.org/URL)- `workRecord[string]`: Relationship with the work record of the execution  . Model: [http://schema.org/URL](http://schema.org/URL)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`    
+- `hasAgriParcel`  - `id`  - `plannedEndAt`  - `plannedStartAt`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 This entity is primarily associated with the agricultural vertical and related IoT applications.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriParcelOperation:    
@@ -270,9 +283,14 @@ AgriParcelOperation:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### AgriParcelOperation NGSI-v2 key-values Example    
 Here is an example of a AgriParcelOperation in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -308,8 +326,10 @@ AgriParcelOperation:
   "irrigationRecord": "https://example.com/agriparcelrecords/irrigationrecord1"  
 }  
 ```  
+</details>  
 #### AgriParcelOperation NGSI-v2 normalized Example    
 Here is an example of a AgriParcelOperation in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -400,8 +420,10 @@ AgriParcelOperation:
   }  
 }  
 ```  
+</details>  
 #### AgriParcelOperation NGSI-LD key-values Example    
 Here is an example of a AgriParcelOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -456,8 +478,10 @@ AgriParcelOperation:
     ]  
 }  
 ```  
+</details>  
 #### AgriParcelOperation NGSI-LD normalized Example    
 Here is an example of a AgriParcelOperation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",  
@@ -565,8 +589,17 @@ AgriParcelOperation:
         "value": "https://example.com/agriparcelrecords/workrecord1"  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
