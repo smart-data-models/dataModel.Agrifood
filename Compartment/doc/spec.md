@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entity: Compartment  
-===================  
+===================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/Compartment/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **Artificial area in a building or department that is measured by certain sensors. A compartment is not necessarily a physical separator. It can be a department or a grouping of several pens within a department that are being measured by the same sensor.**  
 version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `additionalInfo`: list of all the raw values sent by the sensor/platform with all the possible extra properties that are not included in the main structure. It is a JSON structure similar to this: { 'temperature': '32', 'humidity':'42'}  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `arrivalTimestamp`: Date and Time at which the animal were inserted in the compartment  - `avgGrowth`: The average growth in weight of the animals in this compartment  - `avgWeight`: The average weight of the pigs in this compartment  - `buildingId`: Unique identifier of a building the compartment is located in  - `co2`: The CO2 concentration in the compartment  - `companyId`: Unique identifier of a company  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `empty`: True/False value if the compartment is empty  - `farmId`: Unique identifier of a farm where the compartment is located in  - `feedConsumption`: The total amount of food that has been eaten from the feeding station(s) in the compartment  - `humidity`: Quantity representing the amount of water vapour in the atmosphere in the compartment  - `id`: Unique identifier of the entity  - `lastUpdate`: Date and time at which the measurements in the compartment were taken. Unix timestamp  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `luminosity`: The brightness of a light source of a certain wavelength at the compartment  - `name`: The name of this item.  - `numAnimals`: Number of animals in the compartment  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parentCompartmentId`: Unique identifier of the  compartment where this compartment is a part of. It is used only when a compartment contains other compartments  - `relatedSource`: List of IDs the current entity may have in external applications  - `seeAlso`: list of uri pointing to additional resources about the item  - `sex`: The sex of the animals contained in the compartment  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`: Temperature of the compartment.  - `type`: NGSI Entity type. it has to be Compartment  - `waterConsumption`: The total amount of water that came out from the tap or taps in the compartment  - `weightStDev`: The standard deviation associated to the average weight of the pigs/piglets contained in the compartment    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `additionalInfo[array]`: list of all the raw values sent by the sensor/platform with all the possible extra properties that are not included in the main structure. It is a JSON structure similar to this: { 'temperature': '32', 'humidity':'42'}  - `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `arrivalTimestamp[string]`: Date and Time at which the animal were inserted in the compartment  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `avgGrowth[number]`: The average growth in weight of the animals in this compartment  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `avgWeight[number]`: The average weight of the pigs in this compartment  . Model: [https://schema.org/Number](https://schema.org/Number)- `buildingId[*]`: Unique identifier of a building the compartment is located in  - `co2[number]`: The CO2 concentration in the compartment  - `companyId[*]`: Unique identifier of a company  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `empty[boolean]`: True/False value if the compartment is empty  - `farmId[*]`: Unique identifier of a farm where the compartment is located in  - `feedConsumption[number]`: The total amount of food that has been eaten from the feeding station(s) in the compartment  - `humidity[number]`: Quantity representing the amount of water vapour in the atmosphere in the compartment  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Unique identifier of the entity  - `lastUpdate[number]`: Date and time at which the measurements in the compartment were taken. Unix timestamp  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `luminosity[number]`: The brightness of a light source of a certain wavelength at the compartment  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item.  - `numAnimals[number]`: Number of animals in the compartment  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parentCompartmentId[*]`: Unique identifier of the  compartment where this compartment is a part of. It is used only when a compartment contains other compartments  - `relatedSource[array]`: List of IDs the current entity may have in external applications  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `sex[string]`: The sex of the animals contained in the compartment  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature[number]`: Temperature of the compartment.  - `type[string]`: NGSI Entity type. it has to be Compartment  - `waterConsumption[number]`: The total amount of water that came out from the tap or taps in the compartment  - `weightStDev[number]`: The standard deviation associated to the average weight of the pigs/piglets contained in the compartment  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `lastUpdate`  - `type`  ## Data Model description of properties  
+- `id`  - `lastUpdate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Compartment:    
@@ -456,9 +470,14 @@ Compartment:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### Compartment NGSI-v2 key-values Example    
 Here is an example of a Compartment in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0",  
@@ -500,8 +519,10 @@ Compartment:
   "weightStDev": 2.3  
 }  
 ```  
+</details>  
 #### Compartment NGSI-v2 normalized Example    
 Here is an example of a Compartment in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0"  
@@ -610,8 +631,10 @@ Compartment:
   }  
 }  
 ```  
+</details>  
 #### Compartment NGSI-LD key-values Example    
 Here is an example of a Compartment in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
@@ -657,8 +680,10 @@ Compartment:
     ]  
 }  
 ```  
+</details>  
 #### Compartment NGSI-LD normalized Example    
 Here is an example of a Compartment in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:a88c6069-86c4-4c09-8621-fc5c58f216e0:001",  
@@ -765,8 +790,17 @@ Compartment:
         "value": 2.3  
     },  
     "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
