@@ -1,0 +1,3 @@
+/* (Beta) Export of data model AnimalDisease of the subject dataModel.Agrifood for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE AnimalDisease_type AS ENUM ('AnimalDisease');
+CREATE TABLE AnimalDisease (address json, alternateName text, animals json, areaServed text, dataProvider text, date timestamp, dateCreated timestamp, dateModified timestamp, description text, diagnosticTest text, disease text, id text, location json, name text, owner json, seeAlso json, source text, type AnimalDisease_type, veterinarian text, veterinarianTreatment text);
