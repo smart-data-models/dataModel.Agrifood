@@ -1,0 +1,3 @@
+/* (Beta) Export of data model MeatProduct of the subject dataModel.Agrifood for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE MeatProduct_type AS ENUM ('MeatProduct');
+CREATE TABLE MeatProduct (address json, alternateName text, areaServed text, carcass text, dataProvider text, date timestamp, dateCreated timestamp, dateModified timestamp, description text, id text, location json, name text, owner json, seeAlso json, source text, type MeatProduct_type, weight integer);
