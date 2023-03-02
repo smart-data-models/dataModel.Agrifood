@@ -1,35 +1,35 @@
 AgriParcelOperation:
-  description: 'This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'
+  description: This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.
   properties:
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     endedAt:
-      description: 'Timestamp when the operation actually finished.'
+      description: Timestamp when the operation actually finished.
       format: date-time
       type: string
       x-ngsi:
@@ -37,65 +37,65 @@ AgriParcelOperation:
         type: Property
     hasAgriParcel:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Reference to the AgriParcel'
+      description: Reference to the AgriParcel
       x-ngsi:
         type: Relationship
     hasAgriProductType:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Reference to the AgriProductType used/applied.'
+      description: Reference to the AgriProductType used/applied.
       x-ngsi:
         type: Relationship
     hasOperator:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Reference to the operator conducting the operation'
+      description: Reference to the operator conducting the operation
       x-ngsi:
         type: Relationship
     id:
       anyOf: &agriparceloperation_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     irrigationRecord:
-      description: 'Relationship with the irrigation record of the execution'
+      description: Relationship with the irrigation record of the execution
       format: uri
       type: string
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
@@ -111,49 +111,49 @@ AgriParcelOperation:
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *agriparceloperation_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     plannedEndAt:
-      description: 'The planned end date/timestamp for the operation. <br/><br/>Note that this is advisory and the actual time the operation finishes may be before or after the planned end.'
+      description: The planned end date/timestamp for the operation. <br/><br/>Note that this is advisory and the actual time the operation finishes may be before or after the planned end.
       format: date-time
       type: string
       x-ngsi:
         model: http://schema.org/DateTime
         type: Property
     plannedStartAt:
-      description: 'The planned start date/timestamp for the operation. Note that this is advisory and the actual time the operation starts may be before or after the planned start'
+      description: The planned start date/timestamp for the operation. Note that this is advisory and the actual time the operation starts may be before or after the planned start
       format: date-time
       type: string
       x-ngsi:
         model: http://schema.org/DateTime
         type: Property
     quantity:
-      description: 'The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids.'
+      description: The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids.
       minimum: 0
       type: number
       x-ngsi:
         model: http://schema.org/Number
         type: Property
     relatedSource:
-      description: 'List of IDs the current entity may have in external applications'
+      description: List of IDs the current entity may have in external applications
       items:
-        - type: object
-          values:
-            application:
-              anyOf: *agriparceloperation_-_properties_-_owner_-_items_-_anyof
-              description: 'Property. Unique identifier of the entity'
-            applicationEntityId:
-              type: string
+        properties:
+          application:
+            anyOf: *agriparceloperation_-_properties_-_owner_-_items_-_anyof
+            description: Property. Unique identifier of the entity
+          applicationEntityId:
+            type: string
+        type: object
       type: array
       x-ngsi:
         type: Property
     reportedAt:
-      description: 'Timestamp when the event fault was reported.'
+      description: Timestamp when the event fault was reported.
       format: date-time
       type: string
       x-ngsi:
@@ -169,7 +169,7 @@ AgriParcelOperation:
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -186,7 +186,7 @@ AgriParcelOperation:
       x-ngsi:
         type: Property
     startedAt:
-      description: 'Timestamp when the operation actually started to be performed.'
+      description: Timestamp when the operation actually started to be performed.
       format: date-time
       type: string
       x-ngsi:
@@ -204,7 +204,7 @@ AgriParcelOperation:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity Type. It has to be AgriParcelOperation'
+      description: NGSI Entity Type. It has to be AgriParcelOperation
       enum:
         - AgriParcelOperation
       type: string
@@ -216,22 +216,22 @@ AgriParcelOperation:
         - borehole
         - rainfall
         - river
-        - 'rainwater capture'
-        - 'water dam'
-        - 'commercial supply'
+        - rainwater capture
+        - water dam
+        - commercial supply
       type: string
       x-ngsi:
         model: http://schema.org/Text
         type: Property
     workOrder:
-      description: 'Relationship with the workorder for the execution'
+      description: Relationship with the workorder for the execution
       format: uri
       type: string
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
     workRecord:
-      description: 'Relationship with the work record of the execution'
+      description: Relationship with the work record of the execution
       format: uri
       type: string
       x-ngsi:
@@ -245,8 +245,8 @@ AgriParcelOperation:
     - plannedEndAt
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelOperation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelOperation/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3
