@@ -64,7 +64,7 @@
   },
   "hasAirQualityObserved": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"
+    "value": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"
   },
   "cropStatus": {
     "value": "seeded"
