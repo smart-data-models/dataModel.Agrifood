@@ -14,6 +14,7 @@
     ],
     "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",
     "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",
+    "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",
     "hasDevice": [
         "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
         "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",

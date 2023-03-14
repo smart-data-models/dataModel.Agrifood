@@ -115,6 +115,23 @@
                 ],
                 "description": "Relationship. Reference to the soil associated with this parcel of land"
             },
+            "hasAirQualityObserved": {
+                "anyOf": [
+                    {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256,
+                        "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                        "description": "Property. Identifier format of any NGSI entity"
+                    },
+                    {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Property. Identifier format of any NGSI entity"
+                    }
+                ],
+                "description": "Relationship. Reference to the air quality observed in this parcel of land"
+            },
             "cropStatus": {
                 "type": "string",
                 "description": "Property. Enum:'seeded, justBorn, growing, maturing, readyForHarvesting'. A choice from an enumerated list describing the crop planting status",

@@ -41,6 +41,10 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"
     },
+    "hasAirQualityObserved": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"
+    },
     "hasDevice": {
         "type": "Relationship",
         "object": [
