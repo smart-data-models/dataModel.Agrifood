@@ -158,6 +158,19 @@ AgriParcel:
       description: Reference to the soil associated with this parcel of land
       x-ngsi:
         type: Relationship
+    hasAirQualityObserved:
+      anyOf:
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      description: Reference to the air quality observed in this parcel of land
+      x-ngsi:
+        type: Relationship
     hasDevices:
       description: 'Reference to the IoT devices associated with this parcel i.e. sensors, controls.'
       items:
@@ -437,4 +450,4 @@ AgriParcel:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json
   x-model-tags: ""
-  x-version: 0.0.4
+  x-version: 0.0.5
