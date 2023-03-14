@@ -75,6 +75,7 @@
         "hasAgriProductTypeChildren": "https://smartdatamodels.org/dataModel.Agrifood/hasAgriProductTypeChildren",
         "hasAgriProductTypeParent": "https://smartdatamodels.org/dataModel.Agrifood/hasAgriProductTypeParent",
         "hasAgriSoil": "https://smartdatamodels.org/dataModel.Agrifood/hasAgriSoil",
+        "hasAirQualityObserved": "https://smartdatamodels.org/dataModel.Agrifood/hasAirQualityObserved",
         "hasBuilding": "https://smartdatamodels.org/dataModel.Agrifood/hasBuilding",
         "hasDevice": "https://smartdatamodels.org/dataModel.Agrifood/hasDevice",
         "hasDevices": "https://smartdatamodels.org/dataModel.Agrifood/hasDevices",
