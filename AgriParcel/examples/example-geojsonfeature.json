@@ -116,6 +116,10 @@
       "type": "Relationship",
       "object": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"
     },
+    "hasAirQualityObserved": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"
+    },
     "cropStatus": {
       "type": "Property",
       "value": "seeded"
