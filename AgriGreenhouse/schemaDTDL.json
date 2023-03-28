@@ -24,7 +24,7 @@
             "writable": true,
             "displayName": "co2",
             "@type": "Property",
-            "schema": "integer",
+            "schema": "long",
             "comment": "The measured interior C02 concentration nominally in mg/L"
         },
         {
@@ -32,7 +32,7 @@
             "writable": true,
             "displayName": "dailyLight",
             "@type": "Property",
-            "schema": "integer",
+            "schema": "long",
             "comment": "Daily Accumulated light measured in kW per square metre"
         },
         {
@@ -82,8 +82,8 @@
             "writable": true,
             "displayName": "leafTemperature",
             "@type": "Property",
-            "schema": "integer",
-            "comment": "The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1"
+            "schema": "long",
+            "comment": "The average leaf temperature nominally in degrees centigrade."
         },
         {
             "name": "name",
@@ -104,7 +104,7 @@
             "displayName": "relativeHumidity",
             "@type": "Property",
             "schema": "long",
-            "comment": "The average greenhouse air temperature nominally in degrees centigrade."
+            "comment": "The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1"
         },
         {
             "name": "seeAlso",
