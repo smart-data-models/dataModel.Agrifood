@@ -45,7 +45,7 @@ The following entity types are available:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 8 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 11 current contributors of the data models of this Subject.
 
 
 ### Contribution
