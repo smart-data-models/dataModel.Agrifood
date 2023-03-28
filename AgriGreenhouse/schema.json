@@ -108,11 +108,11 @@
           "type": "number",
           "minimum": 0.0,
           "maximum": 1.0,
-          "description": "Property. Model:'http://schema.org/Number'. Units:'Degrees centigrade'. The average greenhouse air temperature nominally in degrees centigrade."
+          "description": "Property. Model:'http://schema.org/Number'. Units:'Degrees centigrade'. The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1"
         },
         "leafTemperature": {
           "type": "integer",
-          "description": "Property. Model:'http://schema.org/Number'. The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1"
+          "description": "Property. Model:'http://schema.org/Number'. The average leaf temperature nominally in degrees centigrade."
         },
         "co2": {
           "type": "integer",
