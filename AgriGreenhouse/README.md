@@ -1,4 +1,5 @@
-# AgriGreenhouse
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
+# AgriGreenhouse
 Version: 0.0.2
 
 ## Description 
@@ -19,6 +20,8 @@ Link zur [deutschen Spezifikation](https://github.com/smart-data-models/dataMode
 Link alla [specifica](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/doc/spec_IT.md)
 
 [仕様へのリンク](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/doc/spec_JA.md)
+
+[链接到规范](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/doc/spec_ZH.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/examples/example.json) (keyvalues) for NGSI v2
