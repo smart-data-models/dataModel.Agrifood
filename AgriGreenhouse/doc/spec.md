@@ -15,7 +15,7 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `alternateName[string]`: An alternative name for this item  - `belongsTo[*]`: Entity the Greenhouse belongs to  - `co2[integer]`: The measured interior C02 concentration nominally in mg/L  . Model: [http://schema.org/Number](http://schema.org/Number)- `dailyLight[integer]`: Daily Accumulated light measured in kW per square metre  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `drainFlow[object]`: The observed drain flow rate in litres per second  . Model: [http://schema.org/Number](http://schema.org/Number)- `hasAgriParcelChildren[array]`: Related sub AgriParcel records to which this entity relates  - `hasAgriParcelParent[*]`: Reference to the AgriParcel entity to which this entity relates  - `hasDevice[array]`: Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasWaterQualityObserved[array]`: Reference to one or more water quality observation records current for this entity  - `hasWeatherObserved[*]`: Reference to the weather observation record current for this entity  - `id[*]`: Unique identifier of the entity  - `leafTemperature[integer]`: The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `name[string]`: The name of this item.  - `ownedBy[*]`: Owner (Person or Organization) of the AgriGreenhouse  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource[array]`: List of IDs the current entity may have in external applications  - `relativeHumidity[number]`: The average greenhouse air temperature nominally in degrees centigrade.  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity Type. It has to be AgriGreenhouse  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: An alternative name for this item  - `belongsTo[*]`: Entity the Greenhouse belongs to  - `co2[number]`: The measured interior C02 concentration nominally in mg/L  . Model: [http://schema.org/Number](http://schema.org/Number)- `dailyLight[number]`: Daily Accumulated light measured in kW per square metre  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `drainFlow[object]`: The observed drain flow rate in litres per second  . Model: [http://schema.org/Number](http://schema.org/Number)- `hasAgriParcelChildren[array]`: Related sub AgriParcel records to which this entity relates  - `hasAgriParcelParent[*]`: Reference to the AgriParcel entity to which this entity relates  - `hasDevice[array]`: Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.  . Model: [http://schema.org/URL](http://schema.org/URL)- `hasWaterQualityObserved[array]`: Reference to one or more water quality observation records current for this entity  - `hasWeatherObserved[*]`: Reference to the weather observation record current for this entity  - `id[*]`: Unique identifier of the entity  - `leafTemperature[number]`: The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `name[string]`: The name of this item.  - `ownedBy[*]`: Owner (Person or Organization) of the AgriGreenhouse  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource[array]`: List of IDs the current entity may have in external applications  - `relativeHumidity[number]`: The average greenhouse air temperature nominally in degrees centigrade.  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity Type. It has to be AgriGreenhouse  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `hasAgriParcelParent`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -33,61 +33,61 @@ AgriGreenhouse:
   description: 'This entity contains a harmonised description of the conditions recorded within a generic greenhouse, a type of AgriParcel.'    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     belongsTo:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Entity the Greenhouse belongs to'    
+      description: Entity the Greenhouse belongs to    
       x-ngsi:    
         type: Relationship    
     co2:    
-      description: 'The measured interior C02 concentration nominally in mg/L'    
-      type: integer    
+      description: The measured interior C02 concentration nominally in mg/L    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
         units: mg/L    
     dailyLight:    
-      description: 'Daily Accumulated light measured in kW per square metre'    
-      type: integer    
+      description: Daily Accumulated light measured in kW per square metre    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
         units: kw/m2    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     drainFlow:    
-      description: 'The observed drain flow rate in litres per second'    
+      description: The observed drain flow rate in litres per second    
       properties:    
         maxValue:    
           minimum: 0    
@@ -106,108 +106,108 @@ AgriGreenhouse:
         type: Property    
         units: L/s    
     hasAgriParcelChildren:    
-      description: 'Related sub AgriParcel records to which this entity relates'    
+      description: Related sub AgriParcel records to which this entity relates    
       items:    
         anyOf: &agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             format: uri    
             type: string    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Relationship    
     hasAgriParcelParent:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the AgriParcel entity to which this entity relates'    
+      description: Reference to the AgriParcel entity to which this entity relates    
       x-ngsi:    
         type: Relationship    
     hasDevice:    
       description: 'Reference to the IoT devices associated with this greenhouse i.e. sensors, controls.'    
       items:    
         anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
     hasWaterQualityObserved:    
-      description: 'Reference to one or more water quality observation records current for this entity'    
+      description: Reference to one or more water quality observation records current for this entity    
       items:    
         anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Relationship    
     hasWeatherObserved:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the weather observation record current for this entity'    
+      description: Reference to the weather observation record current for this entity    
       x-ngsi:    
         type: Relationship    
     id:    
       anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     leafTemperature:    
-      description: 'The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1'    
-      type: integer    
+      description: The average leaf temperature nominally in degrees centigrade.    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     ownedBy:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Owner (Person or Organization) of the AgriGreenhouse'    
+      description: Owner (Person or Organization) of the AgriGreenhouse    
       x-ngsi:    
         type: Relationship    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     relatedSource:    
-      description: 'List of IDs the current entity may have in external applications'    
+      description: List of IDs the current entity may have in external applications    
       items:    
         properties:    
           application:    
             anyOf: *agrigreenhouse_-_properties_-_hasdevice_-_items_-_anyof    
-            description: 'Property. Unique identifier of the entity'    
+            description: Property. Unique identifier of the entity    
           applicationEntityId:    
             type: string    
         type: object    
@@ -215,16 +215,16 @@ AgriGreenhouse:
       x-ngsi:    
         type: Property    
     relativeHumidity:    
-      description: 'The average greenhouse air temperature nominally in degrees centigrade.'    
+      description: The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1    
       maximum: 1.0    
       minimum: 0.0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
-        units: 'Degrees centigrade'    
+        units: Degrees centigrade    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -241,7 +241,7 @@ AgriGreenhouse:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity Type. It has to be AgriGreenhouse'    
+      description: NGSI Entity Type. It has to be AgriGreenhouse    
       enum:    
         - AgriGreenhouse    
       type: string    
