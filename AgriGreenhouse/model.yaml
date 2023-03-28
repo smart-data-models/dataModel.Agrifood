@@ -139,7 +139,7 @@ AgriGreenhouse:
       x-ngsi:
         type: Property
     leafTemperature:
-      description: The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1
+      description: The average leaf temperature nominally in degrees centigrade.
       type: number
       x-ngsi:
         model: http://schema.org/Number
@@ -184,7 +184,7 @@ AgriGreenhouse:
       x-ngsi:
         type: Property
     relativeHumidity:
-      description: The average greenhouse air temperature nominally in degrees centigrade.
+      description: The inside relative humidity expressed as a number between 0 and 1 representing the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1
       maximum: 1.0
       minimum: 0.0
       type: number
