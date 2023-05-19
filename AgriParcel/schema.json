@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "1.0.1",
+  "$schemaVersion": "1.0.2",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json",
   "title": "Smart Data Models - Agri Parcel",
@@ -127,21 +127,24 @@
           "description": "Relationship. Reference to the soil associated with this parcel of land"
         },
         "hasAirQualityObserved": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Reference to the air quality observed in this parcel of land"
+          "type": "array",
+          "description": "Relationship. Reference to the air quality observed in this parcel of land",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         },
         "cropStatus": {
           "type": "string",
