@@ -1,6 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
 # AgriParcel
-Version: 1.0.1
+Version: 1.0.2
 
 ## Description 
 
