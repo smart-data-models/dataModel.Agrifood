@@ -7,33 +7,33 @@
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Description globale : **Cette entité contient une description harmonisée d'une parcelle de terrain générique. Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes.**  
-version : 0.0.4  
+Description globale : **Cette entité contient une description harmonisée d'une parcelle générique. Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes**.  
+version : 0.0.5  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `area[number]`: La superficie de la parcelle nominalement en mètres carrés.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsTo[*]`: Entité à laquelle l'élément appartient  - `category[string]`: La catégorie de la parcelle de terre, par exemple : **arable, prairie, vignoble, verger, polyculture, bas-fond, haut-fond, jachère, forêt, zone humide.**  . Model: [http://schema.org/Text](http://schema.org/Text)- `cropStatus[string]`: Enum : 'seeded, justBorn, growing, maturing, readyForHarvesting'. Choix dans une liste énumérée décrivant l'état de plantation de la culture.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `hasAgriCrop[*]`: Référence à la culture associée à cette parcelle  - `hasAgriParcelChildren[array]`: Sous-enregistrements AgriParcel connexes auxquels cette entité se rapporte.  - `hasAgriParcelParent[*]`: Référence à l'AgriParcelle mère  - `hasAgriSoil[*]`: Référence au sol associé à cette parcelle de terrain  - `hasDevices[array]`: Référence aux dispositifs IoT associés à cette parcelle, c'est-à-dire les capteurs, les contrôles.  - `id[*]`: Identifiant unique de l'entité  - `irrigationSystemType[string]`: Enum : 'Irrigation de surface', 'Irrigation localisée', 'Irrigation goutte à goutte', 'Irrigation par aspersion', 'Irrigation par pivot central', 'Irrigation par déplacement latéral', 'Sous-irrigation', 'Irrigation manuelle'. Basé sur les types courants de systèmes d'irrigation tels que définis par les Centers for Disease Control and Prevention (CDC) : https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt[string]`: Indique la date à laquelle la culture a été plantée pour la dernière fois.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `ownedBy[*]`: Propriétaire (personne ou organisation) de l'article  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `soilTextureType[string]`: Enum : "Sables", "Sables loameux", "Loams sableux", "Loam", "Silt loam", "Silt", "Sandy clay loam", "Clay loam", "Silty clay loam", "Sandy clay", "Silty clay", "Clay". Selon la classification de la texture des sols du ministère de l'agriculture des États-Unis (USDA) : https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262.  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir d'AgriParcel  <!-- /30-PropertiesList -->  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour ce poste  - `area[number]`: La superficie de la parcelle, nominalement en mètres carrés.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsTo[*]`: Entité à laquelle l'élément appartient  - `category[string]`: La catégorie de la parcelle de terre, par exemple : **arable, prairies, vignobles, vergers, cultures mixtes, basses terres, hautes terres, jachères, forêts, zones humides**.  . Model: [http://schema.org/Text](http://schema.org/Text)- `cropStatus[string]`: Enum : "seeded, justBorn, growing, maturing, readyForHarvesting". Choix dans une liste énumérative décrivant l'état de plantation de la culture.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `description[string]`: Une description de l'article  - `hasAgriCrop[*]`: Référence à la culture associée à cette parcelle  - `hasAgriParcelChildren[array]`: Sous-enregistrements AgriParcel apparentés auxquels cette entité se rapporte  - `hasAgriParcelParent[*]`: Référence à l'AgriParcel mère  - `hasAgriSoil[*]`: Référence au sol associé à cette parcelle de terrain  - `hasAirQualityObserved[*]`: Référence à la qualité de l'air observée dans cette parcelle  - `hasDevices[array]`: Référence aux dispositifs IoT associés à cette parcelle, c'est-à-dire aux capteurs, aux commandes.  - `id[*]`: Identifiant unique de l'entité  - `irrigationSystemType[string]`: Enum : "Irrigation de surface", "Irrigation localisée", "Irrigation goutte à goutte", "Irrigation par aspersion", "Irrigation par pivot central", "Irrigation par déplacement latéral", "Sous-irrigation", "Irrigation manuelle". Basé sur les types communs de systèmes d'irrigation tels que définis par les Centres de contrôle et de prévention des maladies (CDC) : https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt[string]`: Indique la date à laquelle la culture a été plantée pour la dernière fois.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `ownedBy[*]`: Propriétaire (personne ou organisation) du bien  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `soilTextureType[string]`: Enum : "Sables", "Sables limoneux", "Loams sableux", "Loam", "Silt loam", "Silt", "Sandy clay loam", "Clay loam", "Silty clay loam", "Sandy clay", "Silty clay", "Clay". Sur la base de la classification des textures de sol du département de l'agriculture des États-Unis (USDA) : https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir d'AgriParcel  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `area`  - `hasAgriCrop`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Cette entité est principalement associée à l'agriculture verticale et aux applications IoT connexes.  
+Cette entité est principalement associée au secteur vertical de l'agriculture et aux applications IoT connexes.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Description des propriétés du modèle de données  
+## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriParcel:    
-  description: 'This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
+  description: This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -44,6 +44,9 @@ AgriParcel:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -53,17 +56,20 @@ AgriParcel:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     area:    
-      description: 'The area of the parcel nominally in square meters.'    
+      description: 'Property. Model:''http://schema.org/Number''. Units:''m2''. The area of the parcel nominally in square meters.'    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -71,32 +77,32 @@ AgriParcel:
         type: Property    
         units: m2    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     belongsTo:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Entity the item belongs to'    
+      description: Relationship. Entity the item belongs to    
       x-ngsi:    
         type: Relationship    
     category:    
-      description: 'The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**'    
+      description: 'Property. Model:''http://schema.org/Text''. The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**'    
       type: string    
       x-ngsi:    
         model: http://schema.org/Text    
         type: Property    
     cropStatus:    
-      description: 'Enum:''seeded, justBorn, growing, maturing, readyForHarvesting''. A choice from an enumerated list describing the crop planting status'    
+      description: 'Property. Enum:''seeded, justBorn, growing, maturing, readyForHarvesting''. A choice from an enumerated list describing the crop planting status'    
       enum:    
         - seeded    
         - justBorn    
@@ -107,111 +113,124 @@ AgriParcel:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     hasAgriCrop:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the crop associated with this parcel'    
+      description: Relationship. Reference to the crop associated with this parcel    
       x-ngsi:    
         type: Relationship    
     hasAgriParcelChildren:    
-      description: 'Related sub AgriParcel records to which this entity relates'    
+      description: Relationship. Related sub AgriParcel records to which this entity relates    
       items:    
         anyOf: &agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Property. Identifier format of any NGSI entity    
             format: uri    
             type: string    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Relationship    
     hasAgriParcelParent:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the parent AgriParcel'    
+      description: Relationship. Reference to the parent AgriParcel    
       x-ngsi:    
         type: Relationship    
     hasAgriSoil:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the soil associated with this parcel of land'    
+      description: Relationship. Reference to the soil associated with this parcel of land    
+      x-ngsi:    
+        type: Relationship    
+    hasAirQualityObserved:    
+      anyOf:    
+        - description: Property. Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: Property. Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+      description: Relationship. Reference to the air quality observed in this parcel of land    
       x-ngsi:    
         type: Relationship    
     hasDevices:    
-      description: 'Reference to the IoT devices associated with this parcel i.e. sensors, controls.'    
+      description: 'Property. Reference to the IoT devices associated with this parcel i.e. sensors, controls.'    
       items:    
         anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     id:    
       anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     irrigationSystemType:    
-      description: 'Enum: ''Surface irrigation'', ''Localized irrigation'', ''Drip irrigation'', ''Sprinkler irrigation'', ''Center pivot irrigation'', ''Lateral move irrigation'', ''Sub-irrigation'', ''Manual irrigation''. Based on common types of irrigation systems as defined by Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/healthywater/other/agricultural/types.html'    
+      description: 'Property. Enum: ''Surface irrigation'', ''Localized irrigation'', ''Drip irrigation'', ''Sprinkler irrigation'', ''Center pivot irrigation'', ''Lateral move irrigation'', ''Sub-irrigation'', ''Manual irrigation''. Based on common types of irrigation systems as defined by Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/healthywater/other/agricultural/types.html'    
       enum:    
-        - 'Surface irrigation'    
-        - 'Localized irrigation'    
-        - 'Drip irrigation'    
-        - 'Sprinkler irrigation'    
-        - 'Center pivot irrigation'    
-        - 'Lateral move irrigation'    
+        - Surface irrigation    
+        - Localized irrigation    
+        - Drip irrigation    
+        - Sprinkler irrigation    
+        - Center pivot irrigation    
+        - Lateral move irrigation    
         - Sub-irrigation    
-        - 'Manual irrigation'    
+        - Manual irrigation    
       type: string    
       x-ngsi:    
         type: Property    
     lastPlantedAt:    
-      description: 'Indicates the date when the crop was last planted'    
+      description: Property. Indicates the date when the crop was last planted    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -219,7 +238,7 @@ AgriParcel:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -238,9 +257,9 @@ AgriParcel:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -262,9 +281,9 @@ AgriParcel:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -288,9 +307,9 @@ AgriParcel:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -311,9 +330,9 @@ AgriParcel:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -337,9 +356,9 @@ AgriParcel:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -365,43 +384,43 @@ AgriParcel:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     ownedBy:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Owner (Person or Organization) of the item'    
+      description: Relationship. Owner (Person or Organization) of the item    
       x-ngsi:    
         type: Relationship    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     relatedSource:    
-      description: 'List of IDs the current entity may have in external applications'    
+      description: List of IDs the current entity may have in external applications    
       items:    
         properties:    
           application:    
             anyOf: *agriparcel_-_properties_-_hasdevices_-_items_-_anyof    
-            description: 'Property. Unique identifier of the entity'    
+            description: Property. Unique identifier of the entity    
           applicationEntityId:    
             type: string    
         type: object    
@@ -409,7 +428,7 @@ AgriParcel:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -421,19 +440,19 @@ AgriParcel:
       x-ngsi:    
         type: Property    
     soilTextureType:    
-      description: 'Enum: ''Sands'', ''Loamy sands'', ''Sandy loams'', ''Loam'', ''Silt loam'', ''Silt'', ''Sandy clay loam'', ''Clay loam'', ''Silty clay loam'', ''Sandy clay'', ''Silty clay'', ''Clay''. Based on the soil texture classification of the United States Department of Agriculture (USDA): https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262'    
+      description: 'Property. Enum: ''Sands'', ''Loamy sands'', ''Sandy loams'', ''Loam'', ''Silt loam'', ''Silt'', ''Sandy clay loam'', ''Clay loam'', ''Silty clay loam'', ''Sandy clay'', ''Silty clay'', ''Clay''. Based on the soil texture classification of the United States Department of Agriculture (USDA): https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262'    
       enum:    
         - Sands    
-        - 'Loamy sands'    
-        - 'Sandy loams'    
+        - Loamy sands    
+        - Sandy loams    
         - Loam    
-        - 'Silt loam'    
+        - Silt loam    
         - Silt    
-        - 'Sandy clay loam'    
-        - 'Clay loam'    
-        - 'Silty clay loam'    
-        - 'Sandy clay'    
-        - 'Silty clay'    
+        - Sandy clay loam    
+        - Clay loam    
+        - Silty clay loam    
+        - Sandy clay    
+        - Silty clay    
         - Clay    
       type: string    
       x-ngsi:    
@@ -444,7 +463,7 @@ AgriParcel:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity Type. It has to be AgriParcel'    
+      description: Property. NGSI Entity Type. It has to be AgriParcel    
       enum:    
         - AgriParcel    
       type: string    
@@ -462,7 +481,7 @@ AgriParcel:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.4    
+  x-version: 1.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -471,7 +490,7 @@ AgriParcel:
 <!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### AgriParcel NGSI-v2 valeurs-clés Exemple  
-Voici un exemple d'une AgriParcelle au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'AgriParcel au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -504,6 +523,7 @@ AgriParcel:
     "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
   ],  
   "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
+  "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",  
   "cropStatus": "seeded",  
   "lastPlantedAt": "2016-08-23T10:18:16Z",  
   "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
@@ -519,7 +539,7 @@ AgriParcel:
 ```  
 </details>  
 #### AgriParcel NGSI-v2 normalisé Exemple  
-Voici un exemple d'une AgriParcelle au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'AgriParcel au format JSON-LD tel qu'il a été normalisé. Ce format est compatible avec les NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -586,6 +606,10 @@ AgriParcel:
     "type": "Relationship",  
     "value": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
   },  
+  "hasAirQualityObserved": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+  },  
   "cropStatus": {  
     "value": "seeded"  
   },  
@@ -617,8 +641,8 @@ AgriParcel:
 }  
 ```  
 </details>  
-#### AgriParcel NGSI-LD valeurs-clés Exemple  
-Voici un exemple d'une AgriParcelle au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### AgriParcel Valeurs clés de la NGSI-LD Exemple  
+Voici un exemple d'AgriParcel au format JSON-LD en tant que valeurs clés. Ce format est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -637,6 +661,7 @@ AgriParcel:
     ],  
     "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
     "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
+    "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",  
     "hasDevice": [  
         "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
         "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
@@ -692,7 +717,7 @@ AgriParcel:
 ```  
 </details>  
 #### AgriParcel NGSI-LD normalisé Exemple  
-Voici un exemple d'une AgriParcelle au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'AgriParcel au format JSON-LD tel qu'il a été normalisé. Ce format est compatible avec NGSI-LD lorsque les options ne sont pas utilisées et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -737,6 +762,10 @@ AgriParcel:
     "hasAgriSoil": {  
         "type": "Relationship",  
         "object": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
+    },  
+    "hasAirQualityObserved": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
     },  
     "hasDevice": {  
         "type": "Relationship",  
@@ -813,7 +842,7 @@ AgriParcel:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+Voir [FAQ 10] (https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse à la question de savoir comment traiter les unités de magnitude.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
