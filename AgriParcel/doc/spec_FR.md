@@ -8,19 +8,19 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée d'une parcelle générique. Cette entité est principalement associée à la verticale agricole et aux applications IoT connexes**.  
-version : 0.0.5  
+version : 1.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
 <sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour ce poste  - `area[number]`: La superficie de la parcelle, nominalement en mètres carrés.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsTo[*]`: Entité à laquelle l'élément appartient  - `category[string]`: La catégorie de la parcelle de terre, par exemple : **arable, prairies, vignobles, vergers, cultures mixtes, basses terres, hautes terres, jachères, forêts, zones humides**.  . Model: [http://schema.org/Text](http://schema.org/Text)- `cropStatus[string]`: Enum : "seeded, justBorn, growing, maturing, readyForHarvesting". Choix dans une liste énumérative décrivant l'état de plantation de la culture.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `description[string]`: Une description de l'article  - `hasAgriCrop[*]`: Référence à la culture associée à cette parcelle  - `hasAgriParcelChildren[array]`: Sous-enregistrements AgriParcel apparentés auxquels cette entité se rapporte  - `hasAgriParcelParent[*]`: Référence à l'AgriParcel mère  - `hasAgriSoil[*]`: Référence au sol associé à cette parcelle de terrain  - `hasAirQualityObserved[*]`: Référence à la qualité de l'air observée dans cette parcelle  - `hasDevices[array]`: Référence aux dispositifs IoT associés à cette parcelle, c'est-à-dire aux capteurs, aux commandes.  - `id[*]`: Identifiant unique de l'entité  - `irrigationSystemType[string]`: Enum : "Irrigation de surface", "Irrigation localisée", "Irrigation goutte à goutte", "Irrigation par aspersion", "Irrigation par pivot central", "Irrigation par déplacement latéral", "Sous-irrigation", "Irrigation manuelle". Basé sur les types communs de systèmes d'irrigation tels que définis par les Centres de contrôle et de prévention des maladies (CDC) : https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt[string]`: Indique la date à laquelle la culture a été plantée pour la dernière fois.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `ownedBy[*]`: Propriétaire (personne ou organisation) du bien  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `soilTextureType[string]`: Enum : "Sables", "Sables limoneux", "Loams sableux", "Loam", "Silt loam", "Silt", "Sandy clay loam", "Clay loam", "Silty clay loam", "Sandy clay", "Silty clay", "Clay". Sur la base de la classification des textures de sol du département de l'agriculture des États-Unis (USDA) : https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir d'AgriParcel  <!-- /30-PropertiesList -->  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour ce poste  - `area[number]`: Propriété. Modèle : "http://schema.org/Number". Unités : "m2". La surface de la parcelle nominalement en mètres carrés.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsTo[*]`: Relation. Entité à laquelle l'élément appartient  - `category[string]`: Propriété. Modèle : "http://schema.org/Text". La catégorie de la parcelle de terre, par exemple : **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**  . Model: [http://schema.org/Text](http://schema.org/Text)- `cropStatus[string]`: Propriété. Enum : "seeded, justBorn, growing, maturing, readyForHarvesting". Choix dans une liste énumérative décrivant l'état de plantation de la culture.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `description[string]`: Une description de l'article  - `hasAgriCrop[*]`: Relation. Référence à la culture associée à cette parcelle  - `hasAgriParcelChildren[array]`: Relation. Sous-enregistrements AgriParcel apparentés auxquels cette entité est liée.  - `hasAgriParcelParent[*]`: Lien de parenté. Référence à l'AgriParcel mère  - `hasAgriSoil[*]`: Relation. Référence au sol associé à cette parcelle.  - `hasAirQualityObserved[*]`: Relation. Référence à la qualité de l'air observée dans cette parcelle.  - `hasDevices[array]`: Propriété. Référence aux dispositifs IdO associés à cette parcelle, c'est-à-dire aux capteurs et aux commandes.  - `id[*]`: Identifiant unique de l'entité  - `irrigationSystemType[string]`: Propriété. Enum : "Irrigation de surface", "Irrigation localisée", "Irrigation goutte à goutte", "Irrigation par aspersion", "Irrigation par pivot central", "Irrigation par déplacement latéral", "Sous-irrigation", "Irrigation manuelle". Basé sur les types communs de systèmes d'irrigation tels que définis par les Centres de contrôle et de prévention des maladies (CDC) : https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt[string]`: Propriété. Indique la date à laquelle la culture a été plantée pour la dernière fois.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `ownedBy[*]`: Lien de parenté. Propriétaire (personne ou organisation) de l'objet  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `relatedSource[array]`: Liste des identifiants que l'entité actuelle peut avoir dans des applications externes  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `soilTextureType[string]`: Propriété. Enum : "Sables", "Sables limoneux", "Loams sableux", "Loam", "Silt loam", "Silt", "Sandy clay loam", "Clay loam", "Silty clay loam", "Sandy clay", "Silty clay", "Clay". Sur la base de la classification des textures de sol du département de l'agriculture des États-Unis (USDA) : https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Propriété. Type d'entité NGSI. Il doit s'agir d'AgriParcel  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `area`  - `hasAgriCrop`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Cette entité est principalement associée au secteur vertical de l'agriculture et aux applications IoT connexes.  
+Cette entité est principalement associée au secteur vertical de l'agriculture et aux applications IoT connexes. Il existe une ancienne version (0.x.x) avec une seule valeur hasAirQualityObserved sous forme de chaîne de caractères. Les versions 1.x.x disposent d'un tableau pour cet attribut.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Modèle de données description des propriétés  
@@ -190,16 +190,18 @@ AgriParcel:
       x-ngsi:    
         type: Relationship    
     hasAirQualityObserved:    
-      anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-        - description: Property. Identifier format of any NGSI entity    
-          format: uri    
-          type: string    
       description: Relationship. Reference to the air quality observed in this parcel of land    
+      items:    
+        anyOf:    
+          - description: Property. Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: Property. Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+      type: array    
       x-ngsi:    
         type: Relationship    
     hasDevices:    
@@ -481,7 +483,7 @@ AgriParcel:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json    
   x-model-tags: ""    
-  x-version: 1.0.1    
+  x-version: 1.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -523,7 +525,7 @@ AgriParcel:
     "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
   ],  
   "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
-  "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",  
+  "hasAirQualityObserved": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"],  
   "cropStatus": "seeded",  
   "lastPlantedAt": "2016-08-23T10:18:16Z",  
   "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
@@ -584,31 +586,31 @@ AgriParcel:
     ]  
   },  
   "belongsTo": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
   },  
   "ownedBy": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
   },  
   "hasAgriParcelParent": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
   },  
   "hasAgriParcelChildren": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": [  
       "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
       "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
     ]  
   },  
   "hasAgriCrop": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
   },  
   "hasAirQualityObserved": {  
-    "type": "Relationship",  
-    "value": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+    "type": "URL",  
+    "value": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"]  
   },  
   "cropStatus": {  
     "value": "seeded"  
@@ -618,11 +620,11 @@ AgriParcel:
     "value": "2016-08-23T10:18:16Z"  
   },  
   "hasAgriSoil": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
   },  
   "hasDevice": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": [  
       "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
       "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
@@ -646,73 +648,74 @@ AgriParcel:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-    "type": "AgriParcel",  
-    "area": 200,  
-    "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
-    "category": "arable",  
-    "createdAt": "2017-01-01T01:20:00Z",  
-    "cropStatus": "seeded",  
-    "description": "Spring wheat",  
-    "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
-    "hasAgriParcelChildren": [  
-        "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-        "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-    ],  
-    "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-    "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
-    "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",  
-    "hasDevice": [  
-        "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-        "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-        "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-        "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-    ],  
-    "lastPlantedAt": {  
-        "@type": "DateTime",  
-        "@value": "2016-08-22T10:18:16Z"  
-    },  
-    "location": {  
-        "coordinates": [  
-            [  
-                100,  
-                0  
-            ],  
-            [  
-                101,  
-                0  
-            ],  
-            [  
-                101,  
-                1  
-            ],  
-            [  
-                100,  
-                1  
-            ],  
-            [  
-                100,  
-                0  
-            ]  
+  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+  "type": "AgriParcel",  
+  "area": 200,  
+  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+  "category": "arable",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "cropStatus": "seeded",  
+  "description": "Spring wheat",  
+  "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
+  "hasAgriParcelChildren": [  
+    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
+  ],  
+  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+  "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
+  "hasAirQualityObserved": [  
+    "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+  ],  
+  "hasDevice": [  
+    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+  ],  
+  "lastPlantedAt": "2016-08-22T10:18:16Z",  
+  "location": {  
+    "coordinates": [  
+      [  
+        [  
+          100,  
+          0  
         ],  
-        "type": "Polygon"  
-    },  
-    "modifiedAt": "2017-05-04T12:30:00Z",  
-    "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-    "relatedSource": [  
-        {  
-            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-            "applicationEntityId": "app:parcel1"  
-        }  
+        [  
+          101,  
+          0  
+        ],  
+        [  
+          101,  
+          1  
+        ],  
+        [  
+          100,  
+          1  
+        ],  
+        [  
+          100,  
+          0  
+        ]  
+      ]  
     ],  
-    "seeAlso": [  
-        "https://example.org/concept/agriparcel",  
-        "https://datamodel.org/example/agriparcel"  
-    ],  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
-    ]  
+    "type": "Polygon"  
+  },  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:parcel1"  
+    }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/agriparcel",  
+    "https://datamodel.org/example/agriparcel"  
+  ],  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -765,7 +768,7 @@ AgriParcel:
     },  
     "hasAirQualityObserved": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+        "object": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"]  
     },  
     "hasDevice": {  
         "type": "Relationship",  
