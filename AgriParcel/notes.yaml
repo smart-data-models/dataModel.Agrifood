@@ -1,5 +1,5 @@
 notesHeader:
-  This entity is primarily associated with the agricultural vertical and related IoT applications.
+  This entity is primarily associated with the agricultural vertical and related IoT applications. There is an old version (0.x.x) with one single hasAirQualityObserved value as a string. Versions 1.x.x have an array for this attribute.
 notesMiddle:
 
 notesFooter:
