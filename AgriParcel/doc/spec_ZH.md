@@ -8,19 +8,19 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 全球描述：**该实体包含一个通用地块的统一描述。该实体主要与农业垂直领域和相关的物联网应用有关。  
-版本：0.0.5  
+版本：1.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ##属性列表  
 
 <sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `area[number]`: 地块的面积，名义上是平方米。  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsTo[*]`: 该项目属于的实体  - `category[string]`: 地块的类别，如：**可耕地、葡萄园、果园、混合作物、低地、高地、预留地、森林、湿地：**可耕地、草地、葡萄园、果园、混合作物、低地、高地、预留地、林业、湿地**。  . Model: [http://schema.org/Text](http://schema.org/Text)- `cropStatus[string]`: Enum:'seed, justBorn, growing, maturing, readyForHarvesting'。从描述作物种植状态的枚举列表中选择。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `hasAgriCrop[*]`: 指与该地块相关的作物  - `hasAgriParcelChildren[array]`: 该实体相关的次级AgriParcel记录  - `hasAgriParcelParent[*]`: 参考母体AgriParcel  - `hasAgriSoil[*]`: 参考与该地块相关的土壤  - `hasAirQualityObserved[*]`: 提及在这块土地上观察到的空气质量  - `hasDevices[array]`: 参考与该地块相关的物联网设备，即传感器、控制器。  - `id[*]`: 实体的唯一标识符  - `irrigationSystemType[string]`: 枚举："地面灌溉"，"局部灌溉"，"滴灌"，"喷灌"，"中心支点灌溉"，"侧移灌溉"，"分灌"，"人工灌溉"。根据美国疾病控制和预防中心（CDC）定义的常见灌溉系统类型： https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt[string]`: 表示作物最后一次播种的日期  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `ownedBy[*]`: 项目的所有者（个人或组织）。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `relatedSource[array]`: 当前实体在外部应用程序中可能拥有的ID列表  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `soilTextureType[string]`: 枚举："沙子"、"壤质沙子"、"沙土"、"壤土"、"淤泥"、"沙质粘土"、"粘土"、"淤泥质粘土"、"沙质粘土"、"粘土"。根据美国农业部（USDA）的土壤纹理分类：https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI实体类型。它必须是AgriParcel  <!-- /30-PropertiesList -->  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `area[number]`: 属性。模型:'http://schema.org/Number'。单位:'m2'。地块的面积，名义上是平方米。  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsTo[*]`: 关系。该项目属于的实体  - `category[string]`: 属性。模型:'http://schema.org/Text'。该地块的类别，例如：**可耕地、草地、葡萄园、果园、混合作物、低地、高地、预留地、林业、湿地。  . Model: [http://schema.org/Text](http://schema.org/Text)- `cropStatus[string]`: 属性。Enum:'seed, justBorn, growing, maturing, readyForHarvesting'。从描述作物种植状态的枚举列表中选择。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `hasAgriCrop[*]`: 关系。指与该地块相关的作物  - `hasAgriParcelChildren[array]`: 关系。与该实体相关的次级AgriParcel记录  - `hasAgriParcelParent[*]`: 关系。参考母公司AgriParcel  - `hasAgriSoil[*]`: 关系。指与该地块相关的土壤  - `hasAirQualityObserved[*]`: 关系。参考在这块土地上观察到的空气质量  - `hasDevices[array]`: 属性。参考与该地块相关的物联网设备，即传感器、控制器。  - `id[*]`: 实体的唯一标识符  - `irrigationSystemType[string]`: 属性。枚举："地面灌溉"，"局部灌溉"，"滴灌"，"喷灌"，"中心支点灌溉"，"侧移灌溉"，"分灌"，"手动灌溉"。根据美国疾病控制和预防中心（CDC）定义的常见灌溉系统类型： https://www.cdc.gov/healthywater/other/agricultural/types.html  - `lastPlantedAt[string]`: 属性。表示作物最后一次播种的日期  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `ownedBy[*]`: 关系。项目的所有者（个人或组织）。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `relatedSource[array]`: 当前实体在外部应用程序中可能拥有的ID列表  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `soilTextureType[string]`: 属性。枚举："沙子"、"壤质沙子"、"沙土"、"壤土"、"淤泥"、"沙质粘土"、"粘土"、"淤泥质粘土"、"沙质粘土"、"粘土"。根据美国农业部（USDA）的土壤纹理分类：https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/ref/?cid=nrcs142p2_054262  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: 属性。NGSI实体类型。它必须是AgriParcel  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `area`  - `hasAgriCrop`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-这个实体主要与农业垂直领域和相关的物联网应用有关。  
+这个实体主要与农业垂直领域和相关的物联网应用有关。有一个旧版本（0.x.x）有一个单一的hasAirQualityObserved值，是一个字符串。1.x.x版本的这个属性有一个数组。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## 数据模型的属性描述  
@@ -190,16 +190,18 @@ AgriParcel:
       x-ngsi:    
         type: Relationship    
     hasAirQualityObserved:    
-      anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-        - description: Property. Identifier format of any NGSI entity    
-          format: uri    
-          type: string    
       description: Relationship. Reference to the air quality observed in this parcel of land    
+      items:    
+        anyOf:    
+          - description: Property. Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: Property. Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+      type: array    
       x-ngsi:    
         type: Relationship    
     hasDevices:    
@@ -481,7 +483,7 @@ AgriParcel:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json    
   x-model-tags: ""    
-  x-version: 1.0.1    
+  x-version: 1.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -523,7 +525,7 @@ AgriParcel:
     "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
   ],  
   "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
-  "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",  
+  "hasAirQualityObserved": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"],  
   "cropStatus": "seeded",  
   "lastPlantedAt": "2016-08-23T10:18:16Z",  
   "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
@@ -584,31 +586,31 @@ AgriParcel:
     ]  
   },  
   "belongsTo": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"  
   },  
   "ownedBy": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"  
   },  
   "hasAgriParcelParent": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"  
   },  
   "hasAgriParcelChildren": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": [  
       "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
       "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
     ]  
   },  
   "hasAgriCrop": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"  
   },  
   "hasAirQualityObserved": {  
-    "type": "Relationship",  
-    "value": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+    "type": "URL",  
+    "value": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"]  
   },  
   "cropStatus": {  
     "value": "seeded"  
@@ -618,11 +620,11 @@ AgriParcel:
     "value": "2016-08-23T10:18:16Z"  
   },  
   "hasAgriSoil": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"  
   },  
   "hasDevice": {  
-    "type": "Relationship",  
+    "type": "URL",  
     "value": [  
       "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
       "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
@@ -646,73 +648,74 @@ AgriParcel:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-    "type": "AgriParcel",  
-    "area": 200,  
-    "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
-    "category": "arable",  
-    "createdAt": "2017-01-01T01:20:00Z",  
-    "cropStatus": "seeded",  
-    "description": "Spring wheat",  
-    "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
-    "hasAgriParcelChildren": [  
-        "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
-        "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
-    ],  
-    "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
-    "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
-    "hasAirQualityObserved": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B",  
-    "hasDevice": [  
-        "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
-        "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
-        "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
-        "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
-    ],  
-    "lastPlantedAt": {  
-        "@type": "DateTime",  
-        "@value": "2016-08-22T10:18:16Z"  
-    },  
-    "location": {  
-        "coordinates": [  
-            [  
-                100,  
-                0  
-            ],  
-            [  
-                101,  
-                0  
-            ],  
-            [  
-                101,  
-                1  
-            ],  
-            [  
-                100,  
-                1  
-            ],  
-            [  
-                100,  
-                0  
-            ]  
+  "id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+  "type": "AgriParcel",  
+  "area": 200,  
+  "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",  
+  "category": "arable",  
+  "createdAt": "2017-01-01T01:20:00Z",  
+  "cropStatus": "seeded",  
+  "description": "Spring wheat",  
+  "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",  
+  "hasAgriParcelChildren": [  
+    "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",  
+    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"  
+  ],  
+  "hasAgriParcelParent": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081",  
+  "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",  
+  "hasAirQualityObserved": [  
+    "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+  ],  
+  "hasDevice": [  
+    "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",  
+    "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",  
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"  
+  ],  
+  "lastPlantedAt": "2016-08-22T10:18:16Z",  
+  "location": {  
+    "coordinates": [  
+      [  
+        [  
+          100,  
+          0  
         ],  
-        "type": "Polygon"  
-    },  
-    "modifiedAt": "2017-05-04T12:30:00Z",  
-    "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
-    "relatedSource": [  
-        {  
-            "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
-            "applicationEntityId": "app:parcel1"  
-        }  
+        [  
+          101,  
+          0  
+        ],  
+        [  
+          101,  
+          1  
+        ],  
+        [  
+          100,  
+          1  
+        ],  
+        [  
+          100,  
+          0  
+        ]  
+      ]  
     ],  
-    "seeAlso": [  
-        "https://example.org/concept/agriparcel",  
-        "https://datamodel.org/example/agriparcel"  
-    ],  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
-    ]  
+    "type": "Polygon"  
+  },  
+  "modifiedAt": "2017-05-04T12:30:00Z",  
+  "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",  
+  "relatedSource": [  
+    {  
+      "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",  
+      "applicationEntityId": "app:parcel1"  
+    }  
+  ],  
+  "seeAlso": [  
+    "https://example.org/concept/agriparcel",  
+    "https://datamodel.org/example/agriparcel"  
+  ],  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -765,7 +768,7 @@ AgriParcel:
     },  
     "hasAirQualityObserved": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"  
+        "object": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"]  
     },  
     "hasDevice": {  
         "type": "Relationship",  
