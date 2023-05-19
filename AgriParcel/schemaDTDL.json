@@ -91,11 +91,6 @@
             "displayName": "hasAgriSoil"
         },
         {
-            "name": "hasAirQualityObserved",
-            "writable": true,
-            "displayName": "hasAirQualityObserved"
-        },
-        {
             "name": "lastPlantedAt",
             "writable": true,
             "displayName": "lastPlantedAt",
@@ -143,6 +138,16 @@
             },
             "comment": "Relationship. Related sub AgriParcel records to which this entity relates",
             "displayName": "hasAgriParcelChildren"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "hasAirQualityObserved",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Relationship. Reference to the air quality observed in this parcel of land",
+            "displayName": "hasAirQualityObserved"
         },
         {
             "@type": "Telemetry",
