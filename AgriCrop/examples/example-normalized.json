@@ -10,9 +10,11 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "name": {
+     "type": "Text",
     "value": "Wheat"
   },
   "alternateName": {
+    "type": "Text",
     "value": "Triticum aestivum"
   },
   "agroVocConcept": {
@@ -20,15 +22,18 @@
     "value": "http://aims.fao.org/aos/agrovoc/c_7951"
   },
   "seeAlso": {
+    "type": "Text",
     "value": [
       "https://example.org/concept/wheat",
       "https://datamodel.org/example/wheat"
     ]
   },
   "description": {
+    "type": "Text",
     "value": "Spring wheat"
   },
   "relatedSource": {
+    "type": "Text",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -37,27 +42,28 @@
     ]
   },
   "hasAgriSoil": {
-    "type": "Relationship",
+    "type": "URI",
     "value": [
       "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",
       "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"
     ]
   },
   "hasAgriFertiliser": {
-    "type": "Relationship",
+    "type": "URI",
     "value": [
       "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",
       "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"
     ]
   },
   "hasAgriPest": {
-    "type": "Relationship",
+    "type": "URI",
     "value": [
       "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",
       "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"
     ]
   },
   "plantingFrom": {
+    "type": "array",
     "value": [
       {
         "dateRange": "-09-28/-10-12",
@@ -70,6 +76,7 @@
     ]
   },
   "harvestingInterval": {
+    "type": "array",
     "value": [
       {
         "dateRange": "-03-21/-04-01",
@@ -82,6 +89,7 @@
     ]
   },
   "wateringFrequency": {
+    "type": "Text",
     "value": "daily"
   }
 }
