@@ -1,8 +1,8 @@
 {
-    "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",
+    "id": "urn:ngsi-ld:e24b1aa9-d9bf-4f50-8583-3d51ade41588",
     "type": "Pen",
     "additionalInfo": {
-        "type": "array",
+        "type": "Property",
         "value": [
             {
                 "name": "Farm1FeedTray",
@@ -27,39 +27,38 @@
         ]
     },
     "buildingId": {
-        "type": "string",
-        "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"
+        "type": "Relationship",
+        "object": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"
     },
     "companyId": {
-        "type": "string",
-        "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"
+        "type": "Relationship",
+        "object": "4579b77f-31c1-44ef-b200-9a2407cc82e9"
     },
     "compartmentId": {
-        "type": "string",
-        "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"
+        "type": "Relationship",
+        "object": "ab8680c6-3e82-40fb-8577-f6a0ab717586"
     },
     "empty": {
-        "type": "boolean",
+        "type": "Property",
         "value": "false"
     },
     "farmId": {
-        "type": "string",
-        "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"
+        "type": "Relationship",
+        "object": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"
     },
     "lastUpdate": {
-        "type": "string",
+        "type": "Property",
         "value": "2020-04-12T20:44:55"
     },
     "sex": {
-        "type": "string",
+        "type": "Property",
         "value": ""
     },
     "temperature": {
-        "type": "number",
+        "type": "Property",
         "value": 25
     },
     "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
     ]
 }
