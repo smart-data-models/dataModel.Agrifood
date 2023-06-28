@@ -35,22 +35,21 @@
   },
   "hasAgriFertiliser": {
     "type": "Relationship",
-    "value": [
+    "object": [
       "urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",
       "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"
     ]
   },
   "hasAgriPest": {
     "type": "Relationship",
-    "value": [
+    "object": [
       "urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",
       "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"
     ]
   },
   "hasAgriSoil": {
     "type": "Relationship",
-
-    "value": [
+    "object": [
       "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",
       "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"
     ]
@@ -100,7 +99,6 @@
     "value": "daily"
   },
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
 }
