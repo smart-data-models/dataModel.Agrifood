@@ -28,15 +28,15 @@
     },
     "buildingId": {
         "type": "Relationship",
-        "object": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"
+        "object": "urn:ngsi-ld:5ee3dbc8-343b-40a7-ac04-dec67215ff98"
     },
     "companyId": {
         "type": "Relationship",
-        "object": "4579b77f-31c1-44ef-b200-9a2407cc82e9"
+        "object": "urn:ngsi-ld:4579b77f-31c1-44ef-b200-9a2407cc82e9"
     },
     "compartmentId": {
         "type": "Relationship",
-        "object": "ab8680c6-3e82-40fb-8577-f6a0ab717586"
+        "object": "urn:ngsi-ld:ab8680c6-3e82-40fb-8577-f6a0ab717586"
     },
     "empty": {
         "type": "Property",
@@ -44,7 +44,7 @@
     },
     "farmId": {
         "type": "Relationship",
-        "object": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"
+        "object": "urn:ngsi-ld:3b6473e3-fdc9-4646-b1cf-d41e3af58eff"
     },
     "lastUpdate": {
         "type": "Property",
