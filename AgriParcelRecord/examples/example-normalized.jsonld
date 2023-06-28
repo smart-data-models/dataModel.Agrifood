@@ -53,7 +53,7 @@
     "type": "GeoProperty",
     "value": {
       "type": "Polygon",
-      "coordinates": [
+      "coordinates": [[
         [
           100,
           0
@@ -74,7 +74,7 @@
           100,
           0
         ]
-      ]
+      ]]
     }
   },
   "modifiedAt": "2017-05-04T12:30:00Z",
