@@ -53,38 +53,34 @@
     "type": "GeoProperty",
     "value": {
       "type": "Polygon",
-      "coordinates": [[
+      "coordinates": [
         [
-          100,
-          0
-        ],
-        [
-          101,
-          0
-        ],
-        [
-          101,
-          1
-        ],
-        [
-          100,
-          1
-        ],
-        [
-          100,
-          0
+          [
+            100,
+            0
+          ],
+          [
+            101,
+            0
+          ],
+          [
+            101,
+            1
+          ],
+          [
+            100,
+            1
+          ],
+          [
+            100,
+            0
+          ]
         ]
-      ]]
+      ]
     }
   },
   "modifiedAt": "2017-05-04T12:30:00Z",
-  "observedAt": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2017-05-04T12:30:00Z"
-    }
-  },
+  "observedAt": "2017-05-04T12:30:00Z",
   "relatedSource": {
     "type": "Property",
     "value": [
