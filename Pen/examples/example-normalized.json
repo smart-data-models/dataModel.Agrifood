@@ -1,6 +1,6 @@
 {
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",
-  "type": "pen",
+  "type": "Pen",
   "additionalInfo": {
     "type": "array",
     "value": [
@@ -40,7 +40,7 @@
   },
   "empty": {
     "type": "boolean",
-    "value": "false"
+    "value": false
   },
   "farmId": {
     "type": "string",
