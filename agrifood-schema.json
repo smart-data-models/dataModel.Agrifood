@@ -14,10 +14,12 @@
             "type": "object",
             "properties": {
               "application": {
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+                "description": "Relationship. Identifier of the entity describing the external application"
               },
               "applicationEntityId": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Identifier in the external application"
               }
             }
           }
