@@ -1,88 +1,70 @@
 Animal:
-
   description: An observation of animal conditions at a certain place and time. This data model has been developed for the IoF2020 UC ShareBeef by UCO and SensoWave.
-
   properties:
-
     address:
-
       description: The mailing address
-
       properties:
-
         addressCountry:
-          description: The country. For example, Spain
+          description: 'The country. For example, Spain'
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
-
         addressLocality:
-          description: The locality in which the street address is, and which is in the region
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
-
         addressRegion:
-          description: The region in which the locality is, and which is in the country
+          description: 'The region in which the locality is, and which is in the country'
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
-
         district:
-          description: A district is a type of administrative division that, in some countries, is managed by the local government
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
           x-ngsi:
             type: Property
-
         postOfficeBoxNumber:
-          description: The post office box number for PO box addresses. For example, 03578
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
-
         postalCode:
-          description: The postal code. For example, 24004
+          description: 'The postal code. For example, 24004'
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
             type: Property
-
         streetAddress:
           description: The street address
           type: string
           x-ngsi:
             model: https://schema.org/streetAddress
             type: Property
-
         streetNr:
           description: Number identifying a specific property on a public street
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/address
         type: Property
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     birthdate:
       description: Animal's birthdate
       format: date-time
@@ -90,13 +72,11 @@ Animal:
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
-
     breed:
       description: Breed of the animal
       type: string
       x-ngsi:
         type: Property
-
     calvedBy:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -114,33 +94,28 @@ Animal:
       description: Mother of the animal
       x-ngsi:
         type: Relationship
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     fedWith:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -158,9 +133,8 @@ Animal:
       description: Food used for the animal
       x-ngsi:
         type: Relationship
-
     healthCondition:
-      description: Phenological condition of the animal. Enum:' healthy, sick, inTreatment'
+      description: 'Phenological condition of the animal. Enum:'' healthy, sick, inTreatment'''
       enum:
         - healthy
         - inTreatment
@@ -168,7 +142,6 @@ Animal:
       type: string
       x-ngsi:
         type: Property
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -186,13 +159,11 @@ Animal:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     legalId:
       description: Legal ID of the animal
       type: string
       x-ngsi:
         type: Property
-
     locatedAt:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -210,13 +181,9 @@ Animal:
       description: Id of the AgriParcel relationship
       x-ngsi:
         type: Relationship
-
     location:
-
-      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
-
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-
         - description: Geojson reference to the item. Point
           properties:
             bbox:
@@ -240,7 +207,6 @@ Animal:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
@@ -267,7 +233,6 @@ Animal:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
@@ -296,7 +261,6 @@ Animal:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
@@ -322,7 +286,6 @@ Animal:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -351,7 +314,6 @@ Animal:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -382,16 +344,13 @@ Animal:
           type: object
           x-ngsi:
             type: GeoProperty
-
       x-ngsi:
         type: GeoProperty
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     ownedBy:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -409,7 +368,6 @@ Animal:
       description: The owner of the animal
       x-ngsi:
         type: Relationship
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -432,9 +390,8 @@ Animal:
       type: array
       x-ngsi:
         type: Property
-
     phenologicalCondition:
-      description: Phenological condition of the animal. Enum:'lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'
+      description: 'Phenological condition of the animal. Enum:''lactatingBaby, grazingBaby, maleAdult, femaleAdult, maleYoung, femaleYoung'''
       enum:
         - femaleAdult
         - femaleYoung
@@ -445,7 +402,6 @@ Animal:
       type: string
       x-ngsi:
         type: Property
-
     relatedSource:
       description: List of IDs the current entity may have in external applications
       items:
@@ -476,9 +432,8 @@ Animal:
       type: array
       x-ngsi:
         type: Property
-
     reproductiveCondition:
-      description: Reproductive condition of the animal. Enum:'noStatus, inactive, inCalf, inHeat, active'
+      description: 'Reproductive condition of the animal. Enum:''noStatus, inactive, inCalf, inHeat, active'''
       enum:
         - active
         - inactive
@@ -488,7 +443,6 @@ Animal:
       type: string
       x-ngsi:
         type: Property
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -501,16 +455,14 @@ Animal:
           type: string
       x-ngsi:
         type: Property
-
     sex:
-      description: Sex of the animal. Enum:'male, female'
+      description: 'Sex of the animal. Enum:''male, female'''
       enum:
         - female
         - male
       type: string
       x-ngsi:
         type: Property
-
     siredBy:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -528,13 +480,11 @@ Animal:
       description: Father of the animal
       x-ngsi:
         type: Relationship
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     species:
       description: Species to which the animal belongs. This enum can be increased
       enum:
@@ -547,9 +497,8 @@ Animal:
         - sheep
       type: string
       x-ngsi:
-        model: Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text
+        model: 'Enum:cow, goat, horse, pig, sheep, dairy cattle, beef cattle· https://schema.org/Text'
         type: Property
-
     type:
       description: 'NGSI Entity Type: It has to be Animal'
       enum:
@@ -557,7 +506,6 @@ Animal:
       type: string
       x-ngsi:
         type: Property
-
     weight:
       description: The weight of the animal as a number
       type: number
@@ -565,33 +513,24 @@ Animal:
         model: http://schema.org/Number
         type: Relationship
         units: kg
-
     welfareCondition:
-      description: Indicator of the animal welfare. Enum:'issue, adequate'
+      description: 'Indicator of the animal welfare. Enum:''issue, adequate'''
       enum:
         - issue
         - adequate
       type: string
       x-ngsi:
         type: Property
-
   required:
     - id
     - type
     - species
     - legalId
     - sex
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/LICENSE.md
-
-  x-model-schema: ''
-
-  x-model-tags: ''
-
+  x-model-schema: ""
+  x-model-tags: ""
   x-version: 0.0.2
