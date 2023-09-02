@@ -1,9 +1,6 @@
 AgriCrop:
-
   description: This entity contains a harmonised description of a generic crop. This entity is primarily associated with the agricultural vertical and related IoT applications.
-
   properties:
-
     agroVocConcept:
       description: The link with the defined concept into the AgroVoc vocabulary
       format: uri
@@ -11,39 +8,33 @@ AgriCrop:
       x-ngsi:
         model: http://schema.org/URL
         type: Property
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     harvestingInterval:
       description: 'A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date'
       items:
@@ -60,7 +51,6 @@ AgriCrop:
       x-ngsi:
         model: http://schema.org/URL
         type: Property
-
     hasAgriFertiliser:
       description: Reference to the recommended types of fertiliser suitable for growing this crop
       items:
@@ -81,7 +71,6 @@ AgriCrop:
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
-
     hasAgriPest:
       description: Reference to the pests known to attack this crop
       items:
@@ -102,7 +91,6 @@ AgriCrop:
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
-
     hasAgriSoil:
       description: Reference to the recommended types of soil suitable for growing this crop
       items:
@@ -123,7 +111,6 @@ AgriCrop:
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -141,13 +128,11 @@ AgriCrop:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -170,7 +155,6 @@ AgriCrop:
       type: array
       x-ngsi:
         type: Property
-
     plantingFrom:
       description: 'A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date'
       items:
@@ -187,7 +171,6 @@ AgriCrop:
       x-ngsi:
         model: http://schema.org/URL
         type: Property
-
     relatedSource:
       description: List of IDs the current entity may have in external applications
       items:
@@ -218,7 +201,6 @@ AgriCrop:
       type: array
       x-ngsi:
         type: Property
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -231,13 +213,11 @@ AgriCrop:
           type: string
       x-ngsi:
         type: Property
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     type:
       description: NGSI Entity Type. it has to be AgriCrop
       enum:
@@ -245,22 +225,14 @@ AgriCrop:
       type: string
       x-ngsi:
         type: Property
-
   required:
     - id
     - type
     - name
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/LICENSE.md
-
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json
-
-  x-model-tags: ''
-
+  x-model-tags: ""
   x-version: 0.0.4
