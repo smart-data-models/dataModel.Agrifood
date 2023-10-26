@@ -1,3 +1,3 @@
 /* (Beta) Export of data model AgriCrop of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE AgriCrop_type AS ENUM ('AgriCrop');
-CREATE TABLE AgriCrop (agroVocConcept TEXT, alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, harvestingInterval JSON, hasAgriFertiliser JSON, hasAgriPest JSON, hasAgriSoil JSON, name TEXT, owner JSON, plantingFrom JSON, relatedSource JSON, source TEXT, type AgriCrop_type);
+CREATE TABLE AgriCrop (agroVocConcept TEXT, alternateName TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, harvestingInterval JSON, hasAgriFertiliser JSON, hasAgriPest JSON, hasAgriSoil JSON, id TEXT PRIMARY KEY, name TEXT, owner JSON, plantingFrom JSON, relatedSource JSON, seeAlso JSON, source TEXT, type AgriCrop_type);
