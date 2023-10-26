@@ -1,3 +1,3 @@
 /* (Beta) Export of data model Carcass of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE Carcass_type AS ENUM ('Carcass');
-CREATE TABLE Carcass (address JSON, alternateName TEXT, animal TEXT, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, initialWeight NUMERIC, name TEXT, owner JSON, source TEXT, type Carcass_type, weight NUMERIC);
+CREATE TABLE Carcass (address JSON, alternateName TEXT, animal TEXT, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, initialWeight NUMERIC, location JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type Carcass_type, weight NUMERIC);
