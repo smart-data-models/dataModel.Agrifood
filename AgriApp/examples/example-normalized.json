@@ -10,23 +10,27 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "name": {
+    "type": "Text",
     "value": "Wine track"
   },
   "description": {
+    "type": "Text",
     "value": "An app for wine tracking"
   },
   "version": {
+    "type": "Text",
     "value": "1.0"
   },
   "hasProvider": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c"
   },
   "endpoint": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://app.endpoint/download"
   },
   "category": {
+    "type": "StructuredValue",
     "value": ["TBD"]
   }
 }
