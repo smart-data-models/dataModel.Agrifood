@@ -17,15 +17,19 @@
     }
   },
   "area": {
+    "type": "Number",
     "value": 200
   },
   "description": {
+    "type": "Text",
     "value": "Spring wheat"
   },
   "category": {
+    "type": "Text",
     "value": "arable"
   },
   "relatedSource": {
+    "type": "StructuredValue",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -34,6 +38,7 @@
     ]
   },
   "seeAlso": {
+    "type": "StructuredValue",
     "value": [
       "https://example.org/concept/agriparcel",
       "https://datamodel.org/example/agriparcel"
@@ -67,6 +72,7 @@
     "value": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"]
   },
   "cropStatus": {
+    "type": "Text",
     "value": "seeded"
   },
   "lastPlantedAt": {
