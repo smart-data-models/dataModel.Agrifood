@@ -10,12 +10,15 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "name": {
+    "type": "Text",
     "value": "Wheat farm"
   },
   "description": {
+    "type": "Text",
     "value": "A farm producing wheat"
   },
   "relatedSource": {
+    "type": "Text",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -24,6 +27,7 @@
     ]
   },
   "seeAlso": {
+    "type": "Text",
     "value": [
       "https://example.org/concept/farm",
       "https://datamodel.org/example/farm"
@@ -37,6 +41,7 @@
     }
   },
   "landLocation": {
+    "type": "Text",
     "value": {
       "type": "Polygon",
       "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]
