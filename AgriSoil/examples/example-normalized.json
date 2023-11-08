@@ -10,25 +10,30 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "name": {
+    "type": "Text",
     "value": "Clay"
   },
   "alternateName": {
+    "type": "Text",
     "value": "Heavy soil"
   },
   "description": {
+    "type": "Text",
     "value": "Fine grained, poor draining soil. Particle size less than 0.002mm"
   },
   "agroVocConcept": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://aims.fao.org/aos/agrovoc/c_7951"
   },
   "seeAlso": {
+    "type": "StructuredValue",
     "value": [
       "https://example.org/concept/clay",
       "https://datamodel.org/example/clay"
     ]
   },
   "relatedSource": {
+    "type": "StructuredValue",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -37,7 +42,7 @@
     ]
   },
   "hasAgriProductType": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0",
       "urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de"
