@@ -2,9 +2,11 @@
   "id": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",
   "type": "Animal",
   "species": {
+    "type": "Text",
     "value": "sheep"
   },
   "relatedSource": {
+    "type": "StructuredValue",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -13,6 +15,7 @@
     ]
   },
   "legalId": {
+    "type": "Text",
     "value": "ES142589652140"
   },
   "birthdate": {
@@ -24,17 +27,19 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "sex": {
+    "type": "Text",
     "value": "female"
   },
   "breed": {
+    "type": "Text",
     "value": "Merina"
   },
   "calvedBy": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"
   },
   "siredBy": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"
   },
   "location": {
@@ -45,27 +50,31 @@
     }
   },
   "weight": {
+    "type": "Number",
     "value": 65.3
   },
   "ownedBy": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "http://person.org/leon"
   },
   "locatedAt": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"
   },
   "phenologicalCondition": {
+    "type": "Text",
     "value": "maleAdult"
   },
   "reproductiveCondition": {
+    "type": "Text",
     "value": "inCalf"
   },
   "healthCondition": {
+    "type": "Text",
     "value": "healthy"
   },
   "fedWith": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"
   },
   "welfareCondition": {
