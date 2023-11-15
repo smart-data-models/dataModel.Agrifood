@@ -31,6 +31,8 @@
   },
   "category": {
     "type": "StructuredValue",
-    "value": ["TBD"]
+    "value": [
+      "TBD"
+    ]
   }
 }
