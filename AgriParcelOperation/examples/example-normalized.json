@@ -26,7 +26,7 @@
     ]
   },
   "hasAgriParcel": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb"
   },
   "operationType": {
@@ -54,7 +54,7 @@
     "value": "finished"
   },
   "hasOperator": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"
   },
   "startedAt": {
@@ -70,7 +70,7 @@
     "value": "2016-08-28T10:18:16Z"
   },
   "hasAgriProductType": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec"
   },
   "quantity": {
@@ -82,15 +82,15 @@
     "value": "rainwater capture"
   },
   "workOrder": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://example.com/agriparcelrecords/workorder1"
   },
   "workRecord": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://example.com/agriparcelrecords/workrecord1"
   },
   "irrigationRecord": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://example.com/agriparcelrecords/irrigationrecord1"
   }
 }
