@@ -6,15 +6,15 @@
     "value": "Biona tacos Campero Vacuno 40 kg"
   },
   "date": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2022-01-01T01:20:00Z"
   },
   "farm": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a"
   },
   "amount": {
-    "type": "number",
+    "type": "Number",
     "value": 1230
   },
   "supplier": {
