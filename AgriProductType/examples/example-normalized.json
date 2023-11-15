@@ -32,7 +32,9 @@
   },
   "category": {
     "type": "StructuredValue",
-    "value": ["cropVariety"]
+    "value": [
+      "cropVariety"
+    ]
   },
   "root": {
     "type": "Boolean",
