@@ -6,15 +6,15 @@
     "value": "Lomo alto de ternera"
   },
   "date": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2022-01-01T01:20:00Z"
   },
   "carcass": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01"
   },
   "weight": {
-    "type": "number",
+    "type": "Number",
     "value": 350
   }
 }
