@@ -17,14 +17,40 @@
   ],
   "location": {
     "type": "Point",
-    "coordinates": [100, 0]
+    "coordinates": [
+      100,
+      0
+    ]
   },
   "landLocation": {
     "type": "Polygon",
-    "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]
+    "coordinates": [
+      [
+        [
+          100,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          101,
+          1
+        ],
+        [
+          100,
+          1
+        ],
+        [
+          100,
+          0
+        ]
+      ]
+    ]
   },
   "address": {
-    "addressLocality": "Valdepeñas",
+    "addressLocality": "Valdepe\u00f1as",
     "addressCountry": "ES",
     "streetAddress": "Camino de Membrilla 17"
   },
