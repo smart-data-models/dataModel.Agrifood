@@ -2,19 +2,19 @@
   "id": "urn:ngsi-ld:Carcass:ca3f1295-500c-4aa3-b745-d143097d5c01",
   "type": "Carcass",
   "date": {
-    "type": "Date-time",
+    "type": "DateTime",
     "value": "2022-01-01T01:20:00Z"
   },
   "animal": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01"
   },
   "initialWeight": {
-    "type": "number",
+    "type": "Number",
     "value": 389
   },
   "weight": {
-    "type": "number",
+    "type": "Number",
     "value": 234
   }
 }
