@@ -13,7 +13,30 @@
     "type": "geo:json",
     "value": {
       "type": "Polygon",
-      "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]
+      "coordinates": [
+        [
+          [
+            100,
+            0
+          ],
+          [
+            101,
+            0
+          ],
+          [
+            101,
+            1
+          ],
+          [
+            100,
+            1
+          ],
+          [
+            100,
+            0
+          ]
+        ]
+      ]
     }
   },
   "area": {
@@ -45,31 +68,33 @@
     ]
   },
   "belongsTo": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765"
   },
   "ownedBy": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c"
   },
   "hasAgriParcelParent": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriParcel:1ea0f120-4474-11e8-9919-672036642081"
   },
   "hasAgriParcelChildren": {
-    "type": "URL",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",
       "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"
     ]
   },
   "hasAgriCrop": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8"
   },
   "hasAirQualityObserved": {
-    "type": "URL",
-    "value": ["urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"]
+    "type": "StructuredValue",
+    "value": [
+      "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"
+    ]
   },
   "cropStatus": {
     "type": "Text",
@@ -80,11 +105,11 @@
     "value": "2016-08-23T10:18:16Z"
   },
   "hasAgriSoil": {
-    "type": "URL",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"
   },
   "hasDevice": {
-    "type": "URL",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
       "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",
@@ -93,11 +118,11 @@
     ]
   },
   "soilTextureType": {
-      "type": "string",
-      "value": "Clay"
+    "type": "Text",
+    "value": "Clay"
   },
   "irrigationSystemType": {
-      "type": "string",
-      "value": "Drip irrigation"
+    "type": "Text",
+    "value": "Drip irrigation"
   }
 }
