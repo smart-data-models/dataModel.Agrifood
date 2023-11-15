@@ -46,7 +46,10 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-4.754444444, 41.640833333]
+      "coordinates": [
+        -4.754444444,
+        41.640833333
+      ]
     }
   },
   "weight": {
@@ -78,6 +81,7 @@
     "value": "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"
   },
   "welfareCondition": {
+    "type": "Text",
     "value": "adequate"
   }
 }
