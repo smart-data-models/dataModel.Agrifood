@@ -17,7 +17,10 @@
   "siredBy": "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87",
   "location": {
     "type": "Point",
-    "coordinates": [-4.754444444, 41.640833333]
+    "coordinates": [
+      -4.754444444,
+      41.640833333
+    ]
   },
   "weight": 65.3,
   "ownedBy": "http://person.org/leon",
