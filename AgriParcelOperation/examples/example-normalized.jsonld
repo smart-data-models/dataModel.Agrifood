@@ -1,7 +1,13 @@
 {
     "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",
     "type": "AgriParcelOperation",
-    "createdAt": "2017-01-01T01:20:00Z",
+    "dateCreated": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-01T01:20:00Z"
+        }
+    },
     "description": {
         "type": "Property",
         "value": "Monthly fertiliser application"
@@ -29,7 +35,13 @@
         "type": "Property",
         "value": "https://example.com/agriparcelrecords/irrigationrecord1"
     },
-    "modifiedAt": "2017-05-04T12:30:00Z",
+    "dateModified": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-05-04T12:30:00Z"
+        }
+    },
     "operationType": {
         "type": "Property",
         "value": "fertiliser"
