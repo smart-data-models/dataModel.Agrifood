@@ -162,7 +162,7 @@
                     "format": "date-time",
                     "description": "Property. Indicates the date when the crop was last planted"
                 },
-                "hasDevices": {
+                "hasDevice": {
                     "type": "array",
                     "description": "Property. Reference to the IoT devices associated with this parcel i.e. sensors, controls",
                     "items": {
