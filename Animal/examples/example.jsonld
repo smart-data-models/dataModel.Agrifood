@@ -15,7 +15,7 @@
     ],
     "type": "Point"
   },
-  "modifiedAt": "2017-05-04T12:30:00Z",
+  "dateModified": "2017-05-04T12:30:00Z",
   "ownedBy": "http://person.org/leon",
   "phenologicalCondition": "maleAdult",
   "relatedSource": [
