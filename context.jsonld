@@ -99,7 +99,6 @@
         "hasAirQualityObserved": "https://smartdatamodels.org/dataModel.Agrifood/hasAirQualityObserved",
         "hasBuilding": "https://smartdatamodels.org/dataModel.Agrifood/hasBuilding",
         "hasDevice": "https://smartdatamodels.org/dataModel.Agrifood/hasDevice",
-        "hasDevices": "https://smartdatamodels.org/dataModel.Agrifood/hasDevices",
         "hasOperator": "https://smartdatamodels.org/dataModel.Agrifood/hasOperator",
         "hasProvider": "https://smartdatamodels.org/dataModel.Agrifood/hasProvider",
         "hasWaterQualityObserved": "https://smartdatamodels.org/dataModel.Agrifood/hasWaterQualityObserved",
