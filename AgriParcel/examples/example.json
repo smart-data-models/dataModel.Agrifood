@@ -57,7 +57,7 @@
   "cropStatus": "seeded",
   "lastPlantedAt": "2016-08-23T10:18:16Z",
   "hasAgriSoil": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df",
-  "hasDevices": [
+  "hasDevice": [
     "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
     "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",
     "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",
