@@ -17,7 +17,7 @@
   "hasAirQualityObserved": [
     "urn:ngsi-ld:AirQualityObserved:B3F76EA170D030BCD9E036DCC9BEA22B"
   ],
-  "hasDevices": [
+  "hasDevice": [
     "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
     "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",
     "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",
