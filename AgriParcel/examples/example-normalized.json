@@ -108,7 +108,7 @@
     "type": "Text",
     "value": "urn:ngsi-ld:AgriSoil:429d1338-4474-11e8-b90a-d3e34ceb73df"
   },
-  "hasDevice": {
+  "hasDevices": {
     "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
