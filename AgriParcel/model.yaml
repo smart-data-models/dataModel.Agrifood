@@ -221,7 +221,7 @@ AgriParcel:
       type: array
       x-ngsi:
         type: Relationship
-    hasDevices:
+    hasDevice:
       description: 'Reference to the IoT devices associated with this parcel i.e. sensors, controls'
       items:
         anyOf:
@@ -507,9 +507,9 @@ AgriParcel:
                 type: string
                 x-ngsi:
                   type: Property
-            description: Unique identifier of the entity
+            description: Identifier of the entity describing the external application
             x-ngsi:
-              type: Property
+              type: Relationship
           applicationEntityId:
             description: Identifier in the external application
             type: string
@@ -569,7 +569,7 @@ AgriParcel:
     - hasAgriCrop
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcel/schema.json
   x-model-tags: ""
