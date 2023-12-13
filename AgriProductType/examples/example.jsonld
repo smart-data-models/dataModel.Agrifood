@@ -5,7 +5,7 @@
   "category": [
     "cropVariety"
   ],
-  "createdAt": "2017-01-01T01:20:00Z",
+  "dateCreated": "2017-01-01T01:20:00Z",
   "description": "Soft edible fruits",
   "hasAgriProductTypeChildren": [
     "urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",
@@ -13,7 +13,7 @@
     "urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555"
   ],
   "hasAgriProductTypeParent": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e",
-  "modifiedAt": "2017-05-04T12:30:00Z",
+  "dateModified": "2017-05-04T12:30:00Z",
   "name": "Soft Fruits",
   "relatedSource": [
     {
