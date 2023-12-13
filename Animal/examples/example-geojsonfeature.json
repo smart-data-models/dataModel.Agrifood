@@ -13,7 +13,13 @@
   },
   "properties": {
     "type": "Animal",
-    "modifiedAt": "2017-05-04T12:30:00Z",
+    "dateModified": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-05-04T12:30:00Z"
+        }
+    },
     "species": {
       "type": "Property",
       "value": "sheep"
