@@ -1,16 +1,16 @@
 {
-    "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
-    "type": "AgriApp",
-    "category": [
-        "TBD"
-    ],
-    "description": "An app for wine tracking",
-    "endpoint": "https://app.endpoint/download",
-    "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
-    "name": "Wine track",
-    "version": "1.0",
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
+  "type": "AgriApp",
+  "category": [
+    "TBD"
+  ],
+  "description": "An app for wine tracking",
+  "endpoint": "https://app.endpoint/download",
+  "hasProvider": "urn:ngsi-ld:Organization:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
+  "name": "Wine track",
+  "version": "1.0",
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
+  ]
 }
