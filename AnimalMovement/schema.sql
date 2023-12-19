@@ -1,3 +1,3 @@
-/* (Beta) Export of data model AnimalMovement of the subject dataModel.Agrifood for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model AnimalMovement of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE AnimalMovement_type AS ENUM ('AnimalMovement');
-CREATE TABLE AnimalMovement (address json, alternateName text, animal json, areaServed text, dataProvider text, date timestamp, dateCreated timestamp, dateModified timestamp, description text, farm text, id text, location json, movement text, name text, owner json, parcel text, pen text, seeAlso json, source text, type AnimalMovement_type);
+CREATE TABLE AnimalMovement (address JSON, alternateName TEXT, animal JSON, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, farm TEXT, id TEXT PRIMARY KEY, location JSON, movement TEXT, name TEXT, owner JSON, parcel TEXT, pen TEXT, seeAlso JSON, source TEXT, type AnimalMovement_type);

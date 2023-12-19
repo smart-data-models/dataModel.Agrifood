@@ -1,93 +1,147 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。农牧业  
-======<!-- /10-Header -->  
+实体：农业农场  
+=======<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriFarm/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全球描述。**该实体包含一个由建筑物和地块组成的通用农场的统一描述。该实体主要与农业垂直领域和相关的物联网应用有关。  
-版本：0.0.5  
+全局描述：**该实体包含对由建筑物和地块组成的通用农场的统一描述。该实体主要与农业垂直领域和相关物联网应用有关。  
+版本： 0.0.5  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: 与该物品联系的细节。  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `hasAgriParcel[array]`: 属于农场的农业地块清单  - `hasBuilding[array]`: 属于农场的建筑物清单  - `id[*]`: 实体的唯一标识符  - `landLocation[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `ownedBy[*]`: 农场的所有者（个人或组织  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `relatedSource[array]`: 当前实体在外部应用程序中可能拥有的ID列表  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI实体类型。它必须是农业农场  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
+	- `availabilityRestriction[*]`: 该属性将一个联络点与该联络点不在时的信息联系起来。详细信息通过 "开放时间规范 "类提供  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
+	- `availableLanguage[*]`: 某人在使用物品、服务或场所时可能使用的语言。请使用 IETF BCP 47 标准中的一种语言代码。可使用 "文本 "选项，但也可以使用 "语言 "选项。  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: 该联络点的可用选项（如免费电话号码或对听力受损来电者的支持）  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+	- `contactType[string]`: 此项目的联系类型    
+	- `email[idn-email]`: 所有者的电子邮件地址    
+	- `faxNumber[string]`: 传真号码  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `name[string]`: 该项目的名称    
+	- `productSupported[string]`: 该支持联络点所涉及的产品或服务（如特定产品系列的产品支持）。可以是特定产品或产品系列（如 "iPhone"），也可以是产品或服务的一般类别（如 "智能手机）  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `telephone[string]`: 联系人电话    
+- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `hasAgriParcel[array]`: 农场所属农业地块清单  - `hasBuilding[array]`: 农场所属建筑清单  - `id[*]`: 实体的唯一标识符  - `landLocation[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `location[*]`: 项目的 Geojson 引用。可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `ownedBy[*]`: 农场主（个人或组织  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `relatedSource[array]`: 当前实体在外部应用程序中可能拥有的 ID 列表  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `type[string]`: NGSI 实体类型。必须是 AgriFarm  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 AgriFarm:    
-  description: 'This entity contains a harmonised description of a generic farm made up of buildings and parcels. This entity is primarily associated with the agricultural vertical and related IoT applications.'    
+  description: This entity contains a harmonised description of a generic farm made up of buildings and parcels. This entity is primarily associated with the agricultural vertical and related IoT applications.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     contactPoint:    
-      description: 'The details to contact with the item.'    
+      description: The details to contact with the item    
       properties:    
         areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          description: The geographic area where a service or offered item is provided. Supersedes serviceArea    
           type: string    
+          x-ngsi:    
+            type: Property    
         availabilityRestriction:    
           anyOf:    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            - description: Array of identifiers format of any NGSI entity    
               items:    
                 maxLength: 256    
                 minLength: 1    
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
                 type: string    
               type: array    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              x-ngsi:    
+                type: Property    
+            - description: Array of identifiers format of any NGSI entity    
               items:    
                 format: uri    
                 type: string    
               type: array    
-          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+              x-ngsi:    
+                type: Property    
+          description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class    
+          x-ngsi:    
+            model: http://schema.org/hoursAvailable    
+            type: Relationship    
         availableLanguage:    
           anyOf:    
             - anyOf:    
@@ -95,96 +149,150 @@ AgriFarm:
                 - items:    
                     type: string    
                   type: array    
-          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+          x-ngsi:    
+            model: http://schema.org/availableLanguage    
+            type: Property    
         contactOption:    
           anyOf:    
             - type: string    
             - items:    
                 type: string    
               type: array    
-          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
+          description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)    
+          x-ngsi:    
+            model: http://schema.org/contactOption    
+            type: Property    
         contactType:    
-          description: 'Property. Contact type of this item.'    
+          description: Contact type of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         email:    
-          description: 'Property. Email address of owner.'    
+          description: Email address of owner    
           format: idn-email    
           type: string    
+          x-ngsi:    
+            type: Property    
         faxNumber:    
-          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          description: The fax number    
           type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
         name:    
-          description: 'Property. The name of this item.'    
+          description: The name of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         productSupported:    
-          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
+          description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')    
           type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
         telephone:    
-          description: 'Property. Telephone of this contact.'    
+          description: Telephone of this contact    
           type: string    
+          x-ngsi:    
+            type: Property    
         url:    
-          description: 'Property. URL which provides a description or further information about this item.'    
+          description: URL which provides a description or further information about this item    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     hasAgriParcel:    
-      description: 'List of agri parcels belonging to the farm'    
+      description: List of agri parcels belonging to the farm    
       items:    
-        anyOf: &agrifarm_-_properties_-_hasbuilding_-_items_-_anyof    
-          - description: 'Property. Identifier format of any NGSI entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
             format: uri    
             type: string    
-        description: 'Property. Unique identifier of the entity'    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Relationship    
     hasBuilding:    
-      description: 'List of buildings belonging to the farm'    
+      description: List of buildings belonging to the farm    
       items:    
-        anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Relationship    
     id:    
-      anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof    
-      description: 'Unique identifier of the entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     landLocation:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: &agrifarm_-_properties_-_location_-_oneof    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -203,9 +311,11 @@ AgriFarm:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -227,9 +337,11 @@ AgriFarm:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -253,9 +365,11 @@ AgriFarm:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -276,9 +390,11 @@ AgriFarm:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -302,9 +418,11 @@ AgriFarm:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -330,56 +448,253 @@ AgriFarm:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: *agrifarm_-_properties_-_location_-_oneof    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Point    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON LineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Polygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPoint    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiLineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPolygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     ownedBy:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Owner (Person or Organization) of the farm'    
+          x-ngsi:    
+            type: Property    
+      description: Owner (Person or Organization) of the farm    
       x-ngsi:    
         type: Relationship    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     relatedSource:    
-      description: 'List of IDs the current entity may have in external applications'    
+      description: List of IDs the current entity may have in external applications    
       items:    
         properties:    
           application:    
-            anyOf: *agrifarm_-_properties_-_hasbuilding_-_items_-_anyof    
-            description: 'Property. Unique identifier of the entity'    
+            anyOf:    
+              - description: Identifier format of any NGSI entity    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              - description: Identifier format of any NGSI entity    
+                format: uri    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+            description: Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
           applicationEntityId:    
+            description: Identifier in the external application    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -391,12 +706,12 @@ AgriFarm:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity Type. It has to be AgriFarm'    
+      description: NGSI Entity Type. It has to be AgriFarm    
       enum:    
         - AgriFarm    
       type: string    
@@ -418,9 +733,9 @@ AgriFarm:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
+## 有效载荷示例  
 #### AgriFarm NGSI-v2 关键值示例  
-这里是一个以JSON-LD格式作为关键值的AgriFarm的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的背景数据。  
+下面是一个以 JSON-LD 格式作为键值的 AgriFarm 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -469,8 +784,8 @@ AgriFarm:
 }  
 ```  
 </details>  
-#### AgriFarm NGSI-v2规范化示例  
-下面是一个以JSON-LD格式规范化的AgriFarm的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### AgriFarm NGSI-v2 标准化示例  
+下面是一个规范化 JSON-LD 格式的 AgriFarm 示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -553,8 +868,8 @@ AgriFarm:
 }  
 ```  
 </details>  
-#### AgriFarm NGSI-LD关键值示例  
-这里是一个以JSON-LD格式作为关键值的AgriFarm的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### AgriFarm NGSI-LD 关键值示例  
+下面是一个以 JSON-LD 格式作为键值的 AgriFarm 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -635,8 +950,8 @@ AgriFarm:
 }  
 ```  
 </details>  
-#### AgriFarm NGSI-LD 归一化实例  
-下面是一个以JSON-LD格式规范化的AgriFarm的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### AgriFarm NGSI-LD 归一化示例  
+下面是一个规范化 JSON-LD 格式的 AgriFarm 示例。在不使用选项的情况下，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -753,7 +1068,7 @@ AgriFarm:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

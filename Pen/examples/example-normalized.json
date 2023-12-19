@@ -2,7 +2,7 @@
   "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",
   "type": "Pen",
   "additionalInfo": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "name": "Farm1FeedTray",
@@ -27,35 +27,35 @@
     ]
   },
   "buildingId": {
-    "type": "string",
+    "type": "Text",
     "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"
   },
   "companyId": {
-    "type": "string",
+    "type": "Text",
     "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"
   },
   "compartmentId": {
-    "type": "string",
+    "type": "Text",
     "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"
   },
   "empty": {
-    "type": "boolean",
+    "type": "Boolean",
     "value": false
   },
   "farmId": {
-    "type": "string",
+    "type": "Text",
     "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"
   },
   "lastUpdate": {
-    "type": "string",
+    "type": "DateTime",
     "value": "2020-04-12T20:44:55"
   },
   "sex": {
-    "type": "string",
+    "type": "Text",
     "value": ""
   },
   "temperature": {
-    "type": "number",
+    "type": "Number",
     "value": 25
   }
 }

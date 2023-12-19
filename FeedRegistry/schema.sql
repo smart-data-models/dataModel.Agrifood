@@ -1,3 +1,3 @@
-/* (Beta) Export of data model FeedRegistry of the subject dataModel.Agrifood for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model FeedRegistry of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE FeedRegistry_type AS ENUM ('FeedRegistry');
-CREATE TABLE FeedRegistry (address json, alternateName text, amount integer, areaServed text, dataProvider text, date timestamp, dateCreated timestamp, dateModified timestamp, deliveryNote text, description text, farm text, id text, location json, name text, owner json, seeAlso json, source text, supplier text, type FeedRegistry_type);
+CREATE TABLE FeedRegistry (address JSON, alternateName TEXT, amount NUMERIC, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, deliveryNote TEXT, description TEXT, farm TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, supplier TEXT, type FeedRegistry_type);

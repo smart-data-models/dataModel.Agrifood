@@ -20,7 +20,7 @@
             "displayName": "area",
             "@type": "Property",
             "schema": "long",
-            "comment": "Property. Model:'http://schema.org/Number'. Units:'m2'. The area of the parcel nominally in square meters."
+            "comment": "The area of the parcel nominally in square meters"
         },
         {
             "name": "areaServed",
@@ -41,7 +41,7 @@
             "displayName": "category",
             "@type": "Property",
             "schema": "string",
-            "comment": "Property. Model:'http://schema.org/Text'. The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**"
+            "comment": "The category of the parcel of land e.g.: **arable, grassland, vineyard, orchard, mixed crop, lowland, upland, set-aside, forestry, wetland.**"
         },
         {
             "name": "dataProvider",
@@ -49,7 +49,7 @@
             "displayName": "dataProvider",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
         },
         {
             "name": "dateCreated",
@@ -57,7 +57,7 @@
             "displayName": "dateCreated",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateModified",
@@ -65,7 +65,7 @@
             "displayName": "dateModified",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
             "name": "description",
@@ -96,7 +96,7 @@
             "displayName": "lastPlantedAt",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Property. Indicates the date when the crop was last planted"
+            "comment": "Indicates the date when the crop was last planted"
         },
         {
             "name": "location",
@@ -109,7 +109,7 @@
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The name of this item."
+            "comment": "The name of this item"
         },
         {
             "name": "ownedBy",
@@ -127,7 +127,7 @@
             "displayName": "source",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
         },
         {
             "@type": "Telemetry",
@@ -136,7 +136,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Relationship. Related sub AgriParcel records to which this entity relates",
+            "comment": "Related sub AgriParcel records to which this entity relates",
             "displayName": "hasAgriParcelChildren"
         },
         {
@@ -146,18 +146,18 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Relationship. Reference to the air quality observed in this parcel of land",
+            "comment": "Reference to the air quality observed in this parcel of land",
             "displayName": "hasAirQualityObserved"
         },
         {
             "@type": "Telemetry",
-            "name": "hasDevices",
+            "name": "hasDevice",
             "schema": {
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Property. Reference to the IoT devices associated with this parcel i.e. sensors, controls.",
-            "displayName": "hasDevices"
+            "comment": "Reference to the IoT devices associated with this parcel i.e. sensors, controls",
+            "displayName": "hasDevice"
         },
         {
             "@type": "Telemetry",

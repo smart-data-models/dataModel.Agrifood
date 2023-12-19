@@ -10,6 +10,7 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "relatedSource": {
+    "type": "StructuredValue",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -18,23 +19,48 @@
     ]
   },
   "seeAlso": {
+    "type": "StructuredValue",
     "value": [
       "https://example.org/concept/agriparcelrec",
       "https://datamodel.org/example/agriparcelrec"
     ]
   },
   "hasAgriParcel": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed"
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Polygon",
-      "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]
+      "coordinates": [
+        [
+          [
+            100,
+            0
+          ],
+          [
+            101,
+            0
+          ],
+          [
+            101,
+            1
+          ],
+          [
+            100,
+            1
+          ],
+          [
+            100,
+            0
+          ]
+        ]
+      ]
     }
   },
   "soilTemperature": {
+    "type": "Number",
     "value": 27,
     "metadata": {
       "unitCode": {
@@ -53,6 +79,7 @@
     }
   },
   "soilMoistureVwc": {
+    "type": "Number",
     "value": 0.08,
     "metadata": {
       "unitCode": {
@@ -65,6 +92,7 @@
     }
   },
   "soilMoistureEc": {
+    "type": "Number",
     "value": 17,
     "metadata": {
       "unitCode": {
@@ -77,6 +105,7 @@
     }
   },
   "soilSalinity": {
+    "type": "Number",
     "value": 1198.11,
     "metadata": {
       "unitCode": {
@@ -89,7 +118,8 @@
     }
   },
   "leafWetness": {
-    "value": 1.0,
+    "type": "Boolean",
+    "value": true,
     "metadata": {
       "unitCode": {
         "value": "P1"
@@ -101,6 +131,7 @@
     }
   },
   "leafRelativeHumidity": {
+    "type": "Number",
     "value": 0.25,
     "metadata": {
       "unitCode": {
@@ -113,6 +144,7 @@
     }
   },
   "leafTemperature": {
+    "type": "Number",
     "value": 25.1,
     "metadata": {
       "unitCode": {
@@ -125,6 +157,7 @@
     }
   },
   "airTemperature": {
+    "type": "Number",
     "value": 20,
     "metadata": {
       "unitCode": {
@@ -137,6 +170,7 @@
     }
   },
   "solarRadiation": {
+    "type": "Number",
     "value": 15,
     "metadata": {
       "unitCode": {
@@ -149,6 +183,7 @@
     }
   },
   "relativeHumidity": {
+    "type": "Number",
     "value": 0.15,
     "metadata": {
       "unitCode": {
@@ -161,6 +196,7 @@
     }
   },
   "atmosphericPressure": {
+    "type": "Number",
     "value": 1013.25,
     "metadata": {
       "unitCode": {
@@ -173,10 +209,11 @@
     }
   },
   "description": {
+    "type": "Text",
     "value": "Monthly fertiliser application"
   },
   "hasDevice": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
       "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b",

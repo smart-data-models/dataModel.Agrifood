@@ -14,18 +14,18 @@ AgriCrop:
       x-ngsi:
         type: Property
     dataProvider:
-      description: A sequence of characters identifying the provider of the harmonised data entity.
+      description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.
+      description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
@@ -36,7 +36,7 @@ AgriCrop:
       x-ngsi:
         type: Property
     harvestingInterval:
-      description: 'A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.'
+      description: 'A list of the recommended harvesting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date'
       items:
         properties:
           dateRange:
@@ -52,17 +52,21 @@ AgriCrop:
         model: http://schema.org/URL
         type: Property
     hasAgriFertiliser:
-      description: Reference to the recommended types of fertiliser suitable for growing this crop.
+      description: Reference to the recommended types of fertiliser suitable for growing this crop
       items:
         anyOf:
-          - description: Property. Identifier format of any NGSI entity
+          - description: Identifier format of any NGSI entity
             maxLength: 256
             minLength: 1
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
-          - description: Property. Identifier format of any NGSI entity
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
             format: uri
             type: string
+            x-ngsi:
+              type: Property
       type: array
       x-ngsi:
         model: http://schema.org/URL
@@ -71,62 +75,88 @@ AgriCrop:
       description: Reference to the pests known to attack this crop
       items:
         anyOf:
-          - description: Property. Identifier format of any NGSI entity
+          - description: Identifier format of any NGSI entity
             maxLength: 256
             minLength: 1
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
-          - description: Property. Identifier format of any NGSI entity
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
             format: uri
             type: string
+            x-ngsi:
+              type: Property
       type: array
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
     hasAgriSoil:
-      description: Reference to the recommended types of soil suitable for growing this crop.
+      description: Reference to the recommended types of soil suitable for growing this crop
       items:
         anyOf:
-          - description: Property. Identifier format of any NGSI entity
+          - description: Identifier format of any NGSI entity
             maxLength: 256
             minLength: 1
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
-          - description: Property. Identifier format of any NGSI entity
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
             format: uri
             type: string
+            x-ngsi:
+              type: Property
       type: array
       x-ngsi:
         model: http://schema.org/URL
         type: Relationship
     id:
-      anyOf: &agricrop_-_properties_-_owner_-_items_-_anyof
-        - description: Property. Identifier format of any NGSI entity
+      anyOf:
+        - description: Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: Property. Identifier format of any NGSI entity
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
           format: uri
           type: string
+          x-ngsi:
+            type: Property
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
     name:
-      description: The name of this item.
+      description: The name of this item
       type: string
       x-ngsi:
         type: Property
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
-        anyOf: *agricrop_-_properties_-_owner_-_items_-_anyof
-        description: Property. Unique identifier of the entity
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         type: Property
     plantingFrom:
-      description: 'A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date.'
+      description: 'A list of the recommended planting interval date(s) for this crop. Specified using ISO8601 repeating date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning repeat each year from this start date to this end date'
       items:
         properties:
           dateRange:
@@ -146,10 +176,27 @@ AgriCrop:
       items:
         properties:
           application:
-            anyOf: *agricrop_-_properties_-_owner_-_items_-_anyof
-            description: Property. Unique identifier of the entity
+            anyOf:
+              - description: Identifier format of any NGSI entity
+                maxLength: 256
+                minLength: 1
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                type: string
+                x-ngsi:
+                  type: Property
+              - description: Identifier format of any NGSI entity
+                format: uri
+                type: string
+                x-ngsi:
+                  type: Property
+            description: Unique identifier of the entity
+            x-ngsi:
+              type: Property
           applicationEntityId:
+            description: Identifier in the external application
             type: string
+            x-ngsi:
+              type: Property
         type: object
       type: array
       x-ngsi:
@@ -167,7 +214,7 @@ AgriCrop:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property

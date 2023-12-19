@@ -1,9 +1,8 @@
 {
-  "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0"
-  ,
+  "id": "a88c6069-86c4-4c09-8621-fc5c58f216e0",
   "type": "Compartment",
   "additionalInfo": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "name": "Farm2FeedTray",
@@ -20,88 +19,87 @@
     ]
   },
   "arrivalTimestamp": {
-    "type": "string",
+    "type": "DateTime",
     "value": "2020-04-14T22:00:00.000Z"
   },
   "avgGrowth": {
-    "type": "number",
+    "type": "Number",
     "value": 4
   },
   "avgWeight": {
-    "type": "number",
+    "type": "Number",
     "value": 45.5
   },
   "buildingId": {
-    "type": "string",
+    "type": "Text",
     "value": "f6ce5251-e959-4269-9040-8056c6a093d9"
   },
   "co2": {
-    "type": "number",
+    "type": "Number",
     "value": 20
   },
   "companyId": {
-    "type": "string",
+    "type": "Text",
     "value": "1401c9e0-c441-4bd1-b8d3-fb1194479aa7"
   },
   "empty": {
-    "type": "boolean",
+    "type": "Boolean",
     "value": false
   },
   "farmId": {
-    "type": "string",
+    "type": "Text",
     "value": "7438345c-fdff-45c9-a02f-1d764cbc03a7"
   },
   "feedConsumption": {
-    "type": "number",
+    "type": "Number",
     "value": 8.3
   },
   "humidity": {
-    "type": "number",
+    "type": "Number",
     "value": 0.7
   },
   "lastUpdate": {
-    "type": "number",
+    "type": "Number",
     "value": 1589841011000
   },
   "luminosity": {
-    "type": "number",
+    "type": "Number",
     "value": 3
   },
   "name": {
-    "type": "string",
+    "type": "Text",
     "value": ""
   },
   "numAnimals": {
-    "type": "number",
+    "type": "Number",
     "value": 22
   },
   "outputFeed": {
-    "type": "number",
+    "type": "Number",
     "value": 8.2
   },
   "parentCompartmentId": {
-    "type": "string",
+    "type": "Text",
     "value": "f0ddd929-5a18-479b-9ad6-5947cc2cd05b"
   },
   "sex": {
-    "type": "string",
+    "type": "Text",
     "value": ""
   },
   "startWeight": {
-    "type": "number",
+    "type": "Number",
     "value": 26
   },
   "temperature": {
-    "type": "number",
+    "type": "Number",
     "value": 25
   },
   "waterConsumption": {
-    "type": "number",
+    "type": "Number",
     "value": 23
   },
   "weightStDev": {
-    "type": "number",
+    "type": "Number",
     "value": 2.3
   }
 }
-

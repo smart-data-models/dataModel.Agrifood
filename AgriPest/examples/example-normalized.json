@@ -10,12 +10,15 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "name": {
+    "type": "Text",
     "value": "Grasshopper"
   },
   "alternateName": {
+    "type": "Text",
     "value": "Chorthippus parallelus"
   },
   "relatedSource": {
+    "type": "StructuredValue",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -24,20 +27,22 @@
     ]
   },
   "seeAlso": {
+    "type": "StructuredValue",
     "value": [
       "https://example.org/concept/pest",
       "https://datamodel.org/example/pest"
     ]
   },
   "agroVocConcept": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://aims.fao.org/aos/agrovoc/c_31924"
   },
   "description": {
+    "type": "Text",
     "value": "Common European grasshopper"
   },
   "hasAgriProductType": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:AgriProductType:06afffde-4488-11e8-861a-cfcf50aaa9cc",
       "urn:ngsi-ld:AgriProductType:0c094486-4488-11e8-a15f-afa816790c64",

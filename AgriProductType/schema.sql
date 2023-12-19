@@ -1,3 +1,3 @@
-/* (Beta) Export of data model AgriProductType of the subject dataModel.Agrifood for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model AgriProductType of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE AgriProductType_type AS ENUM ('AgriProductType');
-CREATE TABLE AgriProductType (agroVocConcept text, alternateName text, category json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, hasAgriProductTypeChildren json, hasAgriProductTypeParent text, id text, name text, owner json, relatedSource json, root text, seeAlso json, source text, type AgriProductType_type);
+CREATE TABLE AgriProductType (agroVocConcept TEXT, alternateName TEXT, category JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, hasAgriProductTypeChildren JSON, id TEXT PRIMARY KEY, name TEXT, owner JSON, relatedSource JSON, root BOOLEAN, seeAlso JSON, source TEXT, type AgriProductType_type);

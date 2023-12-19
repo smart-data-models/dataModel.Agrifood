@@ -10,12 +10,15 @@
     "value": "2017-05-04T12:30:00Z"
   },
   "name": {
+    "type": "Text",
     "value": "Soft Fruits"
   },
   "description": {
+    "type": "Text",
     "value": "Soft edible fruits"
   },
   "relatedSource": {
+    "type": "StructuredValue",
     "value": [
       {
         "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -24,21 +27,25 @@
     ]
   },
   "agroVocConcept": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://aims.fao.org/aos/agrovoc/c_3128"
   },
   "category": {
-    "value": ["cropVariety"]
+    "type": "StructuredValue",
+    "value": [
+      "cropVariety"
+    ]
   },
   "root": {
+    "type": "Boolean",
     "value": true
   },
   "hasAgriProductTypeParent": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e"
   },
   "hasAgriProductTypeChildren": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",
       "urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db",

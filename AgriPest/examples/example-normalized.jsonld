@@ -9,7 +9,13 @@
         "type": "Property",
         "value": "Chorthippus parallelus"
     },
-    "createdAt": "2017-01-01T01:20:00Z",
+    "dateCreated": {
+        "type": "Property",
+        "value" {
+            "@type": "DateTime",
+            "@value": "2017-01-01T01:20:00Z"
+        }
+    },
     "description": {
         "type": "Property",
         "value": "Common European grasshopper"
@@ -22,7 +28,13 @@
             "urn:ngsi-ld:AgriProductType:14bf9f26-4488-11e8-9e3d-bfb78de66dd3"
         ]
     },
-    "modifiedAt": "2017-05-04T12:30:00Z",
+    "dateModified": {
+        "type": "Property",
+        "value" {
+            "@type": "DateTime",
+            "@value": "2017-05-04T12:30:00Z"
+        }
+    },
     "name": {
         "type": "Property",
         "value": "Grasshopper"
