@@ -1,7 +1,6 @@
 {
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",
   "type": "AgriParcelRecord",
-  "airTemperature": 20,
   "atmosphericPressure": 1013.25,
   "description": "Monthly fertiliser application",
   "hasAgriParcel": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed",
