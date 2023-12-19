@@ -3,7 +3,6 @@
   "type": "AgriGreenhouse",
   "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",
   "co2": 28,
-  "createdAt": "2017-01-01T01:20:00Z",
   "dailyLight": 24,
   "drainFlow": {
     "maxValue": 50,
@@ -28,7 +27,6 @@
   ],
   "hasWeatherObserved": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d",
   "leafTemperature": 22,
-  "modifiedAt": "2017-05-04T12:30:00Z",
   "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
   "relatedSource": [
     {
@@ -42,7 +40,6 @@
     "https://datamodel.org/example/agrigreenhouse"
   ],
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
 }

@@ -4,7 +4,6 @@
   "area": 200,
   "belongsTo": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",
   "category": "arable",
-  "createdAt": "2017-01-01T01:20:00Z",
   "cropStatus": "seeded",
   "description": "Spring wheat",
   "hasAgriCrop": "urn:ngsi-ld:AgriCrop:36021150-4474-11e8-a721-af07c5fae7c8",
@@ -51,7 +50,6 @@
     ],
     "type": "Polygon"
   },
-  "modifiedAt": "2017-05-04T12:30:00Z",
   "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
   "relatedSource": [
     {
@@ -64,7 +62,6 @@
     "https://datamodel.org/example/agriparcel"
   ],
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
 }

@@ -3,7 +3,6 @@
   "type": "AgriParcelRecord",
   "airTemperature": 20,
   "atmosphericPressure": 1013.25,
-  "createdAt": "2017-01-01T01:20:00Z",
   "description": "Monthly fertiliser application",
   "hasAgriParcel": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed",
   "hasDevice": [
@@ -42,11 +41,7 @@
     ],
     "type": "Polygon"
   },
-  "modifiedAt": "2017-05-04T12:30:00Z",
-  "observedAt": {
-    "@type": "DateTime",
-    "@value": "2017-05-04T12:30:00Z"
-  },
+  "observedAt": "2017-05-04T12:30:00Z",
   "relatedSource": [
     {
       "application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
@@ -64,7 +59,6 @@
   "soilTemperature": 27,
   "solarRadiation": 15,
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
 }

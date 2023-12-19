@@ -23,7 +23,6 @@
     "https://datamodel.org/example/pest"
   ],
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
 }

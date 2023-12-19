@@ -12,7 +12,6 @@
     "telephone": "00349674532",
     "type": "ContactPoint"
   },
-  "createdAt": "2017-01-01T01:20:00Z",
   "description": "A farm producing wheat",
   "hasAgriParcel": [
     "urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",
@@ -56,7 +55,6 @@
     ],
     "type": "Point"
   },
-  "modifiedAt": "2017-05-04T12:30:00Z",
   "name": "Wheat farm",
   "ownedBy": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
   "relatedSource": [
@@ -70,7 +68,6 @@
     "https://datamodel.org/example/farm"
   ],
   "@context": [
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
 }
