@@ -17,10 +17,6 @@
     "type": "Number",
     "value": 4
   },
-  "deliveryNote": {
-    "type": "Text",
-    "value": "Primera entrega 2022"
-  },
   "animals": {
     "type": "StructuredValue",
     "value": [
