@@ -20,10 +20,6 @@
     "type": "Property",
     "value": 4
   },
-  "deliveryNote": {
-    "type": "Property",
-    "value": "Primera entrega 2022"
-  },
   "animals": {
     "type": "Relationship",
     "object": [
