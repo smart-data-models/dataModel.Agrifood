@@ -156,19 +156,6 @@
       }
     }
   },
-  "airTemperature": {
-    "type": "Number",
-    "value": 20,
-    "metadata": {
-      "unitCode": {
-        "value": "CEL"
-      },
-      "timestamp": {
-        "type": "DateTime",
-        "value": "2017-05-04T12:30:00Z"
-      }
-    }
-  },
   "solarRadiation": {
     "type": "Number",
     "value": 15,
@@ -220,9 +207,5 @@
       "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",
       "urn:ngsi-ld:Device:6f44b54e-4474-11e8-8577-d7ff6a8ef551"
     ]
-  },
-  "observedAt": {
-    "type": "DateTime",
-    "value": "2017-05-04T10:18:16Z"
   }
 }
