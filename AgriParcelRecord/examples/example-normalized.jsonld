@@ -1,19 +1,12 @@
 {
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",
   "type": "AgriParcelRecord",
-  "airTemperature": {
-    "type": "Property",
-    "value": 20,
-    "unitCode": "CEL",
-    "observedAt": "2017-05-04T12:30:00Z"
-  },
   "atmosphericPressure": {
     "type": "Property",
     "value": 1013.25,
     "unitCode": "A97",
     "observedAt": "2017-05-04T12:30:00Z"
   },
-  "createdAt": "2017-01-01T01:20:00Z",
   "description": {
     "type": "Property",
     "value": "Monthly fertiliser application"
@@ -79,8 +72,6 @@
       ]
     }
   },
-  "modifiedAt": "2017-05-04T12:30:00Z",
-  "observedAt": "2017-05-04T12:30:00Z",
   "relatedSource": {
     "type": "Property",
     "value": [
