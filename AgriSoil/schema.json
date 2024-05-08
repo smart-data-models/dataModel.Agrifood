@@ -32,7 +32,10 @@
                     "description": "Relationship. Reference to the recommended types of product (such as fertiliser) that can be used to condition this soil type",
                     "items": {
                         "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-                    }
+                    },
+                "validationSchema": {
+                  "type": "string",
+                  "description": "Property. URL to the corresponding validation schema of the data model. Default value: https://github.com/smart-data-models/dataModel.Agrifood/edit/master/AgriSoil/schema.json"
                 }
             }
         }
