@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.6",
+  "$schemaVersion": "0.0.7",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json",
   "title": "Smart Data Models - Agri Food",
@@ -120,25 +120,25 @@
               },
               "description": {
                 "type": "string",
-                 "description": "Property. Descriptions of the range dates"
+                "description": "Property. Descriptions of the range dates"
               }
             }
           },
           "minItems": 2,
           "maxItems": 2
+        },
+        "wateringFrequency": {
+          "type": "string",
+          "description": "Property. Model:'http://schema.org/URL'. Units:''. A description of the recommended watering schedule. A choice from an enumerated list. One of: **daily, weekly, biweekly, monthly, onDemand, other**. Enum:'daily, weekly, biweekly, monthly, onDemand,    other'",
+          "enum": [
+            "daily",
+            "weekly",
+            "biweekly",
+            "monthly",
+            "onDemand",
+            "other"
+          ]
         }
-      },
-      "wateringFrequency": {
-        "type": "string",
-        "description": "Property. Model:'http://schema.org/URL'. Units:''. A description of the recommended watering schedule. A choice from an enumerated list. One of: **daily, weekly, biweekly, monthly, onDemand, other**. Enum:'daily, weekly, biweekly, monthly, onDemand,    other'",
-        "enum": [
-          "daily",
-          "weekly",
-          "biweekly",
-          "monthly",
-          "onDemand",
-          "other"
-        ]
       }
     }
   ],
