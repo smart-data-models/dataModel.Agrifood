@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.5",
+  "$schemaVersion": "0.0.6",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriCrop/schema.json",
   "title": "Smart Data Models - Agri Food",
@@ -115,10 +115,12 @@
             "properties": {
               "dateRange": {
                 "type": "string",
-                "pattern": "^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$"
+                "pattern": "^-[0-1][0-9]-[0-3][0-9]/-[0-1][0-9]-[0-3][0-9]$",
+                "description": "Property. Range of dates in a string format"
               },
               "description": {
-                "type": "string"
+                "type": "string",
+                 "description": "Property. Descriptions of the range dates"
               }
             }
           },
