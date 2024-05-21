@@ -9,13 +9,6 @@
     "type": "Property",
     "value": "Triticum aestivum"
   },
-  "createdAt": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2017-01-01T01:20:00Z"
-    }
-  },
   "description": {
     "type": "Property",
     "value": "Spring wheat"
@@ -53,13 +46,6 @@
       "urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",
       "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"
     ]
-  },
-  "modifiedAt": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2017-05-04T12:30:00Z"
-    }
   },
   "name": {
     "type": "Property",
