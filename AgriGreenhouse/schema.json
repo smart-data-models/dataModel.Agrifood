@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.3",
+  "$schemaVersion": "0.0.4",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriGreenhouse/schema.json",
   "title": "Smart Data Models - Agri Greenhouse",
@@ -128,18 +128,22 @@
           "properties": {
             "value": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Value of the drain flow"
             },
             "maxValue": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Maximum value of the drain flow"
             },
             "minValue": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Minimum value of the drain flow"
             },
             "unitText": {
-              "type": "string"
+              "type": "string",
+              "description": "Property. Description of the units of the drainflow"
             }
           }
         },
