@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Carcass"
 subject = "dataModel.Agrifood"
-date = "{'type': 'Property', 'value': {'@type': 'Date-time', '@value': '2022-01-01T01:20:00Z'}}"
+date = "2022-01-01T01:20:00Z"
 attribute = "date"
 value = date
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-animal = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01'}"
+animal = "urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01"
 attribute = "animal"
 value = animal
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-initialWeight = {'type': 'Property', 'value': 389}
+initialWeight = 389
 attribute = "initialWeight"
 value = initialWeight
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-weight = {'type': 'Property', 'value': 234}
+weight = 234
 attribute = "weight"
 value = weight
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
