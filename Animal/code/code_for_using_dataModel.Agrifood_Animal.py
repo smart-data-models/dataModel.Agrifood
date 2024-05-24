@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Animal"
 subject = "dataModel.Agrifood"
-birthdate = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2017-01-01T01:20:00Z'}}"
+birthdate = "2017-01-01T01:20:00Z"
 attribute = "birthdate"
 value = birthdate
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-breed = "{'type': 'Property', 'value': 'Merina'}"
+breed = "Merina"
 attribute = "breed"
 value = breed
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-calvedBy = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87'}"
+calvedBy = "urn:ngsi-ld:Animal:aa9f1295-425c-8ba3-b745-b653097d5a87"
 attribute = "calvedBy"
 value = calvedBy
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-fedWith = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081'}"
+fedWith = "urn:ngsi-ld:FEED:1ea0f120-4474-11e8-9919-0000000081"
 attribute = "fedWith"
 value = fedWith
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
