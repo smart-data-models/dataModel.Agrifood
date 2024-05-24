@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "AgriCrop"
 subject = "dataModel.Agrifood"
-agroVocConcept = "{'type': 'Property', 'value': 'http://aims.fao.org/aos/agrovoc/c_7951'}"
+agroVocConcept = "http://aims.fao.org/aos/agrovoc/c_7951"
 attribute = "agroVocConcept"
 value = agroVocConcept
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-harvestingInterval = {'type': 'Property', 'value': [{'dateRange': '-03-21/-04-01', 'description': 'Best Season'}, {'dateRange': '-04-02/-04-15', 'description': 'Season OK'}]}
+harvestingInterval = [{'dateRange': '-03-21/-04-01', 'description': 'Best Season'}, {'dateRange': '-04-02/-04-15', 'description': 'Season OK'}]
 attribute = "harvestingInterval"
 value = harvestingInterval
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAgriFertiliser = {'type': 'Relationship', 'object': ['urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73', 'urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e']}
+hasAgriFertiliser = ['urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73', 'urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e']
 attribute = "hasAgriFertiliser"
 value = hasAgriFertiliser
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAgriPest = {'type': 'Relationship', 'object': ['urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73', 'urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e']}
+hasAgriPest = ['urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73', 'urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e']
 attribute = "hasAgriPest"
 value = hasAgriPest
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
