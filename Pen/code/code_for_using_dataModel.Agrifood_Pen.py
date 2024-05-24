@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Pen"
 subject = "dataModel.Agrifood"
-additionalInfo = {'type': 'Property', 'value': [{'name': 'Farm1FeedTray', 'value': 1}, {'name': 'Farm1DepartmentId', 'value': '43'}, {'name': 'Farm1ValveId', 'value': '69'}, {'name': 'Farm1PenId', 'value': '1'}, {'name': 'Farm1BuildingId', 'value': '2'}]}
+additionalInfo = [{'name': 'Farm1FeedTray', 'value': 1}, {'name': 'Farm1DepartmentId', 'value': '43'}, {'name': 'Farm1ValveId', 'value': '69'}, {'name': 'Farm1PenId', 'value': '1'}, {'name': 'Farm1BuildingId', 'value': '2'}]
 attribute = "additionalInfo"
 value = additionalInfo
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-buildingId = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:5ee3dbc8-343b-40a7-ac04-dec67215ff98'}"
+buildingId = "5ee3dbc8-343b-40a7-ac04-dec67215ff98"
 attribute = "buildingId"
 value = buildingId
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-companyId = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:4579b77f-31c1-44ef-b200-9a2407cc82e9'}"
+companyId = "4579b77f-31c1-44ef-b200-9a2407cc82e9"
 attribute = "companyId"
 value = companyId
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-compartmentId = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:ab8680c6-3e82-40fb-8577-f6a0ab717586'}"
+compartmentId = "ab8680c6-3e82-40fb-8577-f6a0ab717586"
 attribute = "compartmentId"
 value = compartmentId
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
