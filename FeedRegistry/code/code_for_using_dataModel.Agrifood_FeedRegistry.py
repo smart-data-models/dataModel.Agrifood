@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "FeedRegistry"
 subject = "dataModel.Agrifood"
-date = "{'type': 'Property', 'value': {'@type': 'Date-Time', '@value': '2022-01-01T01:20:00Z'}}"
+date = "2022-01-01T01:20:00Z"
 attribute = "date"
 value = date
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-farm = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a'}"
+farm = "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a"
 attribute = "farm"
 value = farm
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-amount = {'type': 'Property', 'value': 1230}
+amount = 1230
 attribute = "amount"
 value = amount
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-supplier = "{'type': 'Property', 'value': 'GEPISA'}"
+supplier = "GEPISA"
 attribute = "supplier"
 value = supplier
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
