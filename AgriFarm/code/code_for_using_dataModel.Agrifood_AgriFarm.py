@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "AgriFarm"
 subject = "dataModel.Agrifood"
-contactPoint = {'type': 'Property', 'value': {'type': 'ContactPoint', 'email': 'wheatfarm@email.com', 'telephone': '00349674532'}}
+contactPoint = {'email': 'wheatfarm@email.com', 'telephone': '00349674532', 'type': 'ContactPoint'}
 attribute = "contactPoint"
 value = contactPoint
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAgriParcel = {'type': 'Relationship', 'object': ['urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835', 'urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4']}
+hasAgriParcel = ['urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835', 'urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4']
 attribute = "hasAgriParcel"
 value = hasAgriParcel
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasBuilding = {'type': 'Relationship', 'object': ['urn:ngsi-ld:Building:a6ba44e0-4474-11e8-8ed1-ab9e0ea93827', 'urn:ngsi-ld:Building:d95b8874-4474-11e8-8d6b-dbe144258354']}
+hasBuilding = ['urn:ngsi-ld:Building:a6ba44e0-4474-11e8-8ed1-ab9e0ea93827', 'urn:ngsi-ld:Building:d95b8874-4474-11e8-8d6b-dbe144258354']
 attribute = "hasBuilding"
 value = hasBuilding
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-landLocation = {'type': 'GeoProperty', 'value': {'type': 'Polygon', 'coordinates': [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]}}
+landLocation = {'coordinates': [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]], 'type': 'Polygon'}
 attribute = "landLocation"
 value = landLocation
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
