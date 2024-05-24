@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "AgriProductType"
 subject = "dataModel.Agrifood"
-agroVocConcept = "{'type': 'Property', 'value': 'http://aims.fao.org/aos/agrovoc/c_3128'}"
+agroVocConcept = "http://aims.fao.org/aos/agrovoc/c_3128"
 attribute = "agroVocConcept"
 value = agroVocConcept
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-category = {'type': 'Property', 'value': ['cropVariety']}
+category = ['cropVariety']
 attribute = "category"
 value = category
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAgriProductTypeChildren = {'type': 'Relationship', 'object': ['urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8', 'urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db', 'urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555']}
+hasAgriProductTypeChildren = ['urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8', 'urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db', 'urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555']
 attribute = "hasAgriProductTypeChildren"
 value = hasAgriProductTypeChildren
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAgriProductTypeParent = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e'}"
+hasAgriProductTypeParent = "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e"
 attribute = "hasAgriProductTypeParent"
 value = hasAgriProductTypeParent
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
