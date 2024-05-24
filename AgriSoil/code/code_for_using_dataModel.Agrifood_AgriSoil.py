@@ -24,25 +24,30 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "AgriSoil"
 subject = "dataModel.Agrifood"
-agroVocConcept = "{'type': 'Property', 'value': 'http://aims.fao.org/aos/agrovoc/c_7951'}"
+agroVocConcept = "http://aims.fao.org/aos/agrovoc/c_7951"
 attribute = "agroVocConcept"
 value = agroVocConcept
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAgriProductType = {'type': 'Relationship', 'object': ['urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0', 'urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de']}
+hasAgriProductType = ['urn:ngsi-ld:AgriProductType:ea54eedf-d5a7-4e44-bddd-50e9935237c0', 'urn:ngsi-ld:AgriProductType:275b4c08-5e52-4bb7-8523-74ce5d0007de']
 attribute = "hasAgriProductType"
 value = hasAgriProductType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-relatedSource = {'type': 'Property', 'value': [{'application': 'urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a', 'applicationEntityId': 'app:clay'}]}
+relatedSource = [{'application': 'urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a', 'applicationEntityId': 'app:clay'}]
 attribute = "relatedSource"
 value = relatedSource
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
