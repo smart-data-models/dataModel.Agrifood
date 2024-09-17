@@ -1,10 +1,10 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.3.4",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
-  "title": "Weather Observed schema - Smart Data Models",
-  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.2",
+  "modelTags": "",
+  "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json",
+  "title": "Smart Data Models - Agri Parcel Record",
+  "description": "This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.",
   "type": "object",
   "allOf": [
     {
@@ -14,61 +14,18 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Agrifood/agrifood-schema.json#/definitions/AgriFood-Commons"
     },
     {
       "properties": {
         "type": {
           "type": "string",
           "enum": [
-            "WeatherObserved"
+            "AgriParcelRecord"
           ],
-          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
+          "description": "Property. NGSI Entity Type. It has to be AgriParcelRecord"
         },
-        "dateObserved": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
-        },
-        "precipitation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
-        },
-        "solarRadiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
-        },
-        "directIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
-        },
-        "diffuseIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
-        },
-        "pressureTendency": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "falling",
-                "raising",
-                "steady"
-              ]
-            },
-            {
-              "type": "number"
-            }
-          ],
-          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
-        },
-        "dewPoint": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
-        },
-        "refDevice": {
+        "hasAgriParcel": {
           "anyOf": [
             {
               "type": "string",
@@ -83,55 +40,67 @@
               "description": "Property. Identifier format of any NGSI entity"
             }
           ],
-          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
+          "description": "Relationship. Reference to the AgriParcel"
         },
-        "streamGauge": {
+        "soilTemperature": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. The observed soil temperature nominally in degrees centigrade. Units:'degrees centigrade'"
+        },
+        "soilMoistureVwc": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
+          "maximum": 1,
+          "description": "Property. Model:'http://schema.org/Number'. Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 "
         },
-        "snowHeight": {
+        "soilMoistureEc": {
           "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
+          "description": "Property. Model:'http://schema.org/Number'. Measured as Electrical Conductivity, EC nominally in units of Siemens per meter. Units:'siemens / m'"
         },
-        "uVIndexMax": {
+        "solarRadiation": {
           "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
+          "description": "Property. Model:'http://schema.org/Number'. Instantaneous solar radiation measured in kW/m2. Units:'kW/m2'"
         },
-        "aqiMajorPollutant": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
-        },
-        "aqiMajorPollutantForecast": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureForecast": {
+        "soilSalinity": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
+          "description": "Property. Model:'http://schema.org/Number'. It is the salt content in the soil"
         },
-        "precipitationForecast": {
+        "relativeHumidity": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Property. Model:'http://schema.org/Number'. Relative Humidity a number between 0 and 1 representing the range of 0% to 100%"
         },
-        "airQualityIndex": {
+        "leafWetness": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Property. Model:'http://schema.org/Number'. It is a meteorological parameter that describes the amount of dew and precipitation left on surfaces"
         },
-        "relativeHumidityForecast": {
+        "leafRelativeHumidity": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Property. Model:'http://schema.org/Number'. Relative humidity on the surface of the leaves"
         },
-        "airQualityIndexForecast": {
+        "leafTemperature": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
+          "description": "Property. Model:'http://schema.org/Number'. The observed leaf temperature nominally in degrees centigrade. Units:'degrees centigrade'"
         },
-        "airTemperatureTSA": {
-          "type": "object",
-          "description": "Property. Air temperature time series aggregation",
-          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
+        "atmosphericPressure": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Atmospheric Pressure nominally in units of hecto Pascals. Units:'hecto Pascals'"
+        },
+        "hasDevice": {
+          "type": "array",
+          "description": "Relationship. Model:'http://schema.org/URL'. Reference to the IoT devices associated with this item i.e. sensors, controls",
+          "items": {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          }
+        },
+        "depth": {
+          "type": "number",
+          "minimum": 0.0,
+          "description": "Property. Model:'http://schema.org/Number'. Metadata to indicate the associated depth where soil measurements are taken"
         }
       }
     }
@@ -139,7 +108,7 @@
   "required": [
     "id",
     "type",
-    "dateObserved",
+    "hasAgriParcel",
     "location"
   ]
 }
