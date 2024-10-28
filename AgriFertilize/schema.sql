@@ -1,0 +1,3 @@
+/* (Beta) Export of data model AgriFertilize of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE AgriFertilize_type AS ENUM ('AgriFertilize');
+CREATE TABLE AgriFertilize (address JSON, alternateName TEXT, areaServed TEXT, bill TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, detail TEXT, dose NUMERIC, enddate TEXT, id TEXT PRIMARY KEY, idcp JSON, inidate TEXT, location JSON, machine JSON, maf JSON, measure JSON, msoup JSON, mud NUMERIC, name TEXT, owner JSON, plan TEXT, r10 TEXT, seeAlso JSON, soup NUMERIC, source TEXT, subtype JSON, taf JSON, target TEXT, tmi JSON, type AgriFertilize_type, typsoil TEXT);
