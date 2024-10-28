@@ -1,0 +1,1129 @@
+AgriFertilize:
+  description: 'Schema for AgriFertilize entity. To fertilize land means to improve its quality in order to make plants grow well on it, by spreading solid animal waste or a chemical mixture on it'
+  properties:
+    address:
+      description: The mailing address
+      properties:
+        addressCountry:
+          description: 'The country. For example, Spain'
+          type: string
+          x-ngsi:
+            model: https://schema.org/addressCountry
+            type: Property
+        addressLocality:
+          description: 'The locality in which the street address is, and which is in the region'
+          type: string
+          x-ngsi:
+            model: https://schema.org/addressLocality
+            type: Property
+        addressRegion:
+          description: 'The region in which the locality is, and which is in the country'
+          type: string
+          x-ngsi:
+            model: https://schema.org/addressRegion
+            type: Property
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+          type: string
+          x-ngsi:
+            type: Property
+        postOfficeBoxNumber:
+          description: 'The post office box number for PO box addresses. For example, 03578'
+          type: string
+          x-ngsi:
+            model: https://schema.org/postOfficeBoxNumber
+            type: Property
+        postalCode:
+          description: 'The postal code. For example, 24004'
+          type: string
+          x-ngsi:
+            model: https://schema.org/https://schema.org/postalCode
+            type: Property
+        streetAddress:
+          description: The street address
+          type: string
+          x-ngsi:
+            model: https://schema.org/streetAddress
+            type: Property
+        streetNr:
+          description: Number identifying a specific property on a public street
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        model: https://schema.org/address
+        type: Property
+    alternateName:
+      description: An alternative name for this item
+      type: string
+      x-ngsi:
+        type: Property
+    areaServed:
+      description: The geographic area where a service or offered item is provided
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    bill:
+      description: Invoice or delivery note number
+      type: string
+      x-ngsi:
+        type: Property
+    dataProvider:
+      description: A sequence of characters identifying the provider of the harmonised data entity
+      type: string
+      x-ngsi:
+        type: Property
+    dateCreated:
+      description: Entity creation timestamp. This will usually be allocated by the storage platform
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateModified:
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    description:
+      description: A description of this item
+      type: string
+      x-ngsi:
+        type: Property
+    detail:
+      description: User notes on administered fertilizer
+      type: string
+      x-ngsi:
+        type: Property
+    dose:
+      description: Fertilizer dose administered
+      type: number
+      x-ngsi:
+        type: Property
+    enddate:
+      description: Final date of fertilizer process. This field can be empty
+      type: string
+      x-ngsi:
+        type: Property
+    id:
+      anyOf:
+        - description: Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      description: Unique identifier of the entity
+      x-ngsi:
+        type: Relationship
+    idcp:
+      description: IDs of the CropSigpac on which the fertilizer is applied in the campaign
+      items:
+        description: Every element of the array of IDs of the CropSigpac on which the fertilizer is applied
+        type: string
+        x-ngsi:
+          type: Property
+      type: array
+      x-ngsi:
+        type: Property
+    inidate:
+      description: The start date of the fertilization process
+      type: string
+      x-ngsi:
+        type: Property
+    location:
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf:
+        - description: Geojson reference to the item. Point
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON Point
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. LineString
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON LineString
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. Polygon
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON Polygon
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiPoint
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON MultiPoint
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON MultiLineString
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON MultiPolygon
+          type: object
+          x-ngsi:
+            type: GeoProperty
+      x-ngsi:
+        type: GeoProperty
+    machine:
+      description: Information on the machinery assigned to the application of the fertilizer as well as information on its hygiene
+      items:
+        description: Every element in the array of machines used
+        properties:
+          detail:
+            description: This field contains the value associated to the machine
+            type: string
+            x-ngsi:
+              type: Property
+          id:
+            description: Identifier unique of the machine
+            type: string
+            x-ngsi:
+              type: Property
+          idmachine:
+            description: This field contains the value associated to the internal id
+            type: string
+            x-ngsi:
+              type: Property
+          product:
+            description: This field contains the value associated to the product that the machine applies
+            type: string
+            x-ngsi:
+              type: Property
+          type:
+            description: This field contains the type of machine
+            type: string
+            x-ngsi:
+              type: Property
+        type: object
+        x-ngsi:
+          type: Property
+      type: array
+      x-ngsi:
+        type: Property
+    maf:
+      description: Information on fertilizer application methods
+      properties:
+        id:
+          description: Identifier of fertilizer application mode
+          type: string
+          x-ngsi:
+            type: Property
+        name:
+          description: Name of fertilizer application mode
+          type: string
+          x-ngsi:
+            type: Property
+        type:
+          description: Type of fertilizer application mode
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
+    measure:
+      description: Details of the measure
+      properties:
+        code:
+          description: Ministry code assigned to the measure
+          type: number
+          x-ngsi:
+            type: Property
+        detail:
+          description: Notes about the measurement
+          type: string
+          x-ngsi:
+            type: Property
+        id:
+          description: Identifier of the measure
+          type: string
+          x-ngsi:
+            type: Property
+        name:
+          description: Name assigned to the measure
+          type: string
+          x-ngsi:
+            type: Property
+        prior:
+          description: Level of importance of the measure. Available values are between 0 (priority) and 10 (least priority)
+          type: string
+          x-ngsi:
+            type: Property
+        symbol:
+          description: Symbol assigned to the measure
+          type: string
+          x-ngsi:
+            type: Property
+        type:
+          description: Type of the measure
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
+    msoup:
+      description: Information on the measurement used for the final amount of broth administered
+      properties:
+        code:
+          description: Code of the measure used for the final amount of broth administered
+          type: number
+          x-ngsi:
+            type: Property
+        detail:
+          description: Details of the msoup
+          type: string
+          x-ngsi:
+            type: Property
+        id:
+          description: Identifier of the msoup
+          type: string
+          x-ngsi:
+            type: Property
+        name:
+          description: Name of the measure used for the final amount of broth administered
+          type: string
+          x-ngsi:
+            type: Property
+        prior:
+          description: Prior details of the measure used for the final amount of broth administered
+          type: string
+          x-ngsi:
+            type: Property
+        symbol:
+          description: Symbol of the measure used for the final amount of broth administered
+          type: string
+          x-ngsi:
+            type: Property
+        type:
+          description: Type of the measure used for the final amount of broth administered
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
+    mud:
+      description: Indicates whether sewage sludge application document has been used or not
+      type: number
+      x-ngsi:
+        type: Property
+    name:
+      description: The name of this item
+      type: string
+      x-ngsi:
+        type: Property
+    owner:
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
+      items:
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Relationship
+      type: array
+      x-ngsi:
+        type: Property
+    plan:
+      description: Information about the subscriber plans that are part of the campaign
+      type: string
+      x-ngsi:
+        type: Property
+    r10:
+      description: Waste authorisation number R10. The treatment of soil by applying waste to the land is considered a recovery operation coded as R1001. Residues must be applied to agricultural soils exclusively for the purpose of producing a benefit to agriculture or an ecological improvement of the same
+      type: string
+      x-ngsi:
+        type: Property
+    seeAlso:
+      description: list of uri pointing to additional resources about the item
+      oneOf:
+        - items:
+            format: uri
+            type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      x-ngsi:
+        type: Property
+    soup:
+      description: Final soup amount administered
+      type: number
+      x-ngsi:
+        type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
+      type: string
+      x-ngsi:
+        type: Property
+    subtype:
+      description: Subtype details of the AgriFertilize entity
+      properties:
+        aacm:
+          description: 'Array of aacm objects associated with the subtype, information on amino acids of the fertilizer type'
+          items:
+            description: 'Every element of the accm '
+            properties:
+              id:
+                description: Identifier of aacm
+                type: number
+                x-ngsi:
+                  type: Property
+              subtype:
+                description: Subtype details of aacm
+                properties:
+                  code:
+                    description: Code of the aacm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  id:
+                    description: Identifier of the aacm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  name:
+                    description: Name of the amino acids of the fertilizer type
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  subtype:
+                    description: Nested subtype details of aacm
+                    properties:
+                      id:
+                        description: Identifier of the nested aacm subtype
+                        type: number
+                        x-ngsi:
+                          type: Property
+                      name:
+                        description: Name of the nested aacm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                      type:
+                        description: Type of the nested aacm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                    type: object
+                    x-ngsi:
+                      type: Property
+                  symbol:
+                    description: Symbol of the aacm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  type:
+                    description: Type of the aacm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                type: object
+                x-ngsi:
+                  type: Property
+              type:
+                description: 'This field contains the type associated to the aacm, information on amino acids of the fertilizer type'
+                type: string
+                x-ngsi:
+                  type: Property
+              value:
+                description: This field contains the value associated to the aacm
+                type: number
+                x-ngsi:
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          type: array
+          x-ngsi:
+            type: Property
+        check:
+          description: Check value associated with the subtype
+          type: number
+          x-ngsi:
+            type: Property
+        code:
+          description: Code of the subtype
+          type: string
+          x-ngsi:
+            type: Property
+        comp:
+          description: Details of the company associated with the subtype
+          properties:
+            id:
+              description: Identifier of the company
+              type: number
+              x-ngsi:
+                type: Property
+            name:
+              description: Name of the company that owns the fertilizer
+              type: string
+              x-ngsi:
+                type: Property
+            type:
+              description: Type of the company
+              type: string
+              x-ngsi:
+                type: Property
+            vat:
+              description: VAT of the company that owns the fertilizer
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
+        hecm:
+          description: 'Array of hecm objects associated with the subtype, information heavy metals of the fertilizer type'
+          items:
+            description: Every element of the hecm array
+            properties:
+              id:
+                description: Identifier of hecm
+                type: number
+                x-ngsi:
+                  type: Property
+              subtype:
+                description: Subtype details of hecm
+                properties:
+                  code:
+                    description: Code of the hecm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  id:
+                    description: Identifier of the hecm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  name:
+                    description: Name of the heavy metals of the fertilizer type
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  subtype:
+                    description: Nested subtype details of hecm
+                    properties:
+                      id:
+                        description: Identifier of the nested hecm subtype
+                        type: number
+                        x-ngsi:
+                          type: Property
+                      name:
+                        description: Name of the nested hecm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                      type:
+                        description: Type of the nested hecm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                    type: object
+                    x-ngsi:
+                      type: Property
+                  symbol:
+                    description: Symbol of the hecm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  type:
+                    description: Type of the hecm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                type: object
+                x-ngsi:
+                  type: Property
+              type:
+                description: 'This field contains the type associated to the hecm, information on heavy metals of the fertilizer type'
+                type: string
+                x-ngsi:
+                  type: Property
+              value:
+                description: This field contains the value associated to the hecm
+                type: number
+                x-ngsi:
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          type: array
+          x-ngsi:
+            type: Property
+        id:
+          description: Identifier of the subtype
+          type: number
+          x-ngsi:
+            type: Property
+        macm:
+          description: 'Array of macm objects associated with the subtype, information on other macronutrients of the fertilizer type'
+          items:
+            description: The individual objects inside the macm
+            properties:
+              id:
+                description: Identifier of macm
+                type: number
+                x-ngsi:
+                  type: Property
+              subtype:
+                description: Subtype details of macm
+                properties:
+                  code:
+                    description: Code of the macm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  id:
+                    description: Identifier of the macm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  name:
+                    description: Name of the other macronutrients of the fertilizer type
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  subtype:
+                    description: Nested subtype details of macm
+                    properties:
+                      id:
+                        description: Identifier of the nested macm subtype
+                        type: number
+                        x-ngsi:
+                          type: Property
+                      name:
+                        description: Name of the nested macm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                      type:
+                        description: Type of the nested macm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                    type: object
+                    x-ngsi:
+                      type: Property
+                  symbol:
+                    description: Symbol of the macm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  type:
+                    description: Type of the macm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                type: object
+                x-ngsi:
+                  type: Property
+              type:
+                description: 'This field contains the type associated to the macm, information on other macronutrients of the fertilizer type'
+                type: string
+                x-ngsi:
+                  type: Property
+              value:
+                description: This field contains the value associated to the macm
+                type: number
+                x-ngsi:
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          type: array
+          x-ngsi:
+            type: Property
+        manure:
+          description: 'Manure details, if any'
+          type: string
+          x-ngsi:
+            type: Property
+        matdet:
+          description: 'Material fertilize detail, if any'
+          type: string
+          x-ngsi:
+            type: Property
+        material:
+          description: Material details associated with the subtype
+          properties:
+            id:
+              description: Identifier of the material
+              type: number
+              x-ngsi:
+                type: Property
+            name:
+              description: Name of the material that uses compost or fertilizer
+              type: string
+              x-ngsi:
+                type: Property
+            type:
+              description: Type of the material that uses compost or fertilizer
+              type: string
+              x-ngsi:
+                type: Property
+          type: object
+          x-ngsi:
+            type: Property
+        metadata:
+          description: Array of metadata objects associated with the subtype
+          items:
+            description: Every group of elements in the metadata
+            properties:
+              date:
+                description: Date associated with the metadata
+                format: date-time
+                type: string
+                x-ngsi:
+                  type: Property
+              type:
+                description: Type of metadata
+                type: string
+                x-ngsi:
+                  type: Property
+              user:
+                description: User details associated with the metadata
+                properties:
+                  email:
+                    description: Email of the user
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  id:
+                    description: Identifier of the user
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  loginname:
+                    description: Login name of the user
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  name:
+                    description: Name of the user in the system
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  surname:
+                    description: Surname of the user
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  type:
+                    description: Type of the user
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  vat:
+                    description: VAT (identification number) of the user
+                    type: string
+                    x-ngsi:
+                      type: Property
+                type: object
+                x-ngsi:
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          type: array
+          x-ngsi:
+            type: Property
+        micm:
+          description: 'Array of micm objects associated with the subtype, information on micronutrients of the type of fertilizer'
+          items:
+            description: Every element of the micm
+            properties:
+              id:
+                description: Identifier of micm
+                type: number
+                x-ngsi:
+                  type: Property
+              subtype:
+                description: Subtype details of micm
+                properties:
+                  code:
+                    description: Code of the micm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  id:
+                    description: Identifier of the micm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  name:
+                    description: Name of the micronutrients of the type of fertilizer
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  subtype:
+                    description: Nested subtype details of micm
+                    properties:
+                      id:
+                        description: Identifier of the nested micm subtype
+                        type: number
+                        x-ngsi:
+                          type: Property
+                      name:
+                        description: Name of the nested micm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                      type:
+                        description: Type of the nested micm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                    type: object
+                    x-ngsi:
+                      type: Property
+                  symbol:
+                    description: Symbol of the micm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  type:
+                    description: Type of the micm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                type: object
+                x-ngsi:
+                  type: Property
+              type:
+                description: 'This field contains the type associated to the micm, information on micronutrients of the type of fertilizer'
+                type: string
+                x-ngsi:
+                  type: Property
+              value:
+                description: This field contains the value associated to the micm
+                type: number
+                x-ngsi:
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          type: array
+          x-ngsi:
+            type: Property
+        mmcm:
+          description: Array of mmcm objects associated with the subtype
+          items:
+            description: Every element in the mmdm array
+            properties:
+              id:
+                description: Identifier of mmcm
+                type: number
+                x-ngsi:
+                  type: Property
+              subtype:
+                description: Subtype details of mmcm
+                properties:
+                  code:
+                    description: Code of the mmcm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  id:
+                    description: Identifier of the mmcm subtype
+                    type: number
+                    x-ngsi:
+                      type: Property
+                  name:
+                    description: Name of the main macronutrient of the fertilizer type
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  subtype:
+                    description: Nested subtype details of mmcm
+                    properties:
+                      id:
+                        description: Identifier of the nested mmcm subtype
+                        type: number
+                        x-ngsi:
+                          type: Property
+                      name:
+                        description: Name of the nested mmcm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                      type:
+                        description: Type of the nested mmcm subtype
+                        type: string
+                        x-ngsi:
+                          type: Property
+                    type: object
+                    x-ngsi:
+                      type: Property
+                  symbol:
+                    description: Symbol of the mmcm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                  type:
+                    description: Type of the mmcm subtype
+                    type: string
+                    x-ngsi:
+                      type: Property
+                type: object
+                x-ngsi:
+                  type: Property
+              type:
+                description: 'This field contains the type associated to the mmcm, information on the main macronutrients of the fertilizer type'
+                type: string
+                x-ngsi:
+                  type: Property
+              value:
+                description: This field contains the value associated to the mmcm
+                type: number
+                x-ngsi:
+                  type: Property
+            type: object
+            x-ngsi:
+              type: Property
+          type: array
+          x-ngsi:
+            type: Property
+        name:
+          description: Name of the type of fertilizer used and associated with the fertilization code
+          type: string
+          x-ngsi:
+            type: Property
+        notes:
+          description: Notes associated with the subtype
+          type: string
+          x-ngsi:
+            type: Property
+        subcode:
+          description: Subcode of the subtype
+          type: string
+          x-ngsi:
+            type: Property
+        symbol:
+          description: Symbol of the subtype
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
+    taf:
+      description: Information on types of fertilizer application
+      properties:
+        id:
+          description: Identifier of the TAF
+          type: string
+          x-ngsi:
+            type: Property
+        name:
+          description: Name of the types of fertilizer application
+          type: string
+          x-ngsi:
+            type: Property
+        type:
+          description: Type of the types of fertilizer application
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
+    target:
+      description: Target details for the AgriFertilize entity
+      type: string
+      x-ngsi:
+        type: Property
+    tmi:
+      description: Information on the types of inhibitory molecule
+      properties:
+        id:
+          description: Identifier of the types of inhibitory molecule
+          type: string
+          x-ngsi:
+            type: Property
+        name:
+          description: Name of the types of inhibitory molecule
+          type: string
+          x-ngsi:
+            type: Property
+        type:
+          description: Type of the types of inhibitory molecule
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
+    type:
+      description: NGSI Entity Type. It has to be AgriFertilize
+      enum:
+        - AgriFertilize
+      type: string
+      x-ngsi:
+        type: Property
+    typsoil:
+      description: Type of soil associated with the AgriFertilize entity
+      type: string
+      x-ngsi:
+        type: Property
+  required:
+    - id
+    - type
+  type: object
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriFertilize/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriFertilize/schema.json
+  x-model-tags: 'Agrifood, AgriFertilize'
+  x-version: 0.0.1
