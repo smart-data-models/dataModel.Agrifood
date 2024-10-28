@@ -1,0 +1,450 @@
+{
+    "@id": "dtmi:com:ngsi-ld:AgriFertilize;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "AgriFertilize Schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriFertilize/schema.json",
+    "description": "Schema for AgriFertilize entity. To fertilize land means to improve its quality in order to make plants grow well on it, by spreading solid animal waste or a chemical mixture on it",
+    "displayName": "AgriFertilize",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "bill",
+            "writable": true,
+            "displayName": "bill",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Invoice or delivery note number"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "detail",
+            "writable": true,
+            "displayName": "detail",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "User notes on administered fertilizer"
+        },
+        {
+            "name": "dose",
+            "writable": true,
+            "displayName": "dose",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Fertilizer dose administered"
+        },
+        {
+            "name": "enddate",
+            "writable": true,
+            "displayName": "enddate",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Final date of fertilizer process. This field can be empty"
+        },
+        {
+            "name": "inidate",
+            "writable": true,
+            "displayName": "inidate",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The start date of the fertilization process"
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "mud",
+            "writable": true,
+            "displayName": "mud",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Indicates whether sewage sludge application document has been used or not"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "plan",
+            "writable": true,
+            "displayName": "plan",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Information about the subscriber plans that are part of the campaign"
+        },
+        {
+            "name": "r10",
+            "writable": true,
+            "displayName": "r10",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Waste authorisation number R10. The treatment of soil by applying waste to the land is considered a recovery operation coded as R1001. Residues must be applied to agricultural soils exclusively for the purpose of producing a benefit to agriculture or an ecological improvement of the same"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "soup",
+            "writable": true,
+            "displayName": "soup",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Final soup amount administered"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "name": "target",
+            "writable": true,
+            "displayName": "target",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Target details for the AgriFertilize entity"
+        },
+        {
+            "name": "typsoil",
+            "writable": true,
+            "displayName": "typsoil",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Type of soil associated with the AgriFertilize entity"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "idcp",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "IDs of the CropSigpac on which the fertilizer is applied in the campaign",
+            "displayName": "idcp"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "machine",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Information on the machinery assigned to the application of the fertilizer as well as information on its hygiene",
+            "displayName": "machine"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "maf",
+            "comment": "Information on fertilizer application methods",
+            "displayName": "maf",
+            "fields": [
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "measure",
+            "comment": "Details of the measure",
+            "displayName": "measure",
+            "fields": [
+                {
+                    "name": "code",
+                    "schema": "long"
+                },
+                {
+                    "name": "detail",
+                    "schema": "string"
+                },
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "prior",
+                    "schema": "string"
+                },
+                {
+                    "name": "symbol",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "msoup",
+            "comment": "Information on the measurement used for the final amount of broth administered",
+            "displayName": "msoup",
+            "fields": [
+                {
+                    "name": "code",
+                    "schema": "long"
+                },
+                {
+                    "name": "detail",
+                    "schema": "string"
+                },
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "prior",
+                    "schema": "string"
+                },
+                {
+                    "name": "symbol",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "subtype",
+            "comment": "Subtype details of the AgriFertilize entity",
+            "displayName": "subtype",
+            "fields": [
+                {
+                    "name": "aacm",
+                    "schema": "array"
+                },
+                {
+                    "name": "check",
+                    "schema": "long"
+                },
+                {
+                    "name": "code",
+                    "schema": "string"
+                },
+                {
+                    "name": "comp",
+                    "schema": "object"
+                },
+                {
+                    "name": "hecm",
+                    "schema": "array"
+                },
+                {
+                    "name": "id",
+                    "schema": "long"
+                },
+                {
+                    "name": "macm",
+                    "schema": "array"
+                },
+                {
+                    "name": "manure",
+                    "schema": "string"
+                },
+                {
+                    "name": "matdet",
+                    "schema": "string"
+                },
+                {
+                    "name": "material",
+                    "schema": "object"
+                },
+                {
+                    "name": "metadata",
+                    "schema": "array"
+                },
+                {
+                    "name": "micm",
+                    "schema": "array"
+                },
+                {
+                    "name": "mmcm",
+                    "schema": "array"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "notes",
+                    "schema": "string"
+                },
+                {
+                    "name": "subcode",
+                    "schema": "string"
+                },
+                {
+                    "name": "symbol",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "taf",
+            "comment": "Information on types of fertilizer application",
+            "displayName": "taf",
+            "fields": [
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "tmi",
+            "comment": "Information on the types of inhibitory molecule",
+            "displayName": "tmi",
+            "fields": [
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        }
+    ]
+}
