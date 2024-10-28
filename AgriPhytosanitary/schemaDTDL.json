@@ -1,0 +1,434 @@
+{
+    "@id": "dtmi:com:ngsi-ld:AgriPhytosanitary;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "AgriPhytosanitary Schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/AgriPhytosanitary/schema.json",
+    "description": "Schema for AgriPhytosanitary entity. Phytosanitary means relating to the health of plants",
+    "displayName": "AgriPhytosanitary",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "batch",
+            "writable": true,
+            "displayName": "batch",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Stock receipt lot number"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "detail",
+            "writable": true,
+            "displayName": "detail",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Additional details about the phytosanitary product"
+        },
+        {
+            "name": "distributed",
+            "writable": true,
+            "displayName": "distributed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Indicates whether the consumption of the phytosanitary administered in the campaign has to be distributed equally between the stock entries or not"
+        },
+        {
+            "name": "dose",
+            "writable": true,
+            "displayName": "dose",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Dose of phytosanitary administered"
+        },
+        {
+            "name": "dt",
+            "writable": true,
+            "displayName": "dt",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Date related to the product's distribution or usage"
+        },
+        {
+            "name": "entrylimit",
+            "writable": true,
+            "displayName": "entrylimit",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Entry limit or threshold for the product's application"
+        },
+        {
+            "name": "infection",
+            "writable": true,
+            "displayName": "infection",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Information about infections that are part of the campaign"
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "mdt",
+            "writable": true,
+            "displayName": "mdt",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Modification date, if applicable"
+        },
+        {
+            "name": "measur",
+            "writable": true,
+            "displayName": "measur",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Measurement details, if applicable"
+        },
+        {
+            "name": "measure",
+            "writable": true,
+            "displayName": "measure",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Unit of measure for the dose"
+        },
+        {
+            "name": "mst",
+            "writable": true,
+            "displayName": "mst",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Modification status, if applicable"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "pp",
+            "writable": true,
+            "displayName": "pp",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Pre-processing information related to the product"
+        },
+        {
+            "name": "preventive",
+            "writable": true,
+            "displayName": "preventive",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Preventive measures associated with the product"
+        },
+        {
+            "name": "recipe",
+            "writable": true,
+            "displayName": "recipe",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Recipe or formulation details for the product"
+        },
+        {
+            "name": "seclimit",
+            "writable": true,
+            "displayName": "seclimit",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Secondary limit or threshold for the product's application"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "soup",
+            "writable": true,
+            "displayName": "soup",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Final soup amount administered"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "name": "speed",
+            "writable": true,
+            "displayName": "speed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Application speed for the phytosanitary product"
+        },
+        {
+            "name": "st",
+            "writable": true,
+            "displayName": "st",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Status of the phytosanitary product"
+        },
+        {
+            "name": "surface",
+            "writable": true,
+            "displayName": "surface",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Surface area for application of the product"
+        },
+        {
+            "name": "typerisk",
+            "writable": true,
+            "displayName": "typerisk",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Type of risk associated with the phytosanitary product"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "idcp",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "IDs of the CropSigpac on which the non-chemical phytosanitary defense is administered in the campaign",
+            "displayName": "idcp"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "idtpismv",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "IDs of stock entries linked to the phytosanitary product administered in the campaign",
+            "displayName": "idtpismv"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "machine",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Information on the machinery assigned to the application of the phytosanitary as well as information on its hygiene",
+            "displayName": "machine"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "tj",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Information on the types of justification that motivate the administration of non-chemical phytosanitary defense in the campaign",
+            "displayName": "tj"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "efficacy",
+            "comment": "Efficacy details of the phytosanitary product",
+            "displayName": "efficacy",
+            "fields": [
+                {
+                    "name": "detail",
+                    "schema": "string"
+                },
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "subtype",
+            "comment": "Detailed information about the subtype of the phytosanitary product",
+            "displayName": "subtype",
+            "fields": [
+                {
+                    "name": "cdate",
+                    "schema": "string"
+                },
+                {
+                    "name": "ci",
+                    "schema": "array"
+                },
+                {
+                    "name": "code",
+                    "schema": "string"
+                },
+                {
+                    "name": "comp",
+                    "schema": "object"
+                },
+                {
+                    "name": "edate",
+                    "schema": "string"
+                },
+                {
+                    "name": "id",
+                    "schema": "string"
+                },
+                {
+                    "name": "idate",
+                    "schema": "string"
+                },
+                {
+                    "name": "idpdf",
+                    "schema": "string"
+                },
+                {
+                    "name": "idtf",
+                    "schema": "array"
+                },
+                {
+                    "name": "ldate",
+                    "schema": "string"
+                },
+                {
+                    "name": "mix",
+                    "schema": "long"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "names",
+                    "schema": "array"
+                },
+                {
+                    "name": "prod",
+                    "schema": "object"
+                },
+                {
+                    "name": "rdate",
+                    "schema": "string"
+                },
+                {
+                    "name": "subs",
+                    "schema": "object"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                }
+            ]
+        }
+    ]
+}
