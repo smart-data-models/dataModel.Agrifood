@@ -30,25 +30,25 @@ import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "AgriPhytosanitary"
 subject = "dataModel.Agrifood"
-subtype = {'type': 'TypePhytosanitary', 'id': '183', 'idpdf': '88013', 'code': '11179', 'name': 'Microthiol Special Disperss', 'names': ['Colpenn', 'Microthiol Special Disperss', 'Sulf 80 Wg'], 'idate': '01-01-1970', 'rdate': '', 'edate': '15-04-2025', 'cdate': '', 'ldate': '', 'mix': 1, 'idtf': [11, 1], 'comp': {'type': 'Company', 'id': 1, 'name': 'Upl Iberia S.a.', 'nif': 'A08103343'}, 'subs': {'type': 'Substance', 'id': '1', 'name': 'Azufre 80% [Wg] P/P'}, 'prod': {'type': 'TypeProduct', 'id': 1, 'name': 'Producto fitosanitario registrado'}, 'ci': []}
+subtype = {'type': 'Property', 'value': {'type': 'TypePhytosanitary', 'id': {'type': 'Property', 'value': '183'}, 'idpdf': {'type': 'Property', 'value': '88013'}, 'code': {'type': 'Property', 'value': '11179'}, 'name': {'type': 'Property', 'value': 'Microthiol Special Disperss'}, 'names': {'type': 'Property', 'value': [{'type': 'Property', 'value': 'Colpenn'}, {'type': 'Property', 'value': 'Microthiol Special Disperss'}, {'type': 'Property', 'value': 'Sulf 80 Wg'}]}, 'idate': {'type': 'Property', 'value': '1970-01-01T00:00:00.000Z'}, 'rdate': {'type': 'Property', 'value': ''}, 'edate': {'type': 'Property', 'value': '2025-04-15T00:00:00.000Z'}, 'cdate': {'type': 'Property', 'value': ''}, 'ldate': {'type': 'Property', 'value': ''}, 'mix': {'type': 'Property', 'value': 1}, 'idtf': {'type': 'Property', 'value': [{'type': 'Property', 'value': 11}, {'type': 'Property', 'value': 1}]}, 'comp': {'type': 'Property', 'value': {'type': 'Company', 'id': {'type': 'Property', 'value': 1}, 'name': {'type': 'Property', 'value': 'Upl Iberia S.a.'}, 'nif': {'type': 'Property', 'value': 'A08103343'}}}, 'subs': {'type': 'Property', 'value': {'type': 'Substance', 'id': {'type': 'Property', 'value': '1'}, 'name': {'type': 'Property', 'value': 'Azufre 80% [Wg] P/P'}}}, 'prod': {'type': 'Property', 'value': {'type': 'TypeProduct', 'id': {'type': 'Property', 'value': 1}, 'name': {'type': 'Property', 'value': 'Producto fitosanitario registrado'}}}, 'ci': {'type': 'Property', 'value': []}}}
 attribute = "subtype"
 value = subtype
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dose = "1"
+dose = "{'type': 'Property', 'value': '1'}"
 attribute = "dose"
 value = dose
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-measure = "1"
+measure = "{'type': 'Property', 'value': '1'}"
 attribute = "measure"
 value = measure
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-efficacy = {'type': 'TypeEfficacy', 'id': '1', 'name': 'Buena', 'detail': ''}
+efficacy = {'type': 'Property', 'value': {'type': 'TypeEfficacy', 'id': {'type': 'Property', 'value': '1'}, 'name': {'type': 'Property', 'value': 'Buena'}, 'detail': {'type': 'Property', 'value': ''}}}
 attribute = "efficacy"
 value = efficacy
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
