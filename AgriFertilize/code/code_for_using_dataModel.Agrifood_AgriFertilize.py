@@ -30,27 +30,27 @@ import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "AgriFertilize"
 subject = "dataModel.Agrifood"
-dose = 50.5
-attribute = "dose"
-value = dose
+subtype = {'type': 'Property', 'value': {'type': 'TypeFertilize', 'id': {'type': 'Property', 'value': 1339}, 'code': {'type': 'Property', 'value': 'F0002478/2025'}, 'name': {'type': 'Property', 'value': 'Abono Organico Npk (Ca) 1,5-1-2 (2) Mezcla De Origen Animal Y Vegetal Sirlepur'}, 'mmcm': {'type': 'Property', 'value': [{'type': 'CM', 'id': {'type': 'Property', 'value': 10000}, 'subtype': {'type': 'Property', 'value': {'type': 'TCM', 'id': {'type': 'Property', 'value': 1}, 'subtype': {'type': 'Property', 'value': {'type': 'SCM', 'id': {'type': 'Property', 'value': 1}, 'name': {'type': 'Property', 'value': 'Macronutriente principal'}}}, 'code': {'type': 'Property', 'value': 1}, 'name': {'type': 'Property', 'value': 'Nitrógeno total'}, 'symbol': {'type': 'Property', 'value': '% N total'}}}, 'value': {'type': 'Property', 'value': 1.5}}, {'type': 'CM', 'id': {'type': 'Property', 'value': 10001}, 'subtype': {'type': 'Property', 'value': {'type': 'TCM', 'id': {'type': 'Property', 'value': 6}, 'subtype': {'type': 'Property', 'value': {'type': 'SCM', 'id': {'type': 'Property', 'value': 1}, 'name': {'type': 'Property', 'value': 'Macronutriente principal'}}}, 'code': {'type': 'Property', 'value': 6}, 'name': {'type': 'Property', 'value': 'Óxido de fósforo total'}, 'symbol': {'type': 'Property', 'value': '% P2O5 total'}}}, 'value': {'type': 'Property', 'value': 1}}, {'type': 'CM', 'id': {'type': 'Property', 'value': 10002}, 'subtype': {'type': 'Property', 'value': {'type': 'TCM', 'id': {'type': 'Property', 'value': 9}, 'subtype': {'type': 'Property', 'value': {'type': 'SCM', 'id': {'type': 'Property', 'value': 1}, 'name': {'type': 'Property', 'value': 'Macronutriente principal'}}}, 'code': {'type': 'Property', 'value': 9}, 'name': {'type': 'Property', 'value': 'Óxido de potasio'}, 'symbol': {'type': 'Property', 'value': '% K2O total'}}}, 'value': {'type': 'Property', 'value': 2}}]}, 'macm': {'type': 'Property', 'value': []}, 'hecm': {'type': 'Property', 'value': []}, 'micm': {'type': 'Property', 'value': []}, 'accm': {'type': 'Property', 'value': []}, 'aacm': {'type': 'Property', 'value': []}, 'otcm': {'type': 'Property', 'value': []}, 'comp': {'type': 'Property', 'value': {'type': 'Company', 'id': {'type': 'Property', 'value': 269}, 'name': {'type': 'Property', 'value': 'Organicos Pedrin, S.l'}, 'nif': {'type': 'Property', 'value': ''}}}, 'manure': {'type': 'Property', 'value': ''}, 'material': {'type': 'Property', 'value': {'type': 'TMF', 'id': {'type': 'Property', 'value': 15}, 'name': {'type': 'Property', 'value': 'Productos fertilizantes: abonos orgánicos'}}}, 'matdet': {'type': 'Property', 'value': ''}, 'provider': {'type': 'Property', 'value': ''}, 'nif': {'type': 'Property', 'value': ''}, 'check': {'type': 'Property', 'value': 0}, 'metadata': {'type': 'Property', 'value': [{'type': 'Create', 'user': {'type': 'Property', 'value': {'type': 'UserMetadata', 'id': {'type': 'Property', 'value': '1'}, 'loginname': {'type': 'Property', 'value': 'sistema'}, 'email': {'type': 'Property', 'value': ''}, 'name': {'type': 'Property', 'value': 'Sistema'}, 'surname': {'type': 'Property', 'value': ''}, 'nif': {'type': 'Property', 'value': ''}}}, 'date': {'type': 'Property', 'value': '2024-02-09T15:48:46.000Z'}}]}, 'reviewed': {'type': 'Property', 'value': 1}}}
+attribute = "subtype"
+value = subtype
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-enddate = "2024-06-30T12:00:00Z"
-attribute = "enddate"
-value = enddate
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-inidate = "2024-06-01T12:00:00Z"
+inidate = "{'type': 'Property', 'value': '2024-05-30T09:14:44.000Z'}"
 attribute = "inidate"
 value = inidate
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-measure = {'detail': 'Measurement details', 'id': 'measure123', 'name': 'MeasureName', 'prior': '5', 'type': 'TypeA', 'code': 101, 'symbol': 'M'}
-attribute = "measure"
-value = measure
+enddate = "{'type': 'Property', 'value': ''}"
+attribute = "enddate"
+value = enddate
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+dose = {'type': 'Property', 'value': 10}
+attribute = "dose"
+value = dose
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
