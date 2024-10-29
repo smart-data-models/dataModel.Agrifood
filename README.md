@@ -10,6 +10,8 @@ The following entity types are available:
 
 - [AgriFarm](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriFarm/README.md). This entity contains a harmonised description of a generic farm made up of buildings and parcels. This entity is primarily associated with the agricultural vertical and related IoT applications.
 
+- [AgriFertilize](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriFertilize/README.md). Schema for AgriFertilize entity. To fertilize land means to improve its quality in order to make plants grow well on it, by spreading solid animal waste or a chemical mixture on it
+
 - [AgriGreenhouse](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriGreenhouse/README.md). This entity contains a harmonised description of the conditions recorded within a generic greenhouse, a type of AgriParcel.
 
 - [AgriParcel](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcel/README.md). This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.
@@ -19,6 +21,8 @@ The following entity types are available:
 - [AgriParcelRecord](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/README.md). This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.
 
 - [AgriPest](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPest/README.md). This entity contains a harmonised description of an agricultural pest. 
+
+- [AgriPhytosanitary](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriPhytosanitary/README.md). Schema for AgriPhytosanitary entity. Phytosanitary means relating to the health of plants
 
 - [AgriProductType](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriProductType/README.md). This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way.
 
