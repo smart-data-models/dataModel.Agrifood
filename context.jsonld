@@ -46,7 +46,7 @@
         "batch": "https://smartdatamodels.org/dataModel.Agrifood/batch",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "belongsTo": "https://smartdatamodels.org/dataModel.Agrifood/belongsTo",
         "bill": "https://smartdatamodels.org/dataModel.Agrifood/bill",
@@ -69,7 +69,7 @@
         "contactType": "https://smartdatamodels.org/contactType",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "cropStatus": "https://smartdatamodels.org/dataModel.Agrifood/cropStatus",
         "dailyLight": "https://smartdatamodels.org/dataModel.Agrifood/dailyLight",
@@ -82,7 +82,7 @@
         "deliveryNote": "https://smartdatamodels.org/dataModel.Agrifood/deliveryNote",
         "depth": "https://smartdatamodels.org/dataModel.Agrifood/depth",
         "description": "http://purl.org/dc/terms/description",
-        "detail": "ngsi-ld:detail",
+        "detail": "https://uri.etsi.org/ngsi-ld/detail",
         "diagnosticTest": "https://smartdatamodels.org/dataModel.Agrifood/diagnosticTest",
         "disease": "https://smartdatamodels.org/dataModel.Agrifood/disease",
         "distributed": "https://smartdatamodels.org/dataModel.Agrifood/distributed",
@@ -96,7 +96,7 @@
         "empty": "https://smartdatamodels.org/dataModel.Agrifood/empty",
         "enddate": "https://smartdatamodels.org/dataModel.Agrifood/enddate",
         "endedAt": "https://smartdatamodels.org/dataModel.Agrifood/endedAt",
-        "endpoint": "ngsi-ld:endpoint",
+        "endpoint": "https://uri.etsi.org/ngsi-ld/endpoint",
         "entrylimit": "https://smartdatamodels.org/dataModel.Agrifood/entrylimit",
         "farm": "https://smartdatamodels.org/dataModel.Agrifood/farm",
         "farmId": "https://smartdatamodels.org/dataModel.Agrifood/farmId",
@@ -145,7 +145,7 @@
         "leafWetness": "https://smartdatamodels.org/dataModel.Agrifood/leafWetness",
         "legalId": "https://smartdatamodels.org/dataModel.Agrifood/legalId",
         "locatedAt": "https://smartdatamodels.org/dataModel.Agrifood/locatedAt",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "loginname": "https://smartdatamodels.org/dataModel.Agrifood/loginname",
         "luminosity": "https://smartdatamodels.org/dataModel.Agrifood/luminosity",
         "machine": "https://smartdatamodels.org/dataModel.Agrifood/machine",
@@ -219,7 +219,7 @@
         "speed": "https://smartdatamodels.org/dataModel.Agrifood/speed",
         "st": "https://smartdatamodels.org/dataModel.Agrifood/st",
         "startedAt": "https://smartdatamodels.org/dataModel.Agrifood/startedAt",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "subcode": "https://smartdatamodels.org/dataModel.Agrifood/subcode",
@@ -241,7 +241,7 @@
         "unitText": "https://smartdatamodels.org/dataModel.Agrifood/unitText",
         "url": "https://smartdatamodels.org/url",
         "user": "https://smartdatamodels.org/dataModel.Agrifood/user",
-        "value": "ngsi-ld:hasValue",
+        "value": "https://uri.etsi.org/ngsi-ld/hasValue",
         "vat": "https://smartdatamodels.org/dataModel.Agrifood/vat",
         "version": "https://smartdatamodels.org/dataModel.Agrifood/version",
         "veterinarian": "https://smartdatamodels.org/dataModel.Agrifood/veterinarian",
