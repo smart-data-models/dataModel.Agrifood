@@ -11,7 +11,7 @@
     },
     "dateCreated": {
         "type": "Property",
-        "value" {
+        "value": {
             "@type": "DateTime",
             "@value": "2017-01-01T01:20:00Z"
         }
@@ -30,7 +30,7 @@
     },
     "dateModified": {
         "type": "Property",
-        "value" {
+        "value": {
             "@type": "DateTime",
             "@value": "2017-05-04T12:30:00Z"
         }
