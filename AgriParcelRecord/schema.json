@@ -101,6 +101,11 @@
           "type": "number",
           "minimum": 0.0,
           "description": "Property. Model:'http://schema.org/Number'. Metadata to indicate the associated depth where soil measurements are taken"
+        },
+        "soilPh": {
+          "type": "number",
+          "description": "Measured soil pH value, recommended scale 0-14.",
+          "model": "http://schema.org/Number"
         }
       }
     }

@@ -1,21 +1,37 @@
-<!-- 10-Header -->  
+<!-- 10-Header -->
+  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entity: AgriParcelRecord  
-========================<!-- /10-Header -->  
-<!-- 15-License -->  
-[Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
-Global description: **This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
-version: 0.0.2  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
 
-## List of properties  
+Entity: AgriParcelRecord  
+========================
+<!-- /10-Header -->
+  
+<!-- 15-License -->
+  
 
-<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+[Open License](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
+
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->
+  
+<!-- 20-Description -->
+  
+
+Global description: **This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
+
+version: 0.0.2  
+<!-- /20-Description -->
+  
+<!-- 30-PropertiesList -->
+  
+
+
+## List of properties  
+
+
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)
+	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
@@ -23,20 +39,65 @@
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: Number identifying a specific property on a public street    
-- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: Atmospheric Pressure nominally in units of hecto Pascals  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `depth[number]`: Metadata to indicate the associated depth where soil measurements are taken  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: A description of this item  - `hasAgriParcel[*]`: Reference to the AgriParcel  - `hasDevice[array]`: Reference to the IoT devices associated with this item i.e. sensors, controls  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `leafRelativeHumidity[number]`: Relative humidity on the surface of the leaves  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: The observed leaf temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: It is a meteorological parameter that describes the amount of dew and precipitation left on surfaces  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource[array]`: List of IDs the current entity may have in external applications  - `relativeHumidity[number]`: Relative Humidity a number between 0 and 1 representing the range of 0% to 100%  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `soilMoistureEC[number]`: Measured as Electrical Conductivity, EC nominally in units of Siemens per meter  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1   . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: It is the salt content in the soil  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: The observed soil temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: Instantaneous solar radiation measured in kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity Type. It has to be AgriParcelRecord  <!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-Required properties  
-- `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-This entity is primarily associated with the agricultural vertical and related IoT applications.  
-<!-- /40-RequiredProperties -->  
-<!-- 50-DataModelHeader -->  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
+- `alternateName[string]`: An alternative name for this item  
+- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `atmosphericPressure[number]`: Atmospheric Pressure nominally in units of hecto Pascals  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  
+- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  
+- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  
+- `depth[number]`: Metadata to indicate the associated depth where soil measurements are taken  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `description[string]`: A description of this item  
+- `hasAgriParcel[*]`: Reference to the AgriParcel  
+- `hasDevice[array]`: Reference to the IoT devices associated with this item i.e. sensors, controls  . Model: [http://schema.org/URL](http://schema.org/URL)
+- `id[*]`: Unique identifier of the entity  
+- `leafRelativeHumidity[number]`: Relative humidity on the surface of the leaves  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `leafTemperature[number]`: The observed leaf temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `leafWetness[number]`: It is a meteorological parameter that describes the amount of dew and precipitation left on surfaces  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  
+- `name[string]`: The name of this item  
+- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  
+- `relatedSource[array]`: List of IDs the current entity may have in external applications  
+- `relativeHumidity[number]`: Relative Humidity a number between 0 and 1 representing the range of 0% to 100%  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `seeAlso[*]`: list of uri pointing to additional resources about the item  
+- `soilMoistureEC[number]`: Measured as Electrical Conductivity, EC nominally in units of Siemens per meter  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `soilMoistureVwc[number]`: Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1   . Model: [http://schema.org/Number](http://schema.org/Number)
+- `soilSalinity[number]`: It is the salt content in the soil  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `soilTemperature[number]`: The observed soil temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `solarRadiation[number]`: Instantaneous solar radiation measured in kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)
+- `soilPh[number]`: Measured soil pH value, scale 0-14. Useful for soil chemistry monitoring in precision agriculture. Model: [http://schema.org/Number](http://schema.org/Number)
+- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  
+- `type[string]`: NGSI Entity Type. It has to be AgriParcelRecord  
+<!-- /30-PropertiesList -->
+  
+<!-- 35-RequiredProperties -->
+  
+
+Required properties  
+- `hasAgriParcel`  
+- `id`  
+- `location`  
+- `type`  
+<!-- /35-RequiredProperties -->
+  
+<!-- 40-RequiredProperties -->
+  
+
+This entity is primarily associated with the agricultural vertical and related IoT applications.  
+<!-- /40-RequiredProperties -->
+  
+<!-- 50-DataModelHeader -->
+  
+
+## Data Model description of properties  
+
+Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->
+  
+<!-- 60-ModelYaml -->
+  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 AgriParcelRecord:    
   description: This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.    
   properties:    
@@ -523,16 +584,25 @@ AgriParcelRecord:
   x-version: 0.0.2    
 ```  
 </details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
-## Example payloads    
-#### AgriParcelRecord NGSI-v2 key-values Example    
-Here is an example of a AgriParcelRecord in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<!-- /60-ModelYaml -->
+  
+<!-- 70-MiddleNotes -->
+  
+<!-- /70-MiddleNotes -->
+  
+<!-- 80-Examples -->
+  
+
+## Example payloads    
+
+#### AgriParcelRecord NGSI-v2 key-values Example    
+
+Here is an example of a AgriParcelRecord in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
   "type": "AgriParcelRecord",  
   "dateCreated": "2017-01-01T01:20:00Z",  
@@ -595,11 +665,15 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-v2 normalized Example    
-Here is an example of a AgriParcelRecord in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+
+#### AgriParcelRecord NGSI-v2 normalized Example    
+
+Here is an example of a AgriParcelRecord in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
   "type": "AgriParcelRecord",  
   "dateCreated": {  
@@ -812,11 +886,15 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD key-values Example    
-Here is an example of a AgriParcelRecord in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+
+#### AgriParcelRecord NGSI-LD key-values Example    
+
+Here is an example of a AgriParcelRecord in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
   "type": "AgriParcelRecord",  
   "atmosphericPressure": 1013.25,  
@@ -880,11 +958,15 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD normalized Example    
-Here is an example of a AgriParcelRecord in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+
+#### AgriParcelRecord NGSI-LD normalized Example    
+
+Here is an example of a AgriParcelRecord in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7",  
   "type": "AgriParcelRecord",  
   "atmosphericPressure": {  
@@ -1021,12 +1103,21 @@ AgriParcelRecord:
   ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
+</details><!-- /80-Examples -->
+  
+<!-- 90-FooterNotes -->
+  
+<!-- /90-FooterNotes -->
+  
+<!-- 95-Units -->
+  
+
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->
+  
+<!-- 97-LastFooter -->
+  
 ---  
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
+
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->
+  
