@@ -1,3 +1,24 @@
 /* (Beta) Export of data model VeterinarianTreatment of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE VeterinarianTreatment_type AS ENUM ('VeterinarianTreatment');
-CREATE TABLE VeterinarianTreatment (address JSON, alternateName TEXT, animals JSON, appliedProduct TEXT, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, phaseOutPeriod NUMERIC, quantity NUMERIC, seeAlso JSON, source TEXT, type VeterinarianTreatment_type, veterinarian TEXT);
+CREATE TABLE VeterinarianTreatment (
+  "address" JSON,
+  "alternateName" TEXT,
+  "animals" JSON,
+  "appliedProduct" TEXT,
+  "areaServed" TEXT,
+  "dataProvider" TEXT,
+  "date" TIMESTAMP,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "id" TEXT PRIMARY KEY,
+  "location" JSON,
+  "name" TEXT,
+  "owner" JSON,
+  "phaseOutPeriod" NUMERIC,
+  "quantity" NUMERIC,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "type" VeterinarianTreatment_type,
+  "veterinarian" TEXT
+);
