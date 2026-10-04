@@ -1,3 +1,39 @@
 /* (Beta) Export of data model Compartment of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE sex_type AS ENUM ('M','F','unknown','');CREATE TYPE Compartment_type AS ENUM ('Compartment');
-CREATE TABLE Compartment (additionalInfo JSON, address JSON, alternateName TEXT, areaServed TEXT, arrivalTimestamp TIMESTAMP, avgGrowth NUMERIC, avgWeight NUMERIC, co2 NUMERIC, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, empty BOOLEAN, feedConsumption NUMERIC, humidity NUMERIC, id TEXT PRIMARY KEY, lastUpdate NUMERIC, location JSON, luminosity NUMERIC, name TEXT, numAnimals NUMERIC, owner JSON, relatedSource JSON, seeAlso JSON, sex sex_type, source TEXT, temperature NUMERIC, type Compartment_type, waterConsumption NUMERIC, weightStDev NUMERIC);
+CREATE TYPE sex_type AS ENUM ('M', 'F', 'unknown', '');
+CREATE TYPE Compartment_type AS ENUM ('Compartment');
+CREATE TABLE Compartment (
+  "additionalInfo" JSON,
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "arrivalTimestamp" TIMESTAMP,
+  "avgGrowth" NUMERIC,
+  "avgWeight" NUMERIC,
+  "buildingId" JSON,
+  "co2" NUMERIC,
+  "companyId" JSON,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "empty" BOOLEAN,
+  "farmId" JSON,
+  "feedConsumption" NUMERIC,
+  "humidity" NUMERIC,
+  "id" TEXT PRIMARY KEY,
+  "lastUpdate" NUMERIC,
+  "location" JSON,
+  "luminosity" NUMERIC,
+  "name" TEXT,
+  "numAnimals" NUMERIC,
+  "owner" JSON,
+  "parentCompartmentId" JSON,
+  "relatedSource" JSON,
+  "seeAlso" JSON,
+  "sex" sex_type,
+  "source" TEXT,
+  "temperature" NUMERIC,
+  "type" Compartment_type,
+  "waterConsumption" NUMERIC,
+  "weightStDev" NUMERIC
+);
