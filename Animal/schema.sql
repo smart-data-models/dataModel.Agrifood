@@ -1,3 +1,40 @@
 /* (Beta) Export of data model Animal of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE healthCondition_type AS ENUM ('healthy','inTreatment','sick');CREATE TYPE phenologicalCondition_type AS ENUM ('femaleAdult','femaleYoung','grazingBaby','lactatingBaby','maleAdult','maleYoung');CREATE TYPE reproductiveCondition_type AS ENUM ('active','inactive','inCalf','inHeat','noStatus');CREATE TYPE sex_type AS ENUM ('female','male');CREATE TYPE species_type AS ENUM ('beef cattle','cow','dairy cattle','goat','horse','pig','sheep');CREATE TYPE Animal_type AS ENUM ('Animal');CREATE TYPE welfareCondition_type AS ENUM ('issue','adequate');
-CREATE TABLE Animal (address JSON, alternateName TEXT, areaServed TEXT, birthdate TIMESTAMP, breed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, healthCondition healthCondition_type, id TEXT PRIMARY KEY, legalId TEXT, location JSON, name TEXT, owner JSON, phenologicalCondition phenologicalCondition_type, relatedSource JSON, reproductiveCondition reproductiveCondition_type, seeAlso JSON, sex sex_type, source TEXT, species species_type, type Animal_type, weight NUMERIC, welfareCondition welfareCondition_type);
+CREATE TYPE healthCondition_type AS ENUM ('healthy', 'inTreatment', 'sick');
+CREATE TYPE phenologicalCondition_type AS ENUM ('femaleAdult', 'femaleYoung', 'grazingBaby', 'lactatingBaby', 'maleAdult', 'maleYoung');
+CREATE TYPE reproductiveCondition_type AS ENUM ('active', 'inactive', 'inCalf', 'inHeat', 'noStatus');
+CREATE TYPE sex_type AS ENUM ('female', 'male');
+CREATE TYPE species_type AS ENUM ('beef cattle', 'cow', 'dairy cattle', 'goat', 'horse', 'pig', 'sheep');
+CREATE TYPE Animal_type AS ENUM ('Animal');
+CREATE TYPE welfareCondition_type AS ENUM ('issue', 'adequate');
+CREATE TABLE Animal (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "birthdate" TIMESTAMP,
+  "breed" TEXT,
+  "calvedBy" JSON,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "fedWith" JSON,
+  "healthCondition" healthCondition_type,
+  "id" TEXT PRIMARY KEY,
+  "legalId" TEXT,
+  "locatedAt" JSON,
+  "location" JSON,
+  "name" TEXT,
+  "ownedBy" JSON,
+  "owner" JSON,
+  "phenologicalCondition" phenologicalCondition_type,
+  "relatedSource" JSON,
+  "reproductiveCondition" reproductiveCondition_type,
+  "seeAlso" JSON,
+  "sex" sex_type,
+  "siredBy" JSON,
+  "source" TEXT,
+  "species" species_type,
+  "type" Animal_type,
+  "weight" NUMERIC,
+  "welfareCondition" welfareCondition_type
+);
