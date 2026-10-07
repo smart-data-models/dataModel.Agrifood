@@ -1,38 +1,38 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-エンティティAgriParcelRecord  
-======================<!-- /10-Header -->  
+エンティティ: AgriParcelRecord  
+========================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープン・ライセンス](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
-[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープンライセンス](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
+[自動生成されたドキュメント](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述：**このエンティティには、土地の区画に記録された条件の調和された記述が含まれる。このエンティティは、主に農業垂直および関連する IoT アプリケーションに関連する。  
-バージョン: 0.0.2  
+全体の説明: **このエンティティには、土地の区画で記録された状態の調和された説明が含まれています。このエンティティは、主に農業分野および関連するIoTアプリケーションに関連付けられています。**  
+version: 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティリスト  
 
-<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
-	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+<sup><sub>[*] 属性に型がない場合、それは複数の型または異なる形式/パターンを持つ可能性があるためです。</sub></sup>  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例：スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地が存在し、その地域内にある場所（都市/町村など）  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その場所が存在し、その国内にある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは、一部の国において地方政府によって管理される行政区画の一種です。    
+	- `postOfficeBoxNumber[string]`: 私書箱住所の私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
-- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 大気圧（公称単位：ヘクトパスカル  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `depth[number]`: 土壌測定が行われた関連深度を示すメタデータ  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: この商品の説明  - `hasAgriParcel[*]`: アグリパーセルに関する言及  - `hasDevice[array]`: この項目に関連するIoTデバイス（センサー、制御装置など）への言及。  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: エンティティの一意識別子  - `leafRelativeHumidity[number]`: 葉の表面の相対湿度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 観察された葉の温度（摂氏名目  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 地表に残った露と降水量を表す気象パラメータ。  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `relativeHumidity[number]`: 相対湿度 0%～100%の範囲を表す0～1の数値。  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `soilMoistureEC[number]`: 電気伝導率（EC）として測定（公称単位：1mあたりシーメンス  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 体積含水率、VWC としてパーセンテージで測定。0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 土壌に含まれる塩分  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 観測された土壌温度（単位：摂氏  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: 瞬時日射量（単位：kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `type[string]`: NGSI エンティティタイプ。AgriParcelRecordでなければならない。  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: 公道上の特定の物件を識別する番号    
+- `alternateName[string]`: このアイテムの別名  - `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的領域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 気圧は公称ヘクトパスカル単位。  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 統合されたデータエンティティのプロバイダーを識別する一連の文字  - `dateCreated[date-time]`: エンティティ作成日時。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。通常、ストレージプラットフォームによって割り当てられます。  - `depth[number]`: 土壌測定が行われた関連する深さを示すメタデータ  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: このアイテムの説明  - `hasAgriParcel[*]`: AgriParcelへの参照  - `hasDevice[array]`: このアイテムに関連付けられたIoTデバイス（センサー、制御装置など）への参照  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `leafRelativeHumidity[number]`: 葉の表面の相対湿度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 観測された葉の温度（公称摂氏度）  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 表面に残っている露と降水量を表す気象パラメータです。  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: アイテムへのGeoJSON参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の一意のIDを参照する、JSONエンコードされた文字のシーケンスを含むリスト  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `relativeHumidity[number]`: 相対湿度。0%から100%の範囲を表す0から1までの数値。  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `soilMoistureEc[number]`: 電気伝導率（EC）として、公称ジーメンス/メートル単位で測定。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 体積含水率（VWC）としてパーセンテージで測定。0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 測定された土壌pH値、推奨スケール0-14。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 土壌中の塩分含有量です。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 観測された土壌温度（公称摂氏度）  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: 瞬間的な太陽放射量（kW/m2で測定）  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: エンティティデータの元のソースをURLとして示す一連の文字。ソースプロバイダーの完全修飾ドメイン名、またはソースオブジェクトへのURLであることが推奨されます。  - `type[string]`: NGSIエンティティタイプ。AgriParcelRecordである必要があります。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-この企業は主に農業分野と関連するIoTアプリケーションに関連している。  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+このエンティティは、主に農業分野および関連するIoTアプリケーションに関連付けられています。  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順（クリックで詳細表示）  
+アルファベット順にソートされています（詳細はこちらをクリック）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -44,36 +44,36 @@ AgriParcelRecord:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'The country. For example, Spain'    
+          description: The country. For example, Spain    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressCountry    
             type: Property    
         addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
+          description: The locality in which the street address is, and which is in the region    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressLocality    
             type: Property    
         addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
+          description: The region in which the locality is, and which is in the country    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressRegion    
             type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          description: A district is a type of administrative division that, in some countries, is managed by the local government    
           type: string    
           x-ngsi:    
             type: Property    
         postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
+          description: The post office box number for PO box addresses. For example, 03578    
           type: string    
           x-ngsi:    
             model: https://schema.org/postOfficeBoxNumber    
             type: Property    
         postalCode:    
-          description: 'The postal code. For example, 24004'    
+          description: The postal code. For example, 24004    
           type: string    
           x-ngsi:    
             model: https://schema.org/https://schema.org/postalCode    
@@ -158,7 +158,7 @@ AgriParcelRecord:
       x-ngsi:    
         type: Relationship    
     hasDevice:    
-      description: 'Reference to the IoT devices associated with this item i.e. sensors, controls'    
+      description: Reference to the IoT devices associated with this item i.e. sensors, controls    
       items:    
         anyOf:    
           - description: Identifier format of any NGSI entity    
@@ -175,7 +175,7 @@ AgriParcelRecord:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
@@ -196,7 +196,7 @@ AgriParcelRecord:
             type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
-        type: Property    
+        type: Relationship    
     leafRelativeHumidity:    
       description: Relative humidity on the surface of the leaves    
       maximum: 1.0    
@@ -221,20 +221,26 @@ AgriParcelRecord:
         model: http://schema.org/Number    
         type: Property    
     location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -249,11 +255,15 @@ AgriParcelRecord:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -261,6 +271,8 @@ AgriParcelRecord:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -275,11 +287,15 @@ AgriParcelRecord:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -289,6 +305,8 @@ AgriParcelRecord:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -303,17 +321,23 @@ AgriParcelRecord:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -328,11 +352,15 @@ AgriParcelRecord:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -342,6 +370,8 @@ AgriParcelRecord:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -361,6 +391,7 @@ AgriParcelRecord:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -372,6 +403,8 @@ AgriParcelRecord:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -408,7 +441,7 @@ AgriParcelRecord:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         type: Property    
@@ -463,7 +496,7 @@ AgriParcelRecord:
       x-ngsi:    
         type: Property    
     soilMoistureEc:    
-      description: 'Measured as Electrical Conductivity, EC nominally in units of Siemens per meter'    
+      description: Measured as Electrical Conductivity, EC nominally in units of Siemens per meter    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -473,6 +506,14 @@ AgriParcelRecord:
       description: 'Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 '    
       maximum: 1    
       minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+    soilPh:    
+      description: Measured soil pH value, recommended scale 0-14.    
+      maximum: 14.0    
+      minimum: 0.0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -498,7 +539,7 @@ AgriParcelRecord:
         type: Property    
         units: kW/m2    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object    
       type: string    
       x-ngsi:    
         type: Property    
@@ -515,21 +556,21 @@ AgriParcelRecord:
     - hasAgriParcel    
     - location    
   type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-derived-from: ''    
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json    
-  x-model-tags: ""    
-  x-version: 0.0.2    
+  x-model-tags: ''    
+  x-version: 0.1.0    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ペイロードの例  
-#### AgriParcelRecord NGSI-v2 キー値の例  
-JSON-LD形式のAgriParcelRecordのkey-valuesの例です。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると個々のエンティティのコンテキストデータを返す。  
+## 例のペイロード  
+#### AgriParcelRecord NGSI-v2キーと値の例  
+以下は、キーと値の形式のJSON-LD形式のAgriParcelRecordの例です。これは、`options=keyValues`を使用する場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -585,6 +626,7 @@ AgriParcelRecord:
   "solarRadiation": 15,  
   "relativeHumidity": 0.15,  
   "atmosphericPressure": 1013.25,  
+  "soilPh": 6.8,  
   "description": "Monthly fertiliser application",  
   "hasDevice": [  
     "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
@@ -595,8 +637,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-v2 正規化例  
-以下は、正規化された JSON-LD 形式の AgriParcelRecord の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriParcelRecord NGSI-v2正規化例  
+以下は、正規化されたJSON-LD形式のAgriParcelRecordの例です。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -796,6 +838,10 @@ AgriParcelRecord:
       }  
     }  
   },  
+  "soilPh": {  
+    "type": "Number",  
+    "value": 6.8  
+  },  
   "description": {  
     "type": "Text",  
     "value": "Monthly fertiliser application"  
@@ -812,8 +858,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD キー値の例  
-JSON-LD形式のAgriParcelRecordのkey-valuesの例です。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+#### AgriParcelRecord NGSI-LDキーと値の例  
+以下は、キーと値の形式のJSON-LD形式のAgriParcelRecordの例です。これは、`options=keyValues`を使用する場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -871,6 +917,7 @@ AgriParcelRecord:
   ],  
   "soilMoistureEc": 17,  
   "soilMoistureVwc": 0.08,  
+  "soilPh": 6.8,  
   "soilSalinity": 1198.11,  
   "soilTemperature": 27,  
   "solarRadiation": 15,  
@@ -880,8 +927,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD 正規化例  
-以下は、正規化された JSON-LD 形式の AgriParcelRecord の例である。これは、オプションを使用しない場合の NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AgriParcelRecord NGSI-LD正規化例  
+以下は、正規化されたJSON-LD形式のAgriParcelRecordの例です。これは、オプションを使用しない場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -997,6 +1044,10 @@ AgriParcelRecord:
       "unitCode": "CMT"  
     }  
   },  
+  "soilPh": {  
+    "type": "Property",  
+    "value": 6.8  
+  },  
   "soilSalinity": {  
     "type": "Property",  
     "value": 1198.11,  
@@ -1025,7 +1076,7 @@ AgriParcelRecord:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
+規模単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

@@ -11,42 +11,42 @@ info:
   description:  |
     This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.
   title: AgriParcelRecord
-  version: "0.0.2"
+  version: "0.1.0"
 openapi: "3.0.0"
 
-paths: 
-  /ngsi-ld/v1/entities: 
-    get: 
+paths:
+  /ngsi-ld/v1/entities:
+    get:
       description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
-      parameters: 
-        - 
+      parameters:
+        -
           in: query
           name: type
           required: true
-          schema: 
-            enum: 
+          schema:
+            enum:
               - AgriParcelRecord
             type: string
-      responses: 
+      responses:
         ? "200"
-        : 
-          content: 
-            application/ld+json: 
-              examples: 
-                keyvalues: 
+        :
+          content:
+            application/ld+json:
+              examples:
+                keyvalues:
                   summary: "Key-Values Pairs"
-                  value: 
-                    - 
+                  value:
+                    -
                       $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/examples/example.json"
-                normalized: 
+                normalized:
                   summary: "Normalized NGSI-LD"
-                  value: 
-                    - 
+                  value:
+                    -
                       $ref: "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/examples/example-normalized.jsonld"
           description: OK
-      tags: 
+      tags:
         - ngsi-ld
-tags: 
-  - 
+tags:
+  -
     description: "NGSI-LD Linked-data Format"
     name: ngsi-ld
