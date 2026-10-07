@@ -1,6 +1,6 @@
 /* (Beta) Export of data model AgriCrop of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE AgriCrop_type AS ENUM ('AgriCrop');
-CREATE TYPE wateringFrequency_type AS ENUM ('daily', 'weekly', 'biweekly', 'monthly', 'onDemand', 'other');
+CREATE TYPE AgriCrop_wateringFrequency_type AS ENUM ('daily', 'weekly', 'biweekly', 'monthly', 'onDemand', 'other');
 CREATE TABLE AgriCrop (
   "agroVocConcept" TEXT,
   "alternateName" TEXT,
@@ -20,5 +20,5 @@ CREATE TABLE AgriCrop (
   "seeAlso" JSON,
   "source" TEXT,
   "type" AgriCrop_type,
-  "wateringFrequency" wateringFrequency_type
+  "wateringFrequency" AgriCrop_wateringFrequency_type
 );
