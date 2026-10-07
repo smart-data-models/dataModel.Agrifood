@@ -1,5 +1,5 @@
 /* (Beta) Export of data model Compartment of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE sex_type AS ENUM ('M', 'F', 'unknown', '');
+CREATE TYPE Compartment_sex_type AS ENUM ('M', 'F', 'unknown', '');
 CREATE TYPE Compartment_type AS ENUM ('Compartment');
 CREATE TABLE Compartment (
   "additionalInfo" JSON,
@@ -30,7 +30,7 @@ CREATE TABLE Compartment (
   "parentCompartmentId" JSON,
   "relatedSource" JSON,
   "seeAlso" JSON,
-  "sex" sex_type,
+  "sex" Compartment_sex_type,
   "source" TEXT,
   "temperature" NUMERIC,
   "type" Compartment_type,
