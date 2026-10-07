@@ -1,5 +1,5 @@
 /* (Beta) Export of data model Pen of the subject dataModel.Agrifood for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE sex_type AS ENUM ('M', 'F', 'unknown', '');
+CREATE TYPE Pen_sex_type AS ENUM ('M', 'F', 'unknown', '');
 CREATE TYPE Pen_type AS ENUM ('Pen');
 CREATE TABLE Pen (
   "additionalInfo" JSON,
@@ -30,7 +30,7 @@ CREATE TABLE Pen (
   "owner" JSON,
   "relatedSource" JSON,
   "seeAlso" JSON,
-  "sex" sex_type,
+  "sex" Pen_sex_type,
   "source" TEXT,
   "temperature" NUMERIC,
   "type" Pen_type,
