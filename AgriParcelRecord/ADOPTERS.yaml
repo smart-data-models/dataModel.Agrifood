@@ -6,5 +6,21 @@ currentAdopters:
  mail:
  organization:
  project:
- comments: 
+ comments:
  startDate:
+-
+ adopter: Nekazari
+ description: Trunk dendrometry for viticulture water-stress monitoring
+ mail:
+ organization: Nekazari
+ project: https://github.com/nkz-os
+ comments:
+ startDate: 7-10-2026
+-
+ adopter: Nekazari
+ description: PAR telemetry for agrivoltaic crop monitoring
+ mail:
+ organization: Nekazari
+ project: https://github.com/nkz-os
+ comments:
+ startDate: 7-10-2026
