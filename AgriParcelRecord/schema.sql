@@ -27,6 +27,8 @@ CREATE TABLE AgriParcelRecord (
   "soilSalinity" NUMERIC,
   "soilTemperature" NUMERIC,
   "solarRadiation" NUMERIC,
+  "stemDiameter" NUMERIC,
+  "stemDiameterVariation" NUMERIC,
   "source" TEXT,
   "type" AgriParcelRecord_type
 );

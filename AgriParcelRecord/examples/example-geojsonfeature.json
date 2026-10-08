@@ -120,6 +120,18 @@
       "unitCode": "N78",
       "observedAt": "2017-05-04T12:30:00Z"
     },
+    "stemDiameter": {
+      "type": "Property",
+      "value": 184.2,
+      "unitCode": "MMT",
+      "observedAt": "2017-05-04T12:30:00Z"
+    },
+    "stemDiameterVariation": {
+      "type": "Property",
+      "value": 0.18,
+      "unitCode": "MMT",
+      "observedAt": "2017-05-04T12:30:00Z"
+    },
     "relativeHumidity": {
       "type": "Property",
       "value": 0.15,

@@ -255,6 +255,13 @@ class AgriParcelRecord(BaseModel):
     solarRadiation: Optional[float] = Field(
         None, description='Instantaneous solar radiation measured in kW/m2'
     )
+    stemDiameter: Optional[float] = Field(
+        None, description='Absolute stem/trunk diameter'
+    )
+    stemDiameterVariation: Optional[float] = Field(
+        None,
+        description='Change in stem/trunk diameter over the reference period (typically the sampling interval)',
+    )
     source: Optional[str] = Field(
         None,
         description='A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object',

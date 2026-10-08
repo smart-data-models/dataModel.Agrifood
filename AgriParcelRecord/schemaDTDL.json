@@ -166,6 +166,22 @@
             "comment": "Instantaneous solar radiation measured in kW/m2"
         },
         {
+            "name": "stemDiameter",
+            "writable": true,
+            "displayName": "stemDiameter",
+            "@type": "Property",
+            "schema": "double",
+            "comment": "Absolute stem/trunk diameter in millimetres"
+        },
+        {
+            "name": "stemDiameterVariation",
+            "writable": true,
+            "displayName": "stemDiameterVariation",
+            "@type": "Property",
+            "schema": "double",
+            "comment": "Change in stem/trunk diameter over the reference period, in millimetres"
+        },
+        {
             "name": "source",
             "writable": true,
             "displayName": "source",

@@ -60,6 +60,14 @@
           "type": "number",
           "description": "Property. Model:'http://schema.org/Number'. Instantaneous solar radiation measured in kW/m2. Units:'kW/m2'"
         },
+        "stemDiameter": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Absolute stem/trunk diameter. Units:'millimetres'"
+        },
+        "stemDiameterVariation": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Change in stem/trunk diameter over the reference period (typically the sampling interval). Units:'millimetres'"
+        },
         "soilSalinity": {
           "type": "number",
           "description": "Property. Model:'http://schema.org/Number'. It is the salt content in the soil"

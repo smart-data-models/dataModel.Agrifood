@@ -57,6 +57,8 @@
   "soilSalinity": 1198.11,
   "soilTemperature": 27,
   "solarRadiation": 15,
+  "stemDiameter": 184.2,
+  "stemDiameterVariation": 0.18,
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"
   ]
