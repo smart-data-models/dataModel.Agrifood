@@ -7,6 +7,13 @@ contributors:
   project: 
   comments: 
   year: 2022
+- name: basabot
+  surname:
+  mail:
+  organization: Nekazari
+  project:
+  comments: photosyntheticallyActiveRadiation attribute, stemDiameter and stemDiameterVariation attributes for AgriParcelRecord
+  year: 2026
 - name: Alejandro
   surname: Blaas
   mail: alejandro@plataformatierra.es
@@ -91,17 +98,3 @@ contributors:
   project:
   comments:
   year: 2022
-- name: basabot
-  surname:
-  mail:
-  organization: Nekazari
-  project:
-  comments: stemDiameter and stemDiameterVariation attributes for AgriParcelRecord
-  year: 2026
-- name: basabot
-  surname:
-  mail:
-  organization: Nekazari
-  project:
-  comments: photosyntheticallyActiveRadiation attribute for AgriParcelRecord
-  year: 2026
