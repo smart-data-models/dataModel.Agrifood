@@ -195,6 +195,10 @@
       }
     }
   },
+  "soilPh": {
+    "type": "Number",
+    "value": 6.8
+  },
   "description": {
     "type": "Text",
     "value": "Monthly fertiliser application"

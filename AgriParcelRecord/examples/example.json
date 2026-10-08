@@ -51,6 +51,7 @@
   "solarRadiation": 15,
   "relativeHumidity": 0.15,
   "atmosphericPressure": 1013.25,
+  "soilPh": 6.8,
   "description": "Monthly fertiliser application",
   "hasDevice": [
     "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",

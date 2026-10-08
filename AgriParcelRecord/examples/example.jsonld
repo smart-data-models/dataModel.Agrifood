@@ -53,6 +53,7 @@
   ],
   "soilMoistureEc": 17,
   "soilMoistureVwc": 0.08,
+  "soilPh": 6.8,
   "soilSalinity": 1198.11,
   "soilTemperature": 27,
   "solarRadiation": 15,

@@ -3,36 +3,36 @@
 Entität: AgriParcelRecord  
 =========================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[Offene Lizenz](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
+[automatisch generiertes Dokument](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung der auf einer Parzelle erfassten Bedingungen. Diese Entität ist in erster Linie mit der vertikalen Landwirtschaft und den damit verbundenen IoT-Anwendungen verbunden.**  
-Version: 0.0.2  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung der auf einem Grundstück erfassten Bedingungen. Diese Entität ist primär mit dem Agrarsektor und verwandten IoT-Anwendungen verbunden.**  
+version: 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+<sup><sub>[*] Wenn in einem Attribut kein Typ vorhanden ist, liegt dies daran, dass es mehrere Typen oder verschiedene Formate/Muster haben könnte</sub></sup>  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Straßenadresse befindet und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich die Ortschaft befindet und die im Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Distrikt ist eine Art von Verwaltungsgliederung, die in einigen Ländern von der lokalen Regierung verwaltet wird    
 	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Nummer zur Identifizierung eines bestimmten Grundstücks an einer öffentlichen Straße    
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: Atmosphärischer Druck, nominell in Einheiten von Hektopascal  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `depth[number]`: Metadaten zur Angabe der zugehörigen Tiefe, in der die Bodenmessungen vorgenommen werden  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Eine Beschreibung dieses Artikels  - `hasAgriParcel[*]`: Hinweis auf das AgriParcel  - `hasDevice[array]`: Verweis auf die mit dieser Position verbundenen IoT-Geräte, d. h. Sensoren, Steuerungen  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `leafRelativeHumidity[number]`: Relative Feuchtigkeit auf der Oberfläche der Blätter  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: Die beobachtete Blatttemperatur wird in Grad Celsius angegeben.  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: Es ist ein meteorologischer Parameter, der die Menge an Tau und Niederschlag beschreibt, die auf Oberflächen verbleibt  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `relatedSource[array]`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `relativeHumidity[number]`: Relative Luftfeuchtigkeit eine Zahl zwischen 0 und 1, die den Bereich von 0% bis 100% repräsentiert  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `soilMoistureEC[number]`: Gemessen als elektrische Leitfähigkeit, EC, nominell in Einheiten von Siemens pro Meter  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: Gemessen als volumetrischer Wassergehalt, VWC in Prozent. 0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: Es ist der Salzgehalt im Boden  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: Die beobachtete Bodentemperatur, angegeben in Grad Celsius  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: Momentane Sonneneinstrahlung gemessen in kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss AgriParcelRecord sein.  <!-- /30-PropertiesList -->  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenadresse  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Nummer, die ein bestimmtes Grundstück an einer öffentlichen Straße identifiziert    
+- `alternateName[string]`: Ein alternativer Name für dieses Element  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel bereitgestellt wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: Atmosphärischer Druck nominell in Einheiten von Hekto-Pascal  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: Eine Zeichenfolge, die den Anbieter der harmonisierten Datenentität identifiziert  - `dateCreated[date-time]`: Erstellungszeitstempel der Entität. Dieser wird üblicherweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird normalerweise von der Speicherplattform vergeben  - `depth[number]`: Metadaten zur Angabe der zugehörigen Tiefe, in der Bodenmessungen vorgenommen werden  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: Eine Beschreibung dieses Elements  - `hasAgriParcel[*]`: Referenz auf das AgriParcel  - `hasDevice[array]`: Referenz auf die mit diesem Element verbundenen IoT-Geräte, d.h. Sensoren, Steuerungen  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Eindeutiger Bezeichner der Entität  - `leafRelativeHumidity[number]`: Relative Luftfeuchtigkeit auf der Oberfläche der Blätter  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: Die beobachtete Blatttemperatur nominell in Grad Celsius  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: Es ist ein meteorologischer Parameter, der die Menge an Tau und Niederschlag beschreibt, die auf Oberflächen zurückbleibt.  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: Geojson-Referenz zum Element. Es kann Point, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Elements  - `owner[array]`: Eine Liste, die eine JSON-kodierte Zeichenfolge enthält, die die eindeutigen IDs des/der Eigentümer(s) referenziert  - `relatedSource[array]`: Liste der IDs, die die aktuelle Entität in externen Anwendungen haben kann  - `relativeHumidity[number]`: Relative Luftfeuchtigkeit, eine Zahl zwischen 0 und 1, die den Bereich von 0% bis 100% darstellt  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: Liste von URIs, die auf zusätzliche Ressourcen zum Element verweisen.  - `soilMoistureEc[number]`: Gemessen als elektrische Leitfähigkeit, EC nominell in Einheiten von Siemens pro Meter  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: Gemessen als volumetrischer Wassergehalt, VWC in Prozent. 0 <= soilMoistureVwc <= 1   . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: Gemessener Boden-pH-Wert, empfohlene Skala 0-14.  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: Es ist der Salzgehalt im Boden  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: Die beobachtete Bodentemperatur nominell in Grad Celsius  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: Momentane Sonneneinstrahlung gemessen in kW/m²  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: Eine Zeichenfolge, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt  - `type[string]`: NGSI-Entitätstyp. Es muss AgriParcelRecord sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-Dieses Unternehmen ist in erster Linie mit der vertikalen Landwirtschaft und damit verbundenen IoT-Anwendungen verbunden.  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+Diese Entität ist primär mit dem Agrarsektor und verwandten IoT-Anwendungen verbunden.  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+## Datenmodellbeschreibung der Eigenschaften  
+Alphabetisch sortiert (für Details klicken)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -44,36 +44,36 @@ AgriParcelRecord:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'The country. For example, Spain'    
+          description: The country. For example, Spain    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressCountry    
             type: Property    
         addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
+          description: The locality in which the street address is, and which is in the region    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressLocality    
             type: Property    
         addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
+          description: The region in which the locality is, and which is in the country    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressRegion    
             type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          description: A district is a type of administrative division that, in some countries, is managed by the local government    
           type: string    
           x-ngsi:    
             type: Property    
         postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
+          description: The post office box number for PO box addresses. For example, 03578    
           type: string    
           x-ngsi:    
             model: https://schema.org/postOfficeBoxNumber    
             type: Property    
         postalCode:    
-          description: 'The postal code. For example, 24004'    
+          description: The postal code. For example, 24004    
           type: string    
           x-ngsi:    
             model: https://schema.org/https://schema.org/postalCode    
@@ -158,7 +158,7 @@ AgriParcelRecord:
       x-ngsi:    
         type: Relationship    
     hasDevice:    
-      description: 'Reference to the IoT devices associated with this item i.e. sensors, controls'    
+      description: Reference to the IoT devices associated with this item i.e. sensors, controls    
       items:    
         anyOf:    
           - description: Identifier format of any NGSI entity    
@@ -175,7 +175,7 @@ AgriParcelRecord:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         model: http://schema.org/URL    
@@ -196,7 +196,7 @@ AgriParcelRecord:
             type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
-        type: Property    
+        type: Relationship    
     leafRelativeHumidity:    
       description: Relative humidity on the surface of the leaves    
       maximum: 1.0    
@@ -221,20 +221,26 @@ AgriParcelRecord:
         model: http://schema.org/Number    
         type: Property    
     location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -249,11 +255,15 @@ AgriParcelRecord:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -261,6 +271,8 @@ AgriParcelRecord:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -275,11 +287,15 @@ AgriParcelRecord:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -289,6 +305,8 @@ AgriParcelRecord:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -303,17 +321,23 @@ AgriParcelRecord:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -328,11 +352,15 @@ AgriParcelRecord:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -342,6 +370,8 @@ AgriParcelRecord:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -361,6 +391,7 @@ AgriParcelRecord:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -372,6 +403,8 @@ AgriParcelRecord:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -408,7 +441,7 @@ AgriParcelRecord:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         type: Property    
@@ -463,7 +496,7 @@ AgriParcelRecord:
       x-ngsi:    
         type: Property    
     soilMoistureEc:    
-      description: 'Measured as Electrical Conductivity, EC nominally in units of Siemens per meter'    
+      description: Measured as Electrical Conductivity, EC nominally in units of Siemens per meter    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -473,6 +506,14 @@ AgriParcelRecord:
       description: 'Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 '    
       maximum: 1    
       minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+    soilPh:    
+      description: Measured soil pH value, recommended scale 0-14.    
+      maximum: 14.0    
+      minimum: 0.0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -498,7 +539,7 @@ AgriParcelRecord:
         type: Property    
         units: kW/m2    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object    
       type: string    
       x-ngsi:    
         type: Property    
@@ -515,21 +556,21 @@ AgriParcelRecord:
     - hasAgriParcel    
     - location    
   type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-derived-from: ''    
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json    
-  x-model-tags: ""    
-  x-version: 0.0.2    
+  x-model-tags: ''    
+  x-version: 0.1.0    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Beispiel-Nutzlasten  
-#### AgriParcelRecord NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen AgriParcelRecord im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+## Beispiel-Payloads    
+#### AgriParcelRecord NGSI-v2 Schlüssel-Wert-Beispiel   
+Hier ist ein Beispiel eines AgriParcelRecord im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -585,6 +626,7 @@ AgriParcelRecord:
   "solarRadiation": 15,  
   "relativeHumidity": 0.15,  
   "atmosphericPressure": 1013.25,  
+  "soilPh": 6.8,  
   "description": "Monthly fertiliser application",  
   "hasDevice": [  
     "urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",  
@@ -595,8 +637,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen AgriParcelRecord im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### AgriParcelRecord NGSI-v2 normalisiertes Beispiel   
+Hier ist ein Beispiel eines AgriParcelRecord im JSON-LD-Format als normalisiert. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -796,6 +838,10 @@ AgriParcelRecord:
       }  
     }  
   },  
+  "soilPh": {  
+    "type": "Number",  
+    "value": 6.8  
+  },  
   "description": {  
     "type": "Text",  
     "value": "Monthly fertiliser application"  
@@ -812,8 +858,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen AgriParcelRecord im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+#### AgriParcelRecord NGSI-LD Schlüssel-Wert-Beispiel   
+Hier ist ein Beispiel eines AgriParcelRecord im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -871,6 +917,7 @@ AgriParcelRecord:
   ],  
   "soilMoistureEc": 17,  
   "soilMoistureVwc": 0.08,  
+  "soilPh": 6.8,  
   "soilSalinity": 1198.11,  
   "soilTemperature": 27,  
   "solarRadiation": 15,  
@@ -880,8 +927,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen AgriParcelRecord im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### AgriParcelRecord NGSI-LD normalisiertes Beispiel   
+Hier ist ein Beispiel eines AgriParcelRecord im JSON-LD-Format als normalisiert. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -997,6 +1044,10 @@ AgriParcelRecord:
       "unitCode": "CMT"  
     }  
   },  
+  "soilPh": {  
+    "type": "Property",  
+    "value": 6.8  
+  },  
   "soilSalinity": {  
     "type": "Property",  
     "value": 1198.11,  
@@ -1025,7 +1076,7 @@ AgriParcelRecord:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort darauf zu erhalten, wie mit Größeneinheiten umzugehen ist  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

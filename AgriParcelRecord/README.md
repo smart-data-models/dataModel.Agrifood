@@ -1,6 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
-# AgriParcelRecord
-Version: 0.0.2
+# AgriParcelRecord
+Version: 0.1.0
 
 ## Description 
 
@@ -33,8 +33,6 @@ Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/Agr
 Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/examples/example-normalized.json) (normalized) for NGSI-V2
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/examples/example-normalized.jsonld) (normalized) for NGSI-LD
-
-Link to the [example](https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/examples/example-geojsonfeature.json) (geojson feature) for NGSI-LD
 
 Link to the [example](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/examples/example.json.csv) (keyvalues) for NGSI v2 in CSV format
 

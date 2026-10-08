@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.1.0",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json",
   "title": "Smart Data Models - Agri Parcel Record",
@@ -101,6 +101,12 @@
           "type": "number",
           "minimum": 0.0,
           "description": "Property. Model:'http://schema.org/Number'. Metadata to indicate the associated depth where soil measurements are taken"
+        },
+        "soilPh": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 14.0,
+          "description": "Property. Model:'http://schema.org/Number'. Measured soil pH value, recommended scale 0-14."
         }
       }
     }

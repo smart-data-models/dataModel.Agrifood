@@ -111,6 +111,10 @@
       "unitCode": "CMT"
     }
   },
+  "soilPh": {
+    "type": "Property",
+    "value": 6.8
+  },
   "soilSalinity": {
     "type": "Property",
     "value": 1198.11,
