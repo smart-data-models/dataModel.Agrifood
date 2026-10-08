@@ -8,3 +8,11 @@ currentAdopters:
  project:
  comments: 
  startDate:
+-
+ adopter: Nekazari
+ description: PAR telemetry for agrivoltaic crop monitoring
+ mail:
+ organization: Nekazari
+ project: https://github.com/nkz-os
+ comments:
+ startDate: 7-10-2026

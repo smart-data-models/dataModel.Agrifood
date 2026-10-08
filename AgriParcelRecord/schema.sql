@@ -27,6 +27,7 @@ CREATE TABLE AgriParcelRecord (
   "soilSalinity" NUMERIC,
   "soilTemperature" NUMERIC,
   "solarRadiation" NUMERIC,
+  "photosyntheticallyActiveRadiation" NUMERIC,
   "source" TEXT,
   "type" AgriParcelRecord_type
 );

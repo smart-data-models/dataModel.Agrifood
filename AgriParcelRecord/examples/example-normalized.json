@@ -169,6 +169,16 @@
       }
     }
   },
+  "photosyntheticallyActiveRadiation": {
+    "type": "Number",
+    "value": 1250,
+    "metadata": {
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2017-05-04T12:30:00Z"
+      }
+    }
+  },
   "relativeHumidity": {
     "type": "Number",
     "value": 0.15,

@@ -255,6 +255,10 @@ class AgriParcelRecord(BaseModel):
     solarRadiation: Optional[float] = Field(
         None, description='Instantaneous solar radiation measured in kW/m2'
     )
+    photosyntheticallyActiveRadiation: Optional[float] = Field(
+        None,
+        description='Photosynthetically Active Radiation (400-700 nm photon flux density) in umol/m2/s',
+    )
     source: Optional[str] = Field(
         None,
         description='A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object',

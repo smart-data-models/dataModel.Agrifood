@@ -60,6 +60,10 @@
           "type": "number",
           "description": "Property. Model:'http://schema.org/Number'. Instantaneous solar radiation measured in kW/m2. Units:'kW/m2'"
         },
+        "photosyntheticallyActiveRadiation": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Photosynthetically Active Radiation (400-700 nm photon flux density). Units:'umol/m2/s'. No UN/CEFACT code exists for this compound unit, so no unitCode is used"
+        },
         "soilSalinity": {
           "type": "number",
           "description": "Property. Model:'http://schema.org/Number'. It is the salt content in the soil"

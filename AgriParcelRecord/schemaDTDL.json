@@ -166,6 +166,14 @@
             "comment": "Instantaneous solar radiation measured in kW/m2"
         },
         {
+            "name": "photosyntheticallyActiveRadiation",
+            "writable": true,
+            "displayName": "photosyntheticallyActiveRadiation",
+            "@type": "Property",
+            "schema": "double",
+            "comment": "Photosynthetically Active Radiation (400-700 nm photon flux density) in umol/m2/s"
+        },
+        {
             "name": "source",
             "writable": true,
             "displayName": "source",

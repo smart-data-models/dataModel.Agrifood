@@ -49,6 +49,7 @@
   "leafRelativeHumidity": 0.25,
   "leafTemperature": 25.1,
   "solarRadiation": 15,
+  "photosyntheticallyActiveRadiation": 1250,
   "relativeHumidity": 0.15,
   "atmosphericPressure": 1013.25,
   "soilPh": 6.8,
