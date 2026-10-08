@@ -24,7 +24,6 @@ CREATE TABLE AgriParcelRecord (
   "seeAlso" JSON,
   "soilMoistureEc" NUMERIC,
   "soilMoistureVwc" NUMERIC,
-  "soilPh" NUMERIC,
   "soilSalinity" NUMERIC,
   "soilTemperature" NUMERIC,
   "solarRadiation" NUMERIC,
