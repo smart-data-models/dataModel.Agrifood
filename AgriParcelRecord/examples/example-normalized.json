@@ -169,6 +169,42 @@
       }
     }
   },
+  "stemDiameter": {
+    "type": "Number",
+    "value": 184.2,
+    "metadata": {
+      "unitCode": {
+        "value": "MMT"
+      },
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2017-05-04T12:30:00Z"
+      }
+    }
+  },
+  "stemDiameterVariation": {
+    "type": "Number",
+    "value": 0.18,
+    "metadata": {
+      "unitCode": {
+        "value": "MMT"
+      },
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2017-05-04T12:30:00Z"
+      }
+    }
+  },
+  "photosyntheticallyActiveRadiation": {
+    "type": "Number",
+    "value": 1250,
+    "metadata": {
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2017-05-04T12:30:00Z"
+      }
+    }
+  },
   "relativeHumidity": {
     "type": "Number",
     "value": 0.15,
