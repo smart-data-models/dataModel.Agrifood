@@ -406,6 +406,13 @@ AgriParcelRecord:
       type: array
       x-ngsi:
         type: Property
+    photosyntheticallyActiveRadiation:
+      description: Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: umol/m2/s
     relatedSource:
       description: List of IDs the current entity may have in external applications
       items:
@@ -504,6 +511,20 @@ AgriParcelRecord:
       type: string
       x-ngsi:
         type: Property
+    stemDiameter:
+      description: Absolute stem/trunk diameter
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: millimetres
+    stemDiameterVariation:
+      description: Change in stem/trunk diameter over the reference period (typically the sampling interval)
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+        units: millimetres
     type:
       description: NGSI Entity Type. It has to be AgriParcelRecord
       enum:
@@ -522,4 +543,4 @@ AgriParcelRecord:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json
   x-model-tags: ''
-  x-version: 0.1.0
+  x-version: 0.1.1
