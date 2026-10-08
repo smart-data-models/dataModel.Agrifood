@@ -1,6 +1,5 @@
 # dataModel.Agrifood
 
-
 ### List of data models
 
 The following entity types are available:
@@ -49,10 +48,8 @@ The following entity types are available:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 11 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/CONTRIBUTORS.yaml) to the 14 current contributors of the data models of this Subject.
 
 
 ### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Agrifood/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Agrifood/pulls) on existing data models
-
-

@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Global description: **This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications.**  
-version: 0.1.0  
+version: 0.1.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -23,7 +23,7 @@
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: Number identifying a specific property on a public street    
-- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: Atmospheric Pressure nominally in units of hecto Pascals  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `depth[number]`: Metadata to indicate the associated depth where soil measurements are taken  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: A description of this item  - `hasAgriParcel[*]`: Reference to the AgriParcel  - `hasDevice[array]`: Reference to the IoT devices associated with this item i.e. sensors, controls  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `leafRelativeHumidity[number]`: Relative humidity on the surface of the leaves  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: The observed leaf temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: It is a meteorological parameter that describes the amount of dew and precipitation left on surfaces  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedSource[array]`: List of IDs the current entity may have in external applications  - `relativeHumidity[number]`: Relative Humidity a number between 0 and 1 representing the range of 0% to 100%  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `soilMoistureEc[number]`: Measured as Electrical Conductivity, EC nominally in units of Siemens per meter  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1   . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: Measured soil pH value, recommended scale 0-14.  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: It is the salt content in the soil  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: The observed soil temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: Instantaneous solar radiation measured in kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity Type. It has to be AgriParcelRecord  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: Atmospheric Pressure nominally in units of hecto Pascals  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `depth[number]`: Metadata to indicate the associated depth where soil measurements are taken  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: A description of this item  - `hasAgriParcel[*]`: Reference to the AgriParcel  - `hasDevice[array]`: Reference to the IoT devices associated with this item i.e. sensors, controls  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `leafRelativeHumidity[number]`: Relative humidity on the surface of the leaves  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: The observed leaf temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: It is a meteorological parameter that describes the amount of dew and precipitation left on surfaces  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `photosyntheticallyActiveRadiation[number]`: Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used  . Model: [http://schema.org/Number](http://schema.org/Number)- `relatedSource[array]`: List of IDs the current entity may have in external applications  - `relativeHumidity[number]`: Relative Humidity a number between 0 and 1 representing the range of 0% to 100%  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `soilMoistureEc[number]`: Measured as Electrical Conductivity, EC nominally in units of Siemens per meter  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1   . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: Measured soil pH value, recommended scale 0-14.  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: It is the salt content in the soil  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: The observed soil temperature nominally in degrees centigrade  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: Instantaneous solar radiation measured in kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `stemDiameter[number]`: Absolute stem/trunk diameter  . Model: [http://schema.org/Number](http://schema.org/Number)- `stemDiameterVariation[number]`: Change in stem/trunk diameter over the reference period (typically the sampling interval)  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI Entity Type. It has to be AgriParcelRecord  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -445,6 +445,13 @@ AgriParcelRecord:
       type: array    
       x-ngsi:    
         type: Property    
+    photosyntheticallyActiveRadiation:    
+      description: Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: umol/m2/s    
     relatedSource:    
       description: List of IDs the current entity may have in external applications    
       items:    
@@ -543,6 +550,20 @@ AgriParcelRecord:
       type: string    
       x-ngsi:    
         type: Property    
+    stemDiameter:    
+      description: Absolute stem/trunk diameter    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
+    stemDiameterVariation:    
+      description: Change in stem/trunk diameter over the reference period (typically the sampling interval)    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
     type:    
       description: NGSI Entity Type. It has to be AgriParcelRecord    
       enum:    
@@ -561,7 +582,7 @@ AgriParcelRecord:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json    
   x-model-tags: ''    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -624,6 +645,9 @@ AgriParcelRecord:
   "leafRelativeHumidity": 0.25,  
   "leafTemperature": 25.1,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "relativeHumidity": 0.15,  
   "atmosphericPressure": 1013.25,  
   "soilPh": 6.8,  
@@ -812,6 +836,42 @@ AgriParcelRecord:
       }  
     }  
   },  
+  "stemDiameter": {  
+    "type": "Number",  
+    "value": 184.2,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Number",  
+    "value": 0.18,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Number",  
+    "value": 1250,  
+    "metadata": {  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
   "relativeHumidity": {  
     "type": "Number",  
     "value": 0.15,  
@@ -921,6 +981,9 @@ AgriParcelRecord:
   "soilSalinity": 1198.11,  
   "soilTemperature": 27,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
   ]  
@@ -1064,6 +1127,23 @@ AgriParcelRecord:
     "type": "Property",  
     "value": 15,  
     "unitCode": "N78",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "stemDiameter": {  
+    "type": "Property",  
+    "value": 184.2,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Property",  
+    "value": 0.18,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Property",  
+    "value": 1250,  
     "observedAt": "2017-05-04T12:30:00Z"  
   },  
   "@context": [  

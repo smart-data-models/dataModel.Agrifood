@@ -1,29 +1,29 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-エンティティ: AgriParcelRecord  
-========================<!-- /10-Header -->  
+エンティティ：AgriParcelRecord  
+=======================<!-- /10-Header -->  
 <!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
 [自動生成されたドキュメント](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全体の説明: **このエンティティには、土地の区画で記録された状態の調和された説明が含まれています。このエンティティは、主に農業分野および関連するIoTアプリケーションに関連付けられています。**  
-version: 0.1.0  
+全体的な説明：**このエンティティには、土地の区画に記録された条件の調和された説明が含まれています。このエンティティは、主に農業分野および関連するIoTアプリケーションに関連付けられています。**  
+version: 0.1.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティリスト  
+## プロパティのリスト  
 
 <sup><sub>[*] 属性に型がない場合、それは複数の型または異なる形式/パターンを持つ可能性があるためです。</sub></sup>  
 - `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例：スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 番地が存在し、その地域内にある場所（都市/町村など）  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: その場所が存在し、その国内にある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区とは、一部の国において地方政府によって管理される行政区画の一種です。    
-	- `postOfficeBoxNumber[string]`: 私書箱住所の私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `addressLocality[string]`: ストリートアドレスがある地域内の場所  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 所在地のある国・地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 行政区は、一部の国において地方政府によって管理される行政区画の一種です。    
+	- `postOfficeBoxNumber[string]`: 私書箱住所の郵便私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 公道上の特定の物件を識別する番号    
-- `alternateName[string]`: このアイテムの別名  - `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的領域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 気圧は公称ヘクトパスカル単位。  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 統合されたデータエンティティのプロバイダーを識別する一連の文字  - `dateCreated[date-time]`: エンティティ作成日時。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。通常、ストレージプラットフォームによって割り当てられます。  - `depth[number]`: 土壌測定が行われた関連する深さを示すメタデータ  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: このアイテムの説明  - `hasAgriParcel[*]`: AgriParcelへの参照  - `hasDevice[array]`: このアイテムに関連付けられたIoTデバイス（センサー、制御装置など）への参照  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: エンティティの一意な識別子  - `leafRelativeHumidity[number]`: 葉の表面の相対湿度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 観測された葉の温度（公称摂氏度）  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 表面に残っている露と降水量を表す気象パラメータです。  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: アイテムへのGeoJSON参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の一意のIDを参照する、JSONエンコードされた文字のシーケンスを含むリスト  - `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `relativeHumidity[number]`: 相対湿度。0%から100%の範囲を表す0から1までの数値。  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `soilMoistureEc[number]`: 電気伝導率（EC）として、公称ジーメンス/メートル単位で測定。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 体積含水率（VWC）としてパーセンテージで測定。0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 測定された土壌pH値、推奨スケール0-14。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 土壌中の塩分含有量です。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 観測された土壌温度（公称摂氏度）  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: 瞬間的な太陽放射量（kW/m2で測定）  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: エンティティデータの元のソースをURLとして示す一連の文字。ソースプロバイダーの完全修飾ドメイン名、またはソースオブジェクトへのURLであることが推奨されます。  - `type[string]`: NGSIエンティティタイプ。AgriParcelRecordである必要があります。  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: 公共の通りにある特定の不動産を識別する番号    
+- `alternateName[string]`: このアイテムの別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的領域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 気圧（名目上はヘクトパスカル単位）  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティのプロバイダーを識別する一連の文字  - `dateCreated[date-time]`: エンティティ作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `depth[number]`: 土壌測定が行われた関連する深さを示すメタデータ  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: このアイテムの説明  - `hasAgriParcel[*]`: AgriParcelへの参照  - `hasDevice[array]`: この項目に関連するIoTデバイス（センサー、制御装置など）への参照  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: エンティティの一意の識別子  - `leafRelativeHumidity[number]`: 葉の表面の相対湿度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 観測された葉温（名目上は摂氏）  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 地表面に残された露や降水量を表す気象パラメータです  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、またはMultiPolygonのいずれかです。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字シーケンスを含むリスト  - `photosyntheticallyActiveRadiation[number]`: 光合成有効放射（400-700 nm 光子束密度）。この複合単位にはUN/CEFACTコードが存在しないため、unitCodeは使用されません  . Model: [http://schema.org/Number](http://schema.org/Number)- `relatedSource[array]`: 現在のエンティティが外部アプリケーションで持つ可能性のあるIDのリスト  - `relativeHumidity[number]`: 相対湿度：0%から100%の範囲を表す、0から1の間の数値  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `soilMoistureEc[number]`: 電気伝導率（EC）として測定（名目上はシーメンス毎メートル単位）  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 体積含水率（VWC）としてパーセンテージで測定。0 <= soilMoistureVwc <= 1   . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 測定された土壌pH値、推奨スケールは0-14。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 土壌中の塩分含有量です  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 観測された土壌温度（名目上は摂氏）  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: kW/m2で測定される瞬間日射量  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: エンティティデータのオリジナルソースをURLとして示す一連の文字。ソースプロバイダーの完全修飾ドメイン名、またはソースオブジェクトへのURLであることが推奨されます。  - `stemDiameter[number]`: 茎/幹の絶対直径  . Model: [http://schema.org/Number](http://schema.org/Number)- `stemDiameterVariation[number]`: 基準期間（通常はサンプリング間隔）における茎/幹の直径の変化  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSIエンティティタイプ。AgriParcelRecordである必要があります。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -31,8 +31,8 @@
 このエンティティは、主に農業分野および関連するIoTアプリケーションに関連付けられています。  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
-## プロパティのデータモデル記述  
-アルファベット順にソートされています（詳細はこちらをクリック）  
+## プロパティのデータモデルの説明  
+アルファベット順（詳細はこちらをクリック）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -445,6 +445,13 @@ AgriParcelRecord:
       type: array    
       x-ngsi:    
         type: Property    
+    photosyntheticallyActiveRadiation:    
+      description: Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: umol/m2/s    
     relatedSource:    
       description: List of IDs the current entity may have in external applications    
       items:    
@@ -543,6 +550,20 @@ AgriParcelRecord:
       type: string    
       x-ngsi:    
         type: Property    
+    stemDiameter:    
+      description: Absolute stem/trunk diameter    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
+    stemDiameterVariation:    
+      description: Change in stem/trunk diameter over the reference period (typically the sampling interval)    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
     type:    
       description: NGSI Entity Type. It has to be AgriParcelRecord    
       enum:    
@@ -561,15 +582,15 @@ AgriParcelRecord:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json    
   x-model-tags: ''    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## 例のペイロード  
-#### AgriParcelRecord NGSI-v2キーと値の例  
+## ペイロードの例   
+#### AgriParcelRecord NGSI-v2 キーと値の例    
 以下は、キーと値の形式のJSON-LD形式のAgriParcelRecordの例です。これは、`options=keyValues`を使用する場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -624,6 +645,9 @@ AgriParcelRecord:
   "leafRelativeHumidity": 0.25,  
   "leafTemperature": 25.1,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "relativeHumidity": 0.15,  
   "atmosphericPressure": 1013.25,  
   "soilPh": 6.8,  
@@ -637,7 +661,7 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-v2正規化例  
+#### AgriParcelRecord NGSI-v2 正規化例    
 以下は、正規化されたJSON-LD形式のAgriParcelRecordの例です。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -812,6 +836,42 @@ AgriParcelRecord:
       }  
     }  
   },  
+  "stemDiameter": {  
+    "type": "Number",  
+    "value": 184.2,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Number",  
+    "value": 0.18,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Number",  
+    "value": 1250,  
+    "metadata": {  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
   "relativeHumidity": {  
     "type": "Number",  
     "value": 0.15,  
@@ -858,7 +918,7 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LDキーと値の例  
+#### AgriParcelRecord NGSI-LD キーと値の例    
 以下は、キーと値の形式のJSON-LD形式のAgriParcelRecordの例です。これは、`options=keyValues`を使用する場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -921,13 +981,16 @@ AgriParcelRecord:
   "soilSalinity": 1198.11,  
   "soilTemperature": 27,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
   ]  
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD正規化例  
+#### AgriParcelRecord NGSI-LD 正規化例    
 以下は、正規化されたJSON-LD形式のAgriParcelRecordの例です。これは、オプションを使用しない場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -1066,6 +1129,23 @@ AgriParcelRecord:
     "unitCode": "N78",  
     "observedAt": "2017-05-04T12:30:00Z"  
   },  
+  "stemDiameter": {  
+    "type": "Property",  
+    "value": 184.2,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Property",  
+    "value": 0.18,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Property",  
+    "value": 1250,  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
@@ -1076,7 +1156,7 @@ AgriParcelRecord:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-規模単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+量の単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

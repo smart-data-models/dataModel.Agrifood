@@ -7,23 +7,23 @@
 [자동으로 생성된 문서](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-전역 설명: **이 엔티티는 필지에 기록된 조건에 대한 조화된 설명을 포함합니다. 이 엔티티는 주로 농업 분야 및 관련 IoT 애플리케이션과 관련이 있습니다.**  
-version: 0.1.0  
+전역 설명: **이 엔티티는 토지 구획에 기록된 상태에 대한 조화된 설명을 포함합니다. 이 엔티티는 주로 농업 분야 및 관련 IoT 애플리케이션과 관련이 있습니다.**  
+version: 0.1.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## 속성 목록  
 
-<sup><sub>[*] 속성에 유형이 없는 경우 여러 유형이나 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>  
-- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 도로명 주소가 위치하고 해당 지역에 속하는 구역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: 구역이 위치하고 국가에 속하는 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 구역은 일부 국가에서 지방 정부가 관리하는 행정 구역의 일종입니다.    
-	- `postOfficeBoxNumber[string]`: 사서함 주소의 사서함 번호. 예를 들어, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: 우편 번호. 예를 들어, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+<sup><sub>[*] 속성에 유형이 없는 경우, 이는 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다.</sub></sup>  
+- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인.  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 도로 주소가 있고 해당 지역에 속하는 지역.  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 지역이 속한 국가 내의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 구역은 일부 국가에서 지방 정부에 의해 관리되는 행정 구역의 한 유형입니다.    
+	- `postOfficeBoxNumber[string]`: 사서함 주소의 사서함 번호. 예를 들어, 03578.  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 우편번호. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 도로명 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 공공 도로의 특정 속성을 식별하는 번호    
-- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공되는 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 대기압은 명목상 헥토파스칼(hPa) 단위를 사용합니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 조화된 데이터 엔티티의 제공자를 식별하는 문자열  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 대개 스토리지 플랫폼에 의해 할당됩니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프. 이것은 일반적으로 저장 플랫폼에 의해 할당됩니다.  - `depth[number]`: 토양 측정이 이루어지는 관련 깊이를 나타내는 메타데이터  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: 이 항목에 대한 설명  - `hasAgriParcel[*]`: AgriParcel에 대한 참조  - `hasDevice[array]`: 이 항목과 관련된 IoT 장치(예: 센서, 제어기)에 대한 참조  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: 엔티티의 고유 식별자  - `leafRelativeHumidity[number]`: 잎 표면의 상대 습도  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 관찰된 잎 온도는 명목상 섭씨 온도를 사용합니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 이는 표면에 남은 이슬과 강수량을 설명하는 기상 매개변수입니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: 항목에 대한 Geojson 참조. Point, LineString, Polygon, MultiPoint, MultiLineString 또는 MultiPolygon일 수 있습니다.  - `name[string]`: 이 항목의 이름  - `owner[array]`: 소유자(들)의 고유 ID를 참조하는 JSON 인코딩 문자열 시퀀스를 포함하는 목록  - `relatedSource[array]`: 현재 엔티티가 외부 애플리케이션에서 가질 수 있는 ID 목록  - `relativeHumidity[number]`: 상대 습도는 0%에서 100% 범위를 나타내는 0과 1 사이의 숫자입니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URI 목록  - `soilMoistureEc[number]`: 전기 전도도(EC)로 측정되며 명목상 미터당 지멘스(S/m) 단위를 사용합니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 체적 함수율(VWC)을 백분율로 측정합니다. 0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 측정된 토양 pH 값, 권장 척도는 0-14입니다.  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 이는 토양의 염분 함량입니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 관찰된 토양 온도는 명목상 섭씨 온도를 사용합니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: kW/m2 단위로 측정된 순시 일사량  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자열. 소스 제공자의 정규화된 도메인 이름 또는 소스 객체의 URL을 사용하는 것이 좋습니다.  - `type[string]`: NGSI 엔티티 유형. AgriParcelRecord여야 합니다.  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: 공공 도로에 있는 특정 부동산을 식별하는 번호    
+- `alternateName[string]`: 이 항목에 대한 대체 이름  - `areaServed[string]`: 서비스 또는 제공되는 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 명목상 헥토파스칼(hPa) 단위의 대기압  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 조화된 데이터 엔티티의 제공자를 식별하는 문자열.  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에 의해 할당됩니다.  - `dateModified[date-time]`: 엔티티의 최종 수정 타임스탬프. 이는 일반적으로 스토리지 플랫폼에 의해 할당됩니다.  - `depth[number]`: 토양 측정이 수행된 관련 깊이를 나타내는 메타데이터  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: 이 항목에 대한 설명  - `hasAgriParcel[*]`: AgriParcel에 대한 참조  - `hasDevice[array]`: 이 항목과 관련된 IoT 장치(즉, 센서, 제어 장치)에 대한 참조  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: 엔티티의 고유 식별자  - `leafRelativeHumidity[number]`: 잎 표면의 상대 습도  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 명목상 섭씨 온도로 관측된 잎 온도  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 표면에 남은 이슬과 강수량을 설명하는 기상 매개변수입니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: 항목에 대한 GeoJSON 참조. Point, LineString, Polygon, MultiPoint, MultiLineString 또는 MultiPolygon이 될 수 있습니다.  - `name[string]`: 이 항목의 이름  - `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스를 포함하는 목록  - `photosyntheticallyActiveRadiation[number]`: 광합성 유효 복사(400-700 nm 광자속 밀도). 이 복합 단위에 대한 UN/CEFACT 코드가 없으므로 unitCode를 사용하지 않습니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `relatedSource[array]`: 현재 엔티티가 외부 애플리케이션에서 가질 수 있는 ID 목록  - `relativeHumidity[number]`: 상대 습도는 0%에서 100% 범위를 나타내는 0과 1 사이의 숫자입니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URI 목록  - `soilMoistureEc[number]`: 전기 전도도(EC)로 측정하며, 명목상 미터당 지멘스(S/m) 단위를 사용합니다  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 체적 함수율(VWC)을 백분율로 측정합니다. 0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 측정된 토양 pH 값, 권장 척도는 0-14입니다.  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 토양 내 염분 함량입니다.  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 명목상 섭씨 온도로 관측된 토양 온도  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: kW/m2 단위로 측정된 순간 태양 복사  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자열. 소스 제공자의 정규화된 도메인 이름 또는 소스 객체의 URL이 권장됩니다.  - `stemDiameter[number]`: 절대 줄기/몸통 직경  . Model: [http://schema.org/Number](http://schema.org/Number)- `stemDiameterVariation[number]`: 기준 기간(통상적으로 샘플링 간격) 동안의 줄기/몸통 직경 변화  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI 엔티티 유형. AgriParcelRecord여야 합니다  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 필수 속성  
 - `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -32,7 +32,7 @@
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 속성에 대한 데이터 모델 설명  
-알파벳순으로 정렬됨 (자세한 내용은 클릭)  
+알파벳순 정렬 (자세한 내용은 클릭)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -445,6 +445,13 @@ AgriParcelRecord:
       type: array    
       x-ngsi:    
         type: Property    
+    photosyntheticallyActiveRadiation:    
+      description: Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: umol/m2/s    
     relatedSource:    
       description: List of IDs the current entity may have in external applications    
       items:    
@@ -543,6 +550,20 @@ AgriParcelRecord:
       type: string    
       x-ngsi:    
         type: Property    
+    stemDiameter:    
+      description: Absolute stem/trunk diameter    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
+    stemDiameterVariation:    
+      description: Change in stem/trunk diameter over the reference period (typically the sampling interval)    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
     type:    
       description: NGSI Entity Type. It has to be AgriParcelRecord    
       enum:    
@@ -561,16 +582,16 @@ AgriParcelRecord:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json    
   x-model-tags: ''    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## 페이로드 예시  
-#### AgriParcelRecord NGSI-v2 key-value 예시  
-여기 key-value 형식의 JSON-LD 포맷으로 된 AgriParcelRecord 예시가 있습니다. 이는 `options=keyValues`를 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+## 예시 페이로드  
+#### AgriParcelRecord NGSI-v2 키-값 예시  
+다음은 키-값 형태의 JSON-LD 형식 AgriParcelRecord 예시입니다. 이는 `options=keyValues`를 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -624,6 +645,9 @@ AgriParcelRecord:
   "leafRelativeHumidity": 0.25,  
   "leafTemperature": 25.1,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "relativeHumidity": 0.15,  
   "atmosphericPressure": 1013.25,  
   "soilPh": 6.8,  
@@ -637,8 +661,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-v2 정규화된 예시  
-여기 정규화된 형식의 JSON-LD 포맷으로 된 AgriParcelRecord 예시가 있습니다. 이는 options를 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### AgriParcelRecord NGSI-v2 정규화 예시  
+다음은 정규화된 JSON-LD 형식의 AgriParcelRecord 예시입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -812,6 +836,42 @@ AgriParcelRecord:
       }  
     }  
   },  
+  "stemDiameter": {  
+    "type": "Number",  
+    "value": 184.2,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Number",  
+    "value": 0.18,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Number",  
+    "value": 1250,  
+    "metadata": {  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
   "relativeHumidity": {  
     "type": "Number",  
     "value": 0.15,  
@@ -858,8 +918,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD key-value 예시  
-여기 key-value 형식의 JSON-LD 포맷으로 된 AgriParcelRecord 예시가 있습니다. 이는 `options=keyValues`를 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### AgriParcelRecord NGSI-LD 키-값 예시  
+다음은 키-값 형태의 JSON-LD 형식 AgriParcelRecord 예시입니다. 이는 `options=keyValues`를 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -921,14 +981,17 @@ AgriParcelRecord:
   "soilSalinity": 1198.11,  
   "soilTemperature": 27,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
   ]  
 }  
 ```  
 </details>  
-#### AgriParcelRecord NGSI-LD 정규화된 예시  
-여기 정규화된 형식의 JSON-LD 포맷으로 된 AgriParcelRecord 예시가 있습니다. 이는 options를 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### AgriParcelRecord NGSI-LD 정규화 예시  
+다음은 정규화된 JSON-LD 형식의 AgriParcelRecord 예시입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1066,6 +1129,23 @@ AgriParcelRecord:
     "unitCode": "N78",  
     "observedAt": "2017-05-04T12:30:00Z"  
   },  
+  "stemDiameter": {  
+    "type": "Property",  
+    "value": 184.2,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Property",  
+    "value": 0.18,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Property",  
+    "value": 1250,  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
@@ -1076,7 +1156,7 @@ AgriParcelRecord:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-크기 단위를 다루는 방법에 대한 답을 얻으려면 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하십시오.  
+크기 단위를 처리하는 방법에 대한 답변은 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하십시오.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

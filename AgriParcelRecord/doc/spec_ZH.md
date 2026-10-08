@@ -3,32 +3,32 @@
 实体：AgriParcelRecord  
 ===================<!-- /10-Header -->  
 <!-- 15-License -->  
-[开放许可证](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
-[自动生成的文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md)  
+[文档自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全球描述：**此实体包含对一块土地上记录的状况的统一描述。此实体主要与农业垂直领域和相关的物联网应用相关联。**  
-version: 0.1.0  
+全局描述：**该实体包含对一块土地上记录条件的统一描述。该实体主要与农业垂直领域及相关的 IoT 应用相关联。**  
+version: 0.1.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## 属性列表  
 
-<sup><sub>[*] 如果属性中没有类型，则可能是因为它有多种类型或不同的格式/模式</sub></sup>  
+<sup><sub>[*] 如果某个属性没有类型，是因为它可能有多种类型或不同的格式/模式</sub></sup>  
 - `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 街道地址所在的城镇，该城镇位于该区域内  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: 城镇所在的区域，该区域位于该国家内  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 区是一种行政区划类型，在某些国家由地方政府管理    
+	- `addressLocality[string]`: 街道地址所在的地区内的地点  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 所在地所在的地区，且该地区位于国家内  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 行政区是一种行政划分，在某些国家由地方政府管理。    
 	- `postOfficeBoxNumber[string]`: 邮政信箱地址的邮政信箱号码。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如，24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 标识公共街道上特定属性的编号    
-- `alternateName[string]`: 此项目的替代名称  - `areaServed[string]`: 提供服务或商品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 大气压力通常以百帕为单位  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 标识协调数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配。  - `dateModified[date-time]`: 实体上次修改的时间戳。这通常由存储平台分配  - `depth[number]`: 指示土壤测量相关深度的元数据  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: 此项目的描述  - `hasAgriParcel[*]`: 农地的参考  - `hasDevice[array]`: 与此项目相关的物联网设备的参考，即传感器、控制器  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: 实体的唯一标识符  - `leafRelativeHumidity[number]`: 叶片表面的相对湿度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 观察到的叶片温度，通常以摄氏度为单位  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 这是一个气象参数，描述表面残留的露水和降水量。  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: 项目的 Geojson 引用。它可以是 Point、LineString、Polygon、MultiPoint、MultiLineString 或 MultiPolygon  - `name[string]`: 此项目的名称  - `owner[array]`: 一个包含 JSON 编码字符序列的列表，该序列引用所有者（一个或多个）的唯一 ID  - `relatedSource[array]`: 当前实体在外部应用中可能拥有的 ID 列表  - `relativeHumidity[number]`: 相对湿度，一个介于 0 和 1 之间的数字，表示 0% 到 100% 的范围  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: 指向有关该项目的其他资源的 URI 列表。  - `soilMoistureEc[number]`: 以电导率（EC）测量，通常以西门子/米为单位  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 以体积含水量（VWC）百分比测量。0 <= 土壤体积含水量 <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 测量的土壤 pH 值，建议范围 0-14。  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 它是土壤中的盐含量  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 观察到的土壤温度，通常以摄氏度为单位  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: 瞬时太阳辐射，以千瓦/平方米测量  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: 以 URL 形式提供实体数据原始来源的字符序列。建议使用来源提供者的完全限定域名，或指向来源对象的 URL  - `type[string]`: NGSI 实体类型。必须是 AgriParcelRecord  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: 识别公共街道上特定物业的号码    
+- `alternateName[string]`: 此项目的替代名称  - `areaServed[string]`: 提供服务或所提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 大气压，单位通常为百帕 (hPa)  . Model: [http://schema.org/Number](http://schema.org/Number)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配。  - `dateModified[date-time]`: 实体最后修改的时间戳。这通常由存储平台分配。  - `depth[number]`: 指示进行土壤测量相关深度的元数据  . Model: [http://schema.org/Number](http://schema.org/Number)- `description[string]`: 此项目的描述  - `hasAgriParcel[*]`: 对 AgriParcel 的引用  - `hasDevice[array]`: 指向与该项目关联的 IoT 设备的引用，例如传感器、控制器  . Model: [http://schema.org/URL](http://schema.org/URL)- `id[*]`: 实体的唯一标识符  - `leafRelativeHumidity[number]`: 叶片表面的相对湿度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafTemperature[number]`: 观测到的叶片温度，单位通常为摄氏度  . Model: [http://schema.org/Number](http://schema.org/Number)- `leafWetness[number]`: 这是一个描述表面留下的露水和降水量的大气参数  . Model: [http://schema.org/Number](http://schema.org/Number)- `location[*]`: Geojson 对项目的引用。可以是 Point, LineString, Polygon, MultiPoint, MultiLineString 或 MultiPolygon。  - `name[string]`: 此项目的名称  - `owner[array]`: 包含 JSON 编码字符序列的列表，引用所有者的唯一 ID  - `photosyntheticallyActiveRadiation[number]`: 光合有效辐射 (400-700 nm 光子通量密度)。该复合单位没有 UN/CEFACT 代码，因此不使用 unitCode  . Model: [http://schema.org/Number](http://schema.org/Number)- `relatedSource[array]`: 当前实体在外部应用中可能具有的 ID 列表  - `relativeHumidity[number]`: 相对湿度，一个 0 到 1 之间的数字，代表 0% 到 100% 的范围  . Model: [http://schema.org/Number](http://schema.org/Number)- `seeAlso[*]`: 指向有关该项目的其他资源的 URI 列表  - `soilMoistureEc[number]`: 测量值为电导率 (EC)，单位通常为西门子/米 (S/m)  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilMoistureVwc[number]`: 测量值为体积含水量 (VWC)，以百分比表示。0 <= soilMoistureVwc <= 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilPh[number]`: 测得的土壤 pH 值，建议量程 0-14  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilSalinity[number]`: 指土壤中的盐分含量  . Model: [http://schema.org/Number](http://schema.org/Number)- `soilTemperature[number]`: 观测到的土壤温度，单位通常为摄氏度  . Model: [http://schema.org/Number](http://schema.org/Number)- `solarRadiation[number]`: 瞬时太阳辐射，测量单位为 kW/m2  . Model: [http://schema.org/Number](http://schema.org/Number)- `source[string]`: 一个字符序列，提供实体数据的原始来源，作为 URL。建议使用来源提供商的完全限定域名，或指向来源对象的 URL  - `stemDiameter[number]`: 绝对茎/干直径  . Model: [http://schema.org/Number](http://schema.org/Number)- `stemDiameterVariation[number]`: 参考期间（通常为采样间隔）茎/干直径的变化  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI 实体类型。必须为 AgriParcelRecord  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必填属性  
+必需属性  
 - `hasAgriParcel`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
-此实体主要与农业垂直领域和相关的物联网应用相关联。  
+该实体主要与农业垂直领域及相关的 IoT 应用相关联。  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 属性的数据模型描述  
@@ -445,6 +445,13 @@ AgriParcelRecord:
       type: array    
       x-ngsi:    
         type: Property    
+    photosyntheticallyActiveRadiation:    
+      description: Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: umol/m2/s    
     relatedSource:    
       description: List of IDs the current entity may have in external applications    
       items:    
@@ -543,6 +550,20 @@ AgriParcelRecord:
       type: string    
       x-ngsi:    
         type: Property    
+    stemDiameter:    
+      description: Absolute stem/trunk diameter    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
+    stemDiameterVariation:    
+      description: Change in stem/trunk diameter over the reference period (typically the sampling interval)    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+        units: millimetres    
     type:    
       description: NGSI Entity Type. It has to be AgriParcelRecord    
       enum:    
@@ -561,16 +582,16 @@ AgriParcelRecord:
   x-license-url: https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json    
   x-model-tags: ''    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## 示例载荷    
-#### 农地记录 (AgriParcelRecord) NGSI-v2 键值对示例  
-这是一个以键值对形式表示的 JSON-LD 格式的 AgriParcelRecord 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
+## 示例负载   
+#### AgriParcelRecord NGSI-v2 键值对示例  
+这是一个以键值对 JSON-LD 格式呈现的 AgriParcelRecord 示例。在使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -624,6 +645,9 @@ AgriParcelRecord:
   "leafRelativeHumidity": 0.25,  
   "leafTemperature": 25.1,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "relativeHumidity": 0.15,  
   "atmosphericPressure": 1013.25,  
   "soilPh": 6.8,  
@@ -637,8 +661,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### 农地记录 (AgriParcelRecord) NGSI-v2 规范化示例  
-这是一个以规范化形式表示的 JSON-LD 格式的 AgriParcelRecord 示例。当不使用选项时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
+#### AgriParcelRecord NGSI-v2 标准化示例  
+这是一个以标准化 JSON-LD 格式呈现的 AgriParcelRecord 示例。在不使用选项时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -812,6 +836,42 @@ AgriParcelRecord:
       }  
     }  
   },  
+  "stemDiameter": {  
+    "type": "Number",  
+    "value": 184.2,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Number",  
+    "value": 0.18,  
+    "metadata": {  
+      "unitCode": {  
+        "value": "MMT"  
+      },  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Number",  
+    "value": 1250,  
+    "metadata": {  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2017-05-04T12:30:00Z"  
+      }  
+    }  
+  },  
   "relativeHumidity": {  
     "type": "Number",  
     "value": 0.15,  
@@ -858,8 +918,8 @@ AgriParcelRecord:
 }  
 ```  
 </details>  
-#### 农地记录 (AgriParcelRecord) NGSI-LD 键值对示例  
-这是一个以键值对形式表示的 JSON-LD 格式的 AgriParcelRecord 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
+#### AgriParcelRecord NGSI-LD 键值对示例  
+这是一个以键值对 JSON-LD 格式呈现的 AgriParcelRecord 示例。在使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -921,14 +981,17 @@ AgriParcelRecord:
   "soilSalinity": 1198.11,  
   "soilTemperature": 27,  
   "solarRadiation": 15,  
+  "stemDiameter": 184.2,  
+  "stemDiameterVariation": 0.18,  
+  "photosyntheticallyActiveRadiation": 1250,  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
   ]  
 }  
 ```  
 </details>  
-#### 农地记录 (AgriParcelRecord) NGSI-LD 规范化示例  
-这是一个以规范化形式表示的 JSON-LD 格式的 AgriParcelRecord 示例。当不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
+#### AgriParcelRecord NGSI-LD 标准化示例  
+这是一个以标准化 JSON-LD 格式呈现的 AgriParcelRecord 示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1066,6 +1129,23 @@ AgriParcelRecord:
     "unitCode": "N78",  
     "observedAt": "2017-05-04T12:30:00Z"  
   },  
+  "stemDiameter": {  
+    "type": "Property",  
+    "value": 184.2,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "stemDiameterVariation": {  
+    "type": "Property",  
+    "value": 0.18,  
+    "unitCode": "MMT",  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
+  "photosyntheticallyActiveRadiation": {  
+    "type": "Property",  
+    "value": 1250,  
+    "observedAt": "2017-05-04T12:30:00Z"  
+  },  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"  
@@ -1076,7 +1156,7 @@ AgriParcelRecord:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-请参阅 [常见问题 10](https://smartdatamodels.org/index.php/faqs/)，了解如何处理数量单位的答案  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/) 以获取有关如何处理数量单位的答案  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
