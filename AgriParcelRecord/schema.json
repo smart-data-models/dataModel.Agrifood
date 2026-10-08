@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.1.1",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Agrifood/AgriParcelRecord/schema.json",
   "title": "Smart Data Models - Agri Parcel Record",
@@ -59,6 +59,18 @@
         "solarRadiation": {
           "type": "number",
           "description": "Property. Model:'http://schema.org/Number'. Instantaneous solar radiation measured in kW/m2. Units:'kW/m2'"
+        },
+        "stemDiameter": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Absolute stem/trunk diameter. Units:'millimetres'"
+        },
+        "stemDiameterVariation": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Change in stem/trunk diameter over the reference period (typically the sampling interval). Units:'millimetres'"
+        },
+        "photosyntheticallyActiveRadiation": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Photosynthetically Active Radiation (400-700 nm photon flux density). Units:'umol/m2/s'. No UN/CEFACT code exists for this compound unit, so no unitCode is used"
         },
         "soilSalinity": {
           "type": "number",
