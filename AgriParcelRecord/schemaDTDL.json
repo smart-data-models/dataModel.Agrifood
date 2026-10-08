@@ -113,6 +113,14 @@
             "comment": "The name of this item"
         },
         {
+            "name": "photosyntheticallyActiveRadiation",
+            "writable": true,
+            "displayName": "photosyntheticallyActiveRadiation",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Photosynthetically Active Radiation (400-700 nm photon flux density). No UN/CEFACT code exists for this compound unit, so no unitCode is used"
+        },
+        {
             "name": "relativeHumidity",
             "writable": true,
             "displayName": "relativeHumidity",
@@ -140,6 +148,14 @@
             "@type": "Property",
             "schema": "long",
             "comment": "Measured as Volumetric Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 "
+        },
+        {
+            "name": "soilPh",
+            "writable": true,
+            "displayName": "soilPh",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Measured soil pH value, recommended scale 0-14."
         },
         {
             "name": "soilSalinity",
@@ -172,6 +188,22 @@
             "@type": "Property",
             "schema": "string",
             "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "name": "stemDiameter",
+            "writable": true,
+            "displayName": "stemDiameter",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Absolute stem/trunk diameter"
+        },
+        {
+            "name": "stemDiameterVariation",
+            "writable": true,
+            "displayName": "stemDiameterVariation",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Change in stem/trunk diameter over the reference period (typically the sampling interval)"
         },
         {
             "@type": "Telemetry",
